@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+    background-color: antiquewhite;
+}
+.carousel-item> img{
+    height: 70vh;
+}
+.heading{
+    font-family: 'Lobster', cursive;
+}
+
+.h1{ text-align: 'center';}

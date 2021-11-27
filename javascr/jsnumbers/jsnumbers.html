@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jsnumbers.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <title>www.frontendpartner.com</title>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-hands-helping"></i>
+                </a>
+          <a class="navbar-brand" href="../../index.html">FrontendPartner</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../Features/features.html">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../Pricing/pricing.html">Pricing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+
+      <div class="heading text-center display-3">
+          FrontEndPartner
+      </div> <br>
+
+     <br><br>
+     <section class="container mt-3">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+            <h1 class="text-center display-4">JS Numbers</h1>
+            <p class="lead">JavaScript has only one type of number. Numbers can be written with or without decimals.
+</p><br>
+<h3 class="text-center display-6">Example</h3><br>
+<p class="text-center" style="font-size:25px ">let x = 3.14;    // A number with decimals<br>
+  let y = 3;       // A number without decimals</p>
+        </div>
+    </section>
+    <br><br>
+    <div>
+      <h3 class="text-center" style="font-size: 30px"><b>JavaScript Numbers are Always 64-bit Floating Point</b></h3><br>
+      <br>
+      <p style="font-size: 25px">Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc.<br>
+
+        JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard.<br>
+        
+        This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63:</p><br><br>
+        <style class="center" >
+          table, th, td {
+            border: 1px solid black;
+          }
+          </style>
+          <table class ="center"   style="width: 100%" >
+            <tr>
+              <th class="text-center" style="font-size:25px"><b>Value (aka Fraction/Mantissa)</b></th>
+              <th class="text-center" style="font-size:25px"><b>Exponent</b></th> 
+              <th class="text-center" style="font-size:25px"><b>Sign</b></th>
+              <br>
+            </tr>
+            <tr>
+              <td class="text-center" style="font-size:20px"> 52 bits (0 - 51)  </td>
+              <td class="text-center" style="font-size:20px"> 11 bits (52 - 62) </td>
+              <td class="text-center" style="font-size:20px"> 	1 bit (63) </td>
+            </tr>
+            </table><br>
+            <br>
+            <br>
+            <h3 class="text-center" style="font-size: 30px"><b>Precision</b></h3><br>
+            <p style="font-size: 25px">Integers (numbers without a period or exponent notation) are accurate up to 15 digits.</p><br>
+            <h4 style="font-size: 30px"><b>Example :</b></h4><br>
+            <p style="font-size:22px">let x = 999999999999999;   // x will be 999999999999999<br>
+              let y = 9999999999999999;  // y will be 10000000000000000
+              </p><br>
+              <p style="font-size:22px">The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate:</p><br>
+              <h4 style="font-size: 30px"><b>Example :</b></h4><br>
+              <p style="font-size:22px">let x = 0.2 + 0.1;         // x will be 0.30000000000000004</p><br><br>
+              <h3 class="text-center" style="font-size: 30px"><b>Adding Numbers and Strings</b></h3><br>
+              <p style="font-size: 22px">If you add two numbers, the result will be a number:</p><br>
+              <h4 style="font-size: 30px"><b>Example :</b></h4><br>
+              <p style="font-size: 22px">let x = 10;<br>
+                let y = 20;<br>
+                let z = x + y;           // z will be 30 (a number)
+              </p><br>
+              <p style="font-size: 22px">If you add two strings, the result will be a string concatenation:
+              </p><br>
+              <h4 style="font-size: 30px"><b>Example :</b></h4><br>
+              <p style="font-size: 22px">let x = "10";<br>
+                let y = "20";<br>
+                let z = x + y;           // z will be 1020 (a string)</p><br><br>
+                <h3 class="text-center" style="font-size: 30px"><b>Numeric Strings</b></h3><br>
+            <p style="font-size: 25px">JavaScript strings can have numeric content:</p><br>
+            <p style="font-size: 22px">let x = 100;         // x is a number<br>
+
+              let y = "100";       // y is a string<br><br>
+              JavaScript will try to convert strings to numbers in all numeric operations:<br>
+              
+              This will work:<br><br>
+              let x = "100";<br>
+              let y = "10";<br>
+              let z = x / y;       // z will be 10</p><br><br>
+              <h3 class="text-center" style="font-size: 30px"><b>NaN - Not a Number</b></h3><br>
+              <p style="font-size: 22px">NaN is a JavaScript reserved word indicating that a number is not a legal number.<br><br>
+
+                Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):</p><br><br>
+                <h4 style="font-size: 30px"><b>Example :</b></h4><br>
+                <style class="center" >
+                  table, th, td {
+                    border: 1px solid black;
+                  }
+                 </style>
+                 <table class ="center"   style="width: 100%" >
+                <tr>
+                  <td class="text-center" style="font-size:20px"> let x = 100 / "Apple";  // x will be NaN (Not a Number)  </td>>
+                </tr>
+                </table>
+                <br><br>
+                 <p style="font-size: 22px"> However, if the string contains a numeric value , the result will be a number:</p><br><br>
+                  <h4 style="font-size: 30px"><b>Example :</b></h4><br>
+                  <style class="center" >
+                    table, th, td {
+                      border: 1px solid black;
+                    }
+                   </style>
+                   <table class ="center"   style="width: 100%" >
+                  <tr>
+                    <td class="text-center" style="font-size:20px"> let x = 100 / "10";     // x will be 10  </td>>
+                  </tr>
+                  </table> 
+                  <br><br>
+                  <h3 class="text-center" style="font-size: 30px"><b>Numbers Can be Objects</b></h3><br> 
+                  <p style="font-size: 22px">Normally JavaScript numbers are primitive values created from literals:<br><br>
+
+                    let x = 123;<br><br>
+                    
+                    But numbers can also be defined as objects with the keyword new:<br><br>
+                    
+                    let y = new Number(123);</p><br><br>
+                    <h4 style="font-size: 30px"><b>Example :</b></h4><br>
+                    <p style="font-size: 22px">let x = 123;<br>
+                      let y = new Number(123);<br><br>
+                      
+                      // typeof x returns number<br>
+                      // typeof y returns object</p>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <footer class="page-footer font-small teal pt-4">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+              <!-- Content -->
+              <h5 class="text-uppercase font-weight-bold">Contact us</h5>
+              <p>frontendpartner@gmail.com</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mb-md-0 mb-3">
+
+              <!-- Content -->
+              <h5 class="text-uppercase font-weight-bold">Helpline number</h5>
+              <p>9876543210</p>
+
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Footer Text -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+          <a href="https://mdbootstrap.com/"> FrontEndPartner</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+  </body>
+</html>
