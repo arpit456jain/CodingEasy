@@ -1,17 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-body{
-    background-color: antiquewhite;
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+body {
+  background-color: antiquewhite;
 }
-.carousel-item> img{
-    height: 70vh;
+.carousel-item > img {
+  height: 70vh;
 }
-.heading{
-    font-family: 'Lobster', cursive;
+.heading {
+  font-family: "Lobster", cursive;
 }
-.card> img{
-    height: 30vh;
+.card > img {
+  height: 30vh;
 }
-.btn{
-    color: white !important;
-    background-color: teal !important;
+.btn {
+  color: white !important;
+  background-color: teal !important;
+}
+.card {
+  display: flex;
+  align-items: row;
+  justify-content: center;
+  transition: 0.1s;
+}
+.icon {
+  font-size: 1em;
+}
+@media only screen and (min-device-width: 481px) {
+  .icon {
+    font-size: 1.73em;
+  }
 }
