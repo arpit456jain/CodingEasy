@@ -15,3 +15,9 @@ body{
     color: white !important;
     background-color: teal !important;
 }
+.card {
+    display: flex;
+    align-items: row;
+    justify-content: center;
+    transition: 0.1s;
+  }
