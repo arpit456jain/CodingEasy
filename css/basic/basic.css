@@ -15,3 +15,21 @@ body{
     color: white !important;
     background-color: teal !important;
 }
+pre { 
+    display: flex;
+white-space: pre-line;
+word-break: break-word;
+}
+.photo{
+    width: 40vw;
+}
+@media only screen and (min-device-width: 481px) {
+    .code {
+      margin-left: 80px;
+    }
+  }
+  @media only screen and (max-device-width: 481px) {
+    .photo{
+        width: 90vw;
+    }
+  }
