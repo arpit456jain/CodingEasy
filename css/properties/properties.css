@@ -15,3 +15,13 @@ body{
     color: white !important;
     background-color: teal !important;
 }
+pre { 
+    display: flex;
+white-space: pre-line;
+word-break: break-word;
+}
+@media only screen and (min-device-width: 481px) {
+    .code {
+      margin-left: 80px;
+    }
+  }
