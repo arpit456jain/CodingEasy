@@ -3,8 +3,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/arpit456jain/CodingEasy/pulls) &nbsp; 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/) &nbsp; 
 <a href="https://github.com/arpit456jain/CodingEasy"><img src="https://sloc.xyz/github/arpit456jain/CodingEasy" alt="LOC"/></a> &nbsp;
-<a href="https://github.com/arpit456jain/CodingEasy/stargazers"><img src="https://img.shields.io/github/stars/arpit456jain/CodingEasy" alt="Stars Badge"/></a> &nbsp;  
-<a href="https://github.com/arpit456jain/CodingEasy/network/members"><img src="https://img.shields.io/github/forks/arpit456jain/CodingEasy" alt="Forks Badge"/></a> &nbsp;
+<a href="https://github.com/arpit456jain/CodingEasy/stargazers"><img src="https://img.shields.io/github/stars/arpit456jain/CodingEasy" alt="Stars Badge"/></a> &nbsp;<a href="https://github.com/arpit456jain/CodingEasy/network/members"><img src="https://img.shields.io/github/forks/arpit456jain/CodingEasy" alt="Forks Badge"/></a> &nbsp;
 ![GitHub contributors](https://img.shields.io/github/contributors/arpit456jain/CodingEasy?color=blue) &nbsp;
 ![GitHub last commit](https://img.shields.io/github/last-commit/arpit456jain/CodingEasy?color=red&style=plastic) &nbsp;
 ![Repo. Size](https://img.shields.io/github/repo-size/arpit456jain/CodingEasy?color=white) &nbsp;  
