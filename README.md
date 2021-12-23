@@ -1,16 +1,30 @@
-# CodingEasy
+# <p align = "center"> CodingEasy </p>
 
-# 💥 How to Contribute
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/arpit456jain/CodingEasy/pulls) &nbsp; &nbsp; 
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/) &nbsp; &nbsp; 
+<a href="https://github.com/arpit456jain/CodingEasy"><img src="https://sloc.xyz/github/arpit456jain/CodingEasy" alt="LOC"/></a> &nbsp; &nbsp;
+<a href="https://github.com/arpit456jain/CodingEasy/stargazers"><img src="https://img.shields.io/github/stars/arpit456jain/CodingEasy" alt="Stars Badge"/></a> &nbsp; &nbsp; 
+<a href="https://github.com/arpit456jain/CodingEasy/network/members"><img src="https://img.shields.io/github/forks/arpit456jain/CodingEasy" alt="Forks Badge"/></a> &nbsp; &nbsp; 
+![GitHub contributors](https://img.shields.io/github/contributors/arpit456jain/CodingEasy?color=blue) &nbsp; &nbsp; 
+![GitHub last commit](https://img.shields.io/github/last-commit/arpit456jain/CodingEasy?color=red&style=plastic) &nbsp; &nbsp;
+![Repo. Size](https://img.shields.io/github/repo-size/arpit456jain/CodingEasy?color=white) &nbsp; &nbsp; 
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/arpit456jain/CodingEasy/pulls)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+</br>
+
+## Table of Contents
+  - **[How to Contribute?]()**
+  - **[How to make a Pull Request?]()**
+  - **[Project Admin]()**
+  - **[Our Valuable Contributors]()**
+  
+## How to Contribute?
 
 - Take a look at the existing [Issues](https://github.com/ssurbhi09/Github-Automation/issues) or [create a new issue](https://github.com/ssurbhi09/Github-Automation/issues/new/choose)!
 - [Fork the Repo](https://github.com/ssurbhi09/Github-Automation/issues/new/fork), create a branch for any issue that you are working on and commit your work.
 - Create a **[Pull Request](CodingEasy)** (_PR_), which will be promptly reviewed and given suggestions for improvements by the community.
 - Add screenshots or screen captures to your Pull Request to help us understand the effects of the changes that are included in your commits.
 
-## ⭐ HOW TO MAKE A PULL REQUEST:
+## How to make a Pull Request?
 
 **1.** Start by making a fork the [**CodingEasy**](https://github.com/arpit456jain/CodingEasy) repository. Click on the <a href="https://github.com/arpit456jain/CodingEasy/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
 
@@ -60,7 +74,7 @@ git merge upstream/main
 **8.** Stage your changes and commit:
 
 ```bash
-git add .
+git add.
 ```
 
 ```bash
@@ -77,10 +91,9 @@ git push origin YourBranchName
 
 **11.** **Congratulations!** You've made your first contribution! 🙌🏼
 
+</br>
 
-
-## Project Admin 👷👷:
-
+## Project Admin
 
 <table>
 <tr>
@@ -91,23 +104,12 @@ git push origin YourBranchName
 </table>
 <br>
 
+## Our valuable Contributors
 
-
-## Our valuable Contributors👩‍💻👨‍💻 :
+[![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/arpit456jain/CodingEasy)
 
 <a href="https://github.com/arpit456jain/CodingEasy/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=arpit456jain/CodingEasy" />
 </a>
 
-
  <br>
- <br>
-
-
-## All the best! 🥇
-
-<p align="center">
-
-[![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/unnati914/Care4ther-)
-
-</p>
