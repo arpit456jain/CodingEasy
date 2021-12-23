@@ -79,6 +79,31 @@ git push origin YourBranchName
 
 
 
+## Project Admin 👷👷:
+
+
+<table>
+<tr>
+<td align="center"><a href="https://github.com/arpit456jain"><img src="https://avatars.githubusercontent.com/u/55352601?v=4" width=150px height=150px /></a></br> <h4 style="color:red;">Arpit Jain</h4>
+<a href="https://www.linkedin.com/in/arpit-jain-0b054a170/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
+
+</tr>
+</table>
+<br>
+
+
+
+## Our valuable Contributors👩‍💻👨‍💻 :
+
+<a href="https://github.com/arpit456jain/CodingEasy/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=arpit456jain/CodingEasy" />
+</a>
+
+
+ <br>
+ <br>
+
+
 ## All the best! 🥇
 
 <p align="center">
