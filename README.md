@@ -14,7 +14,7 @@
 ## Table of Contents
   - **[How to Contribute?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-contribute)**
   - **[How to make a Pull Request?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-make-a-pull-request)**
-  - **[Project Admin]()**
+  - **[Project Admin](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#project-admin)**
   - **[Our Valuable Contributors]()**
   
 ## How to Contribute?
