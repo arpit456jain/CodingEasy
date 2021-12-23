@@ -79,18 +79,6 @@ git push origin YourBranchName
 
 
 
-
-
-## Our valuable Contributors👩‍💻👨‍💻 :
-
-<a href="https://github.com/arpit456jain/CodingEasy/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=arpit456jain/CodingEasy" />
-</a>
-
-
- <br>
- <br>
-
 ## Project Admin 👷👷:
 
 
@@ -102,6 +90,18 @@ git push origin YourBranchName
 </tr>
 </table>
 <br>
+
+
+
+## Our valuable Contributors👩‍💻👨‍💻 :
+
+<a href="https://github.com/arpit456jain/CodingEasy/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=arpit456jain/CodingEasy" />
+</a>
+
+
+ <br>
+ <br>
 
 
 ## All the best! 🥇
