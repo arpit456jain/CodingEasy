@@ -118,7 +118,7 @@ git push origin YourBranchName
 
 ### This project is a part of following Open Source Program
 
-<p align="center"><img alt="Logo" width=55% src="https://user-images.githubusercontent.com/71459989/144653495-ec7b077d-fdb3-47a8-b74e-9306e53d1c7a.png"></p>
+<p align="center"><img alt="Logo" width=55% src="https://user-images.githubusercontent.com/55352601/147348331-5e8361aa-8d7c-40fb-bb2d-bec5a1f9da59.png"></p>
 
 
 
