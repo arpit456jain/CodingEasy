@@ -1,15 +1,26 @@
 # <p align = "center"> CodingEasy </p>
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/arpit456jain/CodingEasy/pulls) &nbsp; 
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/) &nbsp; 
+<div align="center">
+ 
+![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)
+ 
+ <br>
+ 
+![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) &nbsp;  ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)  &nbsp;
 <a href="https://github.com/arpit456jain/CodingEasy"><img src="https://sloc.xyz/github/arpit456jain/CodingEasy" alt="LOC"/></a> &nbsp;
 <a href="https://github.com/arpit456jain/CodingEasy/stargazers"><img src="https://img.shields.io/github/stars/arpit456jain/CodingEasy" alt="Stars Badge"/></a> &nbsp;<a href="https://github.com/arpit456jain/CodingEasy/network/members"><img src="https://img.shields.io/github/forks/arpit456jain/CodingEasy" alt="Forks Badge"/></a> &nbsp;
 ![GitHub contributors](https://img.shields.io/github/contributors/arpit456jain/CodingEasy?color=blue) &nbsp;
 ![GitHub last commit](https://img.shields.io/github/last-commit/arpit456jain/CodingEasy?color=red&style=plastic) &nbsp;
 ![Repo. Size](https://img.shields.io/github/repo-size/arpit456jain/CodingEasy?color=white) &nbsp;  
+<a href="https://github.com/arpit456jain/CodingEasy/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?v=103"></a>&nbsp;
+<a href="https://github.com/arpit456jain/CodingEasy/issues"><img src="https://img.shields.io/github/issues/arpit456jain/CodingEasy?color=0059b3"></a>&nbsp;
+<a href="https://github.com/arpit456jain/CodingEasy/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/arpit456jain/CodingEasy?color=yellow"></a>&nbsp;
+<a href="https://github.com/arpit456jain/CodingEasy/pulls"><img src="https://img.shields.io/github/issues-pr/arpit456jain/CodingEasy?color=brightgreen"></a>&nbsp;
+<a href="https://github.com/arpit456jain/CodingEasy/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed-raw/arpit456jain/CodingEasy?color=0059b3"></a> &nbsp;
+
 
 </br>
-
+</div>
 
  
  ## 📌 Opensource Programs
