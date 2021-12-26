@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+    background-color: antiquewhite;
+}
+.carousel-item> img{
+    height: 70vh;
+}
+.heading{
+    font-family: 'Lobster', cursive;
+}
+.card> img{
+    height: 30vh;
+}
+.btn{
+    color: white !important;
+    background-color: teal !important;
+}
+.h1{ text-align: 'center';}
+
+pre { 
+    display: flex;
+white-space: pre-line;
+word-break: break-word;
+}
+.card {
+    display: flex;
+    align-items: row;
+    justify-content: center;
+    transition: 0.1s;
+  }
+@media only screen and (min-device-width: 481px) {
+    .code {
+      margin-left: 80px;
+    }
+  }
