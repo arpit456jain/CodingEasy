@@ -1,29 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-body{
-    background-color: antiquewhite;
-}
-.carousel-item> img{
-    height: 70vh;
-}
-.heading{
-    font-family: 'Lobster', cursive;
-}
-
-.h1{ text-align: 'center';}
-
-
-pre { 
-    display: flex;
-white-space: pre-line;
-word-break: break-word;
-}
-
 .para{
     font-size: 20px;
 }
-
-@media only screen and (min-device-width: 481px) {
-    .code {
-      margin-left: 80px;
-    }
-  }
