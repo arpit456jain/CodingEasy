@@ -7,12 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../common.css">
-  <link rel="stylesheet" href="basic.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-   <title>www.codingeasy.com</title>
+  <title>www.codingeasy.com</title>
 
 </head>
 
@@ -48,56 +47,55 @@
   </div> <br>
 
   <section class="container mt-3">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-          <h1 class="text-center display-3">CSS Syntax</h1>
+    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+      <h1 class="text-center display-3">CSS Padding</h1>
 
-          <p class="text-center display-6">A CSS rule consists of a selector and a declaration block.
-          </p>
+    </div>
+  </section>
+  <br><br>
+
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">CSS Padding</h3>
+        <p class="text-center">The CSS <code>padding</code> properties are used to generate space around 
+            an element's content, inside of any defined borders
+            <br>With CSS, you have full control over the margins. There are properties
+            for setting the margin for each side of an element (top, right, bottom, and left).<br>
+
+            <br>CSS has properties for specifying the padding for each
+            side of an element:
+        </p>
+        <ul>
+            <li><code>padding-top</code></li>
+            <li><code>padding-right</code></li>
+            <li><code>padding-bottom</code></li>
+            <li><code>padding-left</code></li>
+        </ul>
+
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3>
+        <div class="code">
+            <pre>
+        <code>
+            p {<br>&nbsp;&nbsp;padding-top: 100px;<br>
+                &nbsp;&nbsp;padding-bottom: 100px;<br>
+                &nbsp;&nbsp;padding-right: 150px;<br>
+                &nbsp;&nbsp;padding-left: 80px;<br>}
+                </code>
+            </pre>
         </div>
       </div>
     </div>
   </section>
   <br><br>
-  <!-- Code and Text -->
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="heading text-center display-4">CSS Syntax </h3><br></br>
-        <img class="photo" src="css_syntax.png" alt="" srcset=""><br></br>
-        <p>The selector points to the HTML element you want to style.<br></br>
-          The declaration block contains one or more declarations separated by semicolons.<br></br>
-          Each declaration includes a CSS property name and a value, separated by a colon.<br></br>
-          Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly
-          braces.
 
-        </p>
-      </div>
+  
+  <br><br>
 
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Example</h3>
-        <p>In this example all &lt;p&gt; elements will be center-aligned, with a red text color:</p>
-        <div class="code">
-          <pre>
-       <code>
-        p {
-          color: red;
-          text-align: center;
-        }
-       </code>
-     </pre>
-        </div>
-        <h3 class="text-center">Example Explained</h3><br></br>
-        <ul>
-          <li> p is a selector in CSS (it points to the HTML element you want to style: &lt;p&gt;).</li>
-          <li> color is a property, and red is the property value</li>
-          <li> text-align is a property, and center is the property value</li>
-        </ul>
-      </div>
-    </div>
-    </div>
-  </section><br><br>
   <footer class="page-footer font-small teal pt-4">
 
     <!-- Footer Text -->
@@ -150,6 +148,7 @@
   </script>
   </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
 </body>
 
 </html>
