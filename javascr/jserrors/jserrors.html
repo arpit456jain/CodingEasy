@@ -48,15 +48,107 @@
      <section class="container mt-3">
         <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
             <h1 class="display-4">JS Errors</h1>
-            <p class="lead">CSS stands for Cascading Style Sheets
-CSS describes how HTML elements are to be displayed on screen, paper, or in other media
-CSS saves a lot of work. It can control the layout of multiple web pages all at once
-External stylesheets are stored in CSS files
+            <p class="lead">The <code >try</code> statement lets you test a block of code 
+              for errors.<br>
+              The <code >catch</code> statement lets you handle the error.<br>
+              The <code >throw</code> statement lets you create custom 
+              errors.<br>
+              The <code >finally</code> statement lets you execute code, 
+              after try and catch, regardless of the result.</p>
 </p>
         </div>
     </section>
     <br><br>
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+  
+          <h3 class="text-center display-6">JavaScript try and catch</h3>
+          <p class="text-center">The <code >try</code> statement allows you to define a block of code to be 
+            tested for errors while it is being executed.</p>
+            <p>The <code >catch</code> statement allows you to define a block of code to 
+            be executed, if an error occurs in the try block.</p>
+            <p>The JavaScript statements <code >try</code> and <code >catch</code> 
+            come in pairs
+            
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h3 class="text-center">Example</h3>
+  
+          <div class="code">
+            <pre>
+                <code>
+                  try {<br>
+                    &nbsp; <em>Block of code to try<br>
+                  </em>}<br>
+                  catch(<em>err</em>) {<br>
+                    &nbsp; <em>Block of code to handle errors<br>
+                  </em>}
+                </code>
+              </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br><br>
 
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+  
+          <h3 class="text-center display-6">The throw Statement</h3>
+          <p class="text-center">Technically you can <strong>throw an exception (throw an error)</strong>.</p>
+
+          <p>The exception can be a JavaScript <code >String</code>, a <code >Number</code>, a <code >Boolean</code> or an <code >Object</code></p>
+            
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h3 class="text-center">Example</h3>
+  
+          <div class="code">
+            <pre>
+                <code>
+                  throw &quot;Too big&quot;;&nbsp;&nbsp;&nbsp; // throw a text<br>
+throw 500;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // throw a number
+                </code>
+              </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br><br>
+
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+  
+          <h3 class="text-center display-6">The finally Statement</h3>
+          <p class="text-center">The <code>finally</code> statement lets you execute code, after try and 
+            catch, regardless of the result:</p>
+            
+            
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h3 class="text-center">Example</h3>
+  
+          <div class="code">
+            <pre>
+                <code>
+                  try {<br>
+                    &nbsp; <em>Block of code to try<br>
+                  </em>}<br>
+                  catch(<em>err</em>) {<br>
+                    &nbsp; <em>Block of code to handle errors<br>
+                  </em>}
+                  <br>finally {<br>&nbsp; <em>Block of code to be executed regardless of the try / catch result<br>
+                  </em>}
+                </code>
+              </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br><br>
 
     <footer class="page-footer font-small teal pt-4">
 
