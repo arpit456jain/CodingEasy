@@ -1,0 +1,9 @@
+Machine Learning is a way by which machines are made to think like humans and process tasks with the prior knowledge of some past datasets.
+
+We generally use 3 different terms in this domain which have a major difference between them.
+They are-
+Artificial Intelligence (AI), Machine Learning (ML), Deep Learning (DL)?
+ML is a subset of AI. And DL is a subset of ML.
+
+If Artificial Intelligence is a subject, then Machine Learning is just a theory to solve various kinds of AI Problems. And the AI problems that are unsolvable by ML Algorithms can be solved by DL. This is because Deep Learning includes usage of Neural Networks.
+Machine Learning includes a process called Training where dataset is fed to the machine. We choose a particular Machine Learning Algorithm to proceed with the problem. The algorithm gradually develops a relationship between features and corresponding labels. This relationship is called Model.
