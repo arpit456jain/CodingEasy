@@ -50,21 +50,63 @@
   <section class="container mt-3">
     <div class="row">
       <div class="col-sm-12">
-    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-      <h1 class="text-center">ReGex -  Regular Expressions </h1>
-     
-    </div>
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+          <h1 class="text-center">ReGex - Regular Expressions </h1>
+          <p class="text-center"> A RegEx, or Regular Expression, is a sequence of characters that forms a search
+            pattern.
+            <br>RegEx can be used to check if a string contains the specified search pattern.
+          </p>
+        </div>
   </section>
   <br><br>
-  
+
 
   <!-- code and text -->
 
-  <section class="container mt-3">
-       
-  </section>
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">RegEx Module</h3>
+        <p class="text-center">Python has a built-in package called <code>re</code>, which can be used to work with
+          Regular Expressions.</p>
 
-  
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3>
+        <div class="code">
+          <pre>
+                <code>
+                  import re
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">RegEx in Python</h3>
+        <p class="text-center">When you have imported the <code>re</code> module, you
+          can start using regular expressions.</p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3>
+        <div class="code">
+          <pre>
+                <code>
+                  <p>Search the string to see if it starts with &quot;The&quot; and ends with &quot;Spain&quot;:</p>
+                  import re<br><br>txt = &quot;The rain in Spain&quot;<br>x = re.search(&quot;^The.*Spain$&quot;, txt)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
   <footer class="page-footer font-small teal pt-4">
 
     <!-- Footer Text -->
@@ -111,10 +153,10 @@
   <script src="https://kit.fontawesome.com/16444fe168.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-  </script>
+    </script>
   </script>
 
 
