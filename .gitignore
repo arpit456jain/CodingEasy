@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# pycharm files
+.idea
 # vscode files
 .vscode
 # C extensions
