@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -43,18 +44,18 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Features/features.html">Features</a>
+              <a class="nav-link" href="/feature">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Pricing/pricing.html">Pricing</a>
+              <a class="nav-link" href="/pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="text-md-end nav-link" href="Login/login.html">Login</a>
+              <a class="text-md-end nav-link" href="/login">Login</a>
             </li>
           </ul>
         </div>
@@ -99,19 +100,19 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./img/1.jpg" class="d-block w-100" alt="..." />
+              <img src="{% static 'img/1.jpg' %}" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block"></div>
             </div>
             <div class="carousel-item">
-              <img src="./img/2.jpg" class="d-block w-100" alt="..." />
+              <img src=".{% static 'img/2.jpg' %}" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block"></div>
             </div>
             <div class="carousel-item">
-              <img src="./img/3.jpg" class="d-block w-100" alt="..." />
+              <img src="{% static 'img/3.jpg' %}" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block"></div>
             </div>
             <div class="carousel-item">
-              <img src="./img/4.jpg" class="d-block w-100" alt="..." />
+              <img src="{% static 'img/4.jpg' %}" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block"></div>
             </div>
           </div>
@@ -191,7 +192,7 @@
             <div class="card-body">
               <h5 class="card-title">HTML</h5>
               <p class="card-text">(HYPER TEXT MARKUP LANGUAGE)</p>
-              <a href="Html/html.html" class="btn">Start Course</a>
+              <a href="/html" class="btn">Start Course</a>
             </div>
           </div>
         </div>
@@ -205,17 +206,17 @@
             <div class="card-body">
               <h5 class="card-title">CSS</h5>
               <p class="card-text">(CASCADING STYLE SHEETS)</p>
-              <a href="css/css.html" class="btn">Start Course</a>
+              <a href="/css" class="btn">Start Course</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 text-center d-flex justify-content-center">
           <div class="card" style="width: 18rem">
-            <img src="./img/bootstrap.png" class="card-img-top" alt="..." />
+            <img src="{% static 'img/bootstrap.png' %}" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Bootstrap</h5>
               <p class="card-text">Some quick example text to build</p>
-              <a href="bootstrap/bootstrap.html" class="btn">Start Course</a>
+              <a href="/bootstrap" class="btn">Start Course</a>
             </div>
           </div>
         </div>
@@ -233,7 +234,7 @@
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="javascr/javascr.html" class="btn">Start Course</a>
+              <a href="/js" class="btn">Start Course</a>
             </div>
           </div>
         </div>
@@ -244,29 +245,29 @@
             <div class="card-body">
               <h5 class="card-title">Python</h5>
               <p class="card-text">Simple, high level, scripting and object-oriented programming language.</p>
-              <a href="python/python.html" class="btn">Start Course</a>
+              <a href="/py" class="btn">Start Course</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 text-center d-flex justify-content-center">
           <div class="card" style="width: 18rem">
-            <img src="./img/cpp.png" class="card-img-top" alt="..." />
+            <img src="{% static 'img/cpp.png' %}" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">C++</h5>
               <p class="card-text">General purpose, object-oriented, middle-level programming language</p>
-              <a href="CPP/cpp.html" class="btn">Start Course</a>
+              <a href="/cpp" class="btn">Start Course</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 text-center d-flex justify-content-center">
           <div class="card" style="width: 18rem">
-            <img src="./img/machine_learning.png" class="card-img-top" alt="..." />
+            <img src="{% static 'img/machine_learning.png' %}" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Machine Learning</h5>
               <p class="card-text">Type of artificial intelligence</p>
-              <a href="Machine Learning/ML.html" class="btn">Start Course</a>
+              <a href="/ml" class="btn">Start Course</a>
             </div>
           </div>
         </div>

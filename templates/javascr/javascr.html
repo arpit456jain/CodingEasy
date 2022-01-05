@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -6,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="{% static 'css/common.css' %}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -29,15 +30,15 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../Features/features.html">Features</a>
+              <a class="nav-link" href="/feature">Features</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../Pricing/pricing.html">Pricing</a>
+              <a class="nav-link" href="/pricing">Pricing</a>
           </li>
-        </ul>
+      </ul>
       </div>
     </div>
   </nav>
@@ -108,7 +109,7 @@
 
           <div class="card-body">
             <h5 class="card-title">Syntax</h5>
-            <a href="syntax/syntax.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=syntax" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -120,7 +121,7 @@
           <div class="card-body">
             <h5 class="card-title">Operators</h5>
 
-            <a href="operators/operators.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=operator" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -130,7 +131,7 @@
           <div class="card-body">
             <h5 class="card-title">Data Types</h5>
 
-            <a href="datatypes/datatypes.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=datatype" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -140,7 +141,7 @@
 
           <div class="card-body">
             <h5 class="card-title">Functions</h5>
-            <a href="functions/functions.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=functions" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -152,7 +153,7 @@
           <div class="card-body">
             <h5 class="card-title">Objects</h5>
 
-            <a href="objects/objects.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=object" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -162,7 +163,7 @@
           <div class="card-body">
             <h5 class="card-title">Events</h5>
 
-            <a href="events/events.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=event" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -172,7 +173,7 @@
 
           <div class="card-body">
             <h5 class="card-title">String</h5>
-            <a href="String/string.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=string" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -184,7 +185,7 @@
           <div class="card-body">
             <h5 class="card-title">JS Numbers</h5>
 
-            <a href="jsnumbers/jsnumbers.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=number" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -194,7 +195,7 @@
           <div class="card-body">
             <h5 class="card-title">JS Classes</h5>
 
-            <a href="jsclasses/jsclasses.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=class" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -204,7 +205,7 @@
 
           <div class="card-body">
             <h5 class="card-title">JS Math</h5>
-            <a href="jsmath/jsmath.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=math" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -216,7 +217,7 @@
           <div class="card-body">
             <h5 class="card-title">JS Conditions</h5>
 
-            <a href="jsconditions/jsconditions.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=condition" class="btn">Explore</a>
           </div>
         </div>
       </div>
@@ -226,7 +227,7 @@
           <div class="card-body">
             <h5 class="card-title">JS Errors</h5>
 
-            <a href="jserrors/jserrors.html" class="btn">Explore</a>
+            <a href="{% url 'js1' %}?data=error" class="btn">Explore</a>
           </div>
         </div>
       </div>
