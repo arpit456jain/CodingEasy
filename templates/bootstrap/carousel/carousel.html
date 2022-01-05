@@ -17,6 +17,11 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loader"></div>
+        </div>
+      <!-- /Preloader  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -151,7 +156,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
-    </script>
+    <script>
+        var loader = document.querySelector("#preloader")
+        window.addEventListener("load",vanish);
+        function vanish(){
+            setInterval(function(){
+      loader.classList.add("disapper")
+   }, 3000);
+        }
+       </script>
 </body>
 
 </html>
