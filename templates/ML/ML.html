@@ -17,6 +17,11 @@
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="loader"></div>
+    </div>
+  <!-- /Preloader  -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -252,6 +257,16 @@
   </script>
   </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <script>
+    var loader = document.querySelector("#preloader")
+    window.addEventListener("load",vanish);
+    function vanish(){
+      setInterval(function(){
+        loader.classList.add("disapper")
+     }, 3000);
+      
+    }
+   </script>
 </body>
 
 </html>

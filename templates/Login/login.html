@@ -12,6 +12,11 @@
     <title>Sign in & Sign up Form</title>
   </head>
   <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="loader"></div>
+      </div>
+    <!-- /Preloader  -->
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
@@ -103,5 +108,15 @@
     </div>
 
     <script src="{% static 'js/login/login.js' %}"></script>
+    <script>
+      var loader = document.querySelector("#preloader")
+      window.addEventListener("load",vanish);
+      function vanish(){
+        setInterval(function(){
+          loader.classList.add("disapper")
+       }, 3000);
+        
+      }
+     </script>
   </body>
 </html>
