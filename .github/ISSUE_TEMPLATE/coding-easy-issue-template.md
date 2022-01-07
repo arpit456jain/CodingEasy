@@ -1,12 +1,3 @@
----
-name: Coding-easy issue template
-about: Issue template
-title: ''
-labels: ''
-assignees: ''
-
----
-
 # Thanks for contributing to coding-easy
 
 ### Description of the issue you are creating _______
