@@ -8,18 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/common.css' %}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
     <title>www.codingeasy.com</title>
 </head>
 
-<body>
+<body style="background-color:lightyellow">
     <!-- Preloader -->
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div id="loader"></div>
-        </div> -->
-      <!-- /Preloader  -->
+    </div>
+    <!-- /Preloader  -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -27,8 +26,7 @@
                 <i class="fas fa-hands-helping"></i>
             </a>
             <a class="navbar-brand" href="../index.html">CodingEasy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -45,11 +43,11 @@
                 </ul>
             </div>
         </div>
-    </nav> 
+    </nav>
     <!-- /navbar -->
     <!-- About -->
     <br />
-    <div class="heading text-center display-3">CodingEasy</div>
+    <div class="heading text-center display-3" style="color:darkred;"><b>CodingEasy</b></div>
     <br />
 
     <br /><br />
@@ -58,13 +56,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-                    <h1 class="display-4">What is CPP</h1>
+                    <h1 class="display-4" style="color:darkgreen;font-family:cambria"><b>What is CPP</b></h1>
                     <p class="lead">
-                        C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming
-                        language that supports procedural, object-oriented, and generic programming.
-                        C++ is regarded as a middle-level language, as it comprises a combination of both high-level and
-                        low-level language features. C++ is a superset of C, and that virtually any legal C program is a
-                        legal C++ program.
+                        C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural, object-oriented, and generic programming.<br> C++ is regarded as a <b>middle-level language</b>, as
+                        it comprises a combination of both high-level and low-level language features. C++ is a superset of C, and that virtually any legal C program is a legal C++ program.
 
 
                     </p>
@@ -77,28 +72,22 @@
     <section class="container mt-5">
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <h3 class="text-center">C++ Basic Syntax</h3>
+                <h3 class="text-center"><b style="color:darkred">C++ Basic Syntax</b></h3>
                 <p>
-                    When we consider a C++ program, it can be defined as a collection of objects that communicate via
-                    invoking each other's methods. Let us now briefly look into what a class, object, methods, and
-                    instant variables mean.
-                    1. Object − Objects have states and behaviors. Example: A dog has states - color, name, breed as
-                    well as behaviors - wagging, barking, eating. An object is an instance of a class.
-                    2. Class − A class can be defined as a template/blueprint that describes the behaviors/states that
-                    object of its type support.
-                    3. Methods − A method is basically a behavior. A class can contain many methods. It is in methods
-                    where the logics are written, data is manipulated and all the actions are executed.
-                    4. Instance Variables − Each object has its unique set of instance variables. An object's state is
-                    created by the values assigned to these instance variables.
+                    When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods.<br> Let us now briefly look into what a class, object, methods, and instant variables mean.
+                    <ol>1. <b style="font-size:20;color:green">Object</b> − Objects have states and behaviors. An object is an instance of a class.<br> Example: A dog has states - color, name, breed as well as behaviors - wagging, barking, eating.</ol>
+                    <ol>2. <b style="font-size:20;color:green">Class</b> − A class can be defined as a template/blueprint that describes the behaviors/states that object of its type support.</ol>
+                    <ol> 3. <b style="font-size:20;color:green">Methods</b> − A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.</ol>
+                    <ol> 4. <b style="font-size:20;color:green">Instance Variables</b> − Each object has its unique set of instance variables. An object's state is created by the values assigned to these instance variables.</ol>
                 </p>
             </div>
 
             <div class="col-md-6 col-sm-12">
-                <h3 class="text-center">Example</h3>
+                <h3 class="text-center"><b style="color:darkred">Example</b></h3>
                 <div class="code">
                     <pre>
            <code>
-            #include&lt;iostream &gt; 
+            #include &lt;iostream&gt; 
 
                 int main() {
                     std::cout << "Hello World!";
@@ -407,22 +396,21 @@
     <!-- Footer -->
     <!-- /footer -->
     <script src="https://kit.fontawesome.com/16444fe168.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
     <script>
         var loader = document.querySelector("#preloader")
-        window.addEventListener("load",vanish);
-        function vanish(){
-          setInterval(function(){
-            loader.classList.add("disapper")
-         }, 3000);
-          
+        window.addEventListener("load", vanish);
+
+        function vanish() {
+            setInterval(function() {
+                loader.classList.add("disapper")
+            }, 3000);
+
         }
-       </script>
+    </script>
 </body>
 
 </html>
