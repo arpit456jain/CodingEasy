@@ -21,14 +21,15 @@
       <div class="forms-container">
         <div class="signin-signup">
           <form action="#" class="sign-in-form">
+            {% csrf_token%}
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input name ="username"type="text" placeholder="Enter Username" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input name = "password" type="password" placeholder="Enter Password" />
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
@@ -47,21 +48,26 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-up-form">
+          <form action="#" class="sign-up-form" method="POST">
+            {% csrf_token %}
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              {{form.username}}
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              {{form.email}}
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              {{form.password1}}
             </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              {{form.password2}}
+            </div>
+            <input type="submit" name ="CreateUser" class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -80,7 +86,11 @@
           </form>
         </div>
       </div>
-
+      <div class="message">
+        {% for message in messages%}
+        <p>{{message}}</p>
+        {% end for %}
+      </div>
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
@@ -106,7 +116,6 @@
         </div>
       </div>
     </div>
-
     <script src="{% static 'js/login/login.js' %}"></script>
     <script>
       var loader = document.querySelector("#preloader")
@@ -117,6 +126,19 @@
        }, 3000);
         
       }
+     </script>
+     <script>
+
+     //Query All input fields
+     var form_fields = document.getElementsByTagName('input')
+     form_fields[4].placeholder='Username';
+     form_fields[5].placeholder='Email';
+     form_fields[6].placeholder='Password';
+     form_fields[7].placeholder='Confirm Password';
+ 
+     for (var field in form_fields){	
+     form_fields[field].className += ' form-control'
+     }
      </script>
   </body>
 </html>
