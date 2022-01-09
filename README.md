@@ -205,3 +205,4 @@ Congratulations! You've created your virtual environment.
  
 
 [![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/arpit456jain/CodingEasy)
+Give it star if you like this project or you learn something from it!!
