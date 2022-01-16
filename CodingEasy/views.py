@@ -4,6 +4,8 @@ from .forms import CreationUserForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 
+def contact_us(request):
+    return render(request, 'contact/contact.html')
 
 def index(request):
   return render(request,'index.html')
