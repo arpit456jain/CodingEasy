@@ -1,10 +1,29 @@
+import imp
+from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreationUserForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
-
-def contact_us(request):
+from django.core.mail import send_mail
+from django.conf import settings
+def contact(request):
+    if  request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        
+        data = {
+            "name" : name,
+            "email" : email,
+            "message" : message
+        }
+        message = '''
+        New Message : {}
+        From : {}
+        '''.format(data['message'],data['email'])
+        send_mail(data['name'],message,'settings.EMAIL_HOST_USER','',['codingeasy@gmail.com'])
+        return HttpResponse('Thank you for submitting the form,we will get in touch soon :)')
     return render(request, 'contact/contact.html')
 
 def index(request):

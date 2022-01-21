@@ -25,7 +25,9 @@
 
             <!-- Left contact page -->
 
-            <form id="contact-form" class="form-horizontal" role="form">
+            <form action ="/contact" id="contact-form" class="form-horizontal" role="form"
+            method="POST">
+            {% csrf_token %}
 
                 <div class="form-group">
                     <div class="col-sm-12">
@@ -43,7 +45,7 @@
 
                 <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
 
-                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND" name="send">
                     <div class="alt-send-button">
                         <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
                     </div>
