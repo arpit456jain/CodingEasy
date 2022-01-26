@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Auth',
     'DashBoard',
-    'Home'
+    'Home',
+    'import_export',
 ]
 
 MIDDLEWARE = [
