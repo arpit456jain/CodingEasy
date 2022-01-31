@@ -187,3 +187,7 @@ def cpp1(request):
 def ml(request):
   return render(request,'./ML/ML.html')
 
+
+def course_video(request):
+    return render(request,'./Course_video/video_page.html')
+
