@@ -3,9 +3,36 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import CreationUserForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from django.core.mail import send_mail, BadHeaderError
+from django.template.loader import render_to_string
+from django.http import HttpResponse
+from django. views. decorators. csrf import csrf_exempt
 
+@csrf_exempt
 def contact_us(request):
-    return render(request, 'contact/contact.html')
+    if request.method=="POST":
+        print("IN POST")
+        name=request.POST.get('name')
+        email=request.POST.get('email')
+        message=request.POST.get('message')
+        email_template_name="contact/contact_info_mail.txt"
+        subject='User tried to Contact'
+
+        data={
+            "name":name,
+            "email":email,
+            "message":message
+        }
+        email = render_to_string(email_template_name, data)
+        try:
+            
+            send_mail(subject,email,'dbmsprojekt@gmail.com',['codingeasy@gmail.com'],fail_silently=False)
+        except BadHeaderError:
+            return HttpResponse('Invalid header found')
+        return HttpResponse('Email sent')
+    else:
+        print('Coding Easy')
+        return render(request, 'contact/contact.html')
 
 def index(request):
   return render(request,'index.html')
