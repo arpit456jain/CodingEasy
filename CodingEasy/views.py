@@ -196,7 +196,14 @@ def cpp1(request):
 
 def ml(request):
   return render(request,'./ML/ML.html')
-
+def ml1(request):
+        query = request.GET.get('data')
+        if query=="linregx":
+            return render(request,'./ML/Linear_Regression/Linear_Regression.html')
+        elif query=="logregx":
+            return render(request,'./ML/Logistic_Regression/Logistical_Regression.html')
+        elif query=="knn":
+            return render(request,'./ML/K_Nearest_Neighbors/K_Nearest_Neighbors.html')
 
 def course_video(request):
     return render(request,'./Course_video/video_page.html')

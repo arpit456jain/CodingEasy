@@ -1,5 +1,5 @@
 asgiref==3.5.0
-backports.zoneinfo==0.2.1
+backports.zoneinfo==0.2.1p
 defusedxml==0.7.1
 diff-match-patch==20200713
 Django==4.0.1

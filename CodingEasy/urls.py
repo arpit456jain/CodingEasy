@@ -42,5 +42,6 @@ urlpatterns = [
     path('cpp',views.cpp,name='cpp'),
     path('cpp1',views.cpp1,name='cpp1'),
     path('ml',views.ml,name='ml'),
+    path('ml1',views.ml1,name='ml1'),
     path('course_video',views.course_video,name='course_video')
 ]
