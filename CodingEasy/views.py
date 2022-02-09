@@ -204,6 +204,16 @@ def ml1(request):
             return render(request,'./ML/Logistic_Regression/Logistical_Regression.html')
         elif query=="knn":
             return render(request,'./ML/K_Nearest_Neighbors/K_Nearest_Neighbors.html')
+        elif query=="decitree":
+            return render(request,'./ML/Decision_Tree/Decision_Tree.html')
+        elif query=="kmc":
+            return render(request,'./ML/K_Means_Clustering/K_Means_Clustering.html')
+        elif query=="nv":
+            return render(request,'./ML/Naive_Bayes/Naive_Bayes.html')
+        elif query=="rf":
+            return render(request,'./ML/Random_Forest/Random_Forest.html')
+        elif query=="svm":
+            return render(request,'./ML/Support_Vector_Machines/Support_Vector_Machines.html')
 
 def course_video(request):
     return render(request,'./Course_video/video_page.html')
