@@ -117,15 +117,23 @@ git push origin YourBranchName
 
 </br>
 
-## Project Setup
+## Project Information:
 
-virtualenv is a tool to create isolated Python environments. Since Python 3.3, a subset of it has been integrated into the standard library under the venv module. The venv module does not offer all features of this library, to name just a few more prominent:
+<em>The venv module provides support for creating lightweight “virtual environments” with their own site directories, optionally isolated from system site directories</em>. Each virtual environment has its own Python binary (which matches the version of the binary that was used to create this environment) and can have its own independent set of installed Python packages in its site directories. Since Python 3.3, a subset of it has been integrated into the standard library under the venv module. 
+<em>The venv module does not provide all features of this library</em>, to name just a few prominent: 
 
 - is slower (by not having the app-data seed method),
 - is not as extendable,
 - cannot create virtual environments for arbitrarily installed python versions (and automatically discover these),
 - is not upgrade-able via pip,
 - does not have as rich programmatic API (describe virtual environments without creating them).
+
+## Tutorials For Better Understanding of the project we are woking on :
+
+
+- <a href="https://www.youtube.com/watch?v=N5vscPTWKOk">Corey Scaffer Tutorial (One Of the Best 😍)</a>
+- Second Resource we can do to understand is to read Python Docs.
+## Project Setup
 
 **1. Create a Virtual Environment**
 
