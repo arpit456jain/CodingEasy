@@ -26,14 +26,23 @@
  ## 📌 Opensource Programs
 
 
-### This project is a part of following Open Source Program
+### This project is a part of following Open Source Programs
 
 <p align="center"><img alt="Logo" width=55% src="https://user-images.githubusercontent.com/55352601/147348331-5e8361aa-8d7c-40fb-bb2d-bec5a1f9da59.png"></p>
 
+## ✨ Motivation
+
+This project is part of the [GirlScript Summer of Code 2020](https://www.gssoc.tech/) Open Source Program.
+
+### Frequently Asked Questions(FAQs) for [GSSoC'20](https://www.gssoc.tech/)
+
+> This project is accepting contributions under [GirlScript Summer of Code 2020](https://www.gssoc.tech/) - three months long Open Source program conducted by [GirlScript Foundation](https://www.gssoc.tech/).
+
+[![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://www.gssoc.tech/)
 
 <br>
 
-## Table of Contents
+## 💻Table of Contents
   - **[How to Contribute?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-contribute)**
   - **[How to make a Pull Request?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-make-a-pull-request)**
   - **[Project Setup](https://github.com/tandrimasingha/CodingEasy/blob/master/README.md#project-setup)**
@@ -41,14 +50,14 @@
   - **[Our Valuable Contributors](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#our-valuable-contributors)**
   
   
-## How to Contribute?
+## 👩‍💻 How to Contribute?
 
 - Take a look at the existing [Issues](https://github.com/ssurbhi09/Github-Automation/issues) or [create a new issue](https://github.com/ssurbhi09/Github-Automation/issues/new/choose)!
 - [Fork the Repo](https://github.com/ssurbhi09/Github-Automation/issues/new/fork), create a branch for any issue that you are working on and commit your work.
 - Create a **[Pull Request](CodingEasy)** (_PR_), which will be promptly reviewed and given suggestions for improvements by the community.
 - Add screenshots or screen captures to your Pull Request to help us understand the effects of the changes that are included in your commits.
 
-## How to make a Pull Request?
+## 📍 How to make a Pull Request?
 
 **1.** Start by making a fork the [**CodingEasy**](https://github.com/arpit456jain/CodingEasy) repository. Click on the <a href="https://github.com/arpit456jain/CodingEasy/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
 
@@ -117,7 +126,7 @@ git push origin YourBranchName
 
 </br>
 
-## Project Setup
+## ⚙ Project Setup
 
 virtualenv is a tool to create isolated Python environments. Since Python 3.3, a subset of it has been integrated into the standard library under the venv module. The venv module does not offer all features of this library, to name just a few more prominent:
 
@@ -194,7 +203,7 @@ Congratulations! You've created your virtual environment.
 </table>
 <br>
 
-## Our valuable Contributors
+## 😎Our valuable Contributors
 
 
 <a href="https://github.com/arpit456jain/CodingEasy/graphs/contributors">
@@ -203,6 +212,11 @@ Congratulations! You've created your virtual environment.
 
  <br> <br>
  
+---
 
+<div align="center">
+ <b>Give it ⭐ if you like this project or you learn something from it!!</b>
+<br> <br>
+ 
 [![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/arpit456jain/CodingEasy)
-Give it star if you like this project or you learn something from it!!
+</div>
