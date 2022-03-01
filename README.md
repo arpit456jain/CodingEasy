@@ -133,6 +133,7 @@ git push origin YourBranchName
 
 - <a href="https://www.youtube.com/watch?v=N5vscPTWKOk">Corey Scaffer Tutorial (One Of the Best 😍)</a>
 - Second Resource we can do to understand is to read Python Docs.
+
 ## Project Setup
 
 **1. Create a Virtual Environment**
