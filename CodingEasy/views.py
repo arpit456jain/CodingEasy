@@ -10,31 +10,6 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
 
-@csrf_exempt
-def contact_us(request):
-    if request.method=="POST":
-        print("IN POST")
-        name=request.POST.get('name')
-        email=request.POST.get('email')
-        message=request.POST.get('message')
-        email_template_name="contact/contact_info_mail.txt"
-        subject='User tried to Contact'
-
-        data={
-            "name":name,
-            "email":email,
-            "message":message
-        }
-        email = render_to_string(email_template_name, data)
-        try:
-            
-            send_mail(subject,email,'dbmsprojekt@gmail.com',['codingeasy@gmail.com'],fail_silently=False)
-        except BadHeaderError:
-            return HttpResponse('Invalid header found')
-        return HttpResponse('Email sent')
-    else:
-        print('Coding Easy')
-        return render(request, 'contact/contact.html')
 
 def index(request):
   return render(request,'index.html')
@@ -51,19 +26,7 @@ def registerPage(request):
     context ={'form':form}
     return render(request,'./login/login.html',context)
 
-def loginPage(request):
-    if  request.method == 'POST':
-        username=request.POST.get('username')
-        password=request.POST.get('password')
 
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request,user)
-            return redirect('home')
-        else:
-            messages.info(request, 'Username or Password is incorrect')
-    context ={}
-    return render(request,'./login/login.html',context)
 def feature(request):
   return render(request,'./Features/features.html')
 def pricing(request):
