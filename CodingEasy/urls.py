@@ -13,35 +13,34 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from unicodedata import name
+# Basic Imports
 from django.contrib import admin
-from django.urls import path,include
-from . import views
+from django.urls import path, include
+# Authentication System Imports
+from users import views as user_views
+from django.contrib.auth import views as auth_views
+# Static Files (User Images) Imports
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path('auth', include("Auth.urls")),
-    path('dashboard', include("DashBoard.urls")),
-    path('home', include("Home.urls")),
+    # Admin Route
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),
-    path('contact',views.contact_us,name='contact'),
-    path('login',views.registerPage,name='registerPage'),
-    path('contact',views.contact_us,name='contact'),
-    path('feature',views.feature,name='feature'),
-    path('pricing',views.pricing,name='pricing'),
-    path('html',views.html,name='html'),
-    path('html1',views.html1,name='html1'),
-    path('css',views.css,name='css'),
-    path('css1',views.css1,name='css1'),
-    path('js',views.js,name='js'),
-    path('js1',views.js1,name='js1'),
-    path('bootstrap',views.bootstrap,name='bootstrap'),
-    path('bootstrap1',views.bootstrap1,name='bootstrap1'),
-    path('py',views.py,name='py'),
-    path('py1',views.py1,name='py1'),
-    path('cpp',views.cpp,name='cpp'),
-    path('cpp1',views.cpp1,name='cpp1'),
-    path('ml',views.ml,name='ml'),
-    path('ml1',views.ml1,name='ml1'),
-    path('course_video',views.course_video,name='course_video')
+    # home app Route
+    path('', include('home.urls')),
+    # blog app Route
+    path('blog/', include('blog.urls')),
+    # user app Routes
+    path('register/', user_views.register, name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('profile/', user_views.profile, name='profile'),
+    # password reset Routes
+    path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
+    path('password-reset/done', auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'),
+    path('password-reset-confirm/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+    path('password-reset-complete', auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'),
 ]
+# Accessing static files in development mode 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

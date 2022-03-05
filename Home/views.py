@@ -1,30 +1,26 @@
-from django.shortcuts import redirect, render
-from django.http import HttpResponse
-from django.core.mail import send_mail, BadHeaderError
-from django.template.loader import render_to_string
-# Create your views here.
+from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.models import User
+from django.views.generic import CreateView
+from django.contrib import messages
+from .models import Contact
+
 def home(request):
-    return HttpResponse("<h2 align = 'center'> Hello Home</h2>")
+    return render(request, 'home/index.html', {'title': 'Home'})
 
-def contact_us(request):
-    if request.method=='POST':
-        name=request.POST.get('name')
-        email=request.POST.get('email')
-        message=request.POST.get('message')
-        email_template_name="contact_info_mail.txt"
-        subject='User tried to Contact'
+def courses(request):
+    return render(request, 'home/courses.html', {'title': 'Courses'})
 
-        data={
-            "name":name,
-            "email":email,
-            "message":message
-        }
-        email = render_to_string(email_template_name, data)
-        try:
-            send_mail(subject,email,'dbmsprojekt@gmail.com',['codingeasy@gmail.com'],fail_silently=False)
-        except BadHeaderError:
-            return HttpResponse('Invalid header found')
-        return redirect('/')
-    else:
-        print('Home')
-        return render(request, 'contact/contact.html')
+def about(request):
+    return render(request, 'home/about.html', {'title': 'About Us'})
+
+class ContactView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    model = Contact
+    fields = ['title', 'feedback']
+    success_message = "Your response was successfully submitted!"
+    extra_context = {'title': 'Contact Us'}
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)

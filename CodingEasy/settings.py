@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x_1=q*b(j*34f(dg0^2sa)-f$k^!0d(qa=@geze9s@8)-(!hy5'
+SECRET_KEY = 'django-insecure-@%q)v=@k%xw#b-lb@k2s=ga9gwmvou%bta$6-s0)oym^w&a@(g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Auth',
-    'DashBoard',
-    'Home',
-    'import_export',
+    # Register the apps
+    'home.apps.HomeConfig',
+    'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -58,8 +60,10 @@ ROOT_URLCONF = 'CodingEasy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        # Register the global template
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,22 +126,33 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Register the global static files
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
+    BASE_DIR / 'static'
 ]
+
+# Make a directory to save user profile images
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Crispy Forms Styling Engine definition
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Register the Login Redirect URL
+LOGIN_REDIRECT_URL = 'home-index'
+
+# Restricted pages automatically redirect at login form
+LOGIN_URL = 'login'
+
+# SMTP Configuration - Password Reset Configuration using Gmail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'dbmsprojekt@gmail.com'
-EMAIL_HOST_PASSWORD = 'XXXXXX'
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-
-
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
