@@ -19,14 +19,8 @@ from django.urls import path,include
 from . import views
 
 urlpatterns = [
-    path('auth', include("Auth.urls")),
-    path('dashboard', include("DashBoard.urls")),
-    path('home', include("Home.urls")),
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
-    path('contact',views.contact_us,name='contact'),
-    path('login',views.registerPage,name='registerPage'),
-    path('contact',views.contact_us,name='contact'),
     path('feature',views.feature,name='feature'),
     path('pricing',views.pricing,name='pricing'),
     path('html',views.html,name='html'),
