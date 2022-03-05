@@ -6,6 +6,8 @@ from django.views.generic import CreateView
 from django.contrib import messages
 from .models import Contact
 
+
+
 def home(request):
     return render(request, 'home/index.html', {'title': 'Home'})
 
