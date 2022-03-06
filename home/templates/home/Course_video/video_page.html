@@ -1,0 +1,221 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/course_video/course_video.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-hands-helping"></i>
+        </a>
+        <a class="navbar-brand" href="index.html">Coding Easy</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'index' %}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/feature">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-md-end nav-link" href="/login">Login/Signup</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /navbar -->
+    <div class="container">
+      <div class="main-video-grid">
+        <div>
+          <ul>
+            <li class="feature-video">
+              <div class="video">
+                <a
+                  href="//fast.wistia.net/embed/iframe/2tfeb8m254?popover=true"
+                  class="wistia-popover[height=388,playerColor=7b796a,width=640]"
+                  ><img
+                    src="https://embed-ssl.wistia.com/deliveries/cb5d03fe49288f51ec0d6506709d21abd6894655.jpg?image_play_button=true&image_play_button_color=7b796ae0"
+                    alt=""
+                    class="wistia-vid-img"
+                /></a>
+                <script
+                  charset="ISO-8859-1"
+                  src="//fast.wistia.com/assets/external/popover-v1.js"
+                ></script>
+              </div>
+            </li>
+            <li class="feature-video">
+              <div class="video">
+                <a
+                  href="//fast.wistia.net/embed/iframe/6sbvzlsrbb?popover=true"
+                  class="wistia-popover[height=388,playerColor=7b796a,width=640]"
+                  ><img
+                    src="https://embed-ssl.wistia.com/deliveries/fe1123344938b8660b6ee16a3977b49a837c034d.jpg?image_play_button=true&image_play_button_color=7b796ae0&"
+                    alt=""
+                    class="wistia-vid-img"
+                /></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+         
+
+
+          <ul style="clear: left;">
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/2ihykab0yi?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/afab7722fda22f689d92d3d5f2e0b2c52a57704f.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img" /></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hubfs/301847/Customer_Logos/ACLegg.png" title="AC Legg Logo" class="video-grid-logo"></p>
+                  <h3>AC Legg</h3>
+                  <p>A.C. Legg was not only faced with impending regulatory requirements, but they were also embarking on SQF certification (Safe Quality Food). With everything involved with both of these huge undertakings, A.C. Legg needed a tool to help manage everything. Find out how TraceGains helped.</p>
+                </div>
+              </li>
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/bbhwm60w3g?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/c21179c774e8584de521411641c2c2d45e8cda33.jpg?image_play_button=true&image_play_button_color=7b796ae0" alt="" class="wistia-vid-img" /></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hubfs/301847/Customer_Logos/BBU.png" title="Bimbo Bakeries Logo" class="video-grid-logo"></p>
+                  <h3>Bimbo Bakeries</h3>
+                  <p>Bimbo Bakeries USA (BBU), part of Grupo Bimbo, S.A.B. de C.V., the world's largest baking company operating in fourteen countries, itself operates 65 facilities in the United states. Learn how TraceGains helps BBU complement its goal to building a standard quality system for the entire company. BBU is now better equiped to prevent supplier-introduced problems across its North American operation.</p>
+                </div>
+              </li>
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/u580za2rs4?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/84b9481f75deadeeed712df09512096a5ff14d2f.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img" /></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hubfs/301847/Customer_Logos/flavorchem_logo.png" title="Flavorchem Logo" class="video-grid-logo"></p>
+                  <h3>Flavorchem</h3>
+                  <p>Flavorchem Corp. specializes in the creation and manufacture of flavor and color solutions for food and beverages. Their mission is to create memorable sensory experiences. Flavorchem's strength lies in a foundation built on unsurpassed service joined with a focused Quality approach in all facets of operations. As a full service company, Flavorchem specializes in everything from product R&D to finished products. Flavorchem creates limitless custom solutions for companies both big and small.</p>
+                </div>
+              </li>
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/3yn7rtz60z?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/295d3e0d47bc2618eb5633c782e6cb09f0b771f8.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img" /></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hubfs/301847/Customer_Logos/gsf-logo-full.png" title="GFS Logo" class="video-grid-logo"></p>
+                  <h3>Golden State Foods</h3>
+                  <p>Golden State Foods is one of the largest diversified suppliers to the foodservice industry, servicing 100+ customers and 125,000+ restaurants on five continents. Wendy White, Director of Global Food Safety & Quality at Golden State Foods, discusses how TraceGains helps GSF manage raw material ingredients and their suppliers.</p>
+                </div>
+              </li>
+            </ul>
+            <ul style="clear: left;">
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/6d39bxe5zm?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/d44e385c401924130a82cf017e8e1a2250518afe.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img" /></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hubfs/301847/Customer_Logos/Illes-Oval-Logo.png" title="Illes Logo" class="video-grid-logo"></p>
+                  <h3>Illes Seasonings & Flavors</h3>
+                  <p>Illes Seasonings & Flavors is in growth-mode, which necessitates additional improvements and streamlining of the supplier qualification processes. David Schauf, VP of Quality (and technical adviser to R&D) and his team at Illes Seasonings reached out to TraceGains to improve a manual process that could not easily scale as business velocity and record-keeping requirements increased.</p>
+                  <p><a href="https://cdn2.hubspot.net/hub/301847/file-454839516-pdf/Case_Studies/TraceGains-Illes-Seasonings-and-Flavors-Case-Study.pdf">Read More</a></p>
+                </div>
+              </li>
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/ahz498vjr8?popover=true" class="wistia-popover[height=508,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/2feee4cd602a4a2466fe4c7159cbfc211a0474f8.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img" /></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hubfs/301847/Customer_Logos/JiffyMixes.png" title="Jiffy Mixes Logo" class="video-grid-logo"></p>
+                  <h3>Chelsea Milling Co.'s (Jiffy Mix)</h3>
+                  <p>Chelsea Milling Co.'s (Jiffy Mix) staff were swamped with manual tasks and needed a solution that permitted 24/7 quality control without adding or compromising on quality. How did TraceGains help?</p>
+                  <p><a href="https://cdn2.hubspot.net/hub/301847/file-457831435-pdf/Case_Studies/TraceGains-JiffyMix-Case-Study.pdf">Read More</a></p>
+                </div>
+              </li>
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/s3y954yu5u?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/d934f962826ebf0b06b7e36de91d2cd612d00eb7.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img"/></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hub/301847/file-2623256451-png/Customer_Logos/mckee-logo.png" title="Mckee Foods Logo" class="video-grid-logo"></p>
+                  <h3>McKee Foods Corporation</h3>
+                  <p>McKee Foods Corporation, makers of Little Debbie®, Drake's Cakes, and other tasty baked snacks, leverages TraceGains to power data in its other systems. Learn how TraceGains empowers McKee's receving department to receive compliant goods more rapidly.</p>
+                </div>
+              </li>
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/8liojn1vox?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/4f2c33514b448fb816dea1bdaa5bfd25595beece.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img"/></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hubfs/301847/Customer_Logos/PinnacleFoods.png" title="Pinnacle Foods Logo" class="video-grid-logo"></p>
+                  <h3>Pinnacle Foods Group</h3>
+                  <p>Pinnacle Foods Group experienced many of the same struggles that numerous food companies deal with on a daily basis. Struggles like having all of the necessary documentation and data needed to demonstrate that suppliers are compliant with not only specifications, but also regulatory requirements and labeling claims. Pinnacle sought a solution that would allow them to maintain accurate records, ensure compliance, and rank suppliers. Why did Pinnacle choose TraceGains as that solution?</p>
+                </div>
+              </li>
+            </ul>
+            <ul style="clear: left;">
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/5rdq5du2eh?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/5345baa487857b3673217a8635e699b5b6aa516a.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img"/></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hub/301847/file-584526890-png/Customer_Logos/red-arrow-logo.png" title="Red Arrow Products Logo" class="video-grid-logo"></p>
+                  <h3>Red Arrow Products</h3>
+                  <p>Red Arrow Products were bogged down with manual processes and mountains of paperwork that the company needed to organize and analyze. They needed a solution that would automate processes and digitize documents to make their business more effective and efficient. How did TraceGains meet their needs?
+                    <p>
+                </div>
+              </li>
+              <li class="video-grid">
+                <div class="video">
+                  <a href="//fast.wistia.net/embed/iframe/8bqcp06oc6?popover=true" class="wistia-popover[height=408,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/2d154d95611089da8a12ed52390d08e4bb02afb5.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img"/></a>
+                  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                  <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hub/301847/file-438102193-png/Customer_Logos/SCI-Fargo.png" title="Specialty Commodities Incorporated Logo" class="video-grid-logo"></p>
+                  <h3>Specialty Commodities</h3>
+                  <p>Specialty Commodities’ own success and growth is creating additional problems. With an ever-growing number of suppliers, supplier risk and compliance management becomes increasingly time consuming and inaccurate, and in the long-term can expose the company to greater liability. Additionally, pending regulatory compliance with the Food Safety Modernization Act (FSMA) put an even greater emphasis on the company to automate its supplier management processes. Find out how TraceGains helped.
+                    <p>
+                      <p><a href="https://cdn2.hubspot.net/hub/301847/file-457753295-pdf/Case_Studies/TraceGains-Specialty-Commodities-Case-Study.pdf">Read More</p>
+            </div>
+          </li>
+          <li class="video-grid">
+            <div class="video">
+              <a href="//fast.wistia.net/embed/iframe/9uovlhaipy?popover=true" class="wistia-popover[height=388,playerColor=7b796a,width=640]"><img src="https://embed-ssl.wistia.com/deliveries/0c98e0917ae6c89e54d41ce31fed5e0c47eab6a1.jpg?image_play_button=true&image_play_button_color=7b796ae0&" alt="" class="wistia-vid-img"/></a>
+                        <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+                        <p style="text-align: center;"><img src="https://cdn2.hubspot.net/hub/301847/file-440749012-png/Customer_Logos/Topco.png" title="Topco Logo" class="video-grid-logo"></p>
+                        <h3>Topco Associates LLC</h3>
+                        <p>Topco Associates LLC provides procurement, quality assurance, packaging and other services exclusively for its member-owners, which include supermarket retailers, food wholesalers and foodservice companies. Topco leverages the collective volume, knowledge and commitment of these companies to create a competitive advantage in the marketplace by reducing costs and offering winning business-building capabilities. Topco's membership collectively represents billions in retail sales volume with thousands of stores.</p>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
