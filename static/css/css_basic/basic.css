@@ -1,8 +1,0 @@
-.photo{
-    width: 40vw;
-}
-  @media only screen and (max-device-width: 481px) {
-    .photo{
-        width: 90vw;
-    }
-  }
