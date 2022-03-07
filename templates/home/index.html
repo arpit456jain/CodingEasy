@@ -1,6 +1,25 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
+{% block loader %}
+
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+
+<script>
+  var loader = document.querySelector("#preloader")
+  window.addEventListener("load", vanish);
+
+  function vanish() {
+    setInterval(function () {
+      loader.classList.add("disapper")
+    }, 1000);
+  }
+</script>
+
+{% endblock loader %}
+
 
 {% block content %}
 
@@ -178,5 +197,6 @@
   </div>
 </div>
 </div>
+
 
 {% endblock content %}
