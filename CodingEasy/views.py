@@ -215,6 +215,28 @@ def ml1(request):
         elif query=="svm":
             return render(request,'./ML/Support_Vector_Machines/Support_Vector_Machines.html')
 
+def django(request):
+  return render(request,'./Django/django.html')
+def django1(request):
+        query = request.GET.get('data')
+        if query=="basic":
+            return render(request,'./Django/Basic/basic.html')
+        # elif query=="condition":
+        #     return render(request,'./Python/Conditions/condition.html')
+        # elif query=="datatype":
+        #     return render(request,'./Python/DataTypes/datatypes.html')
+        # elif query=="file":
+        #     return render(request,'./Python/File Handling/file.html')
+        # elif query=="function":
+        #     return render(request,'./Python/Functions/function.html')
+        # elif query=="loop":
+        #     return render(request,'./Python/Loop/loop.html')
+        # elif query=="operator":
+        #     return render(request,'./Python/Operator/operator.html')
+        # elif query=="regex":
+        #     return render(request,'./Python/RegEx/regex.html')
+
+
 def course_video(request):
     return render(request,'./Course_video/video_page.html')
 
