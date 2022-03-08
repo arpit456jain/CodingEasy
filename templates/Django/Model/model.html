@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/common.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <title>www.codingeasy.com</title>
+  <title></title>
+</head>
+
+<body>
+<!-- Preloader -->
+<!-- <div id="preloader">
+  <div id="loader"></div>
+  </div> -->
+<!-- /Preloader  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-hands-helping"></i>
+      </a>
+      <a class="navbar-brand" href="../../index.html">CodingEasy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/feature">Features</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/pricing">Pricing</a>
+          </li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+  <div class="heading text-center display-3">
+    CodingEasy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+      <h1 class="text-center">Models</h1>
+      <p>A model is a class that represents table or collection in our DB, and where
+           every attribute of the class is a field of the table or collection. Models are
+            defined in the app/models.py. 
+        </p>
+        <ul>
+            Basics : 
+            <li>Each model is a Python class that subclasses django.db.models.Model.</li>
+            <li>Each attribute of the model represents a database field.</li>
+            <li>With all of this, Django gives you an automatically-generated database-access API</li>
+        </ul>
+      
+    </div>
+  </section>
+  <br><br>
+  
+
+  <!-- code and text -->
+  <section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center"></h3>
+            
+            <h1  class="text-center"><p>Creating Models</p></h1>
+            <p>This example model defines a Person, which has a first_name and last_name:</p>  
+            <ul style="list-style: none;">
+                <li>from django.db import models</li>
+                <li>class Person(models.Model):</li>
+                <li>first_name = models.CharField(max_length=30)</li>
+                <li> last_name = models.CharField(max_length=30)</li>
+            </ul>
+            <p>first_name and last_name are fields of the model. Each field is specified as 
+                a class attribute, and each attribute maps to a database column.</p>
+
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center"></h3>
+            
+            <h1  class="text-center"><p>Using Models</p></h1>
+            <p>Once you have defined your models, you need to tell Django you’re going to use those models. Do this by 
+                editing your settings file and changing the INSTALLED_APPS setting to add the name of the module that 
+                contains your models.py.</p>  
+                <p>For example, if the models for your application live in the module myapp.models (the package structure that is created for an application by 
+                    the manage.py startapp script), INSTALLED_APPS should read, in part:</p>
+            <ul style="list-style: none;">
+                <li>INSTALLED_APPS = [</li>
+                <li>#...</li>
+                <li>'myapp',</li>
+                <li>#...</li>
+                <li>]</li>
+            </ul>
+            <p>When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optionally making migrations 
+                for them first with manage.py makemigrations.</p>
+
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center"></h3>
+            
+            <h1  class="text-center"><p>Fields</p></h1>
+            <p>Each field in your model should be an instance of the appropriate Field class. Django uses the field class types to determine a few things:</p>  
+            <ul>
+                <li>The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT).</li>
+                <li>The default HTML widget to use when rendering a form field </li>
+                <li>The minimal validation requirements, used in Django’s admin and in automatically-generated forms.</li>
+    
+            </ul>
+            
+            <p>Django ships with dozens of built-in field types; you can find the complete list in the 
+                model field reference. You can easily write your own fields if Django’s built-in ones don’t do the trick
+            </p>
+
+
+
+        </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+  
+  <footer class="page-footer font-small teal pt-4">
+
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Contact us</h5>
+          <p>codingeasy@gmail.com</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Helpline number</h5>
+          <p>9876543210</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Text -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href="https://mdbootstrap.com/"> CodingEasy</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <script src="https://kit.fontawesome.com/16444fe168.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+  </script>
+  <script>
+    var loader = document.querySelector("#preloader")
+    window.addEventListener("load",vanish);
+    function vanish(){
+      setInterval(function(){
+        loader.classList.add("disapper")
+     }, 3000);
+      
+    }
+   </script>
+</body>
+
+</html>

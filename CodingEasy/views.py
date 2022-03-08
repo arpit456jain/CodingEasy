@@ -221,20 +221,20 @@ def django1(request):
         query = request.GET.get('data')
         if query=="basic":
             return render(request,'./Django/Basic/basic.html')
-        # elif query=="condition":
-        #     return render(request,'./Python/Conditions/condition.html')
-        # elif query=="datatype":
-        #     return render(request,'./Python/DataTypes/datatypes.html')
-        # elif query=="file":
-        #     return render(request,'./Python/File Handling/file.html')
-        # elif query=="function":
-        #     return render(request,'./Python/Functions/function.html')
-        # elif query=="loop":
-        #     return render(request,'./Python/Loop/loop.html')
-        # elif query=="operator":
-        #     return render(request,'./Python/Operator/operator.html')
-        # elif query=="regex":
-        #     return render(request,'./Python/RegEx/regex.html')
+        elif query=="enviroment":
+            return render(request,'./Django/Enviroment/enviroment.html')
+        elif query=="project":
+            return render(request,'./Django/Project/project.html')
+        elif query=="view":
+            return render(request,'./Django/View/view.html')
+        elif query=="url":
+            return render(request,'./Django/Urls/url.html')
+        elif query=="model":
+            return render(request,'./Django/Model/model.html')
+        elif query=="auth":
+            return render(request,'./Django/Authentication/auth.html')
+        elif query=="template":
+            return render(request,'./Django/Template/template.html')
 
 
 def course_video(request):
