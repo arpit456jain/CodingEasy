@@ -1,272 +1,167 @@
+{% extends 'home/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  Coding Easy
+</div> <br>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/common.css' %}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-  <title>www.codingeasy.com</title>
-
-</head>
-
-<body>
-  <!-- Preloader -->
-  <!-- <div id="preloader">
-    <div id="loader"></div>
-    </div> -->
-  <!-- /Preloader  -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <i class="fas fa-hands-helping"></i>
-      </a>
-      <a class="navbar-brand" href="../index.html">Coding Easy</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/feature">Features</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/pricing">Pricing</a>
-          </li>
-      </ul>
+<br><br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="display-4">What is Machine Learning?</h1>
+        <p class="lead">
+        <ul>
+          <li>Machine Learning is a way by which machines are made to think like humans and process tasks with the prior
+            knowledge of some past datasets.</li>
+          <li>We generally use 3 terms related to this field - Artificial Intelligence (AI), Machine Learning (ML), Deep
+            Learning (DL).</li>
+          <li>ML is a subset of AI. And DL is a subset of ML</li>
+          <li>If Artificial Intelligence is a subject, then Machine Learning is just a theory to solve various kinds of
+            AI Problems.
+            And the AI problems that are unsolvable by ML Algorithms can be solved by DL.
+            This is because Deep Learning includes usage of Neural Networks</li>
+        </ul>
+        </p>
       </div>
     </div>
-  </nav>
-  <br>
-  <div class="heading text-center display-3">
-    Coding Easy
-  </div> <br>
-
-  <br><br>
-  <section class="container mt-3">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-          <h1 class="display-4">What is Machine Learning?</h1>
-          <p class="lead"><ul>
-            <li>Machine Learning is a way by which machines are made to think like humans and process tasks with the prior knowledge of some past datasets.</li>
-            <li>We generally use 3 terms related to this field - Artificial Intelligence (AI), Machine Learning (ML), Deep Learning (DL).</li>
-            <li>ML is a subset of AI. And DL is a subset of ML</li>
-            <li>If Artificial Intelligence is a subject, then Machine Learning is just a theory to solve various kinds of AI Problems. 
-                And the AI problems that are unsolvable by ML Algorithms can be solved by DL. 
-                This is because Deep Learning includes usage of Neural Networks</li>
-          </ul>
-          </p>
-        </div>
-      </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">More About Machine Learning</h3>
+      <p>Machine Learning includes a process called Training where dataset is fed to the machine.</p>
+      <p>We choose a particular Machine Learning Algorithm to proceed with the problem.</p>
+      <p>The algorithm gradually develops a relationship between features and corresponding labels</p>
+      <P>Various types of Machine Learning Algorithms are discussed in the following section-</P>
     </div>
-  </section>
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">More About Machine Learning</h3>
-        <p>Machine Learning includes a process called Training where dataset is fed to the machine.</p>
-          <p>We choose a particular Machine Learning Algorithm to proceed with the problem.</p>
-          <p>The algorithm gradually develops a relationship between features and corresponding labels</p>
-          <P>Various types of Machine Learning Algorithms are discussed in the following section-</P>
-      </div>
-      <div class="col-md-6 col-sm-12 ">
-        <h3 class="text-center">3 Main Types of Machine Learning are-</h3>
-        <div class="code">
+    <div class="col-md-6 col-sm-12 ">
+      <h3 class="text-center">3 Main Types of Machine Learning are-</h3>
+      <div class="code">
         <pre>
-            <ol>
-                <li>Supervised Learning (Deals with Labeled Dataset)
-                    A.Regression= Dealing with numerical variables
-                    B.Classification= Dealing with categorical variables</li>
-                <li>Unsupervised Learning (Deals with Unlabeled Dataset)
-                    A.Clustering= Proceeding with dividing data under 
-                    different clusters
-                    B.Association= Proceeding with finding hidden associations 
-                    between different data variables
-                </li>
-                <li>Reinforcement Learning (Deals with learning from the environment 
-                    & mistakes made</li>
-            </ol>
-          </pre>
+          <ol>
+              <li>Supervised Learning (Deals with Labeled Dataset)
+                  A.Regression= Dealing with numerical variables
+                  B.Classification= Dealing with categorical variables</li>
+              <li>Unsupervised Learning (Deals with Unlabeled Dataset)
+                  A.Clustering= Proceeding with dividing data under 
+                  different clusters
+                  B.Association= Proceeding with finding hidden associations 
+                  between different data variables
+              </li>
+              <li>Reinforcement Learning (Deals with learning from the environment 
+                  & mistakes made</li>
+          </ol>
+        </pre>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- Cards -->
+<div class="container-fluid ">
+  <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Linear Regression</h5>
+          <a href="{% url 'ml1' %}?data=linregx"" class=" btn">Explore</a>
         </div>
       </div>
     </div>
+
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Logistic Regression</h5>
+
+          <a href="{% url 'ml1' %}?data=logregx" class="btn">Explore</a>
+        </div>
+      </div>
     </div>
-  </section>
-  <!-- Cards -->
-  <div class="container-fluid ">
-    <div class="row m-3 g-5">
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Linear Regression</h5>
-            <a href="{% url 'ml1' %}?data=linregx"" class="btn">Explore</a>
-          </div>
+        <div class="card-body">
+          <h5 class="card-title">K Nearest Neighbors</h5>
+
+          <a href="{% url 'ml1' %}?data=knn" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Support Vector Machines</h5>
 
-          <div class="card-body">
-            <h5 class="card-title">Logistic Regression</h5>
-
-            <a href="{% url 'ml1' %}?data=logregx" class="btn">Explore</a>
-          </div>
+          <a href="{% url 'ml1' %}?data=svm" class="btn">Explore</a>
         </div>
       </div>
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    </div>
 
-          <div class="card-body">
-            <h5 class="card-title">K Nearest Neighbors</h5>
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-            <a href="{% url 'ml1' %}?data=knn" class="btn">Explore</a>
-          </div>
+        <div class="card-body">
+          <h5 class="card-title">Decision Tree</h5>
+
+          <a href="{% url 'ml1' %}?data=decitree" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Support Vector Machines</h5>
+        <div class="card-body">
+          <h5 class="card-title">Random Forest</h5>
 
-            <a href="{% url 'ml1' %}?data=svm" class="btn">Explore</a>
-          </div>
+          <a href="{% url 'ml1' %}?data=rf" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Decision Tree</h5>
+        <div class="card-body">
+          <h5 class="card-title">Naive Bayes</h5>
 
-            <a href="{% url 'ml1' %}?data=decitree" class="btn">Explore</a>
-          </div>
+          <a href="{% url 'ml1' %}?data=nv" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Random Forest</h5>
+        <div class="card-body">
+          <h5 class="card-title">K Means Clustering</h5>
 
-            <a href="{% url 'ml1' %}?data=rf"  class="btn">Explore</a>
-          </div>
+          <a href="{% url 'ml1' %}?data=kmc" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Naive Bayes</h5>
+        <div class="card-body">
+          <h5 class="card-title">Hierarchical Clustering</h5>
 
-            <a href="{% url 'ml1' %}?data=nv"  class="btn">Explore</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-
-          <div class="card-body">
-            <h5 class="card-title">K Means Clustering</h5>
-
-            <a href="{% url 'ml1' %}?data=kmc" class="btn">Explore</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-
-          <div class="card-body">
-            <h5 class="card-title">Hierarchical Clustering</h5>
-
-            <a href="modal/modal.html" class="btn">Explore</a>
-          </div>
+          <a href="modal/modal.html" class="btn">Explore</a>
         </div>
       </div>
     </div>
   </div>
-  <footer class="page-footer font-small teal pt-4">
-
-    <!-- Footer Text -->
-    <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Contact us</h5>
-          <p>codingeasy@gmail.com</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mb-md-0 mb-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Helpline number</h5>
-          <p>9876543210</p>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Text -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2021 Copyright:
-      <a href="https://mdbootstrap.com/"> Coding Easy </a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <script src="https://kit.fontawesome.com/16444fe168.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-  </script>
-  </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-  <script>
-    var loader = document.querySelector("#preloader")
-    window.addEventListener("load",vanish);
-    function vanish(){
-      setInterval(function(){
-        loader.classList.add("disapper")
-     }, 3000);
-      
-    }
-   </script>
-</body>
-
-</html>
+</div>
+{% endblock content %}
