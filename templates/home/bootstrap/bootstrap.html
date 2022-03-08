@@ -1,87 +1,44 @@
+{% extends 'home/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  Coding Easy
+</div> <br>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/common.css' %}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-  <title>www.codingeasy.com</title>
-
-</head>
-
-<body>
-  <!-- Preloader -->
-  <!-- <div id="preloader">
-    <div id="loader"></div>
-    </div> -->
-  <!-- /Preloader  -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <i class="fas fa-hands-helping"></i>
-      </a>
-      <a class="navbar-brand" href="../index.html">Coding Easy</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/feature">Features</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/pricing">Pricing</a>
-          </li>
-      </ul>
+<br><br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="display-4">What is Bootstrap?</h1>
+        <p class="lead">
+        <ul>
+          <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+          <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation,
+            modals, image carousels and many other, as well as optional JavaScript plugins</li>
+          <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+        </ul>
+        </p>
       </div>
     </div>
-  </nav>
-  <br>
-  <div class="heading text-center display-3">
-    Coding Easy
-  </div> <br>
-
-  <br><br>
-  <section class="container mt-3">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-          <h1 class="display-4">What is Bootstrap?</h1>
-          <p class="lead"><ul>
-            <li>Bootstrap is a free front-end framework for faster and easier web development</li>
-            <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
-            <li>Bootstrap also gives you the ability to easily create responsive designs</li>
-          </ul>
-          </p>
-        </div>
-      </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Bootstrap Versions</h3>
+      <p>Bootstrap 5 (released 2021) is the newest version of Bootstrap
+        (released 2013); with new components, faster stylesheet and more responsiveness.</p>
+      <p>Bootstrap 5 supports the latest, stable releases of all major browsers and
+        platforms. However, Internet Explorer 11 and down is not supported.</p>
+      <p>The main differences between Bootstrap 5 and Bootstrap 3 &amp; 4, is that
+        Bootstrap 5 has switched to vanilla JavaScript instead of jQuery.</p>
     </div>
-  </section>
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Bootstrap Versions</h3>
-        <p>Bootstrap 5 (released 2021) is the newest version of Bootstrap
-          (released 2013); with new components, faster stylesheet and more responsiveness.</p>
-          <p>Bootstrap 5 supports the latest, stable releases of all major browsers and 
-          platforms. However, Internet Explorer 11 and down is not supported.</p>
-          <p>The main differences between Bootstrap 5 and Bootstrap 3 &amp; 4, is that 
-          Bootstrap 5 has switched to vanilla JavaScript instead of jQuery.</p>
-      </div>
-      <div class="col-md-6 col-sm-12 ">
-        <h3 class="text-center">Example</h3>
-        <div class="code">
+    <div class="col-md-6 col-sm-12 ">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
         <pre>
             <code>
               &lt;div class=&quot;container-fluid p-5 bg-primary text-white text-center&quot;&gt;<br>&nbsp; 
@@ -89,173 +46,111 @@
               see the effect!&lt;/p&gt; <br>&lt;/div&gt;<br><br>
             </code>
           </pre>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- Cards -->
+<div class="container-fluid ">
+  <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Grid System</h5>
+          <a href="{% url 'bootstrap1' %}?data=grid" class="btn">Explore</a>
         </div>
       </div>
     </div>
+
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Containers</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=container" class="btn">Explore</a>
+        </div>
+      </div>
     </div>
-  </section>
-  <!-- Cards -->
-  <div class="container-fluid ">
-    <div class="row m-3 g-5">
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Grid System</h5>
-            <a href="{% url 'bootstrap1' %}?data=grid" class="btn">Explore</a>
-          </div>
+        <div class="card-body">
+          <h5 class="card-title">Colors</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=color" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Jumbotron</h5>
 
-          <div class="card-body">
-            <h5 class="card-title">Containers</h5>
-
-            <a href="{% url 'bootstrap1' %}?data=container" class="btn">Explore</a>
-          </div>
+          <a href="{% url 'bootstrap1' %}?data=jumbotron" class="btn">Explore</a>
         </div>
       </div>
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    </div>
 
-          <div class="card-body">
-            <h5 class="card-title">Colors</h5>
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-            <a href="{% url 'bootstrap1' %}?data=color" class="btn">Explore</a>
-          </div>
+        <div class="card-body">
+          <h5 class="card-title">Buttons</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=button" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Jumbotron</h5>
+        <div class="card-body">
+          <h5 class="card-title">Navbar</h5>
 
-            <a href="{% url 'bootstrap1' %}?data=jumbotron" class="btn">Explore</a>
-          </div>
+          <a href="{% url 'bootstrap1' %}?data=navbar" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Buttons</h5>
+        <div class="card-body">
+          <h5 class="card-title">Cards</h5>
 
-            <a href="{% url 'bootstrap1' %}?data=button" class="btn">Explore</a>
-          </div>
+          <a href="{% url 'bootstrap1' %}?data=cards" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Navbar</h5>
+        <div class="card-body">
+          <h5 class="card-title">Carousel</h5>
 
-            <a href="{% url 'bootstrap1' %}?data=navbar" class="btn">Explore</a>
-          </div>
+          <a href="{% url 'bootstrap1' %}?data=carousel" class="btn">Explore</a>
         </div>
       </div>
+    </div>
 
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">Cards</h5>
+        <div class="card-body">
+          <h5 class="card-title">Modal</h5>
 
-            <a href="{% url 'bootstrap1' %}?data=cards" class="btn">Explore</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-
-          <div class="card-body">
-            <h5 class="card-title">Carousel</h5>
-
-            <a href="{% url 'bootstrap1' %}?data=carousel" class="btn">Explore</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 text-center d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-
-          <div class="card-body">
-            <h5 class="card-title">Modal</h5>
-
-            <a href="{% url 'bootstrap1' %}?data=modal" class="btn">Explore</a>
-          </div>
+          <a href="{% url 'bootstrap1' %}?data=modal" class="btn">Explore</a>
         </div>
       </div>
     </div>
   </div>
-  <footer class="page-footer font-small teal pt-4">
-
-    <!-- Footer Text -->
-    <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Contact us</h5>
-          <p>codingeasy@gmail.com</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mb-md-0 mb-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Helpline number</h5>
-          <p>9876543210</p>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Text -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2021 Copyright:
-      <a href="https://mdbootstrap.com/"> Coding Easy </a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <script src="https://kit.fontawesome.com/16444fe168.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-  </script>
- <script>
-  var loader = document.querySelector("#preloader")
-  window.addEventListener("load",vanish);
-  function vanish(){
-    setInterval(function(){
-      loader.classList.add("disapper")
-   }, 3000);
-    
-  }
- </script>
-</body>
-
-</html>
+</div>
+{% endblock content %}

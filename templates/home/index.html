@@ -13,16 +13,17 @@
 
   function vanish() {
     setInterval(function () {
-      loader.classList.add("disapper")
+      loader.classList.add("disappear")
     }, 1000);
   }
 </script>
 
-{% endblock loader %}
+{% endblock loader %} 
 
 
 {% block content %}
 
+<!--Carousel-->
 <div class="container pt-3">
   <div class="col-md-12">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -67,7 +68,8 @@
     </div>
   </div>
 </div>
-<!-- /Crausel -->
+<!-- /Carousel-->
+
 <!-- About -->
 <div class="container-fluid">
   <br />
@@ -104,10 +106,10 @@
     </div>
   </div>
 </div>
-<!-- /about -->
+<!-- /About -->
 <div class="heading text-center h1">Our Courses</div>
 <br />
-<!-- cards -->
+<!-- Cards -->
 <div class="container-fluid ">
   <div class="row m-3 g-5">
     <div class="col-md-4  text-center d-flex justify-content-center">
@@ -197,6 +199,5 @@
   </div>
 </div>
 </div>
-
 
 {% endblock content %}
