@@ -25,4 +25,11 @@ urlpatterns = [
     path('ml/', views.ml, name='ml'),
     path('ml1/', views.ml1, name='ml1'),
     path('course_video/', views.course_video, name='course_video')
+
+    # To add url to a new Course
+
+    # path('newcourse/', views.newcourse, name='newcourse'),  -> for rendering course
+    # path('newcourse1/', views.newcourse1, name='newcourse1'),  -> for rendering sub topics
+
+    # Do not forget to add/update views in views.py file
 ]
