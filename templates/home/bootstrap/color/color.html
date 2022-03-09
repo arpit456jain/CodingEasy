@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <title>www.codingeasy.com</title>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <!-- <div id="preloader">
+        <div id="loader"></div>
+        </div> -->
+      <!-- /Preloader  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-hands-helping"></i>
+            </a>
+            <a class="navbar-brand" href="../../index.html">CodingEasy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feature">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pricing">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="heading text-center display-3">
+        CodingEasy
+    </div> <br>
+    <section class="container mt-3">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                    <h1 class="text-center">Bootstrap Colors</h1>
+
+                </div>
+    </section>
+    <br><br>
+
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h3 class="text-center">Text Colors</h3>
+                <p>Bootstrap 5 has some contextual classes that can be used to provide &quot;meaning through
+                    colors&quot;.</p>
+                <p>The classes for text colors are: <code>.text-muted</code>,
+                    <code>.text-primary</code>, <code>.text-success</code>,
+                    <code>.text-info</code>,
+                    <code>.text-warning</code>, <code>.text-danger</code>, <code>.text-secondary</code>,
+                    <code>.text-white</code>,
+                    <code>.text-dark</code>, <code>.text-body</code> (default
+                    body color/often black) and <code>.text-light</code>:</p>
+
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h3 class="text-center">Example</h3>
+                <div class="code">
+                    <pre>
+                <code>
+                    &lt;p class="text-muted"&gt;This text is muted.&lt;/p&gt;
+                    &lt;p class="text-primary"&gt;This text is important.&lt;/p&gt;
+                    &lt;p class="text-success"&gt;This text indicates success.&lt;/p&gt;
+                    &lt;p class="text-info"&gt;This text represents some information.&lt;/p&gt;
+                    &lt;p class="text-warning"&gt;This text represents a warning.&lt;/p&gt;
+                    &lt;p class="text-danger"&gt;This text represents danger.&lt;/p&gt;
+                    &lt;p class="text-secondary"&gt;Secondary text.&lt;/p&gt;
+                    &lt;p class="text-dark"&gt;Dark grey text.&lt;/p&gt;
+                    &lt;p class="text-body"&gt;Body text.&lt;/p&gt;
+                    &lt;p class="text-light"&gt;Light grey text.&lt;/p&gt;
+                    </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h3 class="text-center">Background Colors</h3>
+                <p>The classes for background colors are: <code>.bg-primary</code>, <code>
+                        .bg-success</code>, <code>.bg-info</code>, <code>.bg-warning</code>, <code>.bg-danger</code>,
+                    <code>.bg-secondary</code>, <code>.bg-dark</code> and <code>.bg-light</code>.</p>
+                <p>Note that background colors do not set the text color, so in some cases you'll want to use them
+                    together with a <code>.text-*</code>
+                    color class.</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h3 class="text-center">Example</h3>
+                <div class="code">
+                    <pre>
+                <code>
+                    &lt;p class="bg-primary text-white"&gt;This text is important.&lt;/p&gt;
+                    &lt;p class="bg-success text-white"&gt;This text indicates success.&lt;/p&gt;
+                    &lt;p class="bg-info text-white"&gt;This text represents some information.&lt;/p&gt;
+                    &lt;p class="bg-warning text-white"&gt;This text represents a warning.&lt;/p&gt;
+                    &lt;p class="bg-danger text-white"&gt;This text represents danger.&lt;/p&gt;
+                    &lt;p class="bg-secondary text-white"&gt;Secondary background color.&lt;/p&gt;
+                    &lt;p class="bg-dark text-white"&gt;Dark grey background color.&lt;/p&gt;
+                    &lt;p class="bg-light text-dark"&gt;Light grey background color.&lt;/p&gt;
+                </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+
+   
+    <br><br>
+
+    <footer class="page-footer font-small teal pt-4">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">Contact us</h5>
+                    <p>codingeasy@gmail.com</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mb-md-0 mb-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">Helpline number</h5>
+                    <p>9876543210</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Text -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+            <a href="https://mdbootstrap.com/"> CodingEasy</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <script src="https://kit.fontawesome.com/16444fe168.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script>
+        var loader = document.querySelector("#preloader")
+        window.addEventListener("load",vanish);
+        function vanish(){
+            setInterval(function(){
+      loader.classList.add("disapper")
+   }, 3000);
+        }
+       </script>
+</body>
+
+</html>
