@@ -199,3 +199,18 @@ def ml1(request):
 
 def course_video(request):
     return render(request, 'home/Course_video/video_page.html')
+
+
+# Adding views to render courses
+
+# def newcourse(request):
+#     return render(request, 'home/newcourse/newcourse.html')
+
+
+# def newcourse1(request):
+#     query = request.GET.get('data')
+#     if query == "topic1":
+#         return render(request, 'home/newcourse/topic1/topic1.html')
+#     elif query == "topic2":
+#         return render(request, 'home/newcourse/topic2/topic2.html')
+
