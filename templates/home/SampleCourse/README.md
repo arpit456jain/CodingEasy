@@ -11,7 +11,7 @@
 
 ### 2) Add a topic to a existing course
 
-1) Create subfolders named **newtopic** inside `template/home/newcourse`
+1) Create subfolders named **newtopic** inside `template/home/course`. Here `/course` is the course for which you want to add a new topic.
 2) Create a file newtopic.html
 3) Update newtopic.html as per the [template](https://github.com/arpit456jain/CodingEasy/blob/master/templates/home/SampleCourse/topic1/topic1.html)
 
