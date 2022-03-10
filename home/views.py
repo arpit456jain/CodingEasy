@@ -131,6 +131,28 @@ def js1(request):
         return render(request, 'home/javascr/syntax/syntax.html')
     elif query == "object":
         return render(request, 'home/javascr/objects/objects.html')
+    
+    
+# Add views for jQuery Course
+def jQuery(request):
+    return render(request, 'home/jQuery/jQuery.html')
+
+
+def jQuery1(request):
+    query = request.GET.get('data')
+    if query == "overview":
+        return render(request, 'home/jQuery/Overview/Overview.html')
+    elif query == "selector":
+        return render(request, 'home/jQuery/Overview/selectors.html')
+    elif query == "attribute":
+        return render(request, 'home/jQuery/Attributes/attributes.html')
+    elif query == "manipulatingCSS":
+        return render(request, 'home/jQuery/ManipulatingCSS/ManipulatingCSS.html')
+    elif query == "jQueryCss":
+        return render(request, 'home/jQuery/ManipulatingCSS/jQueryCss.html')
+    elif query == "jQueryDimensions":
+        return render(request, 'home/jQuery/ManipulatingCSS/jQueryDimensions.html')
+    
 
 
 def py(request):

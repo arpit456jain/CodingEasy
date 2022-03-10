@@ -1,0 +1,272 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery - Attributes</h1>
+                <p>
+                    Some of the most basic components we can manipulate when it comes to
+                    DOM elements are the properties and attributes assigned to those elements.<br><br>
+
+                    Most of these attributes are available through JavaScript as DOM node properties.
+                    Some of the more common properties are −
+                </p>
+                <ol>
+                    <li>className</li>
+                    <li>tagName</li>
+                    <li>id</li>
+                    <li>href</li>
+                    <li>title</li>
+                    <li>rel</li>
+                    <li>src</li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Get Attribute Value</h3><br><br>
+            <p>The <strong>attr()</strong> method can be used to either fetch the value of an attribute from the first element
+                in the matched set or set attribute values onto all matched elements.</p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        Following is a simple example which fetches title attribute of
+                        &lt;em&gt; tag and set &lt;div id = "divid"&gt; value with the same value 
+                    </mark>
+                </span>
+                <pre>
+                <code>
+                    &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;The jQuery Example&lt;/title&gt;
+                            &lt;script type = "text/javascript" 
+                                src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;
+                            &lt;/script&gt;
+                                
+                            &lt;script type = "text/javascript" language = "javascript"&gt;
+                                $(document).ready(function() {
+                                    var title = $("em").attr("title");
+                                    $("#divid").text(title);
+                                });
+                            &lt;/script&gt;
+                        &lt;/head&gt;
+                            
+                        &lt;body&gt;
+                            &lt;div&gt;
+                                &lt;em title = "Bold and Brave">This is first paragraph.&lt;/em&gt;
+                                &lt;p id = "myid"&gt;This is second paragraph.&lt;/p&gt;
+                                &lt;div id = "divid"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Set Attribute Value</h3><br><br>
+            <p>The <strong>attr(name, value)</strong> method can be used to set the named attribute
+                onto all elements in the wrapped set using the passed value.</p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        Following is a simple example which set <strong>src</strong> attribute of an image tag to a correct location
+                    </mark>
+                </span>
+                <pre>
+                <code>
+                    &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;The jQuery Example&lt;/title&gt;
+                            &lt;script type = "text/javascript" 
+                                src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;
+                            &lt;/script&gt;
+                                
+                            &lt;script type = "text/javascript" language = "javascript"&gt;
+                                $(document).ready(function() {
+                                    $("#myimg").attr("src", "/jquery/images/jquery.jpg");
+                                });
+                            &lt;/script&gt;
+                        &lt;/head&gt;
+                            
+                        &lt;body&gt;
+                            &lt;div&gt;
+                                &lt;img id = "myimg" src = "/images/jquery.jpg" alt = "Sample image" /&gt;
+                            &lt;/div&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Applying Styles</h3><br><br>
+            <p>The <strong>addClass( classes ) </strong> method can be used to apply defined style sheets
+                onto all the matched elements.You can specify multiple classes separated by space.</p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        Following is a simple example which sets class attribute of a para &lt;p&gt; tag
+                    </mark>
+                </span>
+                <pre>
+                <code>
+                    &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;The jQuery Example&lt;/title&gt;
+                            &lt;script type = "text/javascript" 
+                                src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;
+                            &lt;/script&gt;
+                                
+                            &lt;script type = "text/javascript" language = "javascript"&gt;
+                                $(document).ready(function() {
+                                    $("em").addClass("selected");
+                                    $("#myid").addClass("highlight");
+                                });
+                            &lt;/script&gt;
+                            &lt;style&gt;
+                                .selected { color:red; }
+                                .highlight { background:yellow; }
+                            &lt;/style&gt;
+                        &lt;/head&gt;
+                            
+                        &lt;body&gt;
+                            &lt;div&gt;
+                                &lt;em title = "Bold and Brave">This is first paragraph.&lt;/em&gt;
+                                &lt;p id = "myid"&gt;This is second paragraph.&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Attribute Methods</h3><br><br>
+            <p>Following table lists down few useful methods which 
+                you can use to manipulate attributes and properties
+            </p>
+        </div>
+        <table id="myTable">
+            <tr>
+                <th>Methods &amp; Description</th>
+            </tr>
+            <tr>
+                <td>
+                    attr( properties )<br>Set a key/value object as properties to all matched elements
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    attr( key, fn )<br>Set a single property to a computed value, on all matched elemen
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    removeAttr( name )<br>Remove an attribute from each of the matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    hasClass( class )<br>Returns true if the specified class is present on at least one of the set of matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    removeClass( class )<br>Removes all or the specified class(es) from the set of matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    toggleClass( class )<br>Adds the specified class if it is not present, removes the specified class if it is present.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    html( )<br>Get the html contents (innerHTML) of the first matched element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    html( val )<br>Set the html contents of every matched element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    text( )<br>Get the combined text contents of all matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    text( val )<br>Set the text contents of all matched elements
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    val( )<br>Get the input value of the first matched element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    val( val )<br>Set the value attribute of every matched element if it is called on
+                    &lt;input&gt; but if it is called on &lt;select&gt; with the passed  &lt;option&gt; value then passed option would be selected,
+                    if it is called on check box or radio box then all the matching check box and radiobox would be checked.
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<br><br>
+
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}
