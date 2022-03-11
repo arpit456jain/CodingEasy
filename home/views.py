@@ -7,6 +7,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -21,14 +22,12 @@ def pricing(request):
     return render(request, 'home/Pricing/pricing.html')
 
 
-def login(request):
-    return render(request, 'home/Login/login.html')
-
-
+@login_required
 def contact(request):
     return render(request, 'home/contact/contact.html')
 
 
+@login_required
 def html(request):
     return render(request, 'home/html/html.html')
 
@@ -49,6 +48,7 @@ def html1(request):
         return render(request, 'home/html/Style/style.html')
 
 
+@login_required
 def css(request):
     return render(request, 'home/css/css.html')
 
@@ -75,6 +75,7 @@ def css1(request):
         return render(request, 'home/css/selectors/selectors.html')
 
 
+@login_required
 def bootstrap(request):
     return render(request, 'home/bootstrap/bootstrap.html')
 
@@ -101,6 +102,7 @@ def bootstrap1(request):
         return render(request, 'home/bootstrap/navbar/navbar.html')
 
 
+@login_required
 def js(request):
     return render(request, 'home/javascr/javascr.html')
 
@@ -131,9 +133,10 @@ def js1(request):
         return render(request, 'home/javascr/syntax/syntax.html')
     elif query == "object":
         return render(request, 'home/javascr/objects/objects.html')
-    
-    
+
+
 # Add views for jQuery Course
+@login_required
 def jQuery(request):
     return render(request, 'home/jQuery/jQuery.html')
 
@@ -152,9 +155,9 @@ def jQuery1(request):
         return render(request, 'home/jQuery/ManipulatingCSS/jQueryCss.html')
     elif query == "jQueryDimensions":
         return render(request, 'home/jQuery/ManipulatingCSS/jQueryDimensions.html')
-    
 
 
+@login_required
 def py(request):
     return render(request, 'home/Python/python.html')
 
@@ -179,6 +182,7 @@ def py1(request):
         return render(request, 'home/Python/RegEx/regex.html')
 
 
+@login_required
 def cpp(request):
     return render(request, 'home/CPP/cpp.html')
 
@@ -195,6 +199,7 @@ def cpp1(request):
         return render(request, 'home/CPP/Variable_Types/Variable_Types.html')
 
 
+@login_required
 def ml(request):
     return render(request, 'home/ML/ML.html')
 
@@ -219,6 +224,7 @@ def ml1(request):
         return render(request, 'home/ML/Support_Vector_Machines/Support_Vector_Machines.html')
 
 
+@login_required
 def course_video(request):
     return render(request, 'home/Course_video/video_page.html')
 
@@ -235,4 +241,3 @@ def course_video(request):
 #         return render(request, 'home/newcourse/topic1/topic1.html')
 #     elif query == "topic2":
 #         return render(request, 'home/newcourse/topic2/topic2.html')
-

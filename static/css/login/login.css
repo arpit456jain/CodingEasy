@@ -17,7 +17,7 @@
   z-index: 99;
   /* display: block; */
 }
-.disapper{
+.disappear{
   animation: vanish 1s forwards;
 }
 @keyframes vanish {

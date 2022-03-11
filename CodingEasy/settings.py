@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home.apps.HomeConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -54,8 +57,7 @@ ROOT_URLCONF = 'CodingEasy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,6 +125,19 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
+# Make a directory to save user profile images
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Crispy Forms Styling Engine definition
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Register the Login Redirect URL
+LOGIN_REDIRECT_URL = 'index'
+
+# Restricted pages; automatically redirect at login form
+LOGIN_URL = 'login'
