@@ -1,0 +1,171 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery Event Methods</h1>
+                <p>jQuery is tailor-made to respond to events in an HTML page.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">What are Events?</h3>
+            <p>
+                    All the different visitors' actions that a web page can respond to are called events.<br>
+                    An event represents the precise moment when something happens.
+                </p>
+                <ul>Examples:
+                    <li>moving a mouse over an element</li>
+                    <li>selecting a radio button</li>
+                    <li>clicking on an element</li>
+                </ul>
+                <p>
+                    The term <strong>"fires/fired"</strong> is often used with events. Example:
+                    "The keypress event is fired, the moment you press a key".
+                </p>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>Here are some common DOM events:</span>
+                <table id="myTable">
+                    <tr>
+                        <th>Mouse Events</th>
+                        <th>Keyboard Events</th>
+                        <th>Form Events</th>
+                        <th>Document/Window Events</th>
+                    </tr>
+                    <tr>
+                        <td>click</td>
+                        <td>keypress</td>
+                        <td>submit</td>
+                        <td>load</td>
+                    </tr>
+                        <td>dblclick</td>
+                        <td>keydown</td>
+                        <td>change</td>
+                        <td>resize</td>
+                    </tr>
+                    <tr>
+                        <td>mouseenter</td>
+                        <td>keyup</td>
+                        <td>focus</td>
+                        <td>scroll</td>
+                    </tr>
+                    <tr>
+                        <td>mouseleave</td>
+                        <td></td>
+                        <td>blur</td>
+                        <td>unload</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery Syntax For Event Methods</h3>
+            <p>
+                In jQuery, most DOM events have an equivalent jQuery method.<br>
+                To assign a click event to all paragraphs on a page, you can do this:<br>
+            </p><br><br>
+            <p>    
+                The next step is to define what should happen when the event fires.
+                You must pass a function to the event:
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre style='margin-left:180px;'><code>$("p").click();</code></pre><br><br>
+                <pre>
+                    <code>
+                        $("p").click(function(){
+                            // action goes here!!
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Commonly Used jQuery Event Methods</h3>
+            <p>
+                <strong>$(document).ready()</strong><br><br>
+                The <mark class='mnpcss'>$(document).ready()</mark> method allows us to executea function when the document is fully loaded. 
+                This event is already explained in the jQuery Syntax chapter.
+            </p>
+            <p>    
+                <strong>click()</strong><br><br>
+                The <mark class='mnpcss'> click()</mark>method attaches an event handler function to an HTML element.<br><br>
+                The function is executed when the user clicks on the HTML element.
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                The following example says: When a click event fires ona <mark class='mnpcss'>&lt;p&gt;</mark>
+                element; hide the current <mark class='mnpcss'>&lt;p&gt;</mark> element:
+                <pre>
+                    <code>
+                        $("p").click(function(){
+                            $(this).hide();
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">The Rest of Commonly Used jQuery Event Methods</h3>
+            <ul>
+                <li><strong>dblclick()</strong></li>
+                <li><strong>mouseenter()</strong></li>
+                <li><strong>mouseleave()</strong></li>
+                <li><strong>mousedown()</strong></li>
+                <li><strong>mouseup()</strong></li>
+                <li><strong>hover()</strong></li>
+                <li><strong>focus()</strong></li>
+                <li><strong>blur()</strong></li>
+                <li><strong>on() </strong></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}
