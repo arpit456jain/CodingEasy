@@ -1,0 +1,123 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery Selectors</h1>
+                <p>jQuery selectors are one of the most important parts of the jQuery library.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery Selectors</h3>
+            <p>
+                jQuery selectors allow you to select and manipulate HTML element(s).<br><br>
+                jQuery selectors are used to "find" (or select) HTML elements based on their name, id,
+                classes, types, attributes, values of attributes and much more. It's based on the existing CSS
+                Selectors, and in addition, it has some own custom selectors.<br><br>
+                All selectors in jQuery start with the dollar sign and parentheses: $().
+            </p>
+             <ul>
+                    <li>The element Selector</li>
+                    <li>The #id Selector</li>
+                    <li>The .class Selector</li>
+            </ul>
+            <p></p>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    $("p")
+
+                    $("#test")
+
+                    $(".test")
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">More Examples of jQuery Selectors</h3>
+        </div>
+
+        <table id="myTable">
+            <tr>
+                <th>$("*")</th>
+                <th>Selects all elements</th>
+            </tr>
+            <tr>
+                <td>$(this)</td>
+                <td>Selects the current HTML element</td>
+            </tr>
+            <tr>
+                <td>$("p.intro")</td>
+                <td>Selects all &lt;p&gt; elements with class="intro"</td>
+            </tr>
+            <tr>
+                <td>$("p:first")</td>
+                <td>Selects the first &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td>$("ul li:first")</td>
+                <td>Selects the first &lt;li&gt; element of the first &lt;ul&gt;</td>
+            </tr>
+            <tr>
+                <td>$("ul li:first-child")</td>
+                <td>Selects the first &lt;li&gt; element of every &lt;ul&gt;</td>
+            </tr>
+            <tr>
+                <td>$("[href]")</td>
+                <td>Selects all elements with an href attribute</td>
+            </tr>
+            <tr>
+                <td>$("a[target='_blank']")</td>
+                <td>Selects all &lt;a&gt; elements with a target attribute value equal to "_blank"</td>
+            </tr>
+            <tr>
+                <td>$("a[target!='_blank']")</td>
+                <td>Selects all &lt;a&gt; elements with a target attribute value NOT equal to "_blank"</td>
+            </tr>
+            <tr>
+                <td>$(":button")</td>
+                <td>Selects all &lt;button&gt; elements and &lt;input&gt; elements of type="button"</td>
+            </tr>
+            <tr>
+                <td>$("tr:even")</td>
+                <td>Selects all even &lt;tr&gt; elements</td>
+            </tr>
+            <tr>
+                <td>$("tr:odd")</td>
+                <td>Selects all odd &lt;tr&gt; elements</td>
+            </tr>
+        </table>
+    </div>
+</section>
+<br><br>
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}

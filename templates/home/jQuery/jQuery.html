@@ -1,0 +1,156 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  Coding Easy
+</div> <br>
+
+<br><br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="display-4">What is jQuery</h1>
+        <p class="lead">
+        <ul> 
+            <!-- Short description about 'jQuery' -->
+            <li>jQuery is easy to learn.</li>
+            <li>The purpose of jQuery is to make it much easier to use JavaScript on your website.</li>
+            <li>jQuery is a lightweight, "write less, do more", JavaScript library.</li>
+            <li>jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.</li>
+            <li>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Why jQuery?</h3>
+      <!-- Detailed description of course  -->
+      <p>There are lots of other JavaScript libraries out there, but jQuery is probably the most popular, and also the most extendable.</p>
+      <p>Many of the biggest companies on the Web use jQuery, such as:
+          <ul>
+              <li>Google</li>
+              <li>Microsoft</li>
+              <li>IBM</li>
+              <li>Netflix</li>
+          </ul>
+      </p>
+      <p>
+          <h4>Adding jQuery to Your Web Pages</h4>
+          <i>There are several ways to start using jQuery on your web site. You can:</i>
+          <ul>
+              <li>Download the jQuery library from jQuery.com</li>
+              <li>Include jQuery from a CDN, like Google</li>
+          </ul>
+      </p>
+    </div>
+
+    <div class="col-md-6 col-sm-12 ">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+          <span>
+              <mark>
+                  The jQuery library is a single JavaScript file, and you reference it with the HTML &lt;script&gt; tag (notice that the &lt;script&gt; tag should be inside the &lt;head&gt; section):
+              </mark>
+          </span>
+        <pre>
+            <code>
+                <!-- Code demonstration -->
+                &lt;head&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="jquery-3.5.1.min.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+            </code>
+        </pre>
+          <span>
+              <strong>jQuery CDN</strong><br/>
+              <mark>
+                  If you don't want to download and host jQuery yourself, you can include it from a CDN (Content Delivery Network).
+              </mark>
+          </span>
+        <pre>
+            <code>
+                <!-- Code demonstration -->
+                &lt;head&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+            </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- Subsections -->
+
+<!-- Cards -->
+<div class="container-fluid ">
+  <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Overview</h5>
+          <a href="{% url 'jQuery1' %}?data=overview" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Selectors</h5>
+          <a href="{% url 'jQuery1' %}?data=selector" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Attribute</h5>
+
+          <a href="{% url 'jQuery1' %}?data=attribute" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Manipulating CSS</h5>
+
+          <a href="{% url 'jQuery1' %}?data=manipulatingCSS" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">jQuery - css()</h5>
+          
+          <a href="{% url 'jQuery1' %}?data=jQueryCss" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">jQuery - Dimensions</h5>
+    
+          <a href="{% url 'jQuery1' %}?data=jQueryDimensions" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
