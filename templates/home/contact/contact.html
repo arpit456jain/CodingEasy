@@ -20,11 +20,20 @@
 
   <section id="contact">
     <h1 class="section-header">Contact Us</h1>
-
+    {% comment %} Messages {% endcomment %}
     <div class="contact-wrapper">
+      <div class="container">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
       <!-- Left contact page -->
-
-      <form id="contact-form" class="form-horizontal" role="form" method="post" action="contact_us">
+      <form id="contact-form" class="form-horizontal" role="form" method="post" action="{% url 'home-contact' %}">
         {% csrf_token %}
         <div class="form-group">
           <div class="col-sm-12">
@@ -69,12 +78,12 @@
         <hr />
         <ul class="social-media-list">
           <li>
-            <a href="#" target="_blank" class="contact-icon">
+            <a href="https://github.com/arpit456jain/CodingEasy" target="_blank" class="contact-icon">
               <i class="fa fa-github" aria-hidden="true"></i></a>
           </li>
           <li>
             <a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-github" aria-hidden="true"></i></a>
+              <i class="fa fa-facebook" aria-hidden="true"></i></a>
           </li>
           <li>
             <a href="#" target="_blank" class="contact-icon">
