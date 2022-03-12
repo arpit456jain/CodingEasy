@@ -67,16 +67,16 @@ This project is part of the [GirlScript Summer of Code 2020](https://www.gssoc.t
 git clone https://github.com/<your-github-username>/CodingEasy
 ```
 
-**3.** Set upstream command:
-
-```bash
-git remote add upstream https://github.com/arpit456jain.git
-```
-
-**4.** Navigate to the new project directory:
+**3.** Navigate to the new project directory:
 
 ```bash
 cd CodingEasy
+```
+
+**4.** Set upstream command:
+
+```bash
+git remote add upstream https://github.com/arpit456jain.git
 ```
 
 **5.** Create a new branch:
