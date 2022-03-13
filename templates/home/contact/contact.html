@@ -1,28 +1,13 @@
+{% extends 'home/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Coding Easy</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,100,300" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="{% static 'css/contact/contact.css' %}" />
-</head>
+{% block content %}
 
-<body>
-
-  <section id="contact">
-    <h1 class="section-header">Contact Us</h1>
+  <!-- Section: Contact v.3 -->
+  <section class="contact-section my-5">
     {% comment %} Messages {% endcomment %}
     <div class="contact-wrapper">
-      <div class="container">
+      <div class="col-lg-8">
         {% if messages %}
           {% for message in messages %}
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -32,78 +17,129 @@
           {% endfor %}
         {% endif %}
       </div>
-      <!-- Left contact page -->
-      <form id="contact-form" class="form-horizontal" role="form" method="post" action="{% url 'home-contact' %}">
-        {% csrf_token %}
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required />
+    <!-- Form with header -->
+      <div class="card">
+
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+            <!--Section description-->
+        <p class="text-center w-responsive mx-auto mb-5">
+          Do you have any questions? Please do not hesitate to contact us directly.
+          Our team will come back to you within
+          a matter of hours to help you.</p>
+        
+        <!-- Grid row -->
+        <div class="row">
+          
+          <!-- Grid column -->
+          <div class="col-lg-8">
+            <div class="card-body form">
+
+              <form id="contact-form" method="post" action="{% url 'home-contact' %}">
+                {% csrf_token %}
+
+              <!-- Header -->
+              <h3 class="mt-4"><i class="fas fa-envelope pr-2"></i>Write to us:</h3>
+
+              <!-- Grid row -->
+              <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" name='name' id="form-contact-name" class="form-control" required placeholder="Your name">
+                  </div>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="email" name='email' id="form-contact-email" class="form-control" required placeholder='Your email'>
+                  </div>
+                </div>
+                <!-- Grid column -->
+
+              </div>
+              <!-- Grid row -->
+
+              <!-- Grid row -->
+              <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <textarea id="form-contact-message" name='message' class="form-control md-textarea" rows="3" required placeholder='Your message'></textarea>
+                  </div>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 mt-4 text-center col-md-12">
+                    <button class="bttn bttn-success" type="submit">
+                      Send
+                    </button>
+                  </div>
+                <!-- Grid column -->
+
+              </div>
+            </form>
           </div>
+
         </div>
+        <!-- Grid column -->
 
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required />
+
+        <!-- Grid column -->
+        <div class="col-lg-4">
+
+          <div class="card-body contact text-center h-100 white-text">
+
+            <h3 class="my-4 pb-2">Contact information</h3>
+            <ul class="text-lg-left list-unstyled ml-4">
+              <li>
+                <p><i class="fas fa-map-marker-alt pr-2"></i>City, State</p>
+              </li>
+              <li>
+                <p><i class="fas fa-phone pr-2"></i>(+91)9876543210</p>
+              </li>
+              <li>
+                <p><i class="fas fa-envelope pr-2"></i>codingeasy@gmail.com</p>
+              </li>
+            </ul>
+            <hr class="hr-light my-4">
+            <ul class="list-inline text-center list-unstyled">
+              <li class="list-inline-item">
+                <a href='https://github.com/arpit456jain/CodingEasy' target='_blank' class="p-2 fa-lg tw-ic">
+                  <i class="fa fa-github-alt"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href='https://twitter.com/girlscriptsoc' target='_blank' class="p-2 fa-lg li-ic">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href='https://www.instagram.com/girlscriptsummerofcode/?hl=en' target='_blank' class="p-2 fa-lg ins-ic">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+
+            <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div
+
           </div>
+
         </div>
+        <!-- Grid column -->
 
-        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-
-        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-          <div class="alt-send-button">
-            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-          </div>
-        </button>
-      </form>
-
-      <!-- Left contact page -->
-
-      <div class="direct-contact-container">
-        <ul class="contact-list">
-          <li class="list-item">
-            <i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i>
-          </li>
-
-          <li class="list-item">
-            <i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+91-9876543210"
-                  title="Give me a call">(+91)9876543210</a></span></i>
-          </li>
-
-          <li class="list-item">
-            <i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:codingeasy@gmail.com"
-                  title="Send me an email">codingeasy@gmail.com</a></span></i>
-          </li>
-        </ul>
-
-        <hr />
-        <ul class="social-media-list">
-          <li>
-            <a href="https://github.com/arpit456jain/CodingEasy" target="_blank" class="contact-icon">
-              <i class="fa fa-github" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-facebook" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-twitter" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-instagram" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-        <hr />
-
-        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
       </div>
+      <!-- Grid row -->
+
     </div>
+  </div>
+  <!-- Form with header -->
+
   </section>
+<!-- Section: Contact v.3 -->
 
-  <script src="{% static 'js/contact/contact.js' %}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+{% endblock content %}

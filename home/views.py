@@ -35,7 +35,7 @@ def contact(request):
         else:
             messages.success(request,('There was an error in your form! try again...'))
             return render(request, 'home/contact/contact.html')
-        messages.success(request,('THANKS FOR CONTACT US'))
+        messages.success(request,('Thank you for contacting us'))
         return redirect('index')
     return render(request, 'home/contact/contact.html')
 
