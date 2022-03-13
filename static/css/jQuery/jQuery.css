@@ -30,3 +30,11 @@
   color:crimson;
   background-color:#f1f1f1;
 }
+
+
+/* style for mark tag in ManipulatingDOM.html page */
+
+.mnpDOM{
+  background-color:#ddd;
+  padding-left:10px;
+}

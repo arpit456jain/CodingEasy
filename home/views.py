@@ -152,6 +152,13 @@ def jQuery1(request):
         return render(request, 'home/jQuery/ManipulatingCSS/jQueryCss.html')
     elif query == "jQueryDimensions":
         return render(request, 'home/jQuery/ManipulatingCSS/jQueryDimensions.html')
+    # The complete of jQuery course
+    elif query == "manipulatingDOM":
+        return render(request, 'home/jQuery/ManipulatingDOM/ManipulatingDOM.html')
+    elif query == "events":
+        return render(request, 'home/jQuery/Events/events.html')
+    elif query == "effects":
+        return render(request, 'home/jQuery/Effects/effects.html')
     
 
 
