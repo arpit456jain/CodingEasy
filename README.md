@@ -43,11 +43,11 @@ This project is part of the [GirlScript Summer of Code 2020](https://www.gssoc.t
 <br>
 
 ## 💻Table of Contents
-  - **[How to Contribute?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-contribute)**
-  - **[How to make a Pull Request?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-make-a-pull-request)**
-  - **[Project Setup](https://github.com/tandrimasingha/CodingEasy/blob/master/README.md#project-setup)**
-  - **[Project Admin](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#project-admin)**
-  - **[Our Valuable Contributors](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#our-valuable-contributors)**
+  - **[How to Contribute?](#👩‍💻-how-to-contribute)**
+  - **[How to make a Pull Request?](#📍-how-to-make-a-pull-request)**
+  - **[Project Setup](#⚙-project-setup)**
+  - **[Project Admin](#project-admin)**
+  - **[Our Valuable Contributors](#😎our-valuable-contributors)**
   
   
 ## 👩‍💻 How to Contribute?
