@@ -7,6 +7,8 @@ from django.core.mail import send_mail, BadHeaderError
 from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
+from django.contrib import messages
+from .forms import ContactForm
 
 
 def index(request):
@@ -26,6 +28,15 @@ def login(request):
 
 
 def contact(request):
+    if request.method == "POST":
+        form  = ContactForm(request.POST or None)
+        if form.is_valid():
+            form.save()
+        else:
+            messages.success(request,('There was an error in your form! try again...'))
+            return render(request, 'home/contact/contact.html')
+        messages.success(request,('Thank you for contacting us'))
+        return redirect('index')
     return render(request, 'home/contact/contact.html')
 
 
