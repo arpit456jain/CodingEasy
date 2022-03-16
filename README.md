@@ -3,6 +3,7 @@
 <div align="center">
  
 ![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)
+
  
  <br>
  
