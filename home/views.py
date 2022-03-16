@@ -235,6 +235,8 @@ def ml1(request):
         return render(request, 'home/ML/Random_Forest/Random_Forest.html')
     elif query == "svm":
         return render(request, 'home/ML/Support_Vector_Machines/Support_Vector_Machines.html')
+    elif query == "hrc":
+        return render(request, 'home/ML/Hierarchical Clustering/Hierarchical Clustering.html')
 
 
 def course_video(request):
