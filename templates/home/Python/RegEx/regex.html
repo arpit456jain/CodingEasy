@@ -1,0 +1,69 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+  <div class="heading text-center display-3">
+    FrontEndPartner
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+          <h1 class="text-center">ReGex - Regular Expressions </h1>
+          <p class="text-center"> A RegEx, or Regular Expression, is a sequence of characters that forms a search
+            pattern.
+            <br>RegEx can be used to check if a string contains the specified search pattern.
+          </p>
+        </div>
+  </section>
+  <br><br>
+
+
+  <!-- code and text -->
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">RegEx Module</h3>
+        <p class="text-center">Python has a built-in package called <code>re</code>, which can be used to work with
+          Regular Expressions.</p>
+
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3>
+        <div class="code">
+          <pre>
+                <code>
+                  import re
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">RegEx in Python</h3>
+        <p class="text-center">When you have imported the <code>re</code> module, you
+          can start using regular expressions.</p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3>
+        <div class="code">
+          <pre>
+                <code>
+                  <p>Search the string to see if it starts with &quot;The&quot; and ends with &quot;Spain&quot;:</p>
+                  import re<br><br>txt = &quot;The rain in Spain&quot;<br>x = re.search(&quot;^The.*Spain$&quot;, txt)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+{% endblock content %}

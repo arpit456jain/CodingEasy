@@ -1,0 +1,105 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery Syntax</h1>
+                <p>With jQuery you select (query) HTML elements and perform "actions" on them.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery Syntax</h3>
+            <p>The jQuery syntax is tailor-made for <strong>selecting</strong> HTML elements
+                and performing some <strong>action</strong> on the element(s).<br/>
+                Basic syntax is: <strong>$(selector).action()M</strong>
+            </p>
+             <ul>
+                    <li>A $ sign to define/access jQuery</li>
+                    <li>A (selector) to "query (or find)" HTML elements</li>
+                    <li>A jQuery action() to be performed on the element(s)</li>
+            </ul>
+            <p></p>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    <mark style="color:red;">$(this).hide()</mark> - hides the current element.
+
+                    <mark style="color:red;">$("p").hide()</mark> - hides all &lt;p elements.
+
+                    <mark style="color:red;">$(".test").hide()</mark> - hides all elements with class="test".
+
+                    <mark style="color:red;">$("#test").hide()</mark> - hides the element with id="test".
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">The Document Ready Event</h3>
+            <p>All jQuery methods should be inside a document ready event:</p>
+            <p>
+                This is to prevent any jQuery code from running before the document is finished loading (is ready).<br/>
+
+                It is good practice to wait for the document to be fully loaded
+                and ready before working with it. This also allows you to have your JavaScript code
+                before the body of your document, in the head section.
+                <p>
+                    <strong>Tip:</strong>
+                    The jQuery team has also created an even shorter method for the document ready event:
+                </p> 
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                    <code>
+                        $(document).ready(function(){
+
+                            // jQuery methods go here...
+
+                        });
+                    </code>
+                    <code>
+                        $(function(){
+
+                            // jQuery methods go here...
+
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}

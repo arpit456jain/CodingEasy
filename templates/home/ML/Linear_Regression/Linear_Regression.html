@@ -1,0 +1,52 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Linear Regression (Regression Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Linear Regression</h3>
+            <p>Linear Regression is the most commonly used Regression technique which involves dealing with numerical
+                values and some mathematical calculations
+            </p>
+            <p>This algorithm uses multiple mathematical & statistical techniques like Linear Algebra, Probability, to
+                find the final results</p>
+            <p>Linear Regression is widely used in predicting the prices of any object. Like we can use it for problem
+                statements like House Price, Car Price, Stock Price etc </p>
+            <p>As shown in the plot the circle markers(Blue Dots) are actual values and the best fit line(Red Line)
+                represents the predicted values.</p>
+            <p>After this we try to find the error which is the difference between predicted and actual value. We also
+                try to minimize the error and thus adjust the best fit line so that we get minimum error. Once we get
+                the perfect best fit line for
+                our problem then we are all good to go for predicting unknown values.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Plot Picture</h3>
+            <div class="code">
+                <pre>
+                <img src="{% static 'img/LinearRegex_Plot.png' %}",height=500px, width=500px>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}

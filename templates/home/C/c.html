@@ -1,0 +1,202 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br />
+<div class="heading text-center display-3 codeeasy"><b>CodingEasy</b></div>
+<br />
+
+<br /><br />
+<!-- jumbotron -->
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="display-4"><b>What is C</b></h1>
+                <p class="lead">
+                    C is a high-level and general-purpose programming language that is ideal for developing firmware or
+                    portable applications. Originally intended for writing system software, C was developed at Bell Labs
+                    by Dennis Ritchie for the Unix Operating System in the early 1970s.
+
+                    Ranked among the most widely used languages, C has a compiler for most computer systems and has
+                    influenced many popular languages – notably C++
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<br /><br />
+<!-- Code and Text -->
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center"><b class="basicsyntax">C Basic Syntax</b></h3>
+            <p>
+                #include &lt;stdio.h&gt; includes the <b><i>standard input output </i></b>library functions. The
+                printf() function is defined in stdio.h .
+                <br>
+
+                <b>int main() - </b> The <b><i>main() function is the entry point of every program</i></b> in c
+                language.
+                <br>
+
+                <b>printf() -</b> The printf() function is <b><i>used to print data </i></b>on the console.
+                <br>
+
+                <b>return 0 -</b> The return 0 statement, returns execution status to the OS. The 0 value is used for
+                successful execution and 1 for unsuccessful execution.
+                <br>
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center"><b class="example">Example</b></h3>
+            <div class="code">
+                <pre>
+           <code>
+            #include &lt;stdio.h&gt; 
+
+                int main() {
+                    printf("Hello World!");
+                    return 0;
+                }
+           </code>
+          </pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cards -->
+<div class="container-fluid ">
+    <div class="row m-3 g-5">
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Data Types</h5>
+                    <a href="{% url 'cpp1' %}?data=datatype" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Variables</h5>
+
+                    <a href="{% url 'cpp1' %}?data=variable" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Constants</h5>
+
+                    <a href="{% url 'cpp1' %}?data=constant" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Modifiers</h5>
+
+                    <a href="{% url 'cpp1' %}?data=modifier" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Keywords</h5>
+
+                    <a href="Table/table.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Operators</h5>
+
+                    <a href="Style/style.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="container-fluid ">
+    <div class="row m-3 g-5">
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Loop Types</h5>
+                    <a href="Basic/Basic.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Decision Making</h5>
+
+                    <a href="Images/images.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Functions</h5>
+
+                    <a href="Links/link.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Numbers</h5>
+
+                    <a href="Lists/list.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Arrays</h5>
+
+                    <a href="Table/table.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Strings</h5>
+
+                    <a href="Style/style.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /jumbotron -->
+
+{% endblock content %}

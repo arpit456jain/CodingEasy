@@ -1,0 +1,123 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+
+<section class="container mt-3">
+  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+    <h1 class="text-center display-3">CSS Alignments</h1>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Center Align Elements</h3>
+      <p class="text-center">To horizontally center a block element (like &lt;div&gt;), use <code>margin: auto;</code>
+        <br>Setting the width of the element will prevent it from stretching out to the
+        edges of its container.
+        <br>The element will then take up the specified width, and the remaining space
+        will be split equally between the two margins
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+              <code>
+                .center
+                {<br>
+                &nbsp;&nbsp;margin: auto;<br>
+                  &nbsp;
+                width: 50%;<br>
+                  &nbsp;
+                border: 3px solid green;<br>&nbsp; padding: 10px;<br>
+                }
+              </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Center Align Text</h3>
+      <p class="text-center">To just center the text inside an element, use <code>text-align: center;</code></p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+            <code>
+              .center
+              .center {<br>&nbsp; text-align: center;<br>&nbsp; 
+                border: 3px solid green;<br>}
+            </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Left and Right Align - Using position</h3>
+      <p class="text-center">One method for aligning elements is to use <code>position: absolute;</code>:</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+              <code>
+                .right
+                  {<br>
+                  &nbsp;&nbsp;position: absolute;<br>
+                    &nbsp;
+                  right: 0px;<br>
+                  &nbsp;&nbsp;width: 300px;<br>
+                  &nbsp;&nbsp;border: 3px solid #73AD;<br>&nbsp;&nbsp;padding: 10px;<br>
+                  }
+              </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Left and Right Align - Using float</h3>
+      <p class="text-center">Another method for aligning elements is to use the <code>float</code> property:</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+            <code>
+              .right
+                {<br>
+                &nbsp;&nbsp;float: right;<br>
+                  &nbsp;
+                width: 300px;<br>
+                &nbsp;&nbsp;border: 3px solid #73AD;<br>&nbsp;&nbsp;padding: 10px;<br>
+                }
+            </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

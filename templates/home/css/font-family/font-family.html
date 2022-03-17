@@ -1,0 +1,40 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+
+<section class="container mt-3">
+  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+    <h1 class="text-center display-3">CSS Font Family</h1>
+
+  </div>
+</section>
+<br><br>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">CSS Font Family</h3>
+      <p class="text-center">In CSS, we use the <code>font-family</code> property to specify the font of a text.</p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  .p1 {<br>&nbsp; font-family: &quot;Times New Roman&quot;, Times, serif;<br>}<br><br>
+                  .p2 {<br>&nbsp; font-family: Arial, Helvetica, sans-serif;<br>}<br><br>
+                  .p3 {<br>&nbsp; font-family: &quot;Lucida Console&quot;, &quot;Courier New&quot;, monospace;<br>}
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br>
+{% endblock content %}

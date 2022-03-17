@@ -1,0 +1,55 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Logistic Regression (Classification Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Logistic Regression</h3>
+            <p>Logistic Regression is a Classification algorithm which is mostly used for Binary Classification problems
+                which includes 2 classes/categories</p>
+            <p>This algorithm is named after the term "Regression" because it is the only Classification algorithm which
+                uses the mathematical concept very similar to Linear Regression</p>
+            <p>This algorithm is widely used in classifying problems like if image is cat/dog or any sentence is
+                spam/ham etc.</p>
+            <p>As shown in the plot the circle markers(Blue Dots) are actual values and the best fit line(Red Line)
+                represents the predicted values. Also there are 2 class values represented by 0 & 1. If a straight line
+                is taken like Linear Regression
+                then most of the points will be missed whereas if an S shaped curve called Sigmoid Curve is taken then
+                most points are covered.
+            </p>
+            <p>After this we try to find the error which is the difference between predicted and actual value. We also
+                try to minimize the error and thus adjust the best fit line so that we get minimum error. Once we get
+                the perfect best fit line for
+                our problem then we are all good to go for predicting unknown values.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Plot Picture</h3>
+            <div class="code">
+                <pre>
+            <img src="{% static 'img/LogisticRegex_Plot.jpg' %}",height=500px, width=500px>
+        </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}

@@ -43,21 +43,21 @@ This project is part of the [GirlScript Summer of Code 2020](https://www.gssoc.t
 <br>
 
 ## 💻Table of Contents
-  - **[How to Contribute?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-contribute)**
-  - **[How to make a Pull Request?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-make-a-pull-request)**
-  - **[Project Setup](https://github.com/tandrimasingha/CodingEasy/blob/master/README.md#project-setup)**
-  - **[Project Admin](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#project-admin)**
-  - **[Our Valuable Contributors](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#our-valuable-contributors)**
+  - **[How to Contribute?](#how-to-contribute)**
+  - **[How to make a Pull Request?](#how-to-make-a-pull-request)**
+  - **[Project Setup](#project-setup)**
+  - **[Project Admin](#project-admin)**
+  - **[Our Valuable Contributors](#our-valuable-contributors)**
   
   
-## 👩‍💻 How to Contribute?
+## How to Contribute?
 
 - Take a look at the existing [Issues](https://github.com/ssurbhi09/Github-Automation/issues) or [create a new issue](https://github.com/ssurbhi09/Github-Automation/issues/new/choose)!
 - [Fork the Repo](https://github.com/ssurbhi09/Github-Automation/issues/new/fork), create a branch for any issue that you are working on and commit your work.
 - Create a **[Pull Request](CodingEasy)** (_PR_), which will be promptly reviewed and given suggestions for improvements by the community.
 - Add screenshots or screen captures to your Pull Request to help us understand the effects of the changes that are included in your commits.
 
-## 📍 How to make a Pull Request?
+## How to make a Pull Request?
 
 **1.** Start by making a fork the [**CodingEasy**](https://github.com/arpit456jain/CodingEasy) repository. Click on the <a href="https://github.com/arpit456jain/CodingEasy/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
 
@@ -67,16 +67,16 @@ This project is part of the [GirlScript Summer of Code 2020](https://www.gssoc.t
 git clone https://github.com/<your-github-username>/CodingEasy
 ```
 
-**3.** Set upstream command:
-
-```bash
-git remote add upstream https://github.com/arpit456jain.git
-```
-
-**4.** Navigate to the new project directory:
+**3.** Navigate to the new project directory:
 
 ```bash
 cd CodingEasy
+```
+
+**4.** Set upstream command:
+
+```bash
+git remote add upstream https://github.com/arpit456jain.git
 ```
 
 **5.** Create a new branch:
@@ -126,7 +126,7 @@ git push origin YourBranchName
 
 </br>
 
-## ⚙ Project Setup
+## Project Setup
 
 virtualenv is a tool to create isolated Python environments. Since Python 3.3, a subset of it has been integrated into the standard library under the venv module. The venv module does not offer all features of this library, to name just a few more prominent:
 
@@ -203,7 +203,7 @@ Congratulations! You've created your virtual environment.
 </table>
 <br>
 
-## 😎Our valuable Contributors
+## Our valuable Contributors
 
 
 <a href="https://github.com/arpit456jain/CodingEasy/graphs/contributors">

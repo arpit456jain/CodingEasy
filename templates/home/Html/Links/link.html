@@ -1,0 +1,102 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  FrontEndPartner
+</div> <br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">Link Tags</h1>
+
+      </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;a&gt;</h3>
+      <p>The &lt;a&gt; tag defines a hyperlink, which is used to link from one page to another.
+
+        The most important attribute of the &lt;a&gt; element is the href attribute, which indicates the link's
+        destination.
+
+        By default, links will appear as follows in all browsers:
+
+        An unvisited link is underlined and blue
+        A visited link is underlined and purple
+        An active link is underlined and red</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+              <code>
+     &lt;a href="https://www.CodingEasy.com"&gt;Visit CodingEasy.com&lt;/a&gt;
+              </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;link&gt;</h3>
+      <p>The &lt;link&gt; tag defines the relationship between the current document and an external resource.
+
+        The &lt;link&gt; tag is most often used to link to external style sheets.
+
+        The &lt;link&gt; element is an empty element, it contains attributes only.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                 <code>
+      &lt;head&gt;
+      &lt;link rel="stylesheet" href="styles.css"&gt;
+      &lt;/head&gt;
+                 </code>
+             </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;nav&gt;</h3>
+      <p>The &lt;nav&gt; tag defines a set of navigation links.
+
+        Notice that NOT all links of a document should be inside a &lt;nav&gt; element. The &lt;nav&gt; element is
+        intended only for major block of navigation links.
+
+        Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the
+        initial rendering of this content.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                    <code>
+    &lt;nav&gt;
+    &lt;a href="/html/"&gt;HTML&lt;/a&gt;
+    &lt;a href="/css/"&gt;CSS&lt;/a&gt;
+    &lt;a href="/js/"&gt;JavaScript&lt;/a&gt;
+    &lt;a href="/python/"&gt;Python&lt;/a&gt;
+    &lt;/nav&gt;
+                    </code>
+                </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+{% endblock content %}

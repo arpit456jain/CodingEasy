@@ -1,0 +1,145 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery Effects - Hide and Show</h1><br>
+                <p><strong>Hide, Show, Toggle, Slide, Fade, and Animate. WOW!</strong></p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery hide() and show()</h3>
+            <p>
+                With jQuery, you can hide and show HTML elements with the
+                <mark class='mnpcss'>hide()</mark> and <mark class='mnpcss'>show()</mark> methods
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                    <code>
+                        $("#hide").click(function(){
+                            $("p").hide();
+                            });
+
+                            $("#show").click(function(){
+                            $("p").show();
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery toggle()</h3>
+            <p>
+                You can also toggle between hiding and showing an element with
+                the <mark class='mnpcss'>toggle()</mark> method.<br><br>
+                Shown elements are hidden and hidden elements are shown:
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                    <code>
+                        $("button").click(function(){
+                            $("p").toggle();
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">The Rest of jQuery Effects</h3>
+            <ul>
+                <li>
+                    <ul><strong>jQuery Fading Methods</strong>
+                        <li class='mnpcss'>fadeIn()</li>
+                        <li class='mnpcss'>fadeOut()</li>
+                        <li class='mnpcss'>fadeToggle()</li>
+                        <li class='mnpcss'>fadeTo()</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul><strong>jQuery Effects - Slidings</strong>
+                        <li class='mnpcss'>slideDown()</li>
+                        <li class='mnpcss'>slideUp()</li>
+                        <li class='mnpcss'>slideToggle()</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul><strong>jQuery Effects - Animation</strong>
+                        <li class='mnpcss'>animate()</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul><strong>jQuery Stop Animations</strong>
+                        <li class='mnpcss'>stop() </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul><strong>jQuery Callback Functions</strong>
+                        <li>
+                            <pre>
+                                <code>
+                                    $("button").click(function(){
+                                        $("p").hide("slow", function(){
+                                            alert("The paragraph is now hidden");
+                                        });
+                                    });
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul><strong>jQuery - Chaining</strong>
+                        <li>
+                            <pre>
+                                <code>
+                                    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}

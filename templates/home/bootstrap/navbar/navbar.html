@@ -1,0 +1,59 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Bootstrap Navigation Bars</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Bootstrap Navigation Bars</h3>
+            <p>A navigation bar is a navigation header that is placed at the top of the
+                page</p>
+            <p>With Bootstrap, a navigation bar can extend or collapse, depending on the
+                screen size.</p>
+            <p>A standard navigation bar is created with the <code>.navbar</code>
+                class, followed by a responsive collapsing class: <code>.navbar-expand-xxl|xl|lg|md|sm</code>
+                (stacks the navbar vertically on xxlarge, extra large, large, medium or small screens). </p>
+            <p>To add links inside the navbar, use either an <code>&lt;ul&gt;</code> element
+                (or a <code>&lt;div&gt;</code>) with <code>class=&quot;navbar-nav&quot;</code>.
+                Then add <code>&lt;li&gt;</code> elements with a <code>.nav-item</code> class
+                followed by an <code>&lt;a&gt;</code> element with a <code>.nav-link</code> class:</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+            <code>
+                &lt;!-- A grey horizontal navbar that becomes 
+                vertical on small screens --&gt;<br>&lt;nav class=&quot;navbar navbar-expand-sm 
+                 bg-light&quot;&gt;<br><br>&nbsp; &lt;div class=&quot;container-fluid&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;!-- Links --&gt;<br>&nbsp; &nbsp; &lt;ul class=&quot;navbar-nav&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class=&quot;nav-item&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link 
+                1&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>&nbsp;&nbsp;&nbsp; &nbsp; &lt;li class=&quot;nav-item&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link 
+                2&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class=&quot;nav-item&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link 
+                3&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/ul&gt;<br>&nbsp; 
+                &lt;/div&gt;<br><br>&lt;/nav&gt;
+            </code>
+        </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+
+{% endblock content %}

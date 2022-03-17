@@ -1,0 +1,52 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+
+<div class="heading text-center display-3">
+  FrontEndPartner
+</div> <br>
+
+<br><br>
+<section class="container mt-3">
+  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+    <h1 class="display-4">JS Objects</h1>
+    <p class="lead">The Object class represents one of JavaScript's data types. It is used to store various keyed
+      collections and more complex entities. Objects can be created using the Object() constructor or the object
+      initializer / literal syntax.
+    </p>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">JS Objects</h3>
+
+      <p class="text-center">
+        You define (and create) a JavaScript object with an object literal
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+              <code>
+                const person = {<br>
+                  &nbsp; firstName: &quot;John&quot;,<br>
+                  &nbsp; lastName: &quot;Doe&quot;,<br>
+                &nbsp;&nbsp;age: 50,<br>
+                &nbsp;&nbsp;eyeColor: &quot;blue&quot;<br>
+                };
+                  </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+{% endblock content %}

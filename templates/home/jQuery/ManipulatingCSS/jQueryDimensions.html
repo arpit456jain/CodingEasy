@@ -1,0 +1,200 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery - Dimensions</h1>
+                <p>With jQuery, it is easy to work with the dimensions of elements and browser window</p>
+                <p><strong>jQuery Dimension Methods</strong></p>
+                <ul>
+                    jQuery has several important methods for working with dimensions:<br><br>
+                    <li><mark class="mnpcss">width()</mark></li>
+                    <li><mark class="mnpcss">height()</mark></li>
+                    <li><mark class="mnpcss">innerWidth()</mark></li>
+                    <li><mark class="mnpcss">innerHeight()</mark></li>
+                    <li><mark class="mnpcss">outerWidth()</mark></li>
+                    <li><mark class="mnpcss">outerHeight()</mark></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery Dimensions</h3>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <img src="{% static 'img/jQueryDimensions.gif'%}" alt=""/>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery width() and height() Methods</h3><br>
+            <p>
+                The <mark class="mnpcss">width()</mark> method sets or returns the width of an element (excludes padding, border and margin).<br><br>
+                The <mark class="mnpcss">height()</mark> method sets or returns the height of an element (excludes padding, border and margin).
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                        <mark>
+                            The following example returns the width and height of a specified
+                            <mark class='mnpcss'>&lt;div&gt;</mark> element:
+                        </mark>
+                    </span>
+                <pre>
+                    <code>
+                        $("button").click(function(){
+                            var txt = "";
+                            txt += "Width: " + $("#div1").width() + "</br>";
+                            txt += "Height: " + $("#div1").height();
+                            $("#div1").html(txt);
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery innerWidth() and innerHeight() Methods</h3><br>
+            <p>
+                The <mark class="mnpcss">innerWidth()</mark> method returns the width of an element (includes padding).<br><br>
+                The <mark class="mnpcss">innerHeight()</mark> method returns the height of an element (includes padding).
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                        <mark>
+                            The following example returns the inner-width/height of a specified
+                            <mark class='mnpcss'>&lt;div&gt;</mark> element:
+                        </mark>
+                    </span>
+                <pre>
+                    <code>
+                        $("button").click(function(){
+                            var txt = "";
+                            txt += "Inner width: " + $("#div1").innerWidth() + "</br>";
+                            txt += "Inner height: " + $("#div1").innerHeight();
+                            $("#div1").html(txt);
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery outerWidth() and outerHeight() Methods</h3><br>
+            <p>
+                The <mark class="mnpcss">outerWidth()</mark> method returns the width of an element (includes padding and border).<br><br>
+                The <mark class="mnpcss">outerHeight()</mark> method returns the height of an element (includes padding and border).
+            </p><br><br><br><br><br>
+            <p>
+                The <mark class="mnpcss">outerWidth(true)</mark> method returns the width of an element (includes padding, border, and margin).<br><br>
+                The <mark class="mnpcss">outerHeight(true)</mark> method returns the height of an element (includes padding, border, and margin).
+            </p>
+            
+
+            
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                        <mark>
+                            The following example returns the outer-width/height
+                            of a specified <mark class='mnpcss'>&lt;div&gt;</mark> element:
+                        </mark>
+                    </span>
+                <pre>
+                    <code>
+                        $("button").click(function(){
+                            var txt = "";
+                            txt += "Outer width: " + $("#div1").outerWidth() + "&lt;/br&gt;";
+                            txt += "Outer height: " + $("#div1").outerHeight();
+                            $("#div1").html(txt);
+                        });
+                    </code>
+                </pre>
+                <pre>
+                    <code>
+                        $("button").click(function(){
+                            var txt = "";
+                            txt += "Outer width (+margin): " + $("#div1").outerWidth(true) + "&lt;/br&gt;";
+                            txt += "Outer height (+margin): " + $("#div1").outerHeight(true);
+                            $("#div1").html(txt);
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery More width() and height()</h3>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        The following example sets the width and height of a specified
+                        <mark class='mnpcss'>&lt;div&gt;</mark> element:
+                    </mark>
+                </span>
+                <pre>
+                <code>
+                    $("button").click(function(){
+                        $("#div1").width(500).height(500);
+                    });
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}

@@ -1,0 +1,72 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Bootstrap Containers</h1>
+                <p>Containers are used to pad the content inside
+                    of them, and there are two container classes available:</p>
+                <ol>
+                    <li>The <code>.container</code> class provides a responsive <strong>fixed width
+                            container</strong></li>
+                    <li>The <code>.container-fluid</code> class provides a <strong>full width container</strong>,
+                        spanning the entire width of the viewport</li>
+                </ol>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Fixed Container</h3>
+            <p>Use the <code>.container</code> class to create a responsive, fixed-width container.</p>
+            <p>Note that its width (<code>max-width</code>) will change on different screen sizes:</p>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    &lt;div class=&quot;container&quot;&gt;<br>&nbsp; &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;<br>&nbsp; &lt;p&gt;This is some text.&lt;/p&gt; <br>&lt;/div&gt;
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Fluid Container</h3>
+            <p>Use the <code>.container-fluid</code> class to create a full width container, that will always span
+                the entire width of the screen (<code>width</code> is always <code>100%</code>):</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    &lt;div class=&quot;container-fluid&quot;&gt;<br>&nbsp; &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;<br>&nbsp; &lt;p&gt;This is some text.&lt;/p&gt; <br>&lt;/div&gt;
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}

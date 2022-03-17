@@ -1,0 +1,108 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">Image Tags</h1>
+
+      </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;img&gt;</h3>
+      <p>The &lt;img&gt; tag is used to embed an image in an HTML page.
+
+        Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt; tag
+        creates a holding space for the referenced image.
+
+        The &lt;img&gt; tag has two required attributes:
+
+        src - Specifies the path to the image
+        alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                &lt;img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;canvas&gt;</h3>
+      <p>The &lt;canvas&gt; tag is used to draw graphics, on the fly, via scripting (usually JavaScript).
+
+        The &lt;canvas&gt; tag is transparent, and is only a container for graphics, you must use a script to actually
+        draw the graphics.
+
+        Any text inside the &lt;canvas&gt; element will be displayed in browsers with JavaScript disabled and in
+        browsers that do not support &lt;canvas&gt;</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                &lt;canvas id="myCanvas"&gt;
+                Your browser does not support the canvas tag.
+                &lt;/canvas&gt;
+                &lt;script&gt;
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(0, 0, 80, 80);
+                &lt;/script&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;picture&gt;</h3>
+      <p>The &lt;picture&gt; tag gives web developers more flexibility in specifying image resources.
+
+        The most common use of the &lt;picture&gt; element will be for art direction in responsive designs. Instead of
+        having one image that is scaled up or down based on the viewport width, multiple images can be designed to
+        more nicely fill the browser viewport.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  &lt;picture&gt;
+                  &lt;source media="(min-width:650px)" srcset="img_pink_flowers.jpg"&gt;
+                  &lt;source media="(min-width:465px)" srcset="img_white_flower.jpg"&gt;
+                  &lt;img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;"&gt;
+                  &lt;/picture&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+</section>
+<br><br>
+
+{% endblock content %}

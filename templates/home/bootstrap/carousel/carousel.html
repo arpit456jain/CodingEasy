@@ -1,0 +1,63 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Bootstrap Carousel</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Bootstrap Carousel</h3>
+            <p>The carousel is a slideshow for cycling through a series of content<br>It works with a series of
+                images, text, or custom markup. It also includes support for previous/next controls and indicators.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    &lt;!-- Carousel --&gt;<br>&lt;div id=&quot;demo&quot; class=&quot;carousel slide&quot; 
+                    data-bs-ride=&quot;carousel&quot;&gt;<br><br>&nbsp; &lt;!-- Indicators/dots --&gt;<br>&nbsp; &lt;div 
+                    class=&quot;carousel-indicators&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;button type=&quot;button&quot; 
+                    data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp; 
+                    &lt;button type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;1&quot;&gt;&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp; 
+                    &lt;button type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;2&quot;&gt;&lt;/button&gt;<br>&nbsp; 
+                    &lt;/div&gt;<br><br>&nbsp; &lt;!-- The slideshow/carousel --&gt;<br>&nbsp; &lt;div 
+                    class=&quot;carousel-inner&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;carousel-item 
+                    active&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;la.jpg&quot; alt=&quot;Los Angeles&quot; 
+                    class=&quot;d-block w-100&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div 
+                    class=&quot;carousel-item&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;img 
+                    src=&quot;chicago.jpg&quot; alt=&quot;Chicago&quot; class=&quot;d-block w-100&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
+                    &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;carousel-item&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &lt;img src=&quot;ny.jpg&quot; alt=&quot;New York&quot; class=&quot;d-block w-100&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
+                    &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;!-- Left and right controls/icons --&gt;<br>&nbsp; 
+                    &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#demo&quot; 
+                    data-bs-slide=&quot;prev&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;span 
+                    class=&quot;carousel-control-prev-icon&quot;&gt;&lt;/span&gt;<br>&nbsp; &lt;/button&gt;<br>&nbsp; 
+                    &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#demo&quot; 
+                    data-bs-slide=&quot;next&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;span 
+                    class=&quot;carousel-control-next-icon&quot;&gt;&lt;/span&gt;<br>&nbsp; &lt;/button&gt;
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<br><br>
+
+{% endblock content %}

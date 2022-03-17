@@ -1,0 +1,47 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Bootstrap Cards</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Bootstrap Cards</h3>
+            <p>A card in Bootstrap 5 is a bordered box with some padding around its content. It includes options for
+                headers, footers, content, colors, etc.</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    &lt;div class="card" style="width:20rem;margin:20px 0 24px 0"&gt;<br>
+                        &lt;img class="card-img-top" src="img_avatar3.png" alt="image" style="width:100%"&gt;<br>
+                        &lt;div class="card-body"&gt;<br>
+                          &lt;h4 class="card-title">John Doe&lt;/h4&gt;<br>
+                          &lt;p class="card-text">Some example text some example text. John Doe is an architect and engineer&lt;/p&gt;<br>
+                          &lt;a href="javascript:void(0)" class="btn btn-primary">See Profile&lt;/a&gt;<br>
+                          &nbsp;&nbsp &lt;/div&gt;<br>
+                      &lt;/div&gt;<br>
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+<br><br>
+{% endblock content %}

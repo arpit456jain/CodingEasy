@@ -1,0 +1,136 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
+
+<br /><br />
+<!-- jumbotron -->
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="display-4">What is HTML</h1>
+        <p class="lead">
+          HTML stands for Hyper Text Markup Language HTML is the standard markup
+          language for creating Web pages HTML describes the structure of a Web
+          page HTML consists of a series of elements HTML elements tell the
+          browser how to display the content HTML elements label pieces of
+          content such as "this is a heading", "this is a paragraph", "this is a
+          link", etc.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br /><br />
+<!-- Code and Text -->
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">A Simple HTML Document</h3>
+      <p>
+        The &lt;!DOCTYPE html &gt; declaration defines that this document is
+        an HTML5 document The &lt;html&gt; element is the root element of an
+        HTML page The &lt;head&gt; element contains meta information about the
+        HTML page The &lt;title&gt; element specifies a title for the HTML
+        page (which is shown in the browser's title bar or in the page's tab)
+        The &lt;body&gt; element defines the document's body, and is a
+        container for all the visible contents, such as headings, paragraphs,
+        images, hyperlinks, tables, lists, etc. The &lt;h1&gt; element defines
+        a large heading The &lt;p&gt; element defines a paragraph
+      </p>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+           <code>
+            &lt;!DOCTYPE html &gt;
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;title&gt;Page Title&lt;title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            &lt;h1&gt;My First Heading&lt;/h1&gt;
+            &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+           </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cards -->
+<div class="container-fluid ">
+  <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Basic Tags</h5>
+          <a href="{% url 'html1' %}?data=basic" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Images</h5>
+
+          <a href="{% url 'html1' %}?data=images" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Links</h5>
+
+          <a href="{% url 'html1' %}?data=link" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Lists</h5>
+
+          <a href="{% url 'html1' %}?data=list" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Tables</h5>
+
+          <a href="{% url 'html1' %}?data=table" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Styles and Semantics</h5>
+
+          <a href="{% url 'html1' %}?data=style" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- /jumbotron -->
+{% endblock content %}

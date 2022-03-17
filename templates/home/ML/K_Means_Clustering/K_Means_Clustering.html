@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">K Means Clustering (Clustering Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">K Means Clustering</h3>
+            <p>K Means Clustering includes formation of clusters of the datapoints and data points with most similarity
+                is placed under 1 cluster. Machine groups the data to same cluster without labels and finds common
+                patterns to predict the unknown
+                data class value. </p>
+            <p>The algorithm proceeds in similar way as K Nearest Neighbors which means by choosing a value of k.
+                Suppose k=3 so there will be 3 clusters formed as shown without labels.</p>
+            <p>Each cluster has a centroid point which marks the cluster. We first start with taking random value of
+                centroid point of all clusters. Then we can find distance between two clusters.</p>
+            <P>There will be a midpoint of the distance between the two centroids and from there a perpendicular bisetor
+                is passing which acts as a boundary between them. Now we try to make the boundary line in an optimized
+                way to make the predictions.</P>
+            <P>When a new datapoint is placed then we try to assign that to an existing cluster to find the value which
+                is assigned to that datapoint.</P>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Plot Picture</h3>
+            <div class="code">
+                <pre>
+                        <img src="{% static 'img/KMeansClustering_Plot.jpg' %}",height=500px, width=500px>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}

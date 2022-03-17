@@ -1,0 +1,156 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  Coding Easy
+</div> <br>
+
+<br><br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="display-4">What is Bootstrap?</h1>
+        <p class="lead">
+        <ul>
+          <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+          <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation,
+            modals, image carousels and many other, as well as optional JavaScript plugins</li>
+          <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Bootstrap Versions</h3>
+      <p>Bootstrap 5 (released 2021) is the newest version of Bootstrap
+        (released 2013); with new components, faster stylesheet and more responsiveness.</p>
+      <p>Bootstrap 5 supports the latest, stable releases of all major browsers and
+        platforms. However, Internet Explorer 11 and down is not supported.</p>
+      <p>The main differences between Bootstrap 5 and Bootstrap 3 &amp; 4, is that
+        Bootstrap 5 has switched to vanilla JavaScript instead of jQuery.</p>
+    </div>
+    <div class="col-md-6 col-sm-12 ">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+            <code>
+              &lt;div class=&quot;container-fluid p-5 bg-primary text-white text-center&quot;&gt;<br>&nbsp; 
+              &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;<br>&nbsp; &lt;p&gt;Resize this responsive page to 
+              see the effect!&lt;/p&gt; <br>&lt;/div&gt;<br><br>
+            </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- Cards -->
+<div class="container-fluid ">
+  <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Grid System</h5>
+          <a href="{% url 'bootstrap1' %}?data=grid" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Containers</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=container" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Colors</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=color" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Jumbotron</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=jumbotron" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Buttons</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=button" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Navbar</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=navbar" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Cards</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=cards" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Carousel</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=carousel" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Modal</h5>
+
+          <a href="{% url 'bootstrap1' %}?data=modal" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
