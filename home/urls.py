@@ -8,7 +8,9 @@ urlpatterns = [
     path('feature/', views.feature, name='home-feature'),
     path('pricing/', views.pricing, name='home-pricing'),
     path('contact/', views.contact, name='home-contact'),
-    path('login/', views.login, name='home-login'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('register/', views.register, name='register'),
     # Courses
     path('html/', views.html, name='html'),
     path('html1/', views.html1, name='html1'),
