@@ -2,13 +2,13 @@ from django import forms
 from .models import Contact
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
+from .models import Contact,Newsletter
 class ContactForm(forms.ModelForm):
     class Meta:
         model= Contact
         fields=['name','email','message']
 
-
+# Create user form
 
 class CreationUserForm(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput(
@@ -19,3 +19,12 @@ class CreationUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ("username", "email", "password1", "password2")
+       
+            
+# newsletter form
+
+class NewsletterForm(forms.ModelForm):
+    class Meta:
+        model = Newsletter
+        fields = ['email']
+    

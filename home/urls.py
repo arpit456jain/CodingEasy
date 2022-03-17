@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.urls import path
 from home import views
 
@@ -11,6 +10,7 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('register/', views.register, name='register'),
+    path('subscribe/', views.subscribe, name='newsletter'),
     # Courses
     path('html/', views.html, name='html'),
     path('html1/', views.html1, name='html1'),
