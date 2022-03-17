@@ -2,7 +2,11 @@
 
 ## 🛠️ Fixes Issue
 
-<!-- Example: Closes #31 -->
+<!-- Use the following template only -->
+
+<!-- Closes #31 -->
+<!-- OR -->
+<!-- Closes part of #31 -->
 
 ## 👨‍💻 Changes proposed
 
