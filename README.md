@@ -2,7 +2,7 @@
 
 <div align="center">
  
-![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)
+<a href= "https://github.com/arpit456jain/CodingEasy/issues" target="_blanlk" title="CodingEasy">![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)</a>
 
  
  <br>
