@@ -8,7 +8,8 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
-from .forms import ContactForm
+from .models import Newsletter
+from .forms import ContactForm,NewsletterForm
 
 
 def index(request):
@@ -33,11 +34,25 @@ def contact(request):
         if form.is_valid():
             form.save()
         else:
-            messages.success(request,('There was an error in your form! try again...'))
+            messages.error(request,('There was an error in your form! try again...'))
             return render(request, 'home/contact/contact.html')
-        messages.success(request,('Thank you for contacting us'))
+        messages.success(request,('Thank you for contacting us'), extra_tags='success')
         return redirect('index')
     return render(request, 'home/contact/contact.html')
+
+# newsletter view
+def subscribe(request):
+    if request.method == "POST":
+        form = NewsletterForm(request.POST or None)
+        instance = form.save(commit=False)
+        if Newsletter.objects.filter(email=instance.email).exists():
+            messages.warning(request,('Sorry! this email is already exist'), extra_tags='warning')
+            return redirect('index')
+        else:
+            instance.save()
+            messages.success(request,('Thank you for subscribing to our newsletter'), extra_tags='success')
+            return redirect('index')
+    return render(request, 'home/index.html')
 
 
 def html(request):
