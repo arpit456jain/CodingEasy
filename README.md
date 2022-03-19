@@ -33,11 +33,11 @@
 
 ## ✨ Motivation
 
-This project is part of the [GirlScript Summer of Code 2020](https://gssoc.girlscript.tech/) Open Source Program.
+This project is part of the [GirlScript Summer of Code 2022](https://gssoc.girlscript.tech/) Open Source Program.
 
-### Frequently Asked Questions(FAQs) for [GSSoC'20](https://gssoc.girlscript.tech/)
+### Frequently Asked Questions(FAQs) for [GSSoC'22](https://gssoc.girlscript.tech/)
 
-> This project is accepting contributions under [GirlScript Summer of Code 2020](https://gssoc.girlscript.tech/) - three months long Open Source program conducted by [GirlScript Foundation](https://gssoc.girlscript.tech/).
+> This project is accepting contributions under [GirlScript Summer of Code 2022](https://gssoc.girlscript.tech/) - three months long Open Source program conducted by [GirlScript Foundation](https://gssoc.girlscript.tech/).
 
 [![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://gssoc.girlscript.tech/)
 
