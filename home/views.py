@@ -44,6 +44,8 @@ def register(request):
             messages.info(request, 'Username already exists')
         elif request.POST['password1'] != request.POST['password2']:
             messages.info(request, 'Password not matched')
+        else:
+            messages.info(request, form.errors)
         form = CreationUserForm()
         context = {'form':form}
         return render(request, 'home/Login/login.html', context)
