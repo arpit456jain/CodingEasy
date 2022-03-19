@@ -1,6 +1,8 @@
 from unicodedata import name
 from django.urls import path
-from home import views
+# from home import views
+from Home import views
+
 
 urlpatterns = [
     # Pages
@@ -26,6 +28,8 @@ urlpatterns = [
     path('cpp1/', views.cpp1, name='cpp1'),
     path('ml/', views.ml, name='ml'),
     path('ml1/', views.ml1, name='ml1'),
+    path('django/', views.django, name='django'),
+    path('django1/', views.django1, name='django1'),
     path('course_video/', views.course_video, name='course_video')
 
     # To add url to a new Course
