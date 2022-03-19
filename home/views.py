@@ -40,7 +40,10 @@ def register(request):
         user.is_valid = False
         user.save()
     else:
-        messages.success(request,form.errors)
+        if User.objects.filter(username = request.POST['username']).exists():
+            messages.info(request, 'Username already exists')
+        elif request.POST['password1'] != request.POST['password2']:
+            messages.info(request, 'Password not matched')
         form = CreationUserForm()
         context = {'form':form}
         return render(request, 'home/Login/login.html', context)
@@ -62,7 +65,7 @@ def login(request):  # sourcery skip: hoist-statement-from-if
         auth.login(request, user)
         return redirect('/')
     else:
-        # messages.info(request, 'invalid user data')
+        messages.info(request, 'Username of password wrong')
         return redirect('login')
 
 @login_required(login_url='login')

@@ -14,6 +14,11 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
+        <div class="message">
+          {% for message in messages%}
+          <p>{{message}}</p>
+          {% endfor %}
+        </div>
         <form action="{% url 'login' %}" class="sign-in-form" method="post">
           {% csrf_token%}
           
@@ -85,11 +90,7 @@
         </form>
       </div>
     </div>
-    <div class="message">
-      {% for message in messages%}
-      <p>{{message}}</p>
-      {% endfor %}
-    </div>
+    
     <div class="panels-container">
       <div class="panel left-panel">
         <div class="content">
