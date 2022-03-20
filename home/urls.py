@@ -1,7 +1,7 @@
 from unicodedata import name
 from django.urls import path
-# from home import views
-from Home import views
+from home import views
+
 
 
 urlpatterns = [
