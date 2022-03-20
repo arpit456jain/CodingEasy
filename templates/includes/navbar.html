@@ -20,9 +20,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'home-pricing' %}">Pricing</a>
                 </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="text-md-end nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                {% else %}
                 <li class="nav-item">
-                    <a class="text-md-end nav-link" href="{% url 'home-login' %}">Login/Signup</a>
+                    <a class="text-md-end nav-link" href="{% url 'login' %}">Login/Signup</a>
                 </li>
+                {% endif %}
                 <li class="nav-item">
                     <a class="text-md-end nav-link" href="{% url 'home-contact' %}">Contact Us</a>
                 </li>

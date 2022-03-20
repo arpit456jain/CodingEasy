@@ -14,8 +14,13 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="#" class="sign-in-form">
-          {% csrf_token%}
+        <div class="message">
+          {% for message in messages%}
+          <p>{{message}}</p>
+          {% endfor %}
+        </div>
+        <form action="{% url 'login' %}" class="sign-in-form" method="post">
+          {% csrf_token %}
           <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -26,6 +31,9 @@
             <input name="password" type="password" placeholder="Enter Password" />
           </div>
           <input type="submit" value="Login" class="btn solid" />
+          <small class="text-muted ml-2">
+              <a href="{% url 'password_reset' %}">Forgot Password?</a> 
+          </small>
           <p class="social-text">Or Sign in with social platforms</p>
           <div class="social-media">
             <a href="#" class="social-icon">
@@ -42,7 +50,7 @@
             </a>
           </div>
         </form>
-        <form action="#" class="sign-up-form" method="POST">
+        <form action="{% url 'register' %}" action="register" class="sign-up-form" method="post">
           {% csrf_token %}
           <h2 class="title">Sign up</h2>
           <div class="input-field">
@@ -79,11 +87,6 @@
           </div>
         </form>
       </div>
-    </div>
-    <div class="message">
-      {% for message in messages%}
-      <p>{{message}}</p>
-      {% endfor %}
     </div>
     <div class="panels-container">
       <div class="panel left-panel">
