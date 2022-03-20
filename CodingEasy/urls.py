@@ -16,10 +16,12 @@ Including another URLconf
 from unicodedata import name
 from django.contrib import admin
 from django.urls import path, include
+from CodingEasy import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
+# <<<<<<< HEAD
     path('',views.index,name='index'),
     path('contact',views.contact_us,name='contact'),
     path('login',views.registerPage,name='registerPage'),
@@ -42,9 +44,9 @@ urlpatterns = [
     path('ml1',views.ml1,name='ml1'),
     path('django',views.django,name='django'),
     path('django1',views.django1,name='django1'),
-    path('course_video',views.course_video,name='course_video')
-=======
+    path('course_video',views.course_video,name='course_video'),
+# =======
     path('', include('home.urls')),
 
->>>>>>> 2120d8d3968c24fcf9c1444da5373a0043d792c1
+# >>>>>>> 2120d8d3968c24fcf9c1444da5373a0043d792c1
 ]
