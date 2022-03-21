@@ -14,12 +14,7 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <div class="message">
-          {% for message in messages%}
-          <p>{{message}}</p>
-          {% endfor %}
-        </div>
-        <form action="{% url 'login' %}" class="sign-in-form" method="post">
+        <form action="#" class="sign-in-form">
           {% csrf_token %}
           <h2 class="title">Sign in</h2>
           <div class="input-field">
@@ -50,7 +45,7 @@
             </a>
           </div>
         </form>
-        <form action="{% url 'register' %}" action="register" class="sign-up-form" method="post">
+        <form action="#" class="sign-up-form" method="POST">
           {% csrf_token %}
           <h2 class="title">Sign up</h2>
           <div class="input-field">
@@ -87,6 +82,11 @@
           </div>
         </form>
       </div>
+    </div>
+    <div class="message">
+      {% for message in messages%}
+      <p>{{message}}</p>
+      {% endfor %}
     </div>
     <div class="panels-container">
       <div class="panel left-panel">
