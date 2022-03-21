@@ -1,0 +1,121 @@
+.navbar {
+	background: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: 1px solid #dfe3e8;
+	border-radius: 0;
+}
+
+.navbar .navbar-brand {
+	padding-left: 0;
+	font-size: 20px;
+	padding-right: 50px;
+}
+.navbar .navbar-brand b {
+	color: #5c6ac4;		
+}
+
+.navbar .navbar-nav {
+	position: relative;
+}
+.navbar a, .navbar a:active {
+	color: #888;
+	font-size: 15px;
+	background: transparent;
+}
+.search-box {
+	position: relative;
+}	
+.search-box input {
+	padding-right: 35px;
+	border-color: #dfe3e8;
+	border-radius: 4px !important;
+	box-shadow: none
+}
+.search-box .input-group-text {
+	min-width: 35px;
+	border: none;
+	background: transparent;
+	position: absolute;
+	right: 0;
+	z-index: 9;
+	padding: 7px;
+	height: 100%;
+}
+.search-box i {
+	color: #a0a5b1;
+	font-size: 19px;
+}
+.navbar .btn-primary, .navbar .btn-primary:active {
+	color: #fff;
+	background: #21d192 !important;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	border-radius: 4px;
+	vertical-align: middle;
+	border: none;
+	min-width: 120px;
+	margin: 2px 0;
+    text-transform: capitalize;
+}
+.navbar .btn-primary:hover, .navbar .btn-primary:focus {		
+	color: #fff;
+	background: #21d192 !important;
+}
+.navbar .action-buttons .dropdown-toggle::after {
+	display: none;
+}
+.search-box .btn span {
+	transform: scale(0.9);
+	display: inline-block;
+}
+.navbar .nav-item i {
+	font-size: 22px;
+    margin-left: 15px;
+}
+
+.navbar .navbar-form {
+	border: none;
+}
+.navbar .navbar-form-wrapper {
+	padding: 0 15px;
+}
+
+@media (min-width: 1200px){
+	.form-inline .input-group {
+		width: 300px;
+		margin-left: 30px;
+	}
+}
+@media (max-width: 768px){
+	.navbar .dropdown-menu.login-form {
+		width: 100%;
+		padding: 10px 15px;
+		background: transparent;
+		border: none;
+	}
+	.navbar .form-inline {
+		display: block;
+	}
+	.navbar .input-group {
+		width: 100%;
+	}
+	.navbar .navbar-nav .btn-primary, .navbar .navbar-nav .btn-primary:active {
+		display: block;
+	}
+}
+
+.fas{
+    color:#21d192;
+}
+
+.fa-home,
+.fa-sign-in,
+.fa-sign-out {
+    color:blue;
+}
+
+/* Disabled Anchor */
+.disabled-link {
+    pointer-events: none;
+}
