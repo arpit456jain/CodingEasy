@@ -15,7 +15,7 @@
     <div class="forms-container">
       <div class="signin-signup">
         <form action="#" class="sign-in-form">
-          {% csrf_token %}
+          {% csrf_token%}
           <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -26,9 +26,6 @@
             <input name="password" type="password" placeholder="Enter Password" />
           </div>
           <input type="submit" value="Login" class="btn solid" />
-          <small class="text-muted ml-2">
-              <a href="{% url 'password_reset' %}">Forgot Password?</a> 
-          </small>
           <p class="social-text">Or Sign in with social platforms</p>
           <div class="social-media">
             <a href="#" class="social-icon">
