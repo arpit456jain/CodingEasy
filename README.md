@@ -2,7 +2,7 @@
 
 <div align="center">
  
-![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)
+<a href= "https://github.com/arpit456jain/CodingEasy/issues" target="_blanlk" title="CodingEasy">![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)</a>
 
  
  <br>
@@ -33,13 +33,13 @@
 
 ## ✨ Motivation
 
-This project is part of the [GirlScript Summer of Code 2020](https://www.gssoc.tech/) Open Source Program.
+This project is part of the [GirlScript Summer of Code 2022](https://gssoc.girlscript.tech/) Open Source Program.
 
-### Frequently Asked Questions(FAQs) for [GSSoC'20](https://www.gssoc.tech/)
+### Frequently Asked Questions(FAQs) for [GSSoC'22](https://gssoc.girlscript.tech/)
 
-> This project is accepting contributions under [GirlScript Summer of Code 2020](https://www.gssoc.tech/) - three months long Open Source program conducted by [GirlScript Foundation](https://www.gssoc.tech/).
+> This project is accepting contributions under [GirlScript Summer of Code 2022](https://gssoc.girlscript.tech/) - three months long Open Source program conducted by [GirlScript Foundation](https://gssoc.girlscript.tech/).
 
-[![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://www.gssoc.tech/)
+[![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://gssoc.girlscript.tech/)
 
 <br>
 
@@ -108,7 +108,7 @@ git merge upstream/main
 **8.** Stage your changes and commit:
 
 ```bash
-git add.
+git add .
 ```
 
 ```bash
