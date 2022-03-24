@@ -34,7 +34,7 @@
 		<div class="navbar-nav action-buttons ml-auto">
             {% if user.is_authenticated %}
                 {% comment %} In the Future the following link will be for the user profile {% endcomment %}
-                <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>	
+                <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
                 <a href="{% url 'logout' %}" data-toggle="dropdown" title="sign out"  class="nav-item nav-link">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                 </a>
