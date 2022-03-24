@@ -302,6 +302,31 @@ def ml1(request):
         return render(request, 'home/ML/Hierarchical Clustering/Hierarchical Clustering.html')
 
 
+def django(request):
+  return render(request,'home/Django/django.html')
+
+
+def django1(request):
+        query = request.GET.get('data')
+        if query=="basic":
+            return render(request,'home/Django/Basic/basic.html')
+        elif query=="enviroment":
+            return render(request,'home/Django/Enviroment/enviroment.html')
+        elif query=="project":
+            return render(request,'home/Django/Project/project.html')
+        elif query=="view":
+            return render(request,'home/Django/View/view.html')
+        elif query=="url":
+            return render(request,'home/Django/Urls/url.html')
+        elif query=="model":
+            return render(request,'home/Django/Model/model.html')
+        elif query=="auth":
+            return render(request,'home/Django/Authentication/auth.html')
+        elif query=="template":
+            return render(request,'home/Django/Template/template.html')
+
+
+
 def course_video(request):
     return render(request, 'home/Course_video/video_page.html')
 
