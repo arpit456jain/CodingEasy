@@ -1,0 +1,99 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <br>
+  <div class="heading text-center display-3">
+    CodingEasy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+      <h1 class="text-center">Project</h1>
+      <p>Django is based on MVT (Model-View-Template) architecture.
+           MVT is a software design pattern for developing a web application.  </p>
+           <ul>
+            MVT Structure has the following three parts – 
+               <li>Model: The model is going to act as the interface of your data. It is 
+                   responsible for maintaining data. It is the logical data structure behind the entire application and is 
+                   represented by a database (generally relational databases such as MySql, Postgres). 
+                
+                </li>
+                <li>
+                    View: The View is the user interface — what you see in your browser when you render a website. 
+                    It is represented by HTML/CSS/Javascript and Jinja files.
+                </li>
+                <li>
+                    Template: A template consists of static parts of the desired HTML output as well as some special syntax describing 
+                    how dynamic content will be inserted.
+                </li>
+           </ul>
+    </div>
+  </section>
+  <br><br>
+  
+
+  <section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Project Structure</h3>
+            <p>A Django Project when initialized contains basic files by default such as manage.py,
+                 view.py, etc. A simple project structure is enough to create a single-page application.
+                  Here are the major files and their explanations. Inside the project folder 
+                  there will be the following files- 
+            </p>
+            <ul>
+                <li>
+                    manage.py- This file is used to interact with your project via the command line(start the server, sync the database… etc).
+                     For getting the full list of commands that can be executed by
+                     manage.py type this code in the command window- 
+                     <p><strong>python manage.py help</strong> </p>
+                </li>
+                <li>
+                    folder – This folder contains all the packages of your project. 
+                    Initially, it contains four files – 
+                    <ul>
+                        <li>_init_.py – It is a python package. It is invoked when the package or a module in the package is imported. We usually 
+                            use this to execute package initialization code, for example for the initialization of package-level data.
+                        </li>
+                        <li>settings.py – As the name indicates it contains all the website settings. In this file, we register any applications we create, the location of our static files, database configuration details, etc.</li>
+                        <li>urls.py – In this file, we store all links of the project and functions to call.</li>
+                        <li>wsgi.py – This file is used in deploying the project in WSGI. It is used to help your Django application communicate with the webserver.</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+        </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Creating a Project</h3>
+            <ul>
+                <li>To initiate a project of Django on Your PC, open Terminal and Enter the following command</li>
+                <p><strong>django-admin startproject projectName</strong> </p>
+                <li>A New Folder with the name projectName will be created. To enter in the project using the terminal enter command </li>
+                <p><strong>cd projectName</strong> </p>
+                <li>
+                  To run the application, we can use the following command - <strong>python manage.py runserver</strong> 
+                </li>
+            </ul>
+            
+
+
+        </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+{% endblock content %}

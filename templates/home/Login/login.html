@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'css/login/login.css' %}" />
   <title>Authentication | Coding Easy</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
 </head>
 
 <body>
@@ -32,6 +33,9 @@
             <input name="password" type="password" placeholder="Enter Password" />
           </div>
           <input type="submit" value="Login" class="btn solid" />
+          <small class="text-muted ml-2">
+            <a href="{% url 'password_reset' %}">Forgot Password?</a>
+          </small>
           <p class="social-text">Or Sign in with social platforms</p>
           <div class="social-media">
             <a href="#" class="social-icon">
