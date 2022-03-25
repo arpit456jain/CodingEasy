@@ -1,4 +1,3 @@
-import imp
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
@@ -8,6 +7,11 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
+from .forms import ContactForm, CreationUserForm
+from django.contrib import messages
+from django.contrib.auth.models import User, auth
+from .decorators import unauthenticated_user
+from django.contrib.auth.decorators import login_required
 from .models import Newsletter
 from .forms import ContactForm,NewsletterForm
 
@@ -24,8 +28,52 @@ def pricing(request):
     return render(request, 'home/Pricing/pricing.html')
 
 
-def login(request):
-    return render(request, 'home/Login/login.html')
+@unauthenticated_user
+def register(request):
+    if request.method != 'POST':
+        form = CreationUserForm()
+        context = {'form':form}
+        return render(request, 'home/Login/login.html', context)
+    form  = CreationUserForm(request.POST)
+    if form.is_valid():
+        user = form.save(commit=False)
+        user.is_valid = False
+        user.save()
+    else:
+        if User.objects.filter(username = request.POST['username']).exists():
+            messages.info(request, 'Username already exists')
+        elif request.POST['password1'] != request.POST['password2']:
+            messages.info(request, 'Password not matched')
+        else:
+            messages.info(request, form.errors)
+        form = CreationUserForm()
+        context = {'form':form}
+        return render(request, 'home/Login/login.html', context)
+    messages.success(request,('Successful'))
+    return redirect('login')
+    
+
+@unauthenticated_user
+def login(request):  # sourcery skip: hoist-statement-from-if
+    if request.method != 'POST':
+        form = CreationUserForm()
+        context = {'form':form}
+        return render(request, 'home/Login/login.html', context)
+    username = request.POST['username']
+    password = request.POST['password']
+
+    user = auth.authenticate(username=username, password=password)
+    if user is not None:
+        auth.login(request, user)
+        return redirect('/')
+    else:
+        messages.info(request, 'Username of password wrong')
+        return redirect('login')
+
+@login_required(login_url='login')
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
 
 
 def contact(request):
@@ -250,6 +298,33 @@ def ml1(request):
         return render(request, 'home/ML/Random_Forest/Random_Forest.html')
     elif query == "svm":
         return render(request, 'home/ML/Support_Vector_Machines/Support_Vector_Machines.html')
+    elif query == "hrc":
+        return render(request, 'home/ML/Hierarchical Clustering/Hierarchical Clustering.html')
+
+
+def django(request):
+  return render(request,'home/Django/django.html')
+
+
+def django1(request):
+        query = request.GET.get('data')
+        if query=="basic":
+            return render(request,'home/Django/Basic/basic.html')
+        elif query=="enviroment":
+            return render(request,'home/Django/Enviroment/enviroment.html')
+        elif query=="project":
+            return render(request,'home/Django/Project/project.html')
+        elif query=="view":
+            return render(request,'home/Django/View/view.html')
+        elif query=="url":
+            return render(request,'home/Django/Urls/url.html')
+        elif query=="model":
+            return render(request,'home/Django/Model/model.html')
+        elif query=="auth":
+            return render(request,'home/Django/Authentication/auth.html')
+        elif query=="template":
+            return render(request,'home/Django/Template/template.html')
+
 
 
 def course_video(request):

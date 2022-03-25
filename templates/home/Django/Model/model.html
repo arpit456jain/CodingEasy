@@ -1,0 +1,107 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <br>
+  <div class="heading text-center display-3">
+    CodingEasy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+      <h1 class="text-center">Models</h1>
+      <p>A model is a class that represents table or collection in our DB, and where
+           every attribute of the class is a field of the table or collection. Models are
+            defined in the app/models.py. 
+        </p>
+        <ul>
+            Basics : 
+            <li>Each model is a Python class that subclasses django.db.models.Model.</li>
+            <li>Each attribute of the model represents a database field.</li>
+            <li>With all of this, Django gives you an automatically-generated database-access API</li>
+        </ul>
+      
+    </div>
+  </section>
+  <br><br>
+  
+
+  <!-- code and text -->
+  <section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center"></h3>
+            
+            <h1  class="text-center"><p>Creating Models</p></h1>
+            <p>This example model defines a Person, which has a first_name and last_name:</p>  
+            <ul style="list-style: none;">
+                <li>from django.db import models</li>
+                <li>class Person(models.Model):</li>
+                <li>first_name = models.CharField(max_length=30)</li>
+                <li> last_name = models.CharField(max_length=30)</li>
+            </ul>
+            <p>first_name and last_name are fields of the model. Each field is specified as 
+                a class attribute, and each attribute maps to a database column.</p>
+
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center"></h3>
+            
+            <h1  class="text-center"><p>Using Models</p></h1>
+            <p>Once you have defined your models, you need to tell Django you’re going to use those models. Do this by 
+                editing your settings file and changing the INSTALLED_APPS setting to add the name of the module that 
+                contains your models.py.</p>  
+                <p>For example, if the models for your application live in the module myapp.models (the package structure that is created for an application by 
+                    the manage.py startapp script), INSTALLED_APPS should read, in part:</p>
+            <ul style="list-style: none;">
+                <li>INSTALLED_APPS = [</li>
+                <li>#...</li>
+                <li>'myapp',</li>
+                <li>#...</li>
+                <li>]</li>
+            </ul>
+            <p>When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optionally making migrations 
+                for them first with manage.py makemigrations.</p>
+
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center"></h3>
+            
+            <h1  class="text-center"><p>Fields</p></h1>
+            <p>Each field in your model should be an instance of the appropriate Field class. Django uses the field class types to determine a few things:</p>  
+            <ul>
+                <li>The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT).</li>
+                <li>The default HTML widget to use when rendering a form field </li>
+                <li>The minimal validation requirements, used in Django’s admin and in automatically-generated forms.</li>
+    
+            </ul>
+            
+            <p>Django ships with dozens of built-in field types; you can find the complete list in the 
+                model field reference. You can easily write your own fields if Django’s built-in ones don’t do the trick
+            </p>
+
+
+
+        </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+{% endblock content %}
+  

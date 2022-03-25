@@ -15,6 +15,8 @@
 2) Create a file newtopic.html
 3) Update newtopic.html as per the [template](https://github.com/arpit456jain/CodingEasy/blob/master/templates/home/SampleCourse/topic1/topic1.html)
 
+**Note**: You can create seperate css files but make sure to link them in [base.html](https://github.com/arpit456jain/CodingEasy/blob/master/templates/home/base.html)
+
 <hr>
 
 ## Mapping URLS for the added courses/topics
