@@ -1,74 +1,63 @@
-{% extends 'homebase.html' %}
+{% extends 'home/base.html' %}
 {% load static %}
 
 {% block content %}
-br
-div class=heading text-center display-3
+<br>
+<div class="heading text-center display-3">
     CodingEasy
-div br
-section class=container mt-3
-    div class=row
-        div class=col-sm-12
-            div class=jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3
-                h1 class=text-center'Topic1'h1
-                pp
-                ol
-                    lili
-                    lili
-                ol
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">'One Hot Encoding'</h1>
+                <p></p>
+                <ol>
+                    <li></li>
+                    <li></li>
+                </ol>
 
-            div
-        div
-    div
+            </div>
+        </div>
+    </div>
 
-section
-brbr
+</section>
+<br><br>
 
-section class=container mt-5
-    div class=row
-        div class=col-md-6 col-sm-12
-            h3 class=text-center'Some topic 1'h3
-            pUse the code.containercode class to create a responsive, fixed-width container.p
-            pp
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">'One Hot Encoding'</h3>
+            <p>It is a stage that is performed in Data pre-processing. As we know that most of the Machine Learning 
+                algorithms cannot perform on label data directly. They require all the input and output variables 
+                to be numeric.</p>
+            <p>One such way of converting label data to numeric data is One Hot Encoding.
+                In case of the variables that are categorical with the absence of ordinal relationaship, interger 
+                encoding is not enough. Using the encoding, thus making the model assume a natural ordering between 
+                the processes can end up in poor performance or unexpected results.</p>
+            <p>Hence, one-hot encoding can be applied for integer representation. The encoded variable is removed 
+                and a new binary variable gets assigned for each new integer value. The binary variables, thus created, 
+                are also called dummy variables</p>
+            <p>One Hot Encoding can often lead to dummy variable trap. It occurs when occurs when two or more dummy 
+                variables created by one-hot encoding are highly correlated. Whenever one variable can be derived 
+                from rest if the variables, these variables are said to be multi co-linear. When there is multi 
+                co-linearity in dataset, the problem of dummy variable trap arises which can mess up our model. So the 
+                simple rule is that we need to drop one of the dummy variables column from our dataset.
+            </p>
 
-        div
-        div class=col-md-6 col-sm-12
-            h3 class=text-centerExampleh3
-            div class=code
-                pre
-                code
-                    &lt;div class=&quot;container&quot;&gt;br&nbsp; &lt;h1&gt;My First Bootstrap Page&lt;h1&gt;br&nbsp; &lt;p&gt;This is some text.&lt;p&gt; br&lt;div&gt;
-                code
-            pre
-            div
-        div
-    div
-section
-brbr
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                    <img src= ![image](https://user-images.githubusercontent.com/88052597/160228024-0d19f325-d1ef-4eb3-adc6-2d37ae1fbc1d.png)>
 
-section class=container mt-5
-    div class=row
-        div class=col-md-6 col-sm-12
-            h3 class=text-center'Some Topic 2'h3
-            pp
-        div
-
-        div class=col-md-6 col-sm-12
-            h3 class=text-centerExampleh3
-            div class=code
-                pre
-                code
-                    
-                code
-            pre
-            div
-        div
-    div
-section
-brbr
-
-!-- Feel free to copy paste for more sections --
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
 
 
-brbr
 {% endblock content %}
