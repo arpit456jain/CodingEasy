@@ -1,0 +1,118 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">Style and Semantics Tags</h1>
+
+      </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;style&gt;</h3>
+      <p>The &lt;style&gt; tag is used to define style information (CSS) for a document.
+
+        Inside the &lt;style&gt; element you specify how HTML elements should render in a browser.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  &lt;html&gt;
+                  &lt;head&gt;
+                  &lt;style&gt;
+                  h1 {color:red;}
+                  p {color:blue;}
+                  &lt;/style&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+
+                  &lt;h1&gt;A heading&lt;/h1&gt;
+                  &lt;p&gt;A paragraph.&lt;/p&gt;
+
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;header&gt;</h3>
+      <p>The &lt;header&gt; element represents a container for introductory content or a set of navigational links.
+
+        A &lt;header&gt; element typically contains:
+
+        one or more heading elements (&lt;h1&gt; - &lt;h6&gt;)
+        logo or icon
+        authorship information
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  &lt;header&gt;
+                  &lt;h1&gt;A heading here&lt;/h1&gt;
+                  &lt;p&gt;Posted by John Doe&lt;/p&gt;
+                  &lt;p&gt;Some additional information here&lt;/p&gt;
+                  &lt;/header&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;footer&gt;</h3>
+      <p>The &lt;/footer&gt; tag defines a footer for a document or section.
+
+        A &lt;/footer&gt; element typically contains:
+
+        authorship information
+        copyright information
+        contact information
+        sitemap
+        back to top links
+        related documents
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  &lt;/footer&gt;
+                  &lt;/p&gt;Author: Hege Refsnes&lt;//p&gt;
+                  &lt;/p&gt;&lt;/a href="mailto:hege@example.com">hege@example.com&lt;//a&gt;&lt;//p&gt;
+                  &lt;/footer&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+{% endblock content %}

@@ -1,0 +1,136 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">List Tags</h1>
+
+      </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;ul&gt;</h3>
+      <p>The &lt;ul&gt; tag defines an unordered (bulleted) list.
+
+        Use the &lt;ul&gt; tag together with the &lt;li&gt; tag to create unordered lists.
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+             <code>
+                &lt;ul&gt;
+                &lt;li&gt;Coffee &lt;/li&gt;
+                &lt;li&gt;Tea &lt;/li&gt;
+                &lt;li&gt;Milk &lt;/li&gt;
+                &lt;/ul&gt;
+             </code>
+         </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;ol&gt;</h3>
+      <p>The &lt;ol&gt; tag defines an ordered list. An ordered list can be numerical or alphabetical.
+
+        The &lt;li&gt; tag is used to define each list item.
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                   &lt;ol&gt;
+                   &lt;li>Coffee&lt;/li&gt;
+                   &lt;li>Tea&lt;/li&gt;
+                   &lt;li&gt;Milk&lt;/li&gt;
+                   &lt;/ol&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;li&gt;</h3>
+      <p>The &lt;li> tag defines a list item.
+
+        The &lt;li&gt; tag is used inside ordered lists(&lt;ol&gt;), unordered lists (&lt;ul&gt;), and in menu lists
+        (&lt;menu&gt;).
+
+        In &lt;ul&gt; and &lt;menu&gt;, the list items will usually be displayed with bullet points.
+
+        In &lt;ol&gt;, the list items will usually be displayed with numbers or letters.
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                   <code>
+                      &lt;ol&gt;
+                      &lt;li>Coffee&lt;/li&gt;
+                      &lt;li>Tea&lt;/li&gt;
+                      &lt;li&gt;Milk&lt;/li&gt;
+                      &lt;/ol&gt;
+                   </code>
+               </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;dl&gt;</h3>
+      <p>The &lt;dl&gt; tag defines a description list.
+
+        The &lt;dl&gt; tag is used in conjunction with &lt;dt&gt; (defines terms/names) and &lt;dd&gt; (describes each
+        term/name).
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                      <code>
+                        &lt;dl&gt;
+                        &lt;dt&gt;Coffee&lt;/dt&gt;
+                        &lt;dd&gt;Black hot drink&lt;/dd&gt;
+                        &lt;dt&gt;Milk&lt;/dt&gt;
+                        &lt;dd&gt;White cold drink&lt;/dd&gt;
+                        &lt;/dl&gt;
+                      </code>
+                  </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+{% endblock content %}

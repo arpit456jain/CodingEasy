@@ -1,0 +1,58 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">Bootstrap Grid System</h1>
+        <p>Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page.</p>
+        <p>If you do not want to use all 12 columns individually, you can group the
+          columns together to create wider columns:</p>
+      </div>
+</section>
+<br><br>
+
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Grid System</h3>
+      <p>The grid system is responsive, and the columns will re-arrange automatically depending on the screen size.
+      </p>
+      <p>Make sure that the sum adds up to 12 or fewer (it is not required that you
+        use all 12 available columns).</p>
+      <br>
+      <p>The Bootstrap 5 grid system has six classes:</p>
+      <ul>
+        <li><code>.col-</code> (extra small devices - screen width less than 576px)</li>
+        <li><code>.col-sm-</code> (small devices - screen width equal to or greater than 576px)</li>
+        <li><code>.col-md-</code> (medium devices - screen width equal to or greater than 768px)</li>
+        <li><code>.col-lg-</code> (large devices - screen width equal to or greater than 992px)</li>
+        <li><code>.col-xl-</code> (xlarge devices - screen width equal to or greater than 1200px)</li>
+        <li><code>.col-xxl-</code> (xxlarge devices - screen width equal to or greater than 1400px)</li>
+      </ul>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                    &lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp; 
+                    &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br>
+                    <br><br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+{% endblock content %}

@@ -215,6 +215,28 @@ def ml1(request):
         elif query=="svm":
             return render(request,'./ML/Support_Vector_Machines/Support_Vector_Machines.html')
 
+def django(request):
+  return render(request,'./Django/django.html')
+def django1(request):
+        query = request.GET.get('data')
+        if query=="basic":
+            return render(request,'./Django/Basic/basic.html')
+        elif query=="enviroment":
+            return render(request,'./Django/Enviroment/enviroment.html')
+        elif query=="project":
+            return render(request,'./Django/Project/project.html')
+        elif query=="view":
+            return render(request,'./Django/View/view.html')
+        elif query=="url":
+            return render(request,'./Django/Urls/url.html')
+        elif query=="model":
+            return render(request,'./Django/Model/model.html')
+        elif query=="auth":
+            return render(request,'./Django/Authentication/auth.html')
+        elif query=="template":
+            return render(request,'./Django/Template/template.html')
+
+
 def course_video(request):
     return render(request,'./Course_video/video_page.html')
 

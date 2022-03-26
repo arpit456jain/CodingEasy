@@ -1,0 +1,54 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Support Vector Machines (Regression & Classification Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Support Vector Machines</h3>
+            <p>Support Vector Machines is a Regression & Classification Algorithm. When used for Regression it's called
+                Support Vector Regressor(SVR) & when it's used for Classification it's called Support Vector
+                Classifier(SVC)</p>
+            <p>Logistic Regression fails when it comes to a dataset with complex features and in those cases of binary
+                classification SVM plays a major role to give more accurate results </p>
+            <p>A Sharp Line Separates the classes. The orange line is the sharp separating line also called
+                Hyperplane/Decision Boundary. Here we have 2 classes - class 0(blue/star markers), class 1(green/circle
+                markers)</p>
+            <p>We calculate the distance of nearest points of both the classes from the hyperplane. The nearest points
+                are encircled with red and are called Support Vectors/Extreme Points. Now suppose their distances are d1
+                and d2 respectively so we
+                find a total distance d=d1+d2 which is called Width Of The Decision Boundary. Now we try to minimize
+                this distance to find the best fit line as Hyperplane such that the width of decision boundary is
+                minimum.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Plot Picture</h3>
+            <div class="code">
+                <pre>
+                    <img src="{% static 'img/VectorMachinesScatter_Plot.jpg' %}",height=500px, width=500px>
+        </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+
+{% endblock content %}

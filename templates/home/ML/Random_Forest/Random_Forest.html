@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Random Forest (Regression & Classification Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Random Forest</h3>
+            <p>Random Forest Tree is a Regression & Classification Algorithm. When used for Regression it's called
+                Random Forest Regressor & when it's used for Classification it's called Random Forest Classifier.</p>
+            <p>The concept is very similar to the decision tree algorithm. It works by taking multiple trees into
+                consideration. And in the end it combines the results of all the trees taken into count. </p>
+            <p>Suppose we have 2 classes - Class 0 & Class 1. And we are considering 3 trees together. So the majority
+                decision of all the 3 trees will be considered. Like in the given plot the two trees give output as
+                Class 0 and one tree gives output
+                as Class 1. Thus majority voting is for Class 0 and thus the result will be declared as Class 0. The
+                data is divided into 3 sections here and fed to each of the trees.
+            </p>
+            <p>When we combine more than 1 models in a problem statement then it is called Ensemble Learning. Since in
+                Random Forest Algorithm we combine results of multiple decision trees so it is also called Ensemble
+                Learning.</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Forest Picture</h3>
+            <div class="code">
+                <pre>
+                    <img src="{% static 'img/RandomForest_Plot.jpg' %}",height=500px, width=500px>
+        </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}

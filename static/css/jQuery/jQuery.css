@@ -1,0 +1,40 @@
+/* Style for table in selectors.html page */
+
+#myTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#myTable td, #myTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#myTable tr:hover {background-color: #ddd;}
+
+#myTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+/* Design the list items in manipulatingcss.html page */
+
+.mnpcss{
+  color:crimson;
+  background-color:#f1f1f1;
+}
+
+
+/* style for mark tag in ManipulatingDOM.html page */
+
+.mnpDOM{
+  background-color:#ddd;
+  padding-left:10px;
+}

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a href="{% url 'index' %}" class="navbar-brand">
+        <i class="fas fa-hands-helping fa-lg"></i>
+    </a> 
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+		<div class="navbar-nav">
+            <a href="{% url 'index' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                &nbsp; Home
+            </a>
+			<a href="{% url 'home-feature' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                Features
+            </a>			
+			<a href="{% url 'home-pricing' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                Pricing
+            </a>			
+			<a href="{% url 'home-contact' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                Contact US
+            </a>
+        </div>
+        <!-- I will put this feature in the future -->
+		<!-- <form class="navbar-form form-inline">
+			<div class="input-group search-box">								
+				<input type="text" id="search" class="form-control" placeholder="Search here...">
+				<div class="input-group-append">
+					<span class="input-group-text"><i class="material-icons">&#xE8B6;</i></span>
+				</div>
+			</div>
+		</form> -->
+		<div class="navbar-nav action-buttons ml-auto">
+            {% if user.is_authenticated %}
+                {% comment %} In the Future the following link will be for the user profile {% endcomment %}
+                <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
+                <a href="{% url 'logout' %}" data-toggle="dropdown" title="sign out"  class="nav-item nav-link">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </a>
+            {% else %}
+                <a href="{% url 'home-login' %}" title="sign in" class="nav-item nav-link">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </a>
+            {% endif %}		
+		</div>
+	</div>
+</nav>

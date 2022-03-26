@@ -1,0 +1,54 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Naive Bayes (Classification Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Naive Bayes</h3>
+            <p>Decision Tree is a Classification Algorithm. This algorithm works on the mathematical concepts of Baye's
+                Theorem which is Conditional Probability.</p>
+            <p>The dataset is converted to a frequency table and then Baye's Theorem is applied to calculated the
+                predicted results. This algorithm gives good results when all features are categorical</p>
+            <p>The formula used is used where A is the target variable which needs to be predicted. And B is one value
+                taken from each of the features. Suppose we have 4 features so the model asks questions to each feature
+                and then determines the value
+                of B for each feature. After this finally we get value of A.
+            </p>
+            <p>There are total 3 types of Naive Bayes Classifier-
+            <ol>
+                <li>Gaussian Naive Bayes </li>
+                <li>Multinomial Naive Bayes </li>
+                <li>Bernoulli Naive Bayes </li>
+            </ol>
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Baye's Theorem Formula</h3>
+            <div class="code">
+                <pre>
+                    <img src="{% static 'img/NaiveBaye.jpg' %}",height=500px, width=500px>
+        </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}

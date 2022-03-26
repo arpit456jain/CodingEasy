@@ -1,0 +1,112 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery - css() Method</h1><br><br>
+                <p>The <mark class="mnpcss">css()</mark> method sets or returns one or more style
+                properties for the selected elements.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Return a CSS Property</h3><br>
+            <p>
+                To return the value of a specified CSS property, use the following syntax:<br><br>
+                css("propertyname");
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        The following example will return the background-color value of the FIRST matched element:
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        $("p").css("background-color");
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Set a CSS Property</h3><br>
+            <p>
+                To set a specified CSS property, use the following syntax:<br><br>
+                css("propertyname","value");
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        The following example will set the background-color value for ALL matched elements:
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        $("p").css("background-color", "yellow");
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Set Multiple CSS Properties</h3><br>
+            <p>
+                To set multiple CSS properties, use the following syntax:<br><br>
+                css({"propertyname":"value","propertyname":"value",...});
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        The following example will set a background-color and a font-size for ALL matched elements:
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        $("p").css({"background-color": "yellow", "font-size": "200%"});
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}

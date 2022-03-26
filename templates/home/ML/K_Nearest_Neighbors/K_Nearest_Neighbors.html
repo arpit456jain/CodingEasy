@@ -1,0 +1,49 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">K Nearest Neighbors (Regression & Classification Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">K Nearest Neighbors</h3>
+            <p>K Nearest Neighbors is a Regression & Classification Algorithm. When used for Regression it's called K
+                Nearest Neighbors Regressor & when it's used for Classification it's called K Nearest Neighbors
+                Classifier</p>
+            <p>We proceed with assuming a value of k. Let's say 3. </p>
+            <p>As we can see in the plot picture we have 2 classes - marked as blue(Class 1) & marked as orange(Class 0)
+                and the datapoints are marked in the plots.</p>
+            <p>The green datapoint marks a new unknown datapoint. So we will consider k nearest known datapoints i.e 3
+                nearest in this case. We calculate the distance of new unknown datapoint from k nearest known datapoints
+                using formula of Eucliean
+                Distance Thus on the basis of these we will label the new unkown datapoint.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Plot Picture</h3>
+            <div class="code">
+                <pre>
+                <img src="{% static 'img/Knn_Plot.jpg' %}",height=500px, width=500px>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}
