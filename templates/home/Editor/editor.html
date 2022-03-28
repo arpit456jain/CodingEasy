@@ -1,0 +1,155 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css">
+    <script type="text/javascript" src="https://codemirror.net/lib/codemirror.js">
+    </script>
+    <script type="text/javascript" src="https://codemirror.net/mode/xml/xml.js">
+    </script>
+    <script type="text/javascript" src="https://codemirror.net/mode/css/css.js">
+    </script>
+    <script type="text/javascript" src="https://codemirror.net/mode/javascript/javascript.js">
+    </script>
+    <style>
+    
+body{
+    margin: 0px;
+    font-family: "Raleway",sans-serif;
+    
+    background-color: white;
+    color: black;
+    font-size: 25px;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: bisque;
+    font-size: larger;
+    font-family: -webkit-body;
+}
+.header button{
+    padding: 10px 20px;
+    background: #f5f5f5;
+    color: #111;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    cursor: pointer;
+    margin-right: 19%;
+}
+.editor{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    
+
+}
+.editor .code{
+    width: 500px;
+    font-size: 19px;
+    border-right: 1px solid #888;
+   
+}
+.editor .code > div{
+    width:100%;
+    height: 33.33%;
+    border-bottom: 1px solid #888;
+    overflow: scroll;
+    font-family: cursive;
+}
+
+.editor .preview{
+    width: calc(100% - 500px);
+    height: 100%;
+}
+textarea {
+    
+    background: #c0cfd3;
+    outline: none;
+    font-family:'Boogaloo' ;
+    
+    font-size: 19px;
+  }
+.editor .preview iframe{
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline: none;
+}
+.CodeMirror{
+    height: auto;
+}
+
+
+</style>
+    
+</head>
+
+
+    
+    </head>
+
+    <body>
+
+        <div class="header">
+            <button id="run-btn">Run ▶️</button>
+
+        </div>
+        <div class="editor">
+            <div class="code">
+                <div class="html-code">HTML</div>
+                <div class="css-code">CSS</div>
+                <div class="js-code">JS</div>
+            </div>
+            
+            <div class="preview">
+                <iframe id="preview-window"></iframe>
+            </div>
+
+        </div>
+        <script>
+            const htmlEditor = CodeMirror(document.querySelector(".editor .code .html-code"), {
+                lineNumbers: true,
+                tabSize: 4,
+                mode: "xml"
+            });
+            const cssEditor = CodeMirror(document.querySelector(".editor .code .css-code"), {
+                lineNumbers: true,
+                tabSize: 4,
+                mode: "css"
+            });
+            const jsEditor = CodeMirror(document.querySelector(".editor .code .js-code"), {
+                lineNumbers: true,
+                tabSize: 4,
+                mode: "javascript"
+            });
+            document.querySelector("#run-btn").addEventListener("click", function () {
+                let htmlCode = htmlEditor.getValue();
+                let cssCode = "<style>" + cssEditor.getValue() + "</style>";
+                let jsCode = "<scri" + "pt>" + jsEditor.getValue() + "</scri" + "pt>";
+                let previewWindow = document.querySelector("#preview-window").contentWindow.document;
+                previewWindow.open();
+                previewWindow.write(htmlCode + cssCode + jsCode);
+                previewWindow.close();
+            });
+        </script>
+    </body>
+
+</html>
+{% endblock content %}
