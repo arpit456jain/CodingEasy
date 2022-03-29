@@ -35,10 +35,15 @@
                 can give as per our choice like accuracy, f1, etc.</p>
             <p>GridSearchCV has some cons. In GridSearchCV, the best parameters are limited and the process
                 is time-consuming.</p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p>
+            <p>sklearn library provides the GridSearchCV function.</p>
+            <p>Below is given a sample code performed on the Iris dataset using GridSearchCV.
+               from sklearn.model_selection import GridSearchCV
+               clf = GridSearchCV(svm.SVC(gamma='auto'), {
+                'C': [1,10,20],
+                'kernel': ['rbf','linear']
+               }, cv=5, return_train_score=False)
+               clf.fit(iris.data, iris.target)
+               clf.cv_results_
             </p>
 
         </div>
@@ -46,8 +51,6 @@
             <h3 class="text-center">Example</h3>
             <div class="code">
                 <pre>
-                    <img src= 
-
             </pre>
             </div>
         </div>
