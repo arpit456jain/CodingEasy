@@ -274,6 +274,10 @@ def cpp1(request):
         return render(request, 'home/CPP/Modifiers/modifiers.html')
     elif query == "variable":
         return render(request, 'home/CPP/Variable_Types/Variable_Types.html')
+    elif query=="storage":
+            return render(request,'home/CPP/Storage_Classes/storage_classes.html')
+    elif query=="operators":
+            return render(request,'home/CPP/Operators/operators.html')
 
 
 def ml(request):
