@@ -7,13 +7,13 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
-from .forms import ContactForm, CreationUserForm
+from .forms import ContactForm, CreationUserForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from .decorators import unauthenticated_user
 from django.contrib.auth.decorators import login_required
 from .models import Newsletter
-from .forms import ContactForm,NewsletterForm
+from .forms import ContactForm, NewsletterForm
 
 
 def index(request):
@@ -32,32 +32,32 @@ def pricing(request):
 def register(request):
     if request.method != 'POST':
         form = CreationUserForm()
-        context = {'form':form}
+        context = {'form': form}
         return render(request, 'home/Login/login.html', context)
-    form  = CreationUserForm(request.POST)
+    form = CreationUserForm(request.POST)
     if form.is_valid():
         user = form.save(commit=False)
         user.is_valid = False
         user.save()
     else:
-        if User.objects.filter(username = request.POST['username']).exists():
+        if User.objects.filter(username=request.POST['username']).exists():
             messages.info(request, 'Username already exists')
         elif request.POST['password1'] != request.POST['password2']:
             messages.info(request, 'Password not matched')
         else:
             messages.info(request, form.errors)
         form = CreationUserForm()
-        context = {'form':form}
+        context = {'form': form}
         return render(request, 'home/Login/login.html', context)
-    messages.success(request,('Successful'))
+    messages.success(request, ('Successful'))
     return redirect('login')
-    
+
 
 @unauthenticated_user
 def login(request):  # sourcery skip: hoist-statement-from-if
     if request.method != 'POST':
         form = CreationUserForm()
-        context = {'form':form}
+        context = {'form': form}
         return render(request, 'home/Login/login.html', context)
     username = request.POST['username']
     password = request.POST['password']
@@ -70,35 +70,64 @@ def login(request):  # sourcery skip: hoist-statement-from-if
         messages.info(request, 'Username of password wrong')
         return redirect('login')
 
+
 @login_required(login_url='login')
 def logout(request):
     auth.logout(request)
     return redirect('/')
 
 
+@login_required
+def profile(request):
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(
+            request.POST, request.FILES, instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f'Your account has been updated!')
+            return redirect('profile')
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+    context = {
+        'u_form': u_form,
+        'p_form': p_form,
+        'title': 'Profile'
+    }
+    return render(request, 'users/profile.html', context)
+
+
 def contact(request):
     if request.method == "POST":
-        form  = ContactForm(request.POST or None)
+        form = ContactForm(request.POST or None)
         if form.is_valid():
             form.save()
         else:
-            messages.error(request,('There was an error in your form! try again...'))
+            messages.error(
+                request, ('There was an error in your form! try again...'))
             return render(request, 'home/contact/contact.html')
-        messages.success(request,('Thank you for contacting us'), extra_tags='success')
+        messages.success(
+            request, ('Thank you for contacting us'), extra_tags='success')
         return redirect('index')
     return render(request, 'home/contact/contact.html')
 
 # newsletter view
+
+
 def subscribe(request):
     if request.method == "POST":
         form = NewsletterForm(request.POST or None)
         instance = form.save(commit=False)
         if Newsletter.objects.filter(email=instance.email).exists():
-            messages.warning(request,('Sorry! this email is already exist'), extra_tags='warning')
+            messages.warning(
+                request, ('Sorry! this email is already exist'), extra_tags='warning')
             return redirect('index')
         else:
             instance.save()
-            messages.success(request,('Thank you for subscribing to our newsletter'), extra_tags='success')
+            messages.success(
+                request, ('Thank you for subscribing to our newsletter'), extra_tags='success')
             return redirect('index')
     return render(request, 'home/index.html')
 
@@ -205,8 +234,8 @@ def js1(request):
         return render(request, 'home/javascr/syntax/syntax.html')
     elif query == "object":
         return render(request, 'home/javascr/objects/objects.html')
-    
-    
+
+
 # Add views for jQuery Course
 def jQuery(request):
     return render(request, 'home/jQuery/jQuery.html')
@@ -233,7 +262,6 @@ def jQuery1(request):
         return render(request, 'home/jQuery/Events/events.html')
     elif query == "effects":
         return render(request, 'home/jQuery/Effects/effects.html')
-    
 
 
 def py(request):
@@ -303,28 +331,27 @@ def ml1(request):
 
 
 def django(request):
-  return render(request,'home/Django/django.html')
+    return render(request, 'home/Django/django.html')
 
 
 def django1(request):
-        query = request.GET.get('data')
-        if query=="basic":
-            return render(request,'home/Django/Basic/basic.html')
-        elif query=="enviroment":
-            return render(request,'home/Django/Enviroment/enviroment.html')
-        elif query=="project":
-            return render(request,'home/Django/Project/project.html')
-        elif query=="view":
-            return render(request,'home/Django/View/view.html')
-        elif query=="url":
-            return render(request,'home/Django/Urls/url.html')
-        elif query=="model":
-            return render(request,'home/Django/Model/model.html')
-        elif query=="auth":
-            return render(request,'home/Django/Authentication/auth.html')
-        elif query=="template":
-            return render(request,'home/Django/Template/template.html')
-
+    query = request.GET.get('data')
+    if query == "basic":
+        return render(request, 'home/Django/Basic/basic.html')
+    elif query == "enviroment":
+        return render(request, 'home/Django/Enviroment/enviroment.html')
+    elif query == "project":
+        return render(request, 'home/Django/Project/project.html')
+    elif query == "view":
+        return render(request, 'home/Django/View/view.html')
+    elif query == "url":
+        return render(request, 'home/Django/Urls/url.html')
+    elif query == "model":
+        return render(request, 'home/Django/Model/model.html')
+    elif query == "auth":
+        return render(request, 'home/Django/Authentication/auth.html')
+    elif query == "template":
+        return render(request, 'home/Django/Template/template.html')
 
 
 def course_video(request):
@@ -343,4 +370,3 @@ def course_video(request):
 #         return render(request, 'home/newcourse/topic1/topic1.html')
 #     elif query == "topic2":
 #         return render(request, 'home/newcourse/topic2/topic2.html')
-
