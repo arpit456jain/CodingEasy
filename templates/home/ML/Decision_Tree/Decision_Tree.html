@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Decision Tree (Regression & Classification Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Decision Tree</h3>
+            <p>Decision Tree is a Regression & Classification Algorithm. When used for Regression it's called Decision
+                Tree Regressor & when it's used for Classification it's called Decision Tree Classifier.</p>
+            <p>The concept is based on a hierarchical data structure which is called Tree. We have nodes and edges as
+                shown. The algotihm gives good results when we have to do multi class classification.</p>
+            <p>Each node represents a question on which decision tree devides the datapoint as to where it should send
+                the datapoint for further questions either in left subtree or right subtree. Only the leaf nodes
+                represents the classes of the problem
+                statement. If there are n nodes then there are n-1 edges.</p>
+            <p>Like here we have to classify whether a species is Bird/Fish/Mammals. so the 1st question 1st we are
+                classifying on the basis of whether the animal breathes in water/air. On the basis of this question we
+                are classifying whether the animal
+                is Fish or not fish. Then we go to the 2nd question stating whether the animal lays eggs or not. And on
+                the basis of this we can classify the animal as Bird or Other Mammals.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Tree Picture</h3>
+            <div class="code">
+                <pre>
+                        <img src="{% static 'img/DecisionTree_Plot.jpg' %}",height=500px, width=500px>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+
+{% endblock content %}

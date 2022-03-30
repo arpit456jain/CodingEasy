@@ -1,0 +1,94 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Bootstrap Colors</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Text Colors</h3>
+            <p>Bootstrap 5 has some contextual classes that can be used to provide &quot;meaning through
+                colors&quot;.</p>
+            <p>The classes for text colors are: <code>.text-muted</code>,
+                <code>.text-primary</code>, <code>.text-success</code>,
+                <code>.text-info</code>,
+                <code>.text-warning</code>, <code>.text-danger</code>, <code>.text-secondary</code>,
+                <code>.text-white</code>,
+                <code>.text-dark</code>, <code>.text-body</code> (default
+                body color/often black) and <code>.text-light</code>:
+            </p>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    &lt;p class="text-muted"&gt;This text is muted.&lt;/p&gt;
+                    &lt;p class="text-primary"&gt;This text is important.&lt;/p&gt;
+                    &lt;p class="text-success"&gt;This text indicates success.&lt;/p&gt;
+                    &lt;p class="text-info"&gt;This text represents some information.&lt;/p&gt;
+                    &lt;p class="text-warning"&gt;This text represents a warning.&lt;/p&gt;
+                    &lt;p class="text-danger"&gt;This text represents danger.&lt;/p&gt;
+                    &lt;p class="text-secondary"&gt;Secondary text.&lt;/p&gt;
+                    &lt;p class="text-dark"&gt;Dark grey text.&lt;/p&gt;
+                    &lt;p class="text-body"&gt;Body text.&lt;/p&gt;
+                    &lt;p class="text-light"&gt;Light grey text.&lt;/p&gt;
+                    </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Background Colors</h3>
+            <p>The classes for background colors are: <code>.bg-primary</code>, <code>
+                        .bg-success</code>, <code>.bg-info</code>, <code>.bg-warning</code>, <code>.bg-danger</code>,
+                <code>.bg-secondary</code>, <code>.bg-dark</code> and <code>.bg-light</code>.
+            </p>
+            <p>Note that background colors do not set the text color, so in some cases you'll want to use them
+                together with a <code>.text-*</code>
+                color class.</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    &lt;p class="bg-primary text-white"&gt;This text is important.&lt;/p&gt;
+                    &lt;p class="bg-success text-white"&gt;This text indicates success.&lt;/p&gt;
+                    &lt;p class="bg-info text-white"&gt;This text represents some information.&lt;/p&gt;
+                    &lt;p class="bg-warning text-white"&gt;This text represents a warning.&lt;/p&gt;
+                    &lt;p class="bg-danger text-white"&gt;This text represents danger.&lt;/p&gt;
+                    &lt;p class="bg-secondary text-white"&gt;Secondary background color.&lt;/p&gt;
+                    &lt;p class="bg-dark text-white"&gt;Dark grey background color.&lt;/p&gt;
+                    &lt;p class="bg-light text-dark"&gt;Light grey background color.&lt;/p&gt;
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+
+{% endblock content %}

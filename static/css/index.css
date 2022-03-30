@@ -13,7 +13,7 @@
   z-index: 99;
   /* display: block; */
 }
-.disapper{
+.disappear{
   animation: vanish 1s forwards;
 }
 @keyframes vanish {
@@ -116,8 +116,33 @@ body {
 .icon {
   font-size: 1em;
 }
+.fea{
+  text-align: center;
+}
 @media only screen and (min-device-width: 481px) {
   .icon {
     font-size: 1.73em;
   }
+}
+
+
+/* Style for up-to-btn */
+
+#to-up-btn {
+position: fixed;
+bottom: 10px;
+right: -30px;
+background-color: #00f;
+color: #fff;
+padding: 5px;
+border-radius: 4px;
+font: 15px bold Arial, Helvetica, sans-serif;
+cursor: pointer;
+transition: 0.2s;
+width: 25px;
+text-align: center;
+}
+
+#to-up-btn.show {
+right: 20px;
 }

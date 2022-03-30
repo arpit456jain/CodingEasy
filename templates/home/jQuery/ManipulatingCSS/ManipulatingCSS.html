@@ -1,0 +1,129 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery - Get and Set CSS Classes</h1>
+                <p><strong>jQuery Manipulating CSS</strong></p>
+                <ol>jQuery has several methods for CSS manipulation. We will look at the following methods:<br><br>
+                    <li><mark class="mnpcss">addClass()</mark> - Adds one or more classes to the selected elements</li>
+                    <li><mark class="mnpcss">removeClass()</mark> - Removes one or more classes from the selected elements</li>
+                    <li><mark class="mnpcss">toggleClass()</mark> - Toggles between adding/removing classes from the selected elements</li>
+                    <li><mark class="mnpcss">css()</mark> - Sets or returns the style attribute</li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery addClass() Method</h3>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        The following example shows how to add class attributes to different elements.
+                        Of course you can select multiple elements, when adding classes:
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        $("button").click(function(){
+                            $("h1, h2, p").addClass("blue");
+                            $("div").addClass("important");
+                        });
+                    </code>
+                </pre>
+                <span>
+                    <mark>
+                        You can also specify multiple classes within the <mark class="mnpcss">addClass()</mark> method:
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        $("button").click(function(){
+                            $("#div1").addClass("important blue");
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery removeClass() Method</h3>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                        <mark>
+                            The following example shows how to remove a specific class attribute from different elements:
+                        </mark>
+                    </span>
+                <pre>
+                <code>
+                    $("button").click(function(){
+                        $("h1, h2, p").removeClass("blue");
+                    });
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">jQuery toggleClass() Method</h3>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        The following example will show how to use the jQuery <mark class="mnpcss">toggleClass()</mark> 
+                        method. This method toggles between adding/removing classes from the selected elements:
+                    </mark>
+                </span>
+                <pre>
+                <code>
+                    $("button").click(function(){
+                        $("h1, h2, p").toggleClass("blue");
+                    });
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}

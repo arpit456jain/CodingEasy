@@ -1,0 +1,441 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">jQuery - DOM Manipulation</h1>
+                <p>jQuery provides various methods to add, edit or delete DOM element(s) in the HTML page</p>
+                <ul>
+                    <li>
+                        JQuery provides methods to manipulate DOM in efficient way. You do not need to write big code to modify
+                        the value of any element's attribute or to extract HTML code from a paragraph or division.
+                    </li>
+                    <li>
+                        JQuery provides methods such as
+                        .attr(), .html(), and .val() which act as getters, retrieving information from DOM elements for later use.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Content Manipulation</h3>
+            <p>
+                The <strong>html()</strong> method gets the html contents (innerHTML) of the first matched element.
+                Here is the syntax for the method
+            </p>
+            <p><mark class="mnpDOM">selector.html()</mark></p>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        Following is an example which makes use of .html() and .text(val) methods.
+                        Here .html() retrieves HTML content from the object and then
+                        .text( val ) method sets value of the object using passed parameter
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;The jQuery Example&lt;/title&gt;
+                                &lt;script type = "text/javascript" 
+                                    src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;
+                                &lt;/script&gt;
+                                    
+                                &lt;script type = "text/javascript" language = "javascript"&gt;
+                                    $(document).ready(function() {
+                                        $("div").click(function () {
+                                        var content = $(this).html();
+                                        $("#result").text( content );
+                                        });
+                                    });
+                                &lt;/script&gt;
+                                    
+                                &lt;style&gt;
+                                    #division{ margin:10px;padding:12px; border:2px solid #666; width:60px;}
+                                &lt;/style&gt;
+                            &lt;/head&gt;
+                                
+                            &lt;body&gt;
+                                &lt;p&gt;Click on the square below:&lt;/p&gt;
+                                &lt;span id = "result"> &lt;/span&gt;
+                                    
+                                &lt;div id = "division" style = "background-color:blue;"&gt;
+                                    This is Blue Square!!
+                                &lt;/div&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">DOM Element Replacement</h3>
+            <p>
+                You can replace a complete DOM element with the specified HTML or DOM elements.<br/>
+                <strong>The replaceWith( content )</strong> method serves this purpose very well.
+            </p>
+            <p>
+                Here is the syntax for the method -<br><br>
+                <mark class="mnpDOM">selector.replaceWith( content )</mark>
+            </p>
+            <p>
+                Here content is what you want to have instead of original element.
+                This could be HTML or simple text.
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        Following is an example which would replace division element with<br/> "&lt;h1&gt;JQuery is Great &lt;/h1&gt;" −
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;The jQuery Example&lt;/title&gt;
+                                &lt;script type = "text/javascript" 
+                                    src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;
+                                &lt;/script&gt;
+                                    
+                                &lt;script type = "text/javascript" language = "javascript"&gt;
+                                    $(document).ready(function() {
+                                        $("div").click(function () {
+                                        $(this).replaceWith("&lt;h1&gt;JQuery is Great&lt;/h1&gt;");
+                                        });
+                                    });
+                                &lt;/script&gt;
+                                    
+                                &lt;style&gt;
+                                    #division{ margin:10px;padding:12px; border:2px solid #666; width:60px;}
+                                &lt;/style&gt;
+                            &lt;/head&gt;
+                                
+                            &lt;body&gt;
+                                &lt;p&gt;Click on the square below:&lt;/p&gt;
+                                &lt;span id = "result"> &lt;/span&gt;
+                                    
+                                &lt;div id = "division" style = "background-color:blue;"&gt;
+                                    This is Blue Square!!
+                                &lt;/div&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Removing DOM Elements</h3>
+            <p>
+                There may be a situation when you would like to remove one or more DOM elements from the document.
+                JQuery provides two methods to handle the situation.
+            </p>
+            <p>
+                The <strong>empty( )</strong> method remove all child nodes from the set of matched elements where as the
+                method <strong>remove( expr )</strong> method removes all matched elements from the DOM.
+            </p>
+            <p>
+                Here is the syntax for the method -<br><br>
+                <p class="mnpDOM">
+                    selector.remove( [ expr ])<br><br>or <br><br>selector.empty( )
+                </p>
+            </p>
+            <p>
+                You can pass optional parameter <i>expr</i> to filter the set of elements to be removed.
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        Following is an example where elements are being removed as soon as they are clicked −
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;The jQuery Example&lt;/title&gt;
+                                &lt;script type = "text/javascript" 
+                                    src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;
+                                &lt;/script&gt;
+                                    
+                                &lt;script type = "text/javascript" language = "javascript"&gt;
+                                    $(document).ready(function() {
+                                        $("div").click(function () {
+                                        $(this).remove( );
+                                        });
+                                    });
+                                &lt;/script&gt;
+                                    
+                                &lt;style&gt;
+                                    .div{ margin:10px;padding:12px; border:2px solid #666; width:60px;}
+                                &lt;/style&gt;
+                            &lt;/head&gt;
+                                
+                            &lt;body&gt;
+                                &lt;p&gt;Click on the square below:&lt;/p&gt;
+                                &lt;span id = "result"> &lt;/span&gt;
+                                    
+                                &lt;div class = "div" style = "background-color:blue;"&gt;&lt;/div&gt;                                
+                                &lt;div class = "div" style = "background-color:green;"&gt;&lt;/div&gt;                                
+                                &lt;div class = "div" style = "background-color:red;"&gt;&lt;/div&gt;                                
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Inserting DOM Elements</h3>
+            <p>
+                There may be a situation when you would like to insert new one or more DOM elements in your existing document.
+                JQuery provides various methods to insert elements at various locations.
+            </p>
+            <p>
+                The <strong>after( content )</strong> method insert content after each of the matched elements
+                where as the method <strong>before( content )</strong> method inserts content before each of the matched elements.
+            </p>
+            <p>
+                Here is the syntax for the method −<br><br>
+                <p class="mnpDOM">
+                    selector.after( content )<br><br>or <br><br>selector.before( content )
+                </p>
+            </p>
+            <p>
+                Here content is what you want to insert. This could be HTML or simple text.
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <span>
+                    <mark>
+                        Following is an example where <div> elements are being inserted just before the clicked element −
+                    </mark>
+                </span>
+                <pre>
+                    <code>
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;The jQuery Example&lt;/title&gt;
+                                &lt;script type = "text/javascript" 
+                                    src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;
+                                &lt;/script&gt;
+                                    
+                                &lt;script type = "text/javascript" language = "javascript"&gt;
+                                    $(document).ready(function() {
+                                        $("div").click(function () {
+                                        $(this).before('&lt;div class="div"&gt;&lt;/div&gt;');
+                                        });
+                                    });
+                                &lt;/script&gt;
+                                    
+                                &lt;style&gt;
+                                    .div{ margin:10px;padding:12px; border:2px solid #666; width:60px;}
+                                &lt;/style&gt;
+                            &lt;/head&gt;
+                                
+                            &lt;body&gt;
+                                &lt;p&gt;Click on the square below:&lt;/p&gt;
+                                &lt;span id = "result"> &lt;/span&gt;
+                                    
+                                &lt;div class = "div" style = "background-color:blue;"&gt;&lt;/div&gt;                                
+                                &lt;div class = "div" style = "background-color:green;"&gt;&lt;/div&gt;                                
+                                &lt;div class = "div" style = "background-color:red;"&gt;&lt;/div&gt;                                
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">DOM Manipulation Methods</h3>
+            <p>
+                Following table lists down all the methods which you can use to manipulate DOM elements
+            </p>
+        </div>
+        <table id="myTable">
+            <tr>
+                <th>Methods &amp; Description</th>
+            </tr>
+            <tr>
+                <td>
+                    after( content )<br>Insert content after each of the matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    append( content )<br>Append content to the inside of every matched element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    appendTo( selector )<br>Append all of the matched elements to another, specified, set of elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    before( content )<br>Insert content before each of the matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    clone( bool )<br>Clone matched DOM Elements, and all their event handlers, and select the clones.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    clone( )<br>Clone matched DOM Elements and select the clones.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    empty( )<br>Remove all child nodes from the set of matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    html( val )<br>Set the html contents of every matched element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    html( )<br>Get the html contents (innerHTML) of the first matched element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    insertAfter( selector )<br>Insert all of the matched elements after another, specified, set of elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    insertBefore( selector )<br>Insert all of the matched elements before another, specified, set of elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    prepend( content )<br>Prepend content to the inside of every matched element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    prependTo( selector )<br>Prepend all of the matched elements to another, specified, set of elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    remove( expr )<br>Removes all matched elements from the DOM.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    replaceAll( selector )<br>Replaces the elements matched by the specified selector with the matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    replaceWith( content )<br>Replaces all matched elements with the specified HTML or DOM elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    text( val )<br>Set the text contents of all matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    text( )<br>Get the combined text contents of all matched elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    wrap( elem )<br>Wrap each matched element with the specified element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    wrap( html )<br>Wrap each matched element with the specified HTML content.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    wrapAll( elem )<br>Wrap all the elements in the matched set into a single wrapper element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    wrapAll( html )<br>Wrap all the elements in the matched set into a single wrapper element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    wrapInner( elem )<br>Wrap the inner child contents of each matched element (including text nodes) with a DOM element
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    wrapInner( html )<br>Wrap the inner child contents of each matched element (including text nodes) with an HTML structure.
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<br><br>
+
+<!-- Feel free to copy paste for more sections -->
+
+
+<br><br>
+{% endblock content %}

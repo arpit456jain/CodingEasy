@@ -1,0 +1,64 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+
+<section class="container mt-3">
+  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+    <h1 class="text-center display-3">Data Types</h1>
+  </div>
+</section>
+<p class="text-center display-6">
+<h3><b><i> C++ offers the programmer a rich assortment of built-in as well as user defined data types.</i></b></h3>
+</p>
+<img src="{% static 'img/cpp-datatypes.jpg' %}">
+<br>
+<br>
+
+Following is the example, which will produce correct size of various data types on your computer.
+<b><i>
+    <p>#include&lt;iostream &gt;
+      <br>
+      using namespace std;
+      <br>
+      int main() {
+      <br>
+      cout << "Size of char : " << sizeof(char) << endl; <br>
+        cout << "Size of int : " << sizeof(int) << endl; <br>
+          cout << "Size of short int : " << sizeof(short int) << endl; <br>
+            cout << "Size of long int : " << sizeof(long int) << endl; <br>
+              cout << "Size of float : " << sizeof(float) << endl; <br>
+                cout << "Size of double : " << sizeof(double) << endl; <br>
+                  cout << "Size of wchar_t : " << sizeof(wchar_t) << endl; <br>
+                    return 0;
+                    <br>
+
+                    }
+    </p>
+  </i></b>
+<p>Output is :-</p>
+<b><i>
+    Size of char : 1
+    <br>
+    Size of int : 4
+    <br>
+    Size of short int : 2
+    <br>
+    Size of long int : 4
+    <br>
+    Size of float : 4
+    <br>
+    Size of double : 8
+    <br>
+    Size of wchar_t : 4
+    <br>
+  </i></b>
+</div>
+</section>
+<br><br>
+
+{% endblock content %}

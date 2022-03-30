@@ -1,0 +1,167 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  Coding Easy
+</div> <br>
+
+<br><br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="display-4">What is Machine Learning?</h1>
+        <p class="lead">
+        <ul>
+          <li>Machine Learning is a way by which machines are made to think like humans and process tasks with the prior
+            knowledge of some past datasets.</li>
+          <li>We generally use 3 terms related to this field - Artificial Intelligence (AI), Machine Learning (ML), Deep
+            Learning (DL).</li>
+          <li>ML is a subset of AI. And DL is a subset of ML</li>
+          <li>If Artificial Intelligence is a subject, then Machine Learning is just a theory to solve various kinds of
+            AI Problems.
+            And the AI problems that are unsolvable by ML Algorithms can be solved by DL.
+            This is because Deep Learning includes usage of Neural Networks</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">More About Machine Learning</h3>
+      <p>Machine Learning includes a process called Training where dataset is fed to the machine.</p>
+      <p>We choose a particular Machine Learning Algorithm to proceed with the problem.</p>
+      <p>The algorithm gradually develops a relationship between features and corresponding labels</p>
+      <P>Various types of Machine Learning Algorithms are discussed in the following section-</P>
+    </div>
+    <div class="col-md-6 col-sm-12 ">
+      <h3 class="text-center">3 Main Types of Machine Learning are-</h3>
+      <div class="code">
+        <pre>
+          <ol>
+              <li>Supervised Learning (Deals with Labeled Dataset)
+                  A.Regression= Dealing with numerical variables
+                  B.Classification= Dealing with categorical variables</li>
+              <li>Unsupervised Learning (Deals with Unlabeled Dataset)
+                  A.Clustering= Proceeding with dividing data under 
+                  different clusters
+                  B.Association= Proceeding with finding hidden associations 
+                  between different data variables
+              </li>
+              <li>Reinforcement Learning (Deals with learning from the environment 
+                  & mistakes made</li>
+          </ol>
+        </pre>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- Cards -->
+<div class="container-fluid ">
+  <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Linear Regression</h5>
+          <a href="{% url 'ml1' %}?data=linregx"" class=" btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Logistic Regression</h5>
+
+          <a href="{% url 'ml1' %}?data=logregx" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">K Nearest Neighbors</h5>
+
+          <a href="{% url 'ml1' %}?data=knn" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Support Vector Machines</h5>
+
+          <a href="{% url 'ml1' %}?data=svm" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Decision Tree</h5>
+
+          <a href="{% url 'ml1' %}?data=decitree" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Random Forest</h5>
+
+          <a href="{% url 'ml1' %}?data=rf" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Naive Bayes</h5>
+
+          <a href="{% url 'ml1' %}?data=nv" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">K Means Clustering</h5>
+
+          <a href="{% url 'ml1' %}?data=kmc" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Hierarchical Clustering</h5>
+
+          <a href="{% url 'ml1' %}?data=hrc" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

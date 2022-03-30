@@ -1,0 +1,60 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+
+<section class="container mt-3">
+  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+    <h1 class="text-center display-3">CSS Padding</h1>
+
+  </div>
+</section>
+<br><br>
+
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">CSS Padding</h3>
+      <p class="text-center">The CSS <code>padding</code> properties are used to generate space around
+        an element's content, inside of any defined borders
+        <br>With CSS, you have full control over the margins. There are properties
+        for setting the margin for each side of an element (top, right, bottom, and left).<br>
+
+        <br>CSS has properties for specifying the padding for each
+        side of an element:
+      </p>
+      <ul>
+        <li><code>padding-top</code></li>
+        <li><code>padding-right</code></li>
+        <li><code>padding-bottom</code></li>
+        <li><code>padding-left</code></li>
+      </ul>
+
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+        <code>
+            p {<br>&nbsp;&nbsp;padding-top: 100px;<br>
+                &nbsp;&nbsp;padding-bottom: 100px;<br>
+                &nbsp;&nbsp;padding-right: 150px;<br>
+                &nbsp;&nbsp;padding-left: 80px;<br>}
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+
+<br><br>
+
+{% endblock content %}

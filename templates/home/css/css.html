@@ -1,0 +1,186 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div>
+
+<br><br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="display-4">What is CSS</h1>
+        <p class="lead">CSS stands for Cascading Style Sheets
+          CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+          CSS saves a lot of work. It can control the layout of multiple web pages all at once
+          External stylesheets are stored in CSS files
+        </p>
+      </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center">Why we use CSS?</h3>
+      <p class="text-center">CSS is used to define styles for your web pages, including the design, layout and
+        variations in display for
+        different devices and screen sizes.</p>
+      <br></br>
+      <h3 class="text-center">CSS Solved a Big Problem</h3>
+      <p class="mx-auto">HTML was NEVER intended to contain tags for formatting a web page!
+        <br></br>
+        HTML was created to describe the content of a web page, like:
+        <br></br>
+        &lt;h1&gt;This is a heading &lt;/h1&gt;
+        <br></br>
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        <br></br>
+        When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a
+        nightmare for web developers. Development of large websites, where fonts and color information were added to
+        every single page, became a long and expensive process.
+        <br></br>
+        To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+        <br></br>
+        CSS removed the style formatting from the HTML page!
+      </p>
+      <br></br>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">CSS Saves a Lot of Work!</h3>
+      <p>The style definitions are normally saved in external .css files.
+        <br></br>
+        With an external stylesheet file, you can change the look of an entire website by changing just one file!
+
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+            <code>
+  body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+            </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="container-fluid ">
+  <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Syntax</h5>
+          <a href="{% url 'css1' %}?data=basic" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Selectors</h5>
+
+          <a href="{% url 'css1' %}?data=selectors" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Functions</h5>
+
+          <a href="{% url 'css1' %}?data=function" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Font Family</h5>
+          <a href="{% url 'css1' %}?data=font-family" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Font Style</h5>
+          <a href="{% url 'css1' %}?data=font-style" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Alignments</h5>
+
+          <a href="{% url 'css1' %}?data=align" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Colors</h5>
+
+          <a href="{% url 'css1' %}?data=color" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Margin</h5>
+          <a href="{% url 'css1' %}?data=margins" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">CSS Padding</h5>
+          <a href="{% url 'css1' %}?data=padding" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <br><br>
+
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Hierarchical Clustering (Clustering Algorithm)</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Hierarchical Clustering</h3>
+            <p>We have a hierarchy of clusters formed under this algorithm.</p>
+            <p>Suppose we have 4 datapoints - P1,P2,P3,P4. Within them P1 & P2 are most similar points so they are
+                grouped under a same cluster. And they are grouped under a bigger cluster.</P>
+            <P>We can represent the hierarchy of the clusters using a diagram as shown called Dendogram. In the
+                dendogram we can see that P1 & P2 are most similar and then they are similar with P3. And their
+                combination is similar with P4. We have to
+                keep on forming clusters until we are left with only 1 big clusters and all the datapoints are covered.
+            </P>
+            <P>It is subdivided into 2 types-></P>
+            <ol>
+                <li>Agglomerative= We need down to up approach of dendogram.</li>
+                <li>Divisive= We need up to down approach of dendogram.</li>
+            </ol>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Plot Picture</h3>
+            <div class="code">
+                <pre>
+                <img src="{% static 'img/Hierarchical_Clustering_Plot_And_Dendrogram.jpg' %}",height=600px, width=500px>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}

@@ -1,0 +1,109 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">File Handling</h1>
+        <p>The key function for working with files in Python is the
+          <code>open()</code> function.
+        </p>
+        <p>The <code>open()</code> function takes two parameters;
+          <em>filename</em>, and <em>mode</em>.
+        </p>
+        <p>There are four different methods (modes) for opening a file:</p>
+
+        <p><code>"r&quot;</code> - Read - Default value. Opens a
+          file for reading, error if the file does not exist</p>
+        <p><code>"a"</code> - Append - Opens a file for
+          appending, creates the file if it does not exist</p>
+        <p><code>"w"</code> - Write - Opens a file for writing,
+          creates the file if it does not exist</p>
+        <p><code>"x&quot;</code> - Create - Creates the specified file, returns
+          an error if the file exists</p>
+      </div>
+</section>
+<br><br>
+
+
+<!-- code and text -->
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Open a File</h3>
+      <p class="text-center">To open the file, use the built-in <code>open()</code> function.
+        <br>The <code>open()</code> function returns a file object, which has a
+        <code>read()</code> method for reading the content of the file.
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  f = open(&quot;demofile.txt&quot;, &quot;r&quot;)
+                  print(f.read())
+                </code>
+            </pre>
+      </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Write to an Existing File</h3>
+      <p class="text-center">To write to an existing file, you must add a parameter to the
+        <code>open()</code> function:
+        <br><code>"a"</code> - Append - will append to the end of the file
+        <br><code>"w"</code> - Write - will overwrite any existing content
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  f = open(&quot;demofile2.txt&quot;, &quot;a&quot;)
+                  f.write(&quot;Now the file has more content!&quot;)
+                  f.close()
+                  #open and read the file after the appending:
+                  f = open(&quot;demofile2.txt&quot;, &quot;r&quot;)print(f.read())
+                </code>
+            </pre>
+      </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Delete a File</h3>
+      <p class="text-center">To delete a file, you must import the OS module, and run its
+        <code>os.remove()</code> function.
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  <p>Remove the file "demofile.txt":</p>
+                  import os
+                  os.remove(&quot;demofile.txt&quot;)
+                </code>
+            </pre>
+      </div>
+    </div>
+</section>
+<br><br>
+{% endblock content %}

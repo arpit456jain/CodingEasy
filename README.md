@@ -2,7 +2,8 @@
 
 <div align="center">
  
-![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)
+<a href= "https://github.com/arpit456jain/CodingEasy/issues" target="_blanlk" title="CodingEasy">![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)</a>
+
  
  <br>
  
@@ -26,19 +27,28 @@
  ## 📌 Opensource Programs
 
 
-### This project is a part of following Open Source Program
+### This project is a part of following Open Source Programs
 
 <p align="center"><img alt="Logo" width=55% src="https://user-images.githubusercontent.com/55352601/147348331-5e8361aa-8d7c-40fb-bb2d-bec5a1f9da59.png"></p>
 
+## ✨ Motivation
+
+This project is part of the [GirlScript Summer of Code 2022](https://gssoc.girlscript.tech/) Open Source Program.
+
+### Frequently Asked Questions(FAQs) for [GSSoC'22](https://gssoc.girlscript.tech/)
+
+> This project is accepting contributions under [GirlScript Summer of Code 2022](https://gssoc.girlscript.tech/) - three months long Open Source program conducted by [GirlScript Foundation](https://gssoc.girlscript.tech/).
+
+[![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://gssoc.girlscript.tech/)
 
 <br>
 
-## Table of Contents
-  - **[How to Contribute?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-contribute)**
-  - **[How to make a Pull Request?](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#how-to-make-a-pull-request)**
-  - **[Project Setup](https://github.com/tandrimasingha/CodingEasy/blob/master/README.md#project-setup)**
-  - **[Project Admin](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#project-admin)**
-  - **[Our Valuable Contributors](https://github.com/Chayan-11/CodingEasy/blob/master/README.md#our-valuable-contributors)**
+## 💻Table of Contents
+  - **[How to Contribute?](#how-to-contribute)**
+  - **[How to make a Pull Request?](#how-to-make-a-pull-request)**
+  - **[Project Setup](#project-setup)**
+  - **[Project Admin](#project-admin)**
+  - **[Our Valuable Contributors](#our-valuable-contributors)**
   
   
 ## How to Contribute?
@@ -58,16 +68,16 @@
 git clone https://github.com/<your-github-username>/CodingEasy
 ```
 
-**3.** Set upstream command:
-
-```bash
-git remote add upstream https://github.com/arpit456jain.git
-```
-
-**4.** Navigate to the new project directory:
+**3.** Navigate to the new project directory:
 
 ```bash
 cd CodingEasy
+```
+
+**4.** Set upstream command:
+
+```bash
+git remote add upstream https://github.com/arpit456jain.git
 ```
 
 **5.** Create a new branch:
@@ -98,7 +108,7 @@ git merge upstream/main
 **8.** Stage your changes and commit:
 
 ```bash
-git add.
+git add .
 ```
 
 ```bash
@@ -203,6 +213,11 @@ Congratulations! You've created your virtual environment.
 
  <br> <br>
  
+---
 
+<div align="center">
+ <b>Give it ⭐ if you like this project or you learn something from it!!</b>
+<br> <br>
+ 
 [![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/arpit456jain/CodingEasy)
-Give it star if you like this project or you learn something from it!!
+</div>

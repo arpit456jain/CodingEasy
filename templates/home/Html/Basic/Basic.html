@@ -1,0 +1,168 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  Coding Easy
+</div> <br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">Basic HTML Tags</h1>
+
+      </div>
+</section>
+<br><br>
+<!-- Code and Text -->
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;html&gt;</h3>
+      <p>The &lt;html&gt; tag represents the root of an HTML document.
+
+        The &lt;html&gt; tag is the container for all other HTML elements (except for the
+        <!DOCTYPE> tag).
+
+        You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web
+        page. This is meant to assist search engines and browsers
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                 &lt;!DOCTYPE html &gt;
+                 &lt;html&gt;
+                 &lt;head&gt;
+                 &lt;title&gt;Page Title&lt;title&gt;
+                 &lt;/head&gt;
+                 &lt;body&gt;
+
+                 &lt;h1&gt;My First Heading&lt;/h1&gt;
+                 &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+                 &lt;/body&gt;
+                 &lt;/html&gt;
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;head&gt;</h3>
+      <p>The
+
+        <head> element is a container for metadata (data about data) and is placed between the <html> tag and the
+
+        <body> tag.
+
+          Metadata is data about the HTML document. Metadata is not displayed.
+
+          Metadata typically define the document title, character set, styles, scripts, and other meta information.
+
+          The following elements can go inside the
+
+          <head> element:
+
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                   <code>
+                     &lt;html&gt;
+                     &lt;head&gt;
+                     &lt;base href="www.frontendpartner.com/" target="_blank"&gt;
+                     &lt;/head&gt;
+                     &lt;body&gt;
+                     &lt;img src="images/stickman.gif" width="24" height="39" alt="Stickman" &gt;
+                     &lt;a&gt; href="tags/tag_base.asp">HTML base Tag &lt;/a&gt;
+                     &lt;/body&gt;
+                     &lt;/html&gt;
+                   </code>
+               </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;title&gt;</h3>
+      <p>The &lt;title&gt; tag defines the title of the document. The title must be text-only, and it is shown in the
+        browser's title bar or in the page's tab.
+
+        The title tag is required in HTML documents!
+
+        The contents of a page title is very important for search engine optimization (SEO)! The page title is used by
+        search engine algorithms to decide the order when listing pages in search results.
+
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                      <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                        &lt;title>HTML Elements Reference&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                        &lt;h1>This is a heading&lt;/h1&gt;
+                        &lt;p>This is a paragraph.&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                      </code>
+                  </pre>
+      </div>
+
+    </div>
+  </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">&lt;body&gt;</h3>
+      <p>The &lt;body&gt; tag defines the document's body.
+
+        The &lt;body&gt; element contains all the contents of an HTML document, such as headings, paragraphs, images,
+        hyperlinks, tables, lists, etc.
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+
+        <pre>
+                         <code>
+                           &lt;html&gt;
+                           &lt;head&gt;
+                           &lt;title&gt;Title of the document&lt;/title&gt;
+                           &lt;/head&gt;
+                           &lt;body&gt;
+                           &lt;h1>This is a heading&lt;/h1&gt;
+                           &lt;p>This is a paragraph.&lt;/p&gt;
+                           &lt;/body&gt;
+                           &lt;/html&gt;
+                         </code>
+                     </pre>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,84 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  Coding Easy
+</div> <br>
+
+<br><br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="display-4">What is 'SampleCourse'</h1>
+        <p class="lead">
+        <ul> 
+          <!-- Short description about 'SampleCourse' -->
+          <li>'SampleCourse' is blah blah blah</li>
+          <li>'SampleCourse' is used becuase blah blah</li>
+          <li>'SampleCourse' can be used to blah blah</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">'SampleCourse'</h3>
+      <!-- Detailed description of course  -->
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+
+    <div class="col-md-6 col-sm-12 ">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+            <code>
+              <!-- Code demonstration -->
+            </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- Subsections -->
+
+<!-- Cards -->
+<div class="container-fluid ">
+
+  <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Topic1</h5>
+          <!-- Do not forget to map the URL -->
+          <a href="{% url 'newcourse1' %}?data=topic1" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-3 g-5">
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Topic2</h5>
+          <!-- Do not forget to map the URL -->
+          <a href="{% url 'newcourse1' %}?data=topic2" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock content %}

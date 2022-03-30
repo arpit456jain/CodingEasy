@@ -1,0 +1,76 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">Loops</h1>
+        <p class="lead">Python has two primitive loop commands:
+        <ul>
+          <li><span>while</span> loops</li>
+          <li><span>for</span> loops</li>
+        </ul>
+        </p>
+      </div>
+</section>
+<br><br>
+
+
+<!-- code and text -->
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">The while Loop</h3>
+      <p class="text-center">With the <span>while</span> loop we can execute a set of statements as long as a condition
+        is true.</p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  i = 1
+                  while i < 5:
+                  &nbsp;&nbsp;print(i)
+                  &nbsp;&nbsp;i += 1
+                </code>
+            </pre>
+      </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">For Loops</h3>
+      <p class="text-center">A <span>for</span> loop is used for iterating over a sequence (that is either a list, a
+        tuple,
+        a dictionary, a set, or a string).
+        This is less like the <span>for</span> keyword in other programming languages, and works more like an iterator
+        method as found in other object-orientated programming languages.With the <span>for</span> loop we can execute a
+        set of statements, once for each item in a list, tuple, set etc.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
+                  for x in fruits:&nbsp;
+                  
+                  print(x)
+                </code>
+            </pre>
+      </div>
+    </div>
+</section>
+<br><br>
+{% endblock content %}

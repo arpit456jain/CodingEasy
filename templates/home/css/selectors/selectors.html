@@ -1,0 +1,197 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+  <div class="heading text-center display-3">
+    CodingEasy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+          <h1 class="text-center display-3">CSS Selectors</h1>
+          <p class="text-center display-6">A CSS selector selects the HTML element(s) you want to style.<br>
+            We can divide CSS selectors into five categories:</p>
+          <ul>
+            <li>Simple selectors (select elements based on name, id, class)</li>
+            <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+            <li>Pseudo-class selectors (select elements based on a certain state)</li>
+            <li>Pseudo-elements selectors (select and style a part of an element)</li>
+            <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+          </ul>
+          <p>This page will explain the most basic CSS Selectors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+  <!-- Code and Text -->
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+
+        <h3 class="text-center display-6">The CSS element Selector</h3><br></br>
+        <p>The element selector selects HTML elements based on the element name.</p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3>
+        <p>Here, all &lt;p&gt; elements on the page will be center-aligned, with a red text color:</p>
+        <div class="code"><pre>
+            <code>
+              p {
+               color: red;
+               text-align: center;
+             }
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center display-6">The CSS id Selector</h3><br></br>
+        <p>The id selector uses the id attribute of an HTML element to select a specific element.<br></br>
+
+          The id of an element is unique within a page, so the id selector is used to select one unique
+          element!<br></br>
+
+          To select an element with a specific id, write a hash (#) character, followed by the id of the
+          element.</p><br></br>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3><br>
+        <p>The CSS rule below will be applied to the HTML element with id="para1":</p>
+        <div class="code">
+        <pre>
+          <code>
+            #para1 {
+              text-align: center;
+              color: red;
+            }
+          </code>
+        </pre>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center display-6">The CSS class Selector</h3><br></br>
+        <p>The class selector selects HTML elements with a specific class attribute.<br></br>
+
+          To select elements with a specific class, write a period (.) character, followed by the class
+          name.</p><br><br>
+        <p>Note: A class name cannot start with a number!</p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3><br>
+        <p>In this example all HTML elements with class="center" will be red and center-aligned: </p>
+        <div class="code"><pre>
+                <code>
+                  .center {
+                    text-align: center;
+                    color: red;
+                  }
+                </code>
+              </pre>
+            </div>
+        <p>You can also specify that only specific HTML elements should be affected by a class.</p><br>
+        <h3 class="text-center">Example</h3>
+        <p>In this example only &lt;p&gt; elements with class="center" will be red and center-aligned:
+        </p>
+        <div class="code"><pre>
+                <code>
+                  p.center {
+                    text-align: center;
+                    color: red;
+                  }
+                </code>
+              </pre></div>
+        <p>
+          HTML elements can also refer to more than one class.
+        </p><br>
+      </div>
+    </div>
+  </section>
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center display-6">The CSS Universal Selector</h3><br>
+        <p>The universal selector (*) selects all HTML elements on the page.</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3><br>
+        <p>The CSS rule below will affect every HTML element on the page: </p>
+      
+        <div class="code">
+        <pre>
+          <code>
+            * {
+              text-align: center;
+              color: blue;
+            }
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center display-6">The CSS Grouping Selector</h3><br><br>
+        <p>The grouping selector selects all the HTML elements with the same style
+          definitions.<br><br>
+
+          Look at the following CSS code (the h1, h2, and p elements have the same style
+          definitions):</p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Example</h3>
+        <div class="code">
+        <pre>
+          <code>
+            h1 {
+              text-align: center;
+              color: red;
+            }
+            
+            h2 {
+              text-align: center;
+              color: red;
+            }
+            
+            p {
+              text-align: center;
+              color: red;
+            }
+          </code>
+        </pre>
+      </div>
+        <p>It will be better to group the selectors, to minimize the code.<br>
+
+          To group selectors, separate each selector with a comma.</p>
+        <br>
+        <br>
+        <h3 class="text-center">Example</h3>
+        <p>In this example we have grouped the selectors from the code above: </p>
+        <div class="code">
+        <pre>
+            <code>
+              h1, h2, p {
+                text-align: center;
+                color: red;
+              }
+            </code>
+          </pre>
+      </div>
+
+    </div>
+    </div>
+  </section><br><br>
+{% endblock content %}

@@ -1,0 +1,322 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br />
+<div class="heading text-center display-3 codeeasy"><b>CodingEasy</b></div>
+<br />
+
+<br /><br />
+<!-- jumbotron -->
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="display-4"><b>What is CPP</b></h1>
+                <p class="lead">
+                    C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language
+                    that supports procedural, object-oriented, and generic programming.<br> C++ is regarded as a
+                    <b>middle-level language</b>, as
+                    it comprises a combination of both high-level and low-level language features. C++ is a superset of
+                    C, and that virtually any legal C program is a legal C++ program.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<br /><br />
+<!-- Code and Text -->
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center"><b class="basicsyntax">C++ Basic Syntax</b></h3>
+            <p>
+                When we consider a C++ program, it can be defined as a collection of objects that communicate via
+                invoking each other's methods.<br> Let us now briefly look into what a class, object, methods, and
+                instant variables mean.
+            <ol>1. <b class="points">Object</b> − Objects have states and behaviors. An object is an instance of a
+                class.<br> Example: A dog has states - color, name, breed as well as behaviors - wagging, barking,
+                eating.</ol>
+            <ol>2. <b class="points">Class</b> − A class can be defined as a template/blueprint that describes the
+                behaviors/states that object of its type support.</ol>
+            <ol>3. <b class="points">Methods</b> − A method is basically a behavior. A class can contain many methods.
+                It is in methods where the logics are written, data is manipulated and all the actions are executed.
+            </ol>
+            <ol>4. <b class="points">Instance Variables</b> − Each object has its unique set of instance variables. An
+                object's state is created by the values assigned to these instance variables.</ol>
+            </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center"><b class="example">Example</b></h3>
+            <div class="code">
+                <pre>
+           <code>
+            #include &lt;iostream&gt; 
+
+                int main() {
+                    std::cout << "Hello World!";
+                    return 0;
+                }
+           </code>
+          </pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cards -->
+<div class="container-fluid ">
+    <div class="row m-3 g-5">
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Data Types</h5>
+                    <a href="{% url 'cpp1' %}?data=datatype" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Variable Types</h5>
+
+                    <a href="{% url 'cpp1' %}?data=variable" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Constants/Literals</h5>
+
+                    <a href="{% url 'cpp1' %}?data=constant" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Modifier Types</h5>
+
+                    <a href="{% url 'cpp1' %}?data=modifier" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Storage Classes</h5>
+
+                    <a href="Table/table.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Operators</h5>
+
+                    <a href="Style/style.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="container-fluid ">
+    <div class="row m-3 g-5">
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Loop Types</h5>
+                    <a href="Basic/Basic.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Decision Making</h5>
+
+                    <a href="Images/images.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Functions</h5>
+
+                    <a href="Links/link.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Numbers</h5>
+
+                    <a href="Lists/list.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Arrays</h5>
+
+                    <a href="Table/table.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Strings</h5>
+
+                    <a href="Style/style.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="container-fluid ">
+    <div class="row m-3 g-5">
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Pointers</h5>
+                    <a href="Basic/Basic.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Class & Objects</h5>
+
+                    <a href="Images/images.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Inheritance</h5>
+
+                    <a href="Links/link.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Overloading</h5>
+
+                    <a href="Lists/list.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Polymorphism</h5>
+
+                    <a href="Table/table.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Abstraction</h5>
+
+                    <a href="Style/style.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container-fluid ">
+    <div class="row m-3 g-5">
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Encapsulation</h5>
+                    <a href="Basic/Basic.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Interfaces</h5>
+
+                    <a href="Images/images.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Exception Handling</h5>
+
+                    <a href="Links/link.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Dynamic Memory</h5>
+
+                    <a href="Lists/list.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Namespaces</h5>
+
+                    <a href="Table/table.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">Templates</h5>
+
+                    <a href="Style/style.html" class="btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

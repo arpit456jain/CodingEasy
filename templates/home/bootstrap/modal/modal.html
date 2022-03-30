@@ -1,0 +1,55 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">Bootstrap Modal</h1>
+
+            </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Bootstrap Modal</h3>
+            <p>The Modal component is a dialog box/popup window that is displayed on top of the current
+                page </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <div class="code">
+                <pre>
+                <code>
+                    &lt;!-- Button to Open the Modal --&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; 
+                    data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#myModal&quot;&gt;<br>&nbsp; Open modal<br>&lt;/button&gt;<br>
+                    <br>&lt;!-- The Modal --&gt;<br>&lt;div class=&quot;modal&quot; id=&quot;myModal&quot;&gt;<br>&nbsp; &lt;div class=&quot;modal-dialog&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
+                    &lt;div class=&quot;modal-content&quot;&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- Modal 
+                    Header --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;modal-header&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &lt;h4 class=&quot;modal-title&quot;&gt;Modal Heading&lt;/h4&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot;&gt;&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &lt;/div&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- Modal body --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &lt;div class=&quot;modal-body&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modal 
+                    body..<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &lt;!-- Modal footer --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div 
+                    class=&quot;modal-footer&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button 
+                    type=&quot;button&quot; class=&quot;btn btn-danger&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &lt;/div&gt;<br><br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<br><br>
+{% endblock content %}
