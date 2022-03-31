@@ -274,6 +274,8 @@ def cpp1(request):
         return render(request, 'home/CPP/Modifiers/modifiers.html')
     elif query == "variable":
         return render(request, 'home/CPP/Variable_Types/Variable_Types.html')
+    elif query=="loops":
+            return render(request,'home/CPP/Loops/loops.html')
 
 
 def ml(request):
