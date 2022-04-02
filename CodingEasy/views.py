@@ -213,15 +213,20 @@ def cpp(request):
 
 
 def cpp1(request):
-    query = request.GET.get('data')
-    if query == "constant":
-        return render(request, './CPP/Constants/Literals/Constants.html')
-    elif query == "datatype":
-        return render(request, './CPP/Data_Types/data_types.html')
-    elif query == "modifier":
-        return render(request, './CPP/Modifiers/modifiers.html')
-    elif query == "variable":
-        return render(request, './CPP/Variable_Types/Variable_Types.html')
+     query = request.GET.get('data')
+     if query=="constant":
+        return render(request,'./CPP/Constants/Literals/Constants.html')
+     elif query=="datatype":
+        return render(request,'./CPP/Data_Types/data_types.html')
+     elif query=="modifier":
+        return render(request,'./CPP/Modifiers/modifiers.html')
+     elif query=="variable":
+        return render(request,'./CPP/Variable_Types/Variable_Types.html')
+     elif query=="storage":
+        return render(request,'./CPP/Storage_Classes/storage_classes.html')
+     elif query=="operators":
+        return render(request,'./CPP/Operators/operators.html')
+
 
 
 def ml(request):

@@ -133,23 +133,23 @@ def subscribe(request):
 
 
 def html(request):
-    return render(request, 'home/html/html.html')
+    return render(request, 'home/Html/html.html')
 
 
 def html1(request):
     query = request.GET.get('data')
     if query == "basic":
-        return render(request, 'home/html/basic/basic.html')
+        return render(request, 'home/Html/Basic/Basic.html')
     elif query == "images":
-        return render(request, 'home/html/Images/images.html')
+        return render(request, 'home/Html/Images/images.html')
     elif query == "link":
-        return render(request, 'home/html/Links/link.html')
+        return render(request, 'home/Html/Links/link.html')
     elif query == "list":
-        return render(request, 'home/html/Lists/list.html')
+        return render(request, 'home/Html/Lists/list.html')
     elif query == "table":
-        return render(request, 'home/html/Table/table.html')
+        return render(request, 'home/Html/Table/table.html')
     elif query == "style":
-        return render(request, 'home/html/Style/style.html')
+        return render(request, 'home/Html/Style/style.html')
 
 
 def css(request):
@@ -302,6 +302,10 @@ def cpp1(request):
         return render(request, 'home/CPP/Modifiers/modifiers.html')
     elif query == "variable":
         return render(request, 'home/CPP/Variable_Types/Variable_Types.html')
+    elif query=="storage":
+            return render(request,'home/CPP/Storage_Classes/storage_classes.html')
+    elif query=="operators":
+            return render(request,'home/CPP/Operators/operators.html')
 
 
 def ml(request):
