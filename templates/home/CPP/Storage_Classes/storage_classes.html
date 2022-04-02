@@ -1,0 +1,164 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+    <div class="heading text-center display-3">
+        CodingEasy
+    </div> <br>
+
+    <section class="container mt-3">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+            <h3 class="text-center display-3">Storage Classes</h3>
+        </div>
+    </section>
+                 
+                <p class="text-center display-6">
+                    <h3><b><i>
+                        Storage class is used to define the lifetime and visibility of a variable and/or function within a C++ program.
+                        A variable’s storage class gives information about the storage location of variable in memory, default initial value,
+                        scope of the variable and its lifetime
+                    </i></b></h3></p>
+                    <div class="text-center"><img src="{% static 'img/StorageClasses.png' %}">
+                    </div>
+                        <br>
+            
+            <ul>
+                <li>
+                    <h3>Automatic ( Auto ) Storage Class</h3> 
+                    Automatic (auto) storage class is the default storage class for all local variables. The auto keyword is applied to all local variables automatically.
+                    The scope of auto variables is within the function or block where they have been declared & it cannot be accessed outside that function or block.
+                    Its lifetime is the same as the lifetime of the function. Once the execution of a function is finished, the variable is destroyed.
+                    By default, garbage value is assigned to them while declaration.
+
+                    <div class="code">
+                        <pre>
+                   <code>
+                    #include &lt;iostream&gt; 
+        
+                        int main() {
+                            auto int x = 324;
+                            std::cout << x;
+                            return 0;
+                        }
+                   </code>
+                  </pre>
+                    </div>
+                </li>
+                <li>
+                    <h3>Register Storage Class</h3>
+                    The register variable allocates memory in register but not in RAM. Register variable are recommended to use for quick access such as in counter.
+                    It is not guaranteed that the variable memory is allocated in register.If a free register is not available, these are then stored in the memory only.
+                    The address of a register variable cannot be obtained using pointers
+                    <div class="code">
+                        <pre>
+                   <code>
+                    #include &lt;iostream&gt; 
+        
+                        int main() {
+                            register int x = 324;
+                            std::cout << x;
+                            return 0;
+                        }
+                   </code>
+                  </pre>
+                    </div>
+
+                </li>
+                <li>
+                    <h3>Static Storage Class</h3>
+                    Static keyword is used to make the members and the methods static i.e, 
+                    making the lifetime to extend until the execution of the program.A static 
+                    member should be initialised only once throughout the program and this can be a assigned many times so that the value may change further . If a static member is declared inside a class then it can be assumed that the member belongs to the class as the static member has to be shared by all the objects of the class. This can be initialised outside the class.
+                    The static member function also has the same way of initialisation.
+                    <div class="code">
+                        <pre>
+                   <code>
+                    #include &lt;iostream&gt; 
+                    using namespace std;
+                    
+                    class B {
+                        public:
+                        static int a;
+                        
+                        B() {
+                            a++;
+                        }
+
+                    };
+
+                    int B::a{1};
+
+                    int main() {
+                        B abc;
+                        cout<&lt;abc.a;
+                        return 0;
+                    }
+                   </code>
+                  </pre>
+                    </div>  
+                </li>
+                <li>
+                    <h3>Mutable Storage Class</h3>
+                    The mutable storage class specifier is used only on a class data member to make it modifiable even though the member is part of an object declared as const. You cannot use the mutable specifier with names declared as static or const, or reference members.                    <div class="code">
+                        <pre>
+                   <code>
+                    #include &lt;iostream&gt; 
+                        class A
+                        {
+                        public:
+                        A() : x(3), y(6) { };
+                        mutable int x;
+                        int y;
+                        };
+
+                        int main() {
+                            const A obj;
+                            obj.x = 345;
+                            obj.y = 56;
+                            return 0;
+                        }
+                   </code>
+                  </pre>
+                    </div>
+                </li>
+                <li>
+                    <h3>External Storage Class</h3>
+                    The extern variable is visible to all the programs. It is used if two or more files are sharing same variable or function.
+                    Extern variables have global scope and hence these variables are visible outside the file in which they are declared.
+                    The lifetime of the extern variables is as long as the program in which it is declared is terminated.
+                    When you use ‘extern’ the variable cannot be initialized as all it does is point the variable name at a storage location that has been previously defined.
+                    <div class="code">
+                        <pre>
+                   <code>
+                    #include &lt;iostream&gt;
+                        int a;
+                        extern void get_a(); 
+        
+                        int main() {
+                                    a = 5;
+                                    get_a();
+                        }
+                   </code>
+                   </pre>
+                   <p><b>Second File</b></p>
+                   <pre>
+                   <code>
+                    #include &lt;iostream&gt;
+                        extern int cnt;
+        
+                        get_a(){
+                            std::cout << "Value of 'a' is " << a << std::endl;
+                        }
+                   </code>
+                  </pre>
+                    </div>
+                </li>
+            </ul>
+            <p>
+            </p>
+        </div>
+    </section>
+    <br><br>
+{% endblock content %}
+
