@@ -226,6 +226,8 @@ def cpp1(request):
         return render(request,'./CPP/Storage_Classes/storage_classes.html')
      elif query=="operators":
         return render(request,'./CPP/Operators/operators.html')
+     elif query=="loops":
+        return render(request,'./CPP/Loops/loops.html')
 
 
 

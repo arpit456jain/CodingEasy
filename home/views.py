@@ -306,6 +306,8 @@ def cpp1(request):
             return render(request,'home/CPP/Storage_Classes/storage_classes.html')
     elif query=="operators":
             return render(request,'home/CPP/Operators/operators.html')
+    elif query=="loops":
+            return render(request,'home/CPP/Loops/loops.html')
 
 
 def ml(request):
