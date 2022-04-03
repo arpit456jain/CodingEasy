@@ -213,27 +213,22 @@ def cpp(request):
 
 
 def cpp1(request):
-     query = request.GET.get('data')
-     if query=="constant":
+    query = request.GET.get('data')
+    if query=="constant":
         return render(request,'./CPP/Constants/Literals/Constants.html')
-     elif query=="datatype":
+    elif query=="datatype":
         return render(request,'./CPP/Data_Types/data_types.html')
-     elif query=="modifier":
+    elif query=="modifier":
         return render(request,'./CPP/Modifiers/modifiers.html')
-     elif query=="variable":
+    elif query=="variable":
         return render(request,'./CPP/Variable_Types/Variable_Types.html')
-     elif query=="storage":
+    elif query=="storage":
         return render(request,'./CPP/Storage_Classes/storage_classes.html')
-     elif query=="operators":
+    elif query=="operators":
         return render(request,'./CPP/Operators/operators.html')
-     elif query=="loops":
+    elif query=="loops":
         return render(request,'./CPP/Loops/loops.html')
-     elif query == "ohe":
-        return render(request, './ML/One Hot Encoding/One Hot Encoding.html')
-     elif query == "kcv":
-        return render(request, './ML/K-Fold Cross Validation/K-Fold Cross Validation.html')
-     elif query == "gs":
-        return render(request, './ML/Gridsearch/Gridsearch.html')
+    
 
 
 def ml(request):
@@ -258,6 +253,12 @@ def ml1(request):
         return render(request, './ML/Random_Forest/Random_Forest.html')
     elif query == "svm":
         return render(request, './ML/Support_Vector_Machines/Support_Vector_Machines.html')
+    elif query == "ohe":
+        return render(request, './ML/One Hot Encoding/One Hot Encoding.html')
+    elif query == "kcv":
+        return render(request, './ML/K-Fold Cross Validation/K-Fold Cross Validation.html')
+    elif query == "gs":
+        return render(request, './ML/Gridsearch/Gridsearch.html')
 
 
 def django(request):

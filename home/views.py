@@ -308,13 +308,7 @@ def cpp1(request):
             return render(request,'home/CPP/Operators/operators.html')
     elif query=="loops":
             return render(request,'home/CPP/Loops/loops.html')
-    elif query == "ohe":
-        return render(request, 'home/ML/One Hot Encoding/One Hot Encoding.html')
-    elif query == "kcv":
-        return render(request, 'home/ML/K-Fold Cross Validation/K-Fold Cross Validation.html')
-    elif query == "gs":
-        return render(request, 'home/ML/Gridsearch/Gridsearch.html')
-
+    
 
 
 def ml(request):
@@ -341,6 +335,13 @@ def ml1(request):
         return render(request, 'home/ML/Support_Vector_Machines/Support_Vector_Machines.html')
     elif query == "hrc":
         return render(request, 'home/ML/Hierarchical Clustering/Hierarchical Clustering.html')
+    elif query == "ohe":
+        return render(request, 'home/ML/One Hot Encoding/One Hot Encoding.html')
+    elif query == "kcv":
+        return render(request, 'home/ML/K-Fold Cross Validation/K-Fold Cross Validation.html')
+    elif query == "gs":
+        return render(request, 'home/ML/Gridsearch/Gridsearch.html')
+
 
 
 def django(request):
