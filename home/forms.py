@@ -2,13 +2,16 @@ from django import forms
 from .models import Contact
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Contact,Newsletter
+from .models import Contact, Newsletter, Profile
+
+
 class ContactForm(forms.ModelForm):
     class Meta:
-        model= Contact
-        fields=['name','email','message']
+        model = Contact
+        fields = ['name', 'email', 'message']
 
 # Create user form
+
 
 class CreationUserForm(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput(
@@ -19,8 +22,8 @@ class CreationUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ("username", "email", "password1", "password2")
-       
-            
+
+
 # newsletter form
 
 class NewsletterForm(forms.ModelForm):
@@ -28,4 +31,16 @@ class NewsletterForm(forms.ModelForm):
         model = Newsletter
         fields = ['email']
 
-   
+
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+
+
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['image']
