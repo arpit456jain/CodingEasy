@@ -289,3 +289,5 @@ def course_video(request):
     return render(request, './Course_video/video_page.html')
 
 
+def git(request):
+    return render(request, './Git_GitHub/git.html')
