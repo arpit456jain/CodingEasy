@@ -1,0 +1,156 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+    <div class="heading text-center display-3">
+        CodingEasy
+    </div> <br>
+
+    <section class="container mt-3">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+            <h3 class="text-center display-3">Operators</h3>
+        </div>
+    </section>
+                 
+                <p class="text-center display-6">
+                    <h3><b><i>
+                    An operator is simply a symbol that is used to perform operations.We can define operators as symbols that help us to perform specific mathematical and logical computations on operands.
+                    Operators are used to operate with the variables.
+                    </i></b></h3></p>
+                    <div class="text-center"><img src="{% static 'img/operators.png' %}">
+                    </div>
+                        <br>
+            
+            <ul>
+                <li>
+                    <h3>Example Code using all the Operators</h3> 
+                    
+
+                    <div class="code">
+                        <pre>
+                   <code>
+                    #include &lt;iostream&gt; 
+        
+                        int main() {
+                            int op1 = 3,op2 = 4;
+                            int x = 5,y = 6;
+                            int a= 10, b= 8,c= 12,d= 14;
+                            cout<<"Operands are op1 = "<&lt;op1<<" op2 = "<&lt;op2;
+                            cout << " x = "<&lt;op3<<" y = "<&lt;op4;
+                            cout <&lt;endl;
+
+
+                            // Arithmetic Operators
+
+                            cout <<"op1 + op2 = "<< op1+op2 <&lt;endl;
+                            cout <<"op1 - op2 = "<< op1-op2 <&lt;endl;
+                            cout <<"op1 * op2 = "<< op3*op4 << endl;
+                            cout <<"op1 / op2 = "<< op3/op4 << endl;
+                            cout <<"op2 % op1 = "<< op2%op1 << endl;
+
+                            //Urnary Operators
+
+                            y = ++x;
+                            cout<<"PreIncrement:Value of x = "<< x;
+                            cout<< endl;
+                            cout<<"PreIncrement:Value of y = "<< y;
+                            cout<< endl;
+                            
+                            y = x--;
+                            cout<<"PostDecrement:Value of x = "<< x;
+                            cout<< endl;
+                            cout<<"PostDecrement:Value of y = "<< y;
+                            cout<< endl;
+
+                            //logical Operators
+
+                            if(!(a==0))
+                                cout<<"a is not zero"<< endl;
+                            else
+                                cout<<"a is zero"<< endl;
+                            
+                            if((a>b)&&(c < d))
+                                    cout<<"Logical AND is true"<< endl;
+                            else
+                                cout<<"Logical AND is false"<< endl;
+                            
+                            if((a< c)||(b< d))
+                                cout<<"Logical OR is true"<< endl;
+                            else
+                                cout<<"Logical OR is false"<< endl;
+
+                            //Relational Operators
+
+                            if(a==b)
+                                cout<<"a is equal to b"<< endl;
+                            else
+                                cout<<"a is not equal to b"<< endl;
+                            
+                            if(c!=d)
+                                cout<<"c is not equal to d"<< endl;
+                            else
+                                cout<<"c is equal to d"<< endl;
+                            
+                            if((a+b) <= (c+d))
+                                cout<<" (a+b) less than/equal to (c+d)"<< endl; 
+                            if((a-b) >= (d-c))
+                                cout<<"(a-b) greater than/equal to (d-c)"<< endl;
+
+
+                            //Bitwise Operators
+
+                            c = a&b;
+                            cout<<"Result of & : "<< c<< endl;
+                            c = a|b;
+                            cout<<"Result of | : "<< c<< endl;
+                            c = a^b;
+                            cout<<"Result of ^ : "<< c<< endl;
+                                
+                            c = a<< 2;
+                            cout<<"Result of << by 2 bits : "<< c<< endl; c = b>>2;
+                            cout<<"Result of >> by 2 bits : "<< c<< endl;
+                                
+                            c = ~3;
+                            cout<<"Result of ~ : "<< c<< endl;
+
+                            // Assignment Operators
+
+                            a += b;
+                            c -= b;
+                            cout<<"\na += b: "<< a;
+                            cout<<"\nc -= b: "<< c;
+                            
+                            a *= b;
+                            b /= c;
+                            cout<<"\na *= b: "<< a;
+                            cout<<"\nb /= c: "<< b;
+                            
+                            // Other Operators
+
+                            x = (y=3,y+4);
+                            cout<<"Value of x = "<< x;
+                            
+                            y = (x< 5)?0:1;
+                            if(y == 0)
+                                cout<<"\nVariable x is less than 5"<< endl;
+                            else
+                                cout<<"\nVariable x is greater than 5"<< endl;
+                            
+                                cout<<"sizeof(x): "<< sizeof(x)<<"\t"<<"sizeof(y): "<< sizeof(y);
+                            
+
+                            return 0;
+                        }
+                   </code>
+                  </pre>
+                    </div>
+                </li>
+            </ul>
+            <p>
+            </p>
+        </div>
+    </section>
+    <br><br>
+{% endblock content %}
+

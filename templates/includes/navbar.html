@@ -1,3 +1,98 @@
+<style>
+    /* Style The Dropdown Button */
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+
+    .dropdown-submenu.pull-left {
+    float: none;
+    }
+
+    .dropdown-submenu.pull-left>.dropdown-content {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+    }
+/*  */
+    .dropdown-content-submenu:hover>.dropdown-content {
+    display: block;
+    }
+
+    .dropdown-content-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #cccccc;
+    margin-top: 5px;
+    margin-right: -10px;
+    }
+
+    .dropdown-content-submenu:hover>a:after {
+    border-left-color: #ffffff;
+    }
+
+    .dropdown-content-submenu.pull-left {
+    float: none;
+    }
+
+    .dropdown--content-submenu.pull-left>.dropdown-content {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+    }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a href="{% url 'index' %}" class="navbar-brand">
         <i class="fas fa-hands-helping fa-lg"></i>
@@ -17,12 +112,14 @@
             </a>			
 			<a href="{% url 'home-pricing' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
                 Pricing
-            </a>			
-			<a href="{% url 'home-contact' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
-                Contact US
             </a>
-            
+			<a href="{% url 'home-contact' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                Contact Us
+            </a>
+
         </div>
+
+
         <!-- I will put this feature in the future -->
 		<!-- <form class="navbar-form form-inline">
 			<div class="input-group search-box">								
@@ -40,9 +137,12 @@
             {% if user.is_authenticated %}
                 {% comment %} In the Future the following link will be for the user profile {% endcomment %}
                 <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
-                <a href="{% url 'logout' %}" data-toggle="dropdown" title="sign out"  class="nav-item nav-link">
+                <a href="{% url 'post-list' %}" class="btn btn-primary">Blog</a>
+                <a href="{% url 'profile' %}" class="btn btn-primary">Profile</a>
+                <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+                {% comment %} <a href="{% url 'logout' %}" data-toggle="dropdown" title="sign out"  class="nav-item nav-link">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
-                </a>
+                </a> {% endcomment %}
             {% else %}
                 <a href="{% url 'login' %}" title="sign in" class="nav-item nav-link">
                     <i class="fa fa-sign-in" aria-hidden="true"></i>

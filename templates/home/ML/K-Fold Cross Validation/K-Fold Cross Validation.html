@@ -1,0 +1,69 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+    CodingEasy
+</div> <br>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+                <h1 class="text-center">K-Fold Cross Validation</h1>
+                <p><br></p>
+                <ul>
+                    <li>Cross-validation is a technique for evaluating a machine learning model and testing its performance. </li>
+                    <li>K-Fold cross-validation is a technique that minimizes the disadvantages of the hold-out method. K-Fold introduces a new way of splitting the dataset which helps to overcome the “test only once bottleneck”.</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">K-Fold Cross Validation</h3>
+            <p>Cross validation is a statistical method that helps in evaluating the performance of the 
+                model. For example, if we are creating ML models for classifying whether emails are spam or not.</p>
+            <p>In order to train a model in such a way, we use whatever label data we have and once the model is built, 
+                we test it using different datassets. Model will return us different reult when we compare with the 
+                truth to measure accuracy.</p>
+            <p>The k value in K-Fold Cross Validation refers to the number of groups that are to be formed. This is
+                done by splitting the data sample into 'k' number of groups. Hence, the k value must be chosen 
+                carefully for the data sample.</p>
+            <p>The model training can be done in the following ways:
+                1. Use all the available data for training and test the model on the same dataset. Here
+                   we are using 100% of the samples for testing the model as well as using the same 
+                   exit samples to test the model.
+                2. Split the available datasets into training and testing sets.
+                3. K-Fold Cross Validation, where we divide our samples into folds. After that we run multiple
+                   iterations. For example, we can use the first fold for testing the model, rest for training.
+                   Then we can use only the second fold for testing, other for training. The process can be 
+                   repeated till the last fold. After that, we have the scores of each and average them out. 
+            <p>A basic example is demonstrated below:
+            from sklearn.model_selection import KFold #using k_fold api
+            kf = KFold(n_splits=3) #n_splits=3 is used to give how many fols you want to create, here it is 3
+            kf</p>
+            <p>sklearn has cross_val_score to test the scores of different models.
+                Command:
+                from sklearn.model_selection import cross_val_score
+            </p>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Example</h3>
+            <br>
+                    <img src="{% static 'img/kfold.jpeg' %}",height=600px, width=600px>
+
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+{% endblock content %}

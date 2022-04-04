@@ -125,6 +125,10 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
+# Make a directory to save user profile images
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -134,11 +138,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Crispy Forms Styling Engine definition
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Register the Login Redirect URL
+LOGIN_REDIRECT_URL = 'home-index'
+
+# Restricted pages automatically redirect at login form
+LOGIN_URL = 'login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = '##########' # Put your gmail address here 
-EMAIL_HOST_PASSWORD = '##########' # Put your gmail address password here
-
+EMAIL_HOST_USER = '##########'  # Put your gmail address here
+EMAIL_HOST_PASSWORD = '##########'  # Put your gmail address password here
