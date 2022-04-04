@@ -1,0 +1,145 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+    <div class="heading text-center display-3">
+        CodingEasy
+    </div> <br>
+
+    <section class="container mt-3">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+              <h1 class="text-center">Loops</h1>
+              <br>
+              <section class="container mt-3">
+                <p>
+                    Loop is a control structure that is used when we want to execute a block of code, multiple times. It usually continues to run until and unless some end condition is fulfilled.
+                    Loops help in reduce the redundancy of the code. C++ supports various types of loops like for loop, while loop, do-while loop.
+
+                </p>
+                </section>
+      
+            </div>
+      </section>
+                 
+                    
+                    <br><div class="text-center"><img src="{% static 'img/loops.png' %}">
+                    </div>
+                    <br><br>
+
+                <section class="container mt-5">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="text-center">For Loop</h3>
+                        <p>For Loop is an entry controlled loop, meaning that the condition specified by us is verified before entering the loop block. It is a repetition control structure. 
+                            The loop written by us is run a specified number of times.Once the body of the loop has been executed,
+                            we increment or decrement the value of the loop variable in the update expression.
+                        </p>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="text-center">Example</h3>
+                        <div class="code">
+                          <pre>
+                               <code>
+                                #include &lt;iostream&gt; 
+        
+                                int main() {
+        
+                                    for (int i = 1; i <= 5; i++)
+                                    {
+                                    cout << " Welcome to CodingEasy \n";
+                                    }
+        
+                                    return 0;
+                                }
+                               </code>
+                           </pre>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <br><br>
+
+
+
+                  <section class="container mt-5">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="text-center">While Loop</h3>
+                        <p>While loop is an entry controlled loop, where we verify the condition specified by us.It tests the condition before executing the loop body.
+                            Repeats a statement or group of statements while a given condition is true.The execution of the loop is terminated based on the test condition. 
+        
+                        </p>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="text-center">Example</h3>
+                        <div class="code">
+                          <pre>
+                               <code>
+                                #include &lt;iostream&gt; 
+        
+                                int main() {
+
+                                    int i = 0;    // initialization expression
+                                    while (i < 5)   // test expression
+                                    {
+                                    cout << "Good morning\n";
+                                    i++;    // update expression
+                                    }
+
+                                    return 0;
+                                }
+                               </code>
+                           </pre>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <br><br>
+
+
+                  <section class="container mt-5">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="text-center">Do While Loop</h3>
+                        <p>Do while loop is an exit controlled loop, meaning the test condition is verified after the execution of the loop, at the end of the body of the loop. Hence, the body executes at least once, 
+                            regardless of the result of the test condition, whether it is true or false.This happens to be the foremost difference in between while loop and do while. In while loop, the condition is tested beforehand,
+                            whereas in do while loop the condition is verified at the finish of body of the loop.
+                        </p>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <h3 class="text-center">Example</h3>
+                        <div class="code">
+                          <pre>
+                               <code>
+                                #include &lt;iostream&gt; 
+        
+                                int main() {
+
+                                    int i = 5;    // initialization expression
+                                    do
+                                    {
+                                        cout << " Good morning\n";
+                                        i++;       // update expression
+
+                                    } while (i < 3);  // test expression
+
+                                    return 0;
+                                }
+                               </code>
+                           </pre>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <br><br>
+            
+            <p>
+            </p>
+        </div>
+    </section>
+    <br><br>
+{% endblock content %}
+
