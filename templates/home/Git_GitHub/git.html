@@ -88,7 +88,34 @@
             <div class="code">
                 <pre>
            <code>
-            
+            // Configure the author name and email address to be used with your commits.
+            Note that Git strips some characters (for example trailing periods) from user.name.<br>
+            git config --global user.name "CodingEasy"
+            git config --global user.email CodingEasy@example.com
+
+            <br>
+            //Create a working copy of a local repository:<br>
+            git clone /path/to/repository
+            git clone username@host:/path/to/repository
+            <br>
+
+            //List the files you've changed and those you still need to add or commit:
+            git status
+
+            <br>
+            //Add one or more files to staging (index):
+            git add &lt;filename&gt;
+            git add *
+            <br>
+
+            //Commit changes to head (but not yet to the remote repository):\
+            git commit -m "Commit message"
+
+            <br>
+            //Send changes to the master branch of your remote repository:
+            git push origin master
+
+            <br>
         </code>
           </pre>
             </div>
