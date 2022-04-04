@@ -32,6 +32,7 @@ urlpatterns = [
     path('ml1/', views.ml1, name='ml1'),
     path('django/', views.django, name='django'),
     path('django1/', views.django1, name='django1'),
+    
     path('course_video/', views.course_video, name='course_video')
 
     # To add url to a new Course

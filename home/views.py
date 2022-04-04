@@ -368,6 +368,7 @@ def django1(request):
         return render(request, 'home/Django/Template/template.html')
 
 
+
 def course_video(request):
     return render(request, 'home/Course_video/video_page.html')
 

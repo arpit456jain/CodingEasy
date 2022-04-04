@@ -287,3 +287,5 @@ def django1(request):
 
 def course_video(request):
     return render(request, './Course_video/video_page.html')
+
+
