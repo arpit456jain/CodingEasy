@@ -116,7 +116,21 @@
 			<a href="{% url 'home-contact' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
                 Contact Us
             </a>
-
+            <!-- <a href="{% url 'home-contact' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link has-sub-menu">
+                Courses -->
+            <div class="dropdown">
+                <a style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link"> Courses </a>
+                <div class="dropdown-content">
+                    <a href="/py" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Python</a>
+                    <a href="/html" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">HTML</a>
+                    <a href="/css" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">CSS</a>
+                    <a href="/bootstrap" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Bootstrap</a>
+                    <a href="/jQuery" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">jQuery</a>
+                    <a href="/js" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Javascript</a>
+                    <a href="/ml" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Machine Learning</a>
+                    <a href="/django" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Django</a>
+                </div>
+            </div> 
         </div>
 
 
@@ -130,10 +144,6 @@
 			</div>
 		</form> -->
 		<div class="navbar-nav action-buttons ml-auto">
-            <button type="button">
-                <a href="{% url 'home-editor' %}" style="font-size:17px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
-                    Code Editor</a>
-            </button>
             {% if user.is_authenticated %}
                 {% comment %} In the Future the following link will be for the user profile {% endcomment %}
                 <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
