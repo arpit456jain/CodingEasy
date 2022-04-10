@@ -28,6 +28,9 @@ def pricing(request):
     return render(request, 'home/Pricing/pricing.html')
 
 
+def editor(request):
+    return render(request, 'home/Editor/editor.html')
+
 @unauthenticated_user
 def register(request):
     if request.method != 'POST':
