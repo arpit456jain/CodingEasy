@@ -215,23 +215,4 @@
 
 </html>
 
-		</form> 
-		<div class="navbar-nav action-buttons ml-auto">
-            {% if user.is_authenticated %}
-                {% comment %} In the Future the following link will be for the user profile {% endcomment %}
-                <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
-                <a href="{% url 'post-list' %}" class="btn btn-primary">Blog</a>
-                <a href="{% url 'profile' %}" class="btn btn-primary">Profile</a>
-                <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
-                {% comment %} <a href="{% url 'logout' %}" data-toggle="dropdown" title="sign out"  class="nav-item nav-link">
-                    <i class="fa fa-sign-out" aria-hidden="true"></i>
-                </a> {% endcomment %}
-            {% else %}
-                <a href="{% url 'login' %}" title="sign in" class="nav-item nav-link">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i>
-                </a>
-            {% endif %}		
-		</div>
-	</div>
-</nav>
 
