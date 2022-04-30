@@ -1,0 +1,126 @@
+{% extends 'home/base.html' %}
+{% load static %}
+  
+{% block content %}
+<br />
+<div class="heading text-center display-3 codeeasy"><b>CodingEasy</b></div>
+<br />
+
+<br /><br /> 
+
+  <!-- jumbotron -->
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+          <h1 class="display-4">What is Django?</h1>
+          <p class="lead">
+            <b>Django</b> is a high-level Python web framework that encourages rapid development and clean, 
+            pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development,
+             so you can focus on writing your app without needing to reinvent the wheel. It is free and open source.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Code and Text -->
+  <section class="container mt-5">
+    <div class="row">
+       <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">More About Django</h3>
+            <p>Django was designed to help developers take applications from concept to completion as quickly as possible.</p>
+              <p>Django takes security seriously and helps developers avoid many common security mistakes.</p>
+              <p>Some of the busiest sites on the web leverage Djangos ability to quickly and flexibly scale.</p>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- Cards -->
+  <div class="container-fluid mb-5 ">
+    <div class="row m-3 g-5">
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Basic</h5>
+            <a href="{% url 'django1' %}?data=basic" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Enviroment</h5>
+             <a href="{% url 'django1' %}?data=enviroment" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Project</h5>
+
+            <a href="{% url 'django1' %}?data=project" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Views</h5>
+
+            <a href="{% url 'django1' %}?data=view" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">URLs</h5>
+
+            <a href="{% url 'django1' %}?data=url" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Template</h5>
+
+            <a href="{% url 'django1' %}?data=template" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Model</h5>
+
+            <a href="{% url 'django1' %}?data=model" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Authentication</h5>
+
+            <a href="{% url 'django1' %}?data=auth" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- /jumbotron -->
+
+  {% endblock content %}

@@ -1,0 +1,121 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <br>
+  <div class="heading text-center display-3">
+    CodingEasy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+      <h1 class="text-center">Template</h1>
+      <p>Django provides a convenient way to generate dynamic HTML pages by using its template system.
+           A template consists of static parts of the desired HTML output as well as some special syntax 
+           describing how dynamic content will be inserted.Django makes it possible to separate python and HTML, the python goes in views and HTML goes
+            in templates.</p>
+           
+    </div>
+  </section>
+  <br><br>
+  
+
+  <section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">The Render Function</h3>
+            <p> To link the two, Django relies on the render function and the Django Template language. 
+            </p>
+            <ul>
+                This function takes three parameters −
+                <li><strong>Request</strong> − The initial request.</li>
+                <li><strong>The path to the template </strong>− This is the path relative to the TEMPLATE_DIRS option in the project settings.py variables.</li>
+                <li><strong>Dictionary of parameters</strong>− A dictionary that contains all variables needed in the template. This variable can be created or you can use locals() to pass all local variable declared in the view.</li>
+            </ul>
+
+
+        </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Django Template Language (DTL)</h3>
+            <p>Django’s template engine offers a mini-language to define the user-facing layer of the application.</p>
+            <h5>Displaying Variables</h5>
+            <p>A variable looks like this: {{variable}}. The template replaces the variable by the variable sent by the view in the third parameter of the render function .Let's change our hello.html to display today’s date −</p>
+            <ul style="list-style: none;">
+                <strong>hello.html -</strong> 
+                <li>&lt;html&gt;</li>
+                <li>&lt;body&gt;</li>
+                <li>Hello World!!!p&gtToday is {{today}}&lt;/p&gt;</li>
+                <li>&lt;/body&gt;</li>
+                <li>&lt;/html&gt;</li>
+            </ul>
+            <p>Then our view will change to −</p>
+            <ul>
+                <li>def hello(request):</li>
+                <li>today = datetime.datetime.now().date()</li>
+                <li>return render(request, "hello.html", {"today" : today})</li>
+            </ul>
+        </div>
+        
+    </div>
+</section>
+<br><br>
+
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Filters</h3>
+            <p>They help you modify variables at display time.</p>
+            <h5><strong>Some examples −</strong></h5>
+            
+            <ul>
+                <li><strong>string|truncatewords:80 </strong> - This filter will truncate the string, so you will see only the first 80 words.</li> 
+                <li><strong>string|lower</strong> - Converts the string to lowercase.</li> 
+                <li><strong>string|escape|linebreaks</strong> - Escapes string contents, then converts line breaks to tags.</li>
+                
+            </ul>
+            
+        </div>
+        
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Tags</h3>
+            <p>Tags lets you perform the following operations: if condition, for loop, template inheritance and more.</p>
+            <h5><strong>Tag if</strong></h5>
+            <p>Just like in Python you can use if, else and elif in your template </p>
+            
+            <h5><strong>Tag for</strong></h5>
+            <p>Just like 'if', we have the 'for' tag, that works exactly like in Python.</p>
+
+            <h5><strong>Block and Extend Tags</strong></h5>
+            <p>A template system cannot be complete without template inheritance. Meaning when you are designing your templates,
+                 you should have a main template with holes that the child's template will fill according to his own need, like a page 
+                 might need a special css for the selected tab.
+            </p>
+            <h5><strong>Comment Tag</strong></h5>
+            <p>The comment tag helps to define comments into templates, not HTML comments, they won’t appear in HTML page. It can be useful 
+                for documentation or just commenting a line of code.</p>
+            
+        </div>
+        
+    </div>
+</section>
+<br><br>
+
+
+{% endblock content %}

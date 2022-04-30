@@ -1,0 +1,61 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <br>
+  <div class="heading text-center display-3">
+    CodingEasy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+      <h1 class="text-center">Enviroment</h1>
+      <p>Django development environment consists of installing and setting up Python, 
+          Django, and a Database System. </p>
+    </div>
+  </section>
+  <br>
+  
+
+  <section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Installation</h3>
+        
+              
+              <ul>
+              <li><strong>Installating Python</strong> </li>
+              <p>You'll need to install Python on your system. Latest Django version requires Python 2.6.5 or higherOtherwise, you can download
+                 and install the latest version of Python from the link <a href="http://www.python.org/download" target="_blank">Python</a>
+
+              </p>  
+              <li><strong>Installating Django</strong></li>
+              <p>Installing Django is very easy, but the steps required for its installation depends on your operating system. Since Python is a platform-independent language, Django has one package that works everywhere regardless of your operating system.
+                 You can download the latest version of Django from the link <a href="http://www.djangoproject.com/download" target="_blank">Django</a>
+              </p> 
+               <li><strong>Database Setup</strong></li>
+               <p>Django supports several major database engines and you can set up any of them based on your comfort.</p>
+               <ul>
+                 <li><a href="http://www.mysql.com/" target="_blank">MySQL</a></li>
+                 <li><a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a></li>
+                 <li><a href="http://www.sqlite.org/" target="_blank">SQLite 3</a></li> 
+                  <li><a href="https://www.oracle.com/" target="_blank">Oracle</a></li> 
+                  <li><a href="http://django-mongodb-engine.readthedocs.org" target="_blank">MongoDb</a></li> 
+                  <li><a href="http://cloud.google.com/appengine/articles/django-nonrel" target="_blank">GoogleAppEngine Datastore</a></li>
+               </ul>
+              <br>
+              <li><strong>Web Server</strong></li>
+              <p>Django comes with a lightweight web server for developing and testing applications. This server is pre-configured to work with Django, and more importantly, it restarts whenever you modify the code.
+                 However, Django does support Apache and other popular web servers such as Lighttpd. </p>
+              </ul>  
+              
+        </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+{% endblock content %}

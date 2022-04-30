@@ -158,10 +158,46 @@
         <div class="card-body">
           <h5 class="card-title">Hierarchical Clustering</h5>
 
-          <a href="modal/modal.html" class="btn">Explore</a>
+          <a href="{% url 'ml1' %}?data=hrc" class="btn">Explore</a>
         </div>
       </div>
     </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">One Hot Encoding</h5>
+
+          <a href="{% url 'ml1' %}?data=ohe" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">K-Fold Cross Validation</h5>
+
+          <a href="{% url 'ml1' %}?data=kcv" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">Grid Search</h5>
+
+          <a href="{% url 'ml1' %}?data=gs" class="btn">Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </div>
 {% endblock content %}

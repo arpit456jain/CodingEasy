@@ -24,24 +24,6 @@
 {% block content %}
 <br><br>
 <div class="contact-wrapper">
-  {% comment %} Messages {% endcomment %}
-  <div class="container">       
-    {% if messages %}
-        {% for message in messages %}
-            {% if "warning" in message.tags %}
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    {{ message }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            {%elif "success" in message.tags %}
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{ message }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            {% endif %}
-        {% endfor %}
-    {% endif %} 
-  </div>
 <!--Carousel-->
 <div class="container pt-3">
   <div class="col-md-12">
@@ -154,7 +136,7 @@
           <a href="/css" class="btn">Start Course</a>
         </div>
       </div>
-    </div>
+    </div> 
     <div class="col-md-4 text-center d-flex justify-content-center">
       <div class="card" style="width: 18rem">
         <img src="{% static 'img/bootstrap.png' %}" class="card-img-top" alt="..." />
@@ -232,7 +214,31 @@
         </div>
       </div>
     </div>
+
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <img src="{% static 'img/django.png' %}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Django</h5>
+          <p class="card-text">High Level Python Web Framework</p>
+          <a href="/django" class="btn">Start Course</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center d-flex justify-content-center">
+      <div class="card" style="width: 18rem">
+        <img src="{% static 'img/git_github.png' %}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Git and GitHub</h5>
+          <p class="card-text">Free and Open source Distributed Version Control System</p>
+          <a href="/git" class="btn">Start Course</a>
+        </div>
+      </div>
+    </div>
   </div>
+
 
   <!-- Add new courses here -->
 

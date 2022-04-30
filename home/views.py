@@ -1,6 +1,5 @@
-import imp
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail, BadHeaderError
@@ -8,8 +7,13 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
+from .forms import ContactForm, CreationUserForm, UserUpdateForm, ProfileUpdateForm
+from django.contrib import messages
+from django.contrib.auth.models import User, auth
+from .decorators import unauthenticated_user
+from django.contrib.auth.decorators import login_required
 from .models import Newsletter
-from .forms import ContactForm,NewsletterForm
+from .forms import *
 
 
 def index(request):
@@ -24,55 +28,148 @@ def pricing(request):
     return render(request, 'home/Pricing/pricing.html')
 
 
-def login(request):
-    return render(request, 'home/Login/login.html')
+def editor(request):
+    return render(request, 'home/Editor/editor.html')
+
+@unauthenticated_user
+def register(request):
+    if request.method != 'POST':
+        form = CreationUserForm()
+        context = {'form': form}
+        return render(request, 'home/Login/login.html', context)
+    form = CreationUserForm(request.POST)
+    if form.is_valid():
+        user = form.save(commit=False)
+        user.is_valid = False
+        user.save()
+    else:
+        if User.objects.filter(username=request.POST['username']).exists():
+            messages.info(request, 'Username already exists')
+        elif request.POST['password1'] != request.POST['password2']:
+            messages.info(request, 'Password not matched')
+        else:
+            messages.info(request, form.errors)
+        form = CreationUserForm()
+        context = {'form': form}
+        return render(request, 'home/Login/login.html', context)
+    messages.success(request, ('Successful'))
+    return redirect('login')
+
+
+@unauthenticated_user
+def login(request):  # sourcery skip: hoist-statement-from-if
+    if request.method != 'POST':
+        form = CreationUserForm()
+        context = {'form': form}
+        return render(request, 'home/Login/login.html', context)
+    username = request.POST['username']
+    password = request.POST['password']
+
+    user = auth.authenticate(username=username, password=password)
+    if user is not None:
+        auth.login(request, user)
+        return redirect('/')
+    else:
+        messages.info(request, 'Username of password wrong')
+        return redirect('login')
+
+
+@login_required(login_url='login')
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
+
+@login_required
+def profile(request):
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(
+            request.POST, request.FILES, instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f'Your account has been updated!')
+            return redirect('profile')
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+    context = {
+        'u_form': u_form,
+        'p_form': p_form,
+        'title': 'Profile'
+    }
+    return render(request, 'users/profile.html', context)
+
+@login_required
+def delete_user(request, uid):
+    user = get_object_or_404(User, id=uid)
+    if request.method == 'POST':
+        delete_form = UserDeleteForm(request.POST, instance=user)
+        user.delete()
+        messages.success(request, ('Your account has been deleted successfully.'), extra_tags='success')
+        return redirect('/')
+    else:
+        delete_form = UserDeleteForm(instance=user)
+
+    context = {
+        'delete_form': delete_form
+    }
+
+    return render(request, 'users/delete_account.html', context)
 
 
 def contact(request):
     if request.method == "POST":
-        form  = ContactForm(request.POST or None)
+        form = ContactForm(request.POST or None)
         if form.is_valid():
             form.save()
         else:
-            messages.error(request,('There was an error in your form! try again...'))
+            messages.error(
+                request, ('There was an error in your form! try again...'))
             return render(request, 'home/contact/contact.html')
-        messages.success(request,('Thank you for contacting us'), extra_tags='success')
+        messages.success(
+            request, ('Thank you for contacting us'), extra_tags='success')
         return redirect('index')
     return render(request, 'home/contact/contact.html')
 
 # newsletter view
+
+
 def subscribe(request):
     if request.method == "POST":
         form = NewsletterForm(request.POST or None)
         instance = form.save(commit=False)
         if Newsletter.objects.filter(email=instance.email).exists():
-            messages.warning(request,('Sorry! this email is already exist'), extra_tags='warning')
+            messages.warning(
+                request, ('Sorry! this email is already exist'), extra_tags='warning')
             return redirect('index')
         else:
             instance.save()
-            messages.success(request,('Thank you for subscribing to our newsletter'), extra_tags='success')
+            messages.success(
+                request, ('Thank you for subscribing to our newsletter'), extra_tags='success')
             return redirect('index')
     return render(request, 'home/index.html')
 
 
 def html(request):
-    return render(request, 'home/html/html.html')
+    return render(request, 'home/Html/html.html')
 
 
 def html1(request):
     query = request.GET.get('data')
     if query == "basic":
-        return render(request, 'home/html/basic/basic.html')
+        return render(request, 'home/Html/Basic/Basic.html')
     elif query == "images":
-        return render(request, 'home/html/Images/images.html')
+        return render(request, 'home/Html/Images/images.html')
     elif query == "link":
-        return render(request, 'home/html/Links/link.html')
+        return render(request, 'home/Html/Links/link.html')
     elif query == "list":
-        return render(request, 'home/html/Lists/list.html')
+        return render(request, 'home/Html/Lists/list.html')
     elif query == "table":
-        return render(request, 'home/html/Table/table.html')
+        return render(request, 'home/Html/Table/table.html')
     elif query == "style":
-        return render(request, 'home/html/Style/style.html')
+        return render(request, 'home/Html/Style/style.html')
 
 
 def css(request):
@@ -157,8 +254,8 @@ def js1(request):
         return render(request, 'home/javascr/syntax/syntax.html')
     elif query == "object":
         return render(request, 'home/javascr/objects/objects.html')
-    
-    
+
+
 # Add views for jQuery Course
 def jQuery(request):
     return render(request, 'home/jQuery/jQuery.html')
@@ -185,7 +282,6 @@ def jQuery1(request):
         return render(request, 'home/jQuery/Events/events.html')
     elif query == "effects":
         return render(request, 'home/jQuery/Effects/effects.html')
-    
 
 
 def py(request):
@@ -226,6 +322,13 @@ def cpp1(request):
         return render(request, 'home/CPP/Modifiers/modifiers.html')
     elif query == "variable":
         return render(request, 'home/CPP/Variable_Types/Variable_Types.html')
+    elif query=="storage":
+            return render(request,'home/CPP/Storage_Classes/storage_classes.html')
+    elif query=="operators":
+            return render(request,'home/CPP/Operators/operators.html')
+    elif query=="loops":
+            return render(request,'home/CPP/Loops/loops.html')
+    
 
 
 def ml(request):
@@ -250,7 +353,42 @@ def ml1(request):
         return render(request, 'home/ML/Random_Forest/Random_Forest.html')
     elif query == "svm":
         return render(request, 'home/ML/Support_Vector_Machines/Support_Vector_Machines.html')
+    elif query == "hrc":
+        return render(request, 'home/ML/Hierarchical Clustering/Hierarchical Clustering.html')
+    elif query == "ohe":
+        return render(request, 'home/ML/One Hot Encoding/One Hot Encoding.html')
+    elif query == "kcv":
+        return render(request, 'home/ML/K-Fold Cross Validation/K-Fold Cross Validation.html')
+    elif query == "gs":
+        return render(request, 'home/ML/Gridsearch/Gridsearch.html')
 
+
+
+def django(request):
+    return render(request, 'home/Django/django.html')
+
+
+def django1(request):
+    query = request.GET.get('data')
+    if query == "basic":
+        return render(request, 'home/Django/Basic/basic.html')
+    elif query == "enviroment":
+        return render(request, 'home/Django/Enviroment/enviroment.html')
+    elif query == "project":
+        return render(request, 'home/Django/Project/project.html')
+    elif query == "view":
+        return render(request, 'home/Django/View/view.html')
+    elif query == "url":
+        return render(request, 'home/Django/Urls/url.html')
+    elif query == "model":
+        return render(request, 'home/Django/Model/model.html')
+    elif query == "auth":
+        return render(request, 'home/Django/Authentication/auth.html')
+    elif query == "template":
+        return render(request, 'home/Django/Template/template.html')
+
+def git(request):
+    return render(request, 'home/Git_GitHub/git.html')
 
 def course_video(request):
     return render(request, 'home/Course_video/video_page.html')
@@ -268,4 +406,3 @@ def course_video(request):
 #         return render(request, 'home/newcourse/topic1/topic1.html')
 #     elif query == "topic2":
 #         return render(request, 'home/newcourse/topic2/topic2.html')
-

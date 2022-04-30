@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<center style="margin-bottom:70%">
+{% if search_content %}
+
+<h1>Hello, You Searched For {{search_content}}</h1><br/>
+
+{% for post in posts %}
+
+    <a href = "{% url 'post-detail' post.id %}">{{post}}</a><br/>
+
+{% endfor %}
+
+{% else %}
+
+<h1>Hey! You Forgot To Search For Any Post Title or Post Content</h1>
+
+{% endif %}
+
+</center>
+
+{% endblock %}
+

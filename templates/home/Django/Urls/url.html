@@ -1,0 +1,103 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <br>
+  <div class="heading text-center display-3">
+    CodingEasy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+      <h1 class="text-center">URLs</h1>
+      <p>Well, till here, we have learned to create a model, view, and template. Now, we will learn about the routing of application. </p>
+      <p>Since Django is a web application framework, it gets user requests by URL locater and responds back. To handle URL, django.urls module is used by the framework.</p>
+      
+    </div>
+  </section>
+  <br><br>
+  
+
+  <section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">URL Mapping</h3>
+            <p>Let's open the file urls.py of the project and see the what it looks like:</p>
+           <ul style="list-style: none;">
+             <strong>urls.py -</strong>
+               <li>from django.contrib import admin  </li>
+                <li>from django.urls import path  </li>
+                <li>urlpatterns = [  </li>
+                <li>path('admin/', admin.site.urls),</li>
+                <li>]</li>
+           </ul>
+           <br>
+            <p>See, Django already has mentioned a URL here for the admin. The path function takes the first argument as a route of string or regex type.
+
+                The view argument is a view function which is used to return a response (template) to the user.
+                
+                The <strong>django.urls</strong>  module contains various functions , <strong>path(route,view,kwargs,name)</strong>  is one of those which is used to map the URL and call the specified view.</p>
+        </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Django URL Functions</h3>
+            <p>Here, we are giving some commonly used functions for URL handling and mapping.</p>
+            
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"><strong>Name</strong></th>
+                    <th scope="col"><strong>Description</strong></th>
+                    <th scope="col"><strong>Example</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>path(route, view, kwargs=None, name=None)</td>
+                    <td>It returns an element for inclusion in urlpatterns.</td>
+                    <td>path('index/', views.index, name='main-view')</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>re_path(route, view, kwargs=None, name=None)</td>
+                    <td>It returns an element for inclusion in urlpatterns.</td>
+                    <td>re_path(r'^index/$', views.index, name='index')</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>include(module, namespace=None)</td>
+                    <td>It is a function that takes a full Python import path to another URLconf module that should be "included" in this place.</td>
+                    <td></td>  
+                  </tr>
+                  <tr>
+                    <td>class HttpResponseNotAllowed</td>
+                    <td>It acts just like HttpResponse but uses a 410 status code.</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>register_converter(converter, type_name)</td>
+                    <td>It is used for registering a converter for use in path() routes.</td> 
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            
+
+
+        </div>
+        </div>
+    </div>
+</section>
+<br><br>
+
+{% endblock content %}
+  

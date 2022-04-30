@@ -1,0 +1,121 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <br>
+  <div class="heading text-center display-3">
+    CodingEasy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+    <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+      <h1 class="text-center">Views</h1>
+        <p>A view is a place where we put our business logic of the application. The view is a python 
+            function which is used to perform some business logic and return a response to the user. This
+             response can be the HTML contents of a Web page, or a redirect, or a 404 error.
+            All the view function are created inside the views.py file of the Django app</p>
+    </div>
+  </section>
+  <br><br>
+  
+
+  <section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Django View Simple Example</h3>
+      
+           <ul style="list-style: none;">
+          <strong><h4>views.py-</h4></strong> 
+          <br>
+               <li>import datetime</li>
+                <li>from django.http import HttpResponse </li>
+                <li>def index(request): </li>
+                <li>now = datetime.datetime.now()  </li>
+                <li>html = "&lt;html&gt;&lt;body&gt;&lt;h3&gt;Now time is %s.&lt;/h3&gt;&lt;/body&gt;&lt;/html&gt;" % now</li>
+                <li>return HttpResponse(html)</li>
+           </ul>
+        </div>
+        <p>Let's step through the code.
+
+            First, we will import DateTime library that provides a method to get current date and time and HttpResponse class.
+            
+            Next, we define a view function index that takes HTTP request and respond back.</p>
+            <ul style="list-style: none;"><li>View calls when gets mapped with URL in urls.py. For example</li>
+            <li>
+                <strong> path('index/', views.index)</strong>
+            </li></ul>
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Returning Errors</h3>
+            <p>Django provides various built-in error classes that are the subclass of HttpResponse and use to show 
+                error message as HTTP response. Some classes are listed below.</p>
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col"><strong>Class</strong></th>
+                        <th scope="col"><strong>Description</strong></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>class HttpResponseNotModified</td>
+                        <td>It is used to designate that a page hasn't been modified since the user's last request (status code 304).</td>
+                        
+                      </tr>
+                      <tr>
+                        
+                        <td>class HttpResponseBadRequest</td>
+                        <td>It acts just like HttpResponse but uses a 400 status code.</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>class HttpResponseNotFound</td>
+                        <td>It acts just like HttpResponse but uses a 404 status code.</td>  
+                      </tr>
+                      <tr>
+                        <td>class HttpResponseNotAllowed</td>
+                        <td>It acts just like HttpResponse but uses a 410 status code.</td>
+                      </tr>
+                      <tr>
+                        <td>HttpResponseServerError</td>
+                        <td>It acts just like HttpResponse but uses a 500 status code.</td> 
+                      </tr>
+                    </tbody>
+                  </table>
+        </div>
+        
+    </div>
+</section>
+<br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Django View HTTP Decorators</h3>
+            <br>
+        <p>HTTP Decorators are used to restrict access to view based on the request method.
+
+            These decorators are listed in django.views.decorators.http and return a django.http.HttpResponseNotAllowed
+             if the conditions are not met.</p>
+             
+           <ul style="list-style: none;">
+               <li><strong> Syntax</strong></li>
+                <li>require_http_methods(request_method_list)</li>
+                
+           </ul>
+        </div>
+        
+    </div>
+</section>
+
+
+{% endblock content %} 
