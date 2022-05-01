@@ -1,53 +1,47 @@
-<style>
-    button {
-        background-color: #002939;
-    }
-</style>
-
 <!-- Footer -->
 <footer class="page-footer font-small blue-grey lighten-5">
 
-    <div style="background-color: #002939;">
+    <div style="background-color: #21d192;">
         <div class="container">
 
-            <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
 
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h6 class="mb-0">Get connected with us on social networks!</h6>
-                </div>
-                <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+            </div>
+            <!-- Grid column -->
 
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-7 text-center text-md-right">
+            <!-- Grid column -->
+            <div class="col-md-6 col-lg-7 text-center text-md-right">
 
-                    <!-- Facebook -->
-                    <a class="fb-ic" href='#'>
-                        <i class="fab fa-facebook-f white-text mr-4"> </i>
-                    </a>
-                    <!-- Twitter -->
-                    <a class="tw-ic" href='#'>
-                        <i class="fab fa-twitter white-text mr-4"> </i>
-                    </a>
-                    <!-- Google +-->
-                    <a class="gplus-ic" href='#'>
-                        <i class="fab fa-google-plus-g white-text mr-4"> </i>
-                    </a>
-                    <!--Linkedin -->
-                    <a class="li-ic" href='#'>
-                        <i class="fab fa-linkedin-in white-text mr-4"> </i>
-                    </a>
-                    <!--Instagram-->
-                    <a class="ins-ic" href='#'>
-                        <i class="fab fa-instagram white-text"> </i>
-                    </a>
-
-                </div>
-                <!-- Grid column -->
+            <!-- Facebook -->
+            <a class="fb-ic" href='#'>
+                <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic" href='#'>
+                <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic" href='#'>
+                <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic" href='#'>
+                <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic" href='#'>
+                <i class="fab fa-instagram white-text"> </i>
+            </a>
 
             </div>
-            <!-- Grid row-->
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
 
         </div>
     </div>
@@ -60,7 +54,7 @@
 
             <div class="col-auto">
                 <p class="pt-2">
-                    <strong>Sign up for our newsletter</strong>
+                <strong>Sign up for our newsletter</strong>
                 </p>
             </div>
 
@@ -68,9 +62,10 @@
 
                 <form class="input-group" method="post" action="{% url 'newsletter' %}">
                     {% csrf_token %}
-                    <input type="email" name="email" class="form-control form-control-sm" placeholder="Email address" aria-label="Your email" aria-describedby="basic-addon2" required>
+                    <input type="email" name ="email" class="form-control form-control-sm" placeholder="Email address"
+                        aria-label="Your email" aria-describedby="basic-addon2" required>
                     <div class="input-group-append">
-                        <button class="btn btn-sm btn-outline-blue-green my-0" type="submit" style="border-radius: 3px; background-color: #002939;">
+                        <button class="btn btn-sm btn-outline-blue-green my-0" type="submit">
                             <strong>Subscribe</strong>
                         </button>
                     </div>
@@ -83,43 +78,43 @@
 
         <!-- Grid row -->
         <div class="row mt-3 dark-grey-text">
-
+            
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
-                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;background-color: #002939;">
-                <p><i class="fas fa-envelope mr-3" style="color: #002939;"></i> codingeasy@gmail.com</p>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p><i class="fas fa-envelope mr-3"></i> codingeasy@gmail.com</p>
 
             </div>
             <!-- Grid column -->
-
+            
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">HELPLINE NUMBER</h6>
-                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;color: #002939;">
-                <p><i class="fas fa-phone mr-3" style="color: #002939;"></i> + 01 234 567 88</p>
-
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+    
             </div>
             <!-- Grid column -->
 
         </div>
         <!-- Grid row -->
 
-    </div>
-    <!-- Footer Links -->
+        </div>
+        <!-- Footer Links -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center text-black-50 py-3">
-        <strong>© 2022 Copyright:</strong>
-        <a class="dark-grey-text" href="https://github.com/arpit456jain/CodingEasy">
-            <strong>Coding Easy</strong>
-        </a>
-    </div>
-    <!-- Copyright -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-black-50 py-3">
+            <strong>© 2022 Copyright:</strong>
+            <a class="dark-grey-text" href="https://github.com/arpit456jain/CodingEasy">
+                <strong>Coding Easy</strong>
+            </a>
+        </div>
+        <!-- Copyright -->
 
 </footer>
 <!-- Footer -->

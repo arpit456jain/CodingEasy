@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail, BadHeaderError
@@ -13,7 +13,7 @@ from django.contrib.auth.models import User, auth
 from .decorators import unauthenticated_user
 from django.contrib.auth.decorators import login_required
 from .models import Newsletter
-from .forms import ContactForm, NewsletterForm
+from .forms import *
 
 
 def index(request):
@@ -100,6 +100,23 @@ def profile(request):
         'title': 'Profile'
     }
     return render(request, 'users/profile.html', context)
+
+@login_required
+def delete_user(request, uid):
+    user = get_object_or_404(User, id=uid)
+    if request.method == 'POST':
+        delete_form = UserDeleteForm(request.POST, instance=user)
+        user.delete()
+        messages.success(request, ('Your account has been deleted successfully.'), extra_tags='success')
+        return redirect('/')
+    else:
+        delete_form = UserDeleteForm(instance=user)
+
+    context = {
+        'delete_form': delete_form
+    }
+
+    return render(request, 'users/delete_account.html', context)
 
 
 def contact(request):

@@ -14,6 +14,7 @@ urlpatterns = [
     path('logout/', views.logout, name='logout'),
     path('register/', views.register, name='register'),
     path('profile/', views.profile, name='profile'),
+    path('delete/<int:uid>', views.delete_user, name="delete_account"),
     path('subscribe/', views.subscribe, name='newsletter'),
     # Courses
     path('html/', views.html, name='html'),

@@ -44,3 +44,8 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image']
+        
+class UserDeleteForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = []
