@@ -1,0 +1,199 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        /* margin: auto; */
+        text-align: center;
+    }
+
+    .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+    }
+</style>
+
+<div class="heading text-center display-3 m-2" style="font-size: 30px; font-weight: 650;">Owner</div>
+<div class="container">
+
+    <div class="row my-3">
+        {% for owner in owners %}
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3">
+            <div class="card">
+
+                <img src="{{owner.image}}"
+                    alt="John" style="height: 300px; border-radius: 10%;">
+                <h1 style="font-size: 30px; font-family: sans-serif; color: black;" class="heading">{{owner.name}}</h1>
+                
+                <p>{{owner.college}}</p>
+
+                <div class="container">
+                    <a href="{{owner.twitter}}" class="m-4"><i class="fa fa-twitter"></i></a>
+                    <a href="{{owner.linkedin}}" class="m-4"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{owner.github}}" class="m-4"><i class="fa fa-github"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<br>
+
+<div class="heading text-center display-3 m-2" style="font-size: 30px; font-weight: 650;">Mentors</div>
+<div class="container">
+
+    <div class="row my-3">
+        {% for mentor in mentors %}
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3">
+            <div class="card">
+
+                <img src="{{mentor.image}}"
+                    alt="John" style="height: 300px; border-radius: 10%;">
+                <h1>{{mentor.name}}</h1>
+                <p class="card-text">{{mentor.college}}</p>
+                
+
+                <div class="container">
+                    <a href="{{mentor.twitter}}" class="m-4"><i class="fa fa-twitter"></i></a>
+                    <a href="{{mentor.linkedin}}" class="m-4"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{mentor.github}}" class="m-4"><i class="fa fa-github"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<br>
+
+<div class="heading text-center display-3 m-2" style="font-size: 30px; font-weight: 650;">Video Creators</div>
+<div class="container">
+
+    <div class="row my-3">
+        {% for video_creator in video_creators %}
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3">
+            <div class="card">
+
+                <img src="{{video_creator.image}}"
+                    alt="John" style="height: 300px; border-radius: 10%;">
+                <h1>{{video_creator.name}}</h1>
+                <p class="card-text">{{video_creator.college}}</p>
+                
+
+                <div class="container">
+                    <a href="{{video_creator.twitter}}" class="m-4"><i class="fa fa-twitter"></i></a>
+                    <a href="{{video_creator.linkedin}}" class="m-4"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{video_creator.github}}" class="m-4"><i class="fa fa-github"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<br>
+
+<div class="heading text-center display-3 m-2" style="font-size: 30px; font-weight: 650;">Content Writers</div>
+<div class="container">
+
+    <div class="row my-3">
+        {% for content_writer in content_writers %}
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3">
+            <div class="card">
+
+                <img src="{{content_writer.image}}"
+                    alt="John" style="height: 300px; border-radius: 10%;">
+                <h1>{{content_writer.name}}</h1>
+                <p class="card-text">{{content_writer.college}}</p>
+                
+
+                <div class="container">
+                    <a href="{{content_writer.twitter}}" class="m-4"><i class="fa fa-twitter"></i></a>
+                    <a href="{{content_writer.linkedin}}" class="m-4"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{content_writer.github}}" class="m-4"><i class="fa fa-facebook"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<br>
+
+<div class="heading text-center display-3 m-2" style="font-size: 30px; font-weight: 650;">Web Developers</div>
+<div class="container">
+
+    <div class="row my-3">
+        {% for web_developer in web_developers %}
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3">
+            <div class="card">
+
+                <img src="{{web_developer.image}}"
+                    alt="John" style="height: 300px; border-radius: 10%;">
+                <h1>{{web_developer.name}}</h1>
+                <p class="card-text">{{web_developer.college}}</p>
+
+
+                <div class="container">
+                    <a href="{{web_developer.twitter}}" class="m-4"><i class="fa fa-twitter"></i></a>
+                    <a href="{{web_developer.linkedin}}" class="m-4"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{web_developer.github}}" class="m-4"><i class="fa fa-github"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<br>
+
+<div class="heading text-center display-3 m-2" style="font-size: 30px; font-weight: 650;">Top Contributors</div>
+<div class="container">
+
+    <div class="row my-3">
+        {% for top_contributor in top_contributors %}
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3">
+            <div class="card">
+
+                <img src="{{top_contributor.image}}"
+                    alt="John" style="height: 300px; border-radius: 10%;">
+                <h1>{{top_contributor.name}}</h1>
+                <p class="card-text">{{top_contributor.college}}</p>
+
+
+                <div class="container">
+                    <a href="{{top_contributor.twitter}}" class="m-4"><i class="fa fa-twitter"></i></a>
+                    <a href="{{top_contributor.linkedin}}" class="m-4"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{top_contributor.github}}" class="m-4"><i class="fa fa-github"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<br>
+
+{% endblock content %}
