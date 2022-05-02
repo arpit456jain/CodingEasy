@@ -14,6 +14,7 @@ from .decorators import unauthenticated_user
 from django.contrib.auth.decorators import login_required
 from .models import Newsletter
 from .forms import *
+import json
 
 
 def index(request):
@@ -30,6 +31,33 @@ def pricing(request):
 
 def editor(request):
     return render(request, 'home/Editor/editor.html')
+
+
+def our_team(request):
+    # Program to fetch data from JSON File
+    owners = open("static/json/owners.json")
+    mentors = open("static/json/mentors.json")
+    video_creators = open("static/json/video_creators.json")
+    content_writers = open("static/json/content_writers.json")
+    web_developers = open("static/json/web_developers.json")
+    top_contributors = open("static/json/top_contributors.json")
+
+    owner_data = json.load(owners)
+    mentors_data = json.load(mentors)
+    video_creators_data = json.load(video_creators)
+    content_writers_data = json.load(content_writers)
+    web_developers_data = json.load(web_developers)
+    top_contributors_data = json.load(top_contributors)
+
+    context = {
+        'owners':owner_data,
+        'mentors':mentors_data,
+        'video_creators':video_creators_data,
+        'content_writers':content_writers_data,
+        'web_developers':web_developers_data,
+        'top_contributors':top_contributors_data,
+    }
+    return render(request, 'home/team/our_team.html', context)
 
 @unauthenticated_user
 def register(request):
