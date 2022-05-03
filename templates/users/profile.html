@@ -9,12 +9,12 @@
           <h2 class="account-heading">{{ user.username }}</h2>
           <p class="text-secondary">{{ user.email }}</p>
           <div>
-            {% comment %} <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'password_reset' %}">
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'password_reset' %}">
               <i class="fas fa-edit"></i>&nbsp;Reset Password
             </a>
             <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_account' user.id %}">
               <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Delete Account
-            </a> {% endcomment %}
+            </a>
           </div>
         </div>
       </div>
