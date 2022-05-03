@@ -15,9 +15,9 @@
                 <a href="{% url 'post-create' %}" title="New Post" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
                     Add post
                 </a> 
-                {% comment %} <a href="{% url 'category-create' %}" title="New Post" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                <a href="{% url 'category-create' %}" title="New Post" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
                     Add category
-                </a> {% endcomment %}
+                </a>
             {% endif %}  
         </div>
         <form class="navbar-form form-inline"
@@ -27,7 +27,7 @@
             <div class="input-group search-box">								
             <input name="search_content" type="text" class="form-control" placeholder="Search here...">
             <div class="input-group-append">
-                <span class="input-group-text"><i class="material-icons">&#xE8B6;</i></span>
+                <button type="submit" class="btn btn-primary mb-2">Search</button>
             </div>
             </div>
         </form>
