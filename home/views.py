@@ -32,6 +32,18 @@ def pricing(request):
 def editor(request):
     return render(request, 'home/Editor/editor.html')
 
+def listtemplates(request):
+    return render(request, 'home/listtemplates/listtemplates.html')
+   
+
+def listtemplates1(request):
+    query = request.GET.get('data')
+    if query == "frontend":
+        return render(request, 'home/listtemplates/frontend/frontendtemplates.html')
+    elif query == "css":
+        return render(request, 'home/listtemplates/css/csstemplates.html')
+    elif query == "js":
+        return render(request, 'home/listtemplates/js/jstemplates.html')
 
 def our_team(request):
     # Program to fetch data from JSON File
@@ -178,6 +190,8 @@ def subscribe(request):
                 request, ('Thank you for subscribing to our newsletter'), extra_tags='success')
             return redirect('index')
     return render(request, 'home/index.html')
+
+
 
 
 def html(request):
