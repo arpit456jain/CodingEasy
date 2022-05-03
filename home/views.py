@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail, BadHeaderError
@@ -13,7 +13,8 @@ from django.contrib.auth.models import User, auth
 from .decorators import unauthenticated_user
 from django.contrib.auth.decorators import login_required
 from .models import Newsletter
-from .forms import ContactForm, NewsletterForm
+from .forms import *
+import json
 
 
 def index(request):
@@ -31,6 +32,7 @@ def pricing(request):
 def editor(request):
     return render(request, 'home/Editor/editor.html')
 
+<<<<<<< HEAD
 def listtemplates(request):
     return render(request, 'home/listtemplates/listtemplates.html')
    
@@ -43,6 +45,34 @@ def listtemplates1(request):
         return render(request, 'home/listtemplates/css/csstemplates.html')
     elif query == "js":
         return render(request, 'home/listtemplates/js/jstemplates.html')
+=======
+
+def our_team(request):
+    # Program to fetch data from JSON File
+    owners = open("static/json/owners.json")
+    mentors = open("static/json/mentors.json")
+    video_creators = open("static/json/video_creators.json")
+    content_writers = open("static/json/content_writers.json")
+    web_developers = open("static/json/web_developers.json")
+    top_contributors = open("static/json/top_contributors.json")
+
+    owner_data = json.load(owners)
+    mentors_data = json.load(mentors)
+    video_creators_data = json.load(video_creators)
+    content_writers_data = json.load(content_writers)
+    web_developers_data = json.load(web_developers)
+    top_contributors_data = json.load(top_contributors)
+
+    context = {
+        'owners':owner_data,
+        'mentors':mentors_data,
+        'video_creators':video_creators_data,
+        'content_writers':content_writers_data,
+        'web_developers':web_developers_data,
+        'top_contributors':top_contributors_data,
+    }
+    return render(request, 'home/team/our_team.html', context)
+>>>>>>> a4efe22f39795213cf05b43690067f8be2a87859
 
 @unauthenticated_user
 def register(request):
@@ -113,6 +143,23 @@ def profile(request):
         'title': 'Profile'
     }
     return render(request, 'users/profile.html', context)
+
+@login_required
+def delete_user(request, uid):
+    user = get_object_or_404(User, id=uid)
+    if request.method == 'POST':
+        delete_form = UserDeleteForm(request.POST, instance=user)
+        user.delete()
+        messages.success(request, ('Your account has been deleted successfully.'), extra_tags='success')
+        return redirect('/')
+    else:
+        delete_form = UserDeleteForm(instance=user)
+
+    context = {
+        'delete_form': delete_form
+    }
+
+    return render(request, 'users/delete_account.html', context)
 
 
 def contact(request):
