@@ -32,7 +32,6 @@ def pricing(request):
 def editor(request):
     return render(request, 'home/Editor/editor.html')
 
-<<<<<<< HEAD
 def listtemplates(request):
     return render(request, 'home/listtemplates/listtemplates.html')
    
@@ -45,7 +44,6 @@ def listtemplates1(request):
         return render(request, 'home/listtemplates/css/csstemplates.html')
     elif query == "js":
         return render(request, 'home/listtemplates/js/jstemplates.html')
-=======
 
 def our_team(request):
     # Program to fetch data from JSON File
@@ -72,7 +70,6 @@ def our_team(request):
         'top_contributors':top_contributors_data,
     }
     return render(request, 'home/team/our_team.html', context)
->>>>>>> a4efe22f39795213cf05b43690067f8be2a87859
 
 @unauthenticated_user
 def register(request):
