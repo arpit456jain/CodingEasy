@@ -31,6 +31,19 @@ def pricing(request):
 def editor(request):
     return render(request, 'home/Editor/editor.html')
 
+def listtemplates(request):
+    return render(request, 'home/listtemplates/listtemplates.html')
+   
+
+def listtemplates1(request):
+    query = request.GET.get('data')
+    if query == "frontend":
+        return render(request, 'home/listtemplates/frontend/frontendtemplates.html')
+    elif query == "css":
+        return render(request, 'home/listtemplates/css/csstemplates.html')
+    elif query == "js":
+        return render(request, 'home/listtemplates/js/jstemplates.html')
+
 @unauthenticated_user
 def register(request):
     if request.method != 'POST':
@@ -133,6 +146,8 @@ def subscribe(request):
                 request, ('Thank you for subscribing to our newsletter'), extra_tags='success')
             return redirect('index')
     return render(request, 'home/index.html')
+
+
 
 
 def html(request):
