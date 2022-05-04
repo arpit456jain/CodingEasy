@@ -39,11 +39,14 @@ def listtemplates(request):
 def listtemplates1(request):
     query = request.GET.get('data')
     if query == "frontend":
-        return render(request, 'home/listtemplates/frontend/frontendtemplates.html')
+        
+        return render(request, 'home/listtemplates/frontend/frontendtemplates.html',context)
     elif query == "css":
-        return render(request, 'home/listtemplates/css/csstemplates.html')
+        
+        return render(request, 'home/listtemplates/css/csstemplates.html',context)
     elif query == "js":
-        return render(request, 'home/listtemplates/js/jstemplates.html')
+        
+        return render(request, 'home/listtemplates/js/jstemplates.html',context)
 
 def our_team(request):
     # Program to fetch data from JSON File
