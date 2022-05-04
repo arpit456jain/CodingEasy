@@ -3,8 +3,59 @@
 
 {% block content %}
 <br />
-<div class="heading text-center display-3">CodingEasy</div>
-<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 0px;
+bottom: 0;
+left: 0;
+z-index: 1000;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="sidebar">
+<ul class="nav nav-sidebar">
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="html.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'html1' %}?data=basic" class="btn btn-primary btn-lg btn-block" style="color:white;">Basic Tags</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=images" class="btn btn-primary btn-lg btn-block" style="color:white;">Images</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=link" class="btn btn-primary btn-lg btn-block" style="color:white;">Links</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=list" class="btn btn-primary btn-lg btn-block" style="color:white;">Lists</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=table" class="btn btn-primary btn-lg btn-block" style="color:white;">Tables</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=style" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Styles<br /> and Semantics</a></h2><br/>
+
+</div>
+</div>
+</div>
+</div>
+
+
 
 <br /><br />
 <!-- jumbotron -->
@@ -69,69 +120,7 @@
   </div>
 </section>
 
-<!-- Cards -->
-<div class="container-fluid ">
-  <div class="row m-3 g-5">
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Basic Tags</h5>
-          <a href="{% url 'html1' %}?data=basic" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Images</h5>
 
-          <a href="{% url 'html1' %}?data=images" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Links</h5>
 
-          <a href="{% url 'html1' %}?data=link" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Lists</h5>
-
-          <a href="{% url 'html1' %}?data=list" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Tables</h5>
-
-          <a href="{% url 'html1' %}?data=table" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Styles and Semantics</h5>
-
-          <a href="{% url 'html1' %}?data=style" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- /jumbotron -->
 {% endblock content %}
