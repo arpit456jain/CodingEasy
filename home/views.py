@@ -39,7 +39,11 @@ def listtemplates(request):
 def listtemplates1(request):
     query = request.GET.get('data')
     if query == "frontend":
-        
+        frontend = open("static/json/frontend.json")
+        frontend_data = json.load(frontend)
+        context = {
+        'frontend':frontend_data,
+        }
         return render(request, 'home/listtemplates/frontend/frontendtemplates.html',context)
     elif query == "css":
         
