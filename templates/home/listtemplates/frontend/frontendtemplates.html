@@ -48,23 +48,21 @@
 <!--
     To add the template 
 
-    <div class="col-md-4 text-center d-flex justify-content-center">
-    <div class="card pd-4" style="width: 20rem; overflow: hidden;">
-
-        <img src="---------Link of the Image----"
-
-            class="card-img-top p-1" alt="..." />
-        <div class="d-flex p-3">
-            <h2><a href="-------template demo link-------"
-                    rel="bookmark">{----Name of thhe template----}</a></h2>
-        </div>
-        <p>Cool Frontend Templates-- any description </p>
-        <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
-            <a class="btn p-3  btn" target="_blank" href="----link from website for template demo------">Demo</a>
-
-            <a class="btn p-3  btn" target="_blank" href="---link from Down-git----" download="" type="button" >Download</a>
-
-            <a class="btn p-3  btn" href="">Buy</a>
-        </div>
-    </div>
-</div> -->
+    {% for temp in frontend %}
+            <div class="col-md-4 text-center d-flex justify-content-center">
+                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
+                    <img src="https://cool-front-end-templates.netlify.app/{{temp.name}}/preview.png"
+                        class="card-img-top p-1" alt="..." />
+                    <div class="d-flex p-3">
+                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/{{temp.link}}/"
+                                rel="bookmark">{{temp.name}}</a></h2>
+                    </div>
+                    <p>Cool Frontend Templates</p>
+                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
+                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/{{temp.link}}/">Demo</a>
+                        <a class="btn p-3  btn" target="_blank" href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/arpit456jain/Cool-Front-End-Templates/tree/master/{{temp.link}}" download="" type="button" >Download</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+         -->

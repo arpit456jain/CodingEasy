@@ -4,5 +4,64 @@
 {% block content %}
 
 
+<main id="main">
+    <section id="hero" class="d-flex flex-column align-items-center justify-content-center mt-5">
+        <h1>Amazing Templates</h1>
+        <p>We create clean, elegant and beautiful free website templates and themes using the most
+            popular HTML, CSS &amp; JavaScript </p> <a href="#featured-templates"
+            class="scrollto btn btn-primary">Browse Templates</a>
+    </section>
+
+
+    <div class="container my-5">
+        <div class="page-header" id="featured-templates">
+            <p class="page-title">Featured Templates</p>
+        </div>
+        <div class="row m-3 g-5">
+            {% for temp in css %}
+            <div class="col-md-4 text-center d-flex justify-content-center">
+                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
+                    <img src="https://amazing-css-effects.netlify.app/{{temp.name}}/preview.png"
+                        class="card-img-top p-1" alt="..." />
+                    <div class="d-flex p-3">
+                        <h2><a target="_blank" href="https://amazing-css-effects.netlify.app/{{temp.link}}/"
+                                rel="bookmark">{{temp.name}}</a></h2>
+                    </div>
+                    <p>Amazing Css Effects</p>
+                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
+                        <a class="btn p-3  btn" target="_blank" href="https://amazing-css-effects.netlify.app/{{temp.link}}/">Demo</a>
+                        <a class="btn p-3  btn" target="_blank" href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/arpit456jain/amazing-css-effects/tree/master/{{temp.link}}" download="" type="button" >Download</a>
+                        <!-- <a class="btn p-3  btn" href="">Buy</a> -->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+        
+</main>
+
 
 {% endblock content %}
+
+<!--
+    To add the template 
+
+    {% for temp in css %}
+            <div class="col-md-4 text-center d-flex justify-content-center">
+                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
+                    <img src="https://amazing-css-effects.netlify.app/{{temp.name}}/preview.png"
+                        class="card-img-top p-1" alt="..." />
+                    <div class="d-flex p-3">
+                        <h2><a target="_blank" href="https://amazing-css-effects.netlify.app/{{temp.link}}/"
+                                rel="bookmark">{{temp.name}}</a></h2>
+                    </div>
+                    <p>Amazing Css Effects</p>
+                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
+                        <a class="btn p-3  btn" target="_blank" href="https://amazing-css-effects.netlify.app/{{temp.link}}/">Demo</a>
+                        <a class="btn p-3  btn" target="_blank" href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/arpit456jain/amazing-css-effects/tree/master/{{temp.link}}" download="" type="button" >Download</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %} -->

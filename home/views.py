@@ -46,17 +46,17 @@ def listtemplates1(request):
         }
         return render(request, 'home/listtemplates/frontend/frontendtemplates.html',context)
     elif query == "css":
-        css = open("static/json/css.json")
-        css_data = json.load(frontend)
-        context = {
-        'css':css_data,
-        }
-        return render(request, 'home/listtemplates/css/csstemplates.html',context)
+        with open("static/json/csstemp.json",encoding='utf-8', errors='ignore') as csstemp:
+            css_data = json.load(csstemp)
+            context = {
+            'csstemp':css_data,
+            }
+            return render(request, 'home/listtemplates/css/csstemplates.html',context)
     elif query == "js":
-        js = open("static/json/js.json")
-        js_data = json.load(js)
+        jstemp = open("static/json/jstemp.json")
+        js_data = json.load(jstemp)
         context = {
-        'js':js_data,
+        'jstemp':js_data,
         }
         return render(request, 'home/listtemplates/js/jstemplates.html',context)
 
