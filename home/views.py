@@ -284,7 +284,39 @@ def jQuery1(request):
         return render(request, 'home/jQuery/Events/events.html')
     elif query == "effects":
         return render(request, 'home/jQuery/Effects/effects.html')
+    
+    
+# Add views for C Course
+def c_course(request):
+    return render(request, 'home/C/c.html')
 
+
+def c_course1(request):
+    query = request.GET.get('data')
+    if query == "constants":
+        return render(request, 'home/C/Constants/Literals/Constants.html')
+    elif query == "data_types":
+        return render(request, 'home/C/Data_Types/data_types.html')
+    elif query == "modifiers":
+        return render(request, 'home/C/Modifiers/modifiers.html')
+    elif query == "variable-types":
+        return render(request, 'home/C/Variable_Types/Variable_Types.html')
+    elif query == "arrays":
+        return render(request, 'home/C/arrays/arrays.html')
+    elif query == "descision-making":
+        return render(request, 'home/C/descision-making/descision.html')
+    elif query == "functions":
+        return render(request, 'home/C/functions/functions.html')
+    elif query == "keywords":
+        return render(request, 'home/C/keywords/keywords.html')
+    elif query == "numbers":
+        return render(request, 'home/C/numbers/numbers.html')
+    elif query == "operators":
+        return render(request, 'home/C/operators/operators.html')
+    elif query == "strings":
+        return render(request, 'home/C/strings/strings.html')
+    elif query == "loops_types":
+        return render(request, 'home/C/loop-types/loops.html')
 
 def py(request):
     return render(request, 'home/Python/python.html')
