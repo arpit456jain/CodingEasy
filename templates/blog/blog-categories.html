@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+  <article class="media content-section" style="margin-bottom:65%">
+    {% if blog_categories %}
+            <div class="article mb-3">
+              <ol>
+              {% for category in blog_categories %}
+              <li class="article-title">
+              <a class="mr-2" href="{{ category.get_absolute_url}}">{{ category }} Category</a>
+              </li> 
+              {% endfor %}
+            </ol>
+            </div>
+          {% endif %}
+  </article>
+{% endblock content %}

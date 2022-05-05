@@ -4,7 +4,7 @@
     {% if cat_menu %}
       <div class="article-metadata mb-3">
         {% for item in cat_menu %}
-        <a style="font-weight:bold" class="mr-2" href="{{ item.get_absolute_url}}">{{ item }}</a> 
+        <span style="font-weight:bold;color:green;" class="mr-2">{{ item }}</span> 
         {% endfor %}
       </div>
     {% endif %}

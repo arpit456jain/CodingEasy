@@ -9,7 +9,7 @@ from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
 from .forms import ContactForm, CreationUserForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib import messages
-from django.contrib.auth.models import User, auth
+from django.contrib.auth.models import User,Group, auth
 from .decorators import unauthenticated_user
 from django.contrib.auth.decorators import login_required
 from .models import Newsletter
@@ -42,6 +42,8 @@ def register(request):
         user = form.save(commit=False)
         user.is_valid = False
         user.save()
+        group = Group.objects.get(name="publisher")
+        user.groups.add(group)
     else:
         if User.objects.filter(username=request.POST['username']).exists():
             messages.info(request, 'Username already exists')
