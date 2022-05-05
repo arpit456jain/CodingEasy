@@ -1,0 +1,51 @@
+<nav style="margin-bottom:20px;" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="{% url 'index' %}" class="navbar-brand">
+            <i class="fas fa-hands-helping fa-lg"></i>
+        </a> 
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+        <div class="navbar-nav">
+            <a href="{% url 'blog-home' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                Blog
+            </a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'post-create' %}" title="New Post" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                    Add post
+                </a> 
+                <a href="{% url 'category-create' %}" title="New Post" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                    Add category
+                </a>
+            {% endif %}  
+        </div>
+        <form class="navbar-form form-inline"
+            method="POST"
+            action="{% url 'search_post' %}">
+            {% csrf_token %}
+            <div class="input-group search-box">								
+            <input name="search_content" type="text" class="form-control" placeholder="Search here...">
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="material-icons">&#xE8B6;</i></span>
+            </div>
+            </div>
+        </form>
+        <div class="navbar-nav action-buttons ml-auto">
+            {% if user.is_authenticated %}
+                {% comment %} In the Future the following link will be for the user profile {% endcomment %}
+                <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
+                <a href="{% url 'profile' %}" class="nav-item nav-link" title="Profile">
+                    <i class="fa fa-user fa-lg"></i>
+                </a>
+                <a href="{% url 'logout' %}" title="sign out" class="nav-item nav-link">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </a>
+            {% else %}
+                <a href="{% url 'login' %}" title="sign in" class="nav-item nav-link">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </a>
+            {% endif %}		
+        </div>
+    </div>
+</nav>

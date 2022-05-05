@@ -120,3 +120,7 @@
     pointer-events: none;
 }
 
+.fa-plus,
+.fa-user {
+    color: #0dcaf0;
+}

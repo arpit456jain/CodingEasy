@@ -57,7 +57,7 @@
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
     }
-/*  */
+
     .dropdown-content-submenu:hover>.dropdown-content {
     display: block;
     }
@@ -109,6 +109,9 @@
             </a>
 			<a href="{% url 'home-feature' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
                 Features
+            </a>
+            <a href="{% url 'listtemplates' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                Templates
             </a>			
 			<a href="{% url 'home-pricing' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
                 Pricing
@@ -116,8 +119,6 @@
 			<a href="{% url 'home-contact' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
                 Contact Us
             </a>
-            <!-- <a href="{% url 'home-contact' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link has-sub-menu">
-                Courses -->
             <div class="dropdown">
                 <a style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link"> Courses </a>
                 <div class="dropdown-content">
@@ -130,7 +131,13 @@
                     <a href="/ml" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Machine Learning</a>
                     <a href="/django" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Django</a>
                 </div>
-            </div> 
+            </div>
+            <a href="{% url 'home-team' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                Our Team
+            </a>
+            <a href="{% url 'blog-home' %}" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                Blog
+            </a> 
         </div>
 
 
@@ -147,12 +154,12 @@
             {% if user.is_authenticated %}
                 {% comment %} In the Future the following link will be for the user profile {% endcomment %}
                 <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
-                <a href="{% url 'post-list' %}" class="btn btn-primary">Blog</a>
-                <a href="{% url 'profile' %}" class="btn btn-primary">Profile</a>
-                <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
-                {% comment %} <a href="{% url 'logout' %}" data-toggle="dropdown" title="sign out"  class="nav-item nav-link">
+                <a href="{% url 'profile' %}" class="nav-item nav-link" title="Profile">
+                    <i class="fa fa-user fa-lg"></i>
+                </a>
+                <a href="{% url 'logout' %}" title="sign out" class="nav-item nav-link">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
-                </a> {% endcomment %}
+                </a>
             {% else %}
                 <a href="{% url 'login' %}" title="sign in" class="nav-item nav-link">
                     <i class="fa fa-sign-in" aria-hidden="true"></i>

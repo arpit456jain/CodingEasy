@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+    {% for post in last_five_posts %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}"> 
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small><br>
+                <a style="color:#21d192;font-weight:bold;" class="mr-2" href="{% url 'posts_by_category' post.category.pk %}">{{ post.category.name }}</a>
+              </div>
+              <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+              {% if post.content|length > 300 %}
+              <div class = "post_body">
+                {{ post.content|truncatewords:"50" }}
+                <a href="{% url 'post-detail' post.id %}">read more</a>
+              </div>
+              {% else %}
+                <p class="article-content">{{ post.content}}</p>
+              {% endif %}
+              {% if post.image.url != None %}
+                <br/>
+                <div class="post-image">
+                  <div class="thumbnail">
+                    <a href="{{ post.image.url }}" target="_balnk">
+                      <figure class="figure">
+                        <img src="{{ post.image.url }}" style="width:560px;height:350px;" class="figure-img img-fluid rounded" alt="Image for {{ post.title }} post" title="Post Image">
+                        <figcaption style="color:#428bca; font-weight: bold" class="figure-caption text-right">Press on the Image to Show the Original Size</figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+        </article>
+    {% endfor %}
+
+{% endblock content %}
