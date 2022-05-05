@@ -362,6 +362,41 @@ def cpp1(request):
             return render(request,'home/CPP/Operators/operators.html')
     elif query=="loops":
             return render(request,'home/CPP/Loops/loops.html')
+        
+    elif query=="descition-making":
+            return render(request,'home/CPP/descition/descition.html')
+    elif query=="functions":
+            return render(request,'home/CPP/functions/functions.html')
+    elif query=="numbers":
+            return render(request,'home/CPP/numbers/numbers.html')
+    elif query=="arrays":
+            return render(request,'home/CPP/arrays/arrays.html')
+    elif query=="strings":
+            return render(request,'home/CPP/strings/strings.html')
+    elif query=="pointers":
+            return render(request,'home/CPP/pointers/pointers.html')
+    elif query=="class-objects":
+            return render(request,'home/CPP/class/class.html')
+    elif query=="inheritance":
+            return render(request,'home/CPP/inheritance/inheritance.html')
+    elif query=="overloading":
+            return render(request,'home/CPP/overloading/overloading.html')
+    elif query=="polymorphism":
+            return render(request,'home/CPP/polymorphism/polymorphism.html')
+    elif query=="abstraction":
+            return render(request,'home/CPP/abstraction/abstraction.html')
+    elif query=="encapsulation":
+            return render(request,'home/CPP/encapsulation/encapsulation.html')
+    elif query=="interfaces":
+            return render(request,'home/CPP/interfaces/interfaces.html')
+    elif query=="except-handling":
+            return render(request,'home/CPP/except/except.html')
+    elif query=="dynamic-memory":
+            return render(request,'home/CPP/dynamic/dynamic.html')
+    elif query=="namespaces":
+            return render(request,'home/CPP/namespaces/namespaces.html')
+    elif query=="templates":
+            return render(request,'home/CPP/templates/templates.html')
     
 
 
