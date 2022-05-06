@@ -1,14 +1,276 @@
-{% extends 'home/base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  FrontEndPartner
-</div> <br>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/navbar/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/CPP/cpp.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/python/python.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/jQuery/jQuery.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/contact/contact.css' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+
+    <title>Image Tag</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+</head>
+<body>
+
+  <style>
+     /* Style The Dropdown Button */
+     .dropbtn {
+       background-color: #4CAF50;
+       color: white;
+       padding: 16px;
+       font-size: 16px;
+       border: none;
+       cursor: pointer;
+     }
+
+     /* The container <div> - needed to position the dropdown content */
+     .dropdown {
+       position: relative;
+       display: inline-block;
+     }
+
+     /* Dropdown Content (Hidden by Default) */
+     .dropdown-content {
+       display: none;
+       position: absolute;
+       background-color: #f9f9f9;
+       min-width: 160px;
+       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       z-index: 1;
+     }
+
+     /* Links inside the dropdown */
+     .dropdown-content a {
+       color: black;
+       padding: 12px 16px;
+       text-decoration: none;
+       display: block;
+     }
+
+     /* Change color of dropdown links on hover */
+     .dropdown-content a:hover {background-color: #f1f1f1}
+
+     /* Show the dropdown menu on hover */
+     .dropdown:hover .dropdown-content {
+       display: block;
+     }
+
+     /* Change the background color of the dropdown button when the dropdown content is shown */
+     .dropdown:hover .dropbtn {
+       background-color: #3e8e41;
+     }
+
+     .dropdown-submenu.pull-left {
+     float: none;
+     }
+
+     .dropdown-submenu.pull-left>.dropdown-content {
+     left: -100%;
+     margin-left: 10px;
+     -webkit-border-radius: 6px 0 6px 6px;
+     -moz-border-radius: 6px 0 6px 6px;
+     border-radius: 6px 0 6px 6px;
+     }
+
+     .dropdown-content-submenu:hover>.dropdown-content {
+     display: block;
+     }
+
+     .dropdown-content-submenu>a:after {
+     display: block;
+     content: " ";
+     float: right;
+     width: 0;
+     height: 0;
+     border-color: transparent;
+     border-style: solid;
+     border-width: 5px 0 5px 5px;
+     border-left-color: #cccccc;
+     margin-top: 5px;
+     margin-right: -10px;
+     }
+
+     .dropdown-content-submenu:hover>a:after {
+     border-left-color: #ffffff;
+     }
+
+     .dropdown-content-submenu.pull-left {
+     float: none;
+     }
+
+     .dropdown--content-submenu.pull-left>.dropdown-content {
+     left: -100%;
+     margin-left: 10px;
+     -webkit-border-radius: 6px 0 6px 6px;
+     -moz-border-radius: 6px 0 6px 6px;
+     border-radius: 6px 0 6px 6px;
+     }
+ </style>
+
+ <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+ 	<a href="/" class="navbar-brand">
+         <i class="fas fa-hands-helping fa-lg"></i>
+     </a>
+     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+ 		<span class="navbar-toggler-icon"></span>
+ 	</button>
+ 	<!-- Collection of nav links, forms, and other content for toggling -->
+ 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+ 		<div class="navbar-nav">
+             <a href="/" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                 <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                 &nbsp; Home
+             </a>
+ 			<a href="/feature/" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                 Features
+             </a>
+             <a href="/listtemplates/" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                 Templates
+             </a>
+ 			<a href="/pricing/" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                 Pricing
+             </a>
+ 			<a href="/contact/" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                 Contact Us
+             </a>
+             <div class="dropdown">
+                 <a style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link"> Courses </a>
+                 <div class="dropdown-content">
+                     <a href="/py" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Python</a>
+                     <a href="/html" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">HTML</a>
+                     <a href="/css" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">CSS</a>
+                     <a href="/bootstrap" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Bootstrap</a>
+                     <a href="/jQuery" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">jQuery</a>
+                     <a href="/js" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Javascript</a>
+                     <a href="/ml" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Machine Learning</a>
+                     <a href="/django" style="color: #db1212; letter-spacing: 1px;" class="nav-item nav-link">Django</a>
+                 </div>
+             </div>
+             <a href="/team/" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                 Our Team
+             </a>
+             <a href="/blog/" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                 Blog
+             </a>
+         </div>
+
+
+         <!-- I will put this feature in the future -->
+ 		<!-- <form class="navbar-form form-inline">
+ 			<div class="input-group search-box">
+ 				<input type="text" id="search" class="form-control" placeholder="Search here...">
+ 				<div class="input-group-append">
+ 					<span class="input-group-text"><i class="material-icons">&#xE8B6;</i></span>
+ 				</div>
+ 			</div>
+ 		</form> -->
+ 		<div class="navbar-nav action-buttons ml-auto">
+
+                 <a href="/login/" title="sign in" class="nav-item nav-link">
+                     <i class="fa fa-sign-in" aria-hidden="true"></i>
+                 </a>
+
+ 		</div>
+ 	</div>
+ </nav>
+     <!-- Messages -->
+
+
+
+
+     <!-- Main body-->
+
+
+<br />
+<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="html.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'html1' %}?data=basic" class="btn btn-primary btn-lg btn-block" style="color:white;">Basic Tags</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=images" class="btn btn-primary btn-lg btn-block" style="color:white;">Images</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=link" class="btn btn-primary btn-lg btn-block" style="color:white;">Links</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=list" class="btn btn-primary btn-lg btn-block" style="color:white;">Lists</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=table" class="btn btn-primary btn-lg btn-block" style="color:white;">Tables</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=style" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Styles<br /> and Semantics</a></h2><br/>
+
+</div>
+</div>
+</div>
+</div>
+<br />
+<br />
+
 <section class="container mt-3">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
         <h1 class="text-center">Link Tags</h1>
 
@@ -18,7 +280,7 @@
 
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <h3 class="text-center">&lt;a&gt;</h3>
       <p>The &lt;a&gt; tag defines a hyperlink, which is used to link from one page to another.
 
@@ -46,7 +308,7 @@
 <br><br>
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <h3 class="text-center">&lt;link&gt;</h3>
       <p>The &lt;link&gt; tag defines the relationship between the current document and an external resource.
 
@@ -71,7 +333,7 @@
 <br><br>
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <h3 class="text-center">&lt;nav&gt;</h3>
       <p>The &lt;nav&gt; tag defines a set of navigation links.
 
