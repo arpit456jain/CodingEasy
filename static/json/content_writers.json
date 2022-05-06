@@ -1,11 +1,31 @@
 [
     {
-        "name": "Arpit Jain",
-        "image":"https://media-exp1.licdn.com/dms/image/C4E03AQEtXZQuvI6MJw/profile-displayphoto-shrink_400_400/0/1596527478717?e=1657152000&v=beta&t=bz4BTGtHB5X2duRdjT96WFcvMotx4c_NMv9lyckSVHY",
-        "college": "Madan Mohan Malaviya University of Technology",
+        "name": "Bhaswati Roy",
+        "image":"https://media-exp1.licdn.com/dms/image/C4E03AQH_h9O5o0d5vw/profile-displayphoto-shrink_400_400/0/1649740307548?e=1657152000&v=beta&t=Ums_Pz1lwEm4yKPbiMcGCHgRMGMZRryDSyjUtDykosc",
+        "college": "Institute of Engineering and Management",
+        "twitter":"https://twitter.com/__bhaswati__",
+        "linkedin": "https://www.linkedin.com/in/bhaswatiroy31/",
+        "github": "https://github.com/BhaswatiRoy"
+        
+
+    },
+    {
+        "name": "Kumari Astha Rani",
+        "image":"https://media-exp1.licdn.com/dms/image/C4D03AQGVuuij_r2TqA/profile-displayphoto-shrink_400_400/0/1648104477898?e=1657152000&v=beta&t=2JMX0VGIsJpfjJ9BMg0x3NFGAPMk6cq4WQ3qfRQYh4c",
+        "college": "Madan Mohan Malaviya University of Technology, Gorakhpur",
         "twitter":"#",
-        "linkedin": "https://www.linkedin.com/in/arpit-jain-0b054a170/",
-        "github": "https://github.com/arpit456jain"
+        "linkedin": "https://www.linkedin.com/in/kumari-astha-rani-552662212/",
+        "github": "https://github.com/astha2412"
+        
+
+    },
+    {
+        "name": "Md Atif",
+        "image":"https://media-exp1.licdn.com/dms/image/C4E03AQFRj1av6XmZ9w/profile-displayphoto-shrink_400_400/0/1610202401817?e=1657152000&v=beta&t=JKfdGNHH2KusxLsZtCGkeFEuU08ouy2ABQVE9P-iIuo",
+        "college": "KIIT",
+        "twitter":"https://twitter.com/Atif0604",
+        "linkedin": "https://www.linkedin.com/in/atif0604/",
+        "github": "https://github.com/Atif0604"
         
 
     }

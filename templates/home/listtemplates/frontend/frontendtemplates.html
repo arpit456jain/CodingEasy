@@ -18,109 +18,24 @@
             <p class="page-title">Featured Templates</p>
         </div>
         <div class="row m-3 g-5">
+            {% for temp in frontend %}
             <div class="col-md-4 text-center d-flex justify-content-center">
                 <div class="card pd-4" style="width: 20rem; overflow: hidden;">
-                    <img src="https://cool-front-end-templates.netlify.app/Tailwind%20Portfolio/preview.png"
+                    <img src="https://cool-front-end-templates.netlify.app/{{temp.name}}/preview.png"
                         class="card-img-top p-1" alt="..." />
                     <div class="d-flex p-3">
-                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/tailwind%20portfolio/"
-                                rel="bookmark">Tailwind Portfolio</a></h2>
+                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/{{temp.link}}/"
+                                rel="bookmark">{{temp.name}}</a></h2>
                     </div>
                     <p>Cool Frontend Templates</p>
                     <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
-                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/tailwind%20portfolio/">Demo</a>
-                        <a class="btn p-3  btn" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/arpit456jain/Amazing-Css-Effects/tree/master/3D%20Animation%20Button" download="" type="button" >Download</a>
+                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/{{temp.link}}/">Demo</a>
+                        <a class="btn p-3  btn" target="_blank" href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/arpit456jain/Cool-Front-End-Templates/tree/master/{{temp.link}}" download="" type="button" >Download</a>
                         <!-- <a class="btn p-3  btn" href="">Buy</a> -->
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4 text-center d-flex justify-content-center">
-                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
-                    <img src="https://cool-front-end-templates.netlify.app/Food_Template/preview.png"
-                        class="card-img-top p-1" alt="..." />
-                    <div class="d-flex p-3">
-                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/Food_Template/index.html"
-                                rel="bookmark">Food _Template</a></h2>
-                    </div>
-                    <p>Cool Frontend Templates</p>
-                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
-                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/Food_Template/index.html">Demo</a>
-                        <a class="btn p-3  btn" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/arpit456jain/Cool-Front-End-Templates/tree/master/Food_Template" download="" type="button" >Download</a>
-                        <!-- <a class="btn p-3  btn" href="">Buy</a> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 text-center d-flex justify-content-center">
-                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
-                    <img src="https://cool-front-end-templates.netlify.app/Organic%20Retail%20Website%20Template/preview.png"
-                        class="card-img-top p-1" alt="..." />
-                    <div class="d-flex p-3">
-                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/Organic%20Retail%20Website%20Template/index.html"
-                                rel="bookmark">Organic Retail Website</a></h2>
-                    </div>
-                    <p>Cool Frontend Templates</p>
-                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
-                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/Organic%20Retail%20Website%20Template/index.html">Demo</a>
-                        <a class="btn p-3  btn" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/arpit456jain/Cool-Front-End-Templates/tree/master/Organic%20Retail%20Website%20Template" download="" type="button" >Download</a>
-                        <!-- <a class="btn p-3  btn" href="">Buy</a> -->
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4 text-center d-flex justify-content-center">
-                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
-                    <img src="https://cool-front-end-templates.netlify.app/Chinese%20Restaurant/preview.png"
-                        class="card-img-top p-1" alt="..." />
-                    <div class="d-flex p-3">
-                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/Chinese%20Restaurant/index.html"
-                                rel="bookmark">Chinese Restaurant</a></h2>
-                    </div>
-                    <p>Cool Frontend Templates</p>
-                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
-                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/Chinese%20Restaurant/index.html">Demo</a>
-                        <a class="btn p-3  btn" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/arpit456jain/Cool-Front-End-Templates/tree/master/Chinese%20Restaurant" download="" type="button" >Download</a>
-                        <!-- <a class="btn p-3  btn" href="">Buy</a> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 text-center d-flex justify-content-center">
-                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
-                    <img src="https://cool-front-end-templates.netlify.app/Covid-19/preview.png"
-                        class="card-img-top p-1" alt="..." />
-                    <div class="d-flex p-3">
-                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/Covid-19/index.html"
-                                rel="bookmark">Covid-19</a></h2>
-                    </div>
-                    <p>Cool Frontend Templates</p>
-                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
-                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/Covid-19/index.html">Demo</a>
-                        <a class="btn p-3  btn" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/arpit456jain/Cool-Front-End-Templates/tree/master/Covid-19" download="" type="button" >Download</a>
-                        <!-- <a class="btn p-3  btn" href="">Buy</a> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 text-center d-flex justify-content-center">
-                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
-                    <img src="https://cool-front-end-templates.netlify.app/E%20commerce%20shopping%20website%20template/preview.png"
-                        class="card-img-top p-1" alt="..." />
-                    <div class="d-flex p-3">
-                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/E%20commerce%20shopping%20website%20template/index.html"
-                                rel="bookmark">E Commerce</a></h2>
-                    </div>
-                    <p>Cool Frontend Templates</p>
-                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
-                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/E%20commerce%20shopping%20website%20template/index.html">Demo</a>
-                        <a class="btn p-3  btn" target="_blank" href="https://github.com/arpit456jain/Cool-Front-End-Templates/tree/master/E%20commerce%20shopping%20website%20template" download="" type="button" >Download</a>
-                        <!-- <a class="btn p-3  btn" href="">Buy</a> -->
-                    </div>
-                </div>
-            </div>   
-
+            {% endfor %}
         </div>
 
 
@@ -133,23 +48,21 @@
 <!--
     To add the template 
 
-    <div class="col-md-4 text-center d-flex justify-content-center">
-    <div class="card pd-4" style="width: 20rem; overflow: hidden;">
-
-        <img src="---------Link of the Image----"
-
-            class="card-img-top p-1" alt="..." />
-        <div class="d-flex p-3">
-            <h2><a href="-------template demo link-------"
-                    rel="bookmark">{----Name of thhe template----}</a></h2>
-        </div>
-        <p>Cool Frontend Templates-- any description </p>
-        <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
-            <a class="btn p-3  btn" target="_blank" href="----link from website for template demo------">Demo</a>
-
-            <a class="btn p-3  btn" target="_blank" href="---link from Down-git----" download="" type="button" >Download</a>
-
-            <a class="btn p-3  btn" href="">Buy</a>
-        </div>
-    </div>
-</div> -->
+    {% for temp in frontend %}
+            <div class="col-md-4 text-center d-flex justify-content-center">
+                <div class="card pd-4" style="width: 20rem; overflow: hidden;">
+                    <img src="https://cool-front-end-templates.netlify.app/{{temp.name}}/preview.png"
+                        class="card-img-top p-1" alt="..." />
+                    <div class="d-flex p-3">
+                        <h2><a target="_blank" href="https://cool-front-end-templates.netlify.app/{{temp.link}}/"
+                                rel="bookmark">{{temp.name}}</a></h2>
+                    </div>
+                    <p>Cool Frontend Templates</p>
+                    <div class=" d-flex mx-auto my-3" role="group" style="color:aliceblue; ">
+                        <a class="btn p-3  btn" target="_blank" href="https://cool-front-end-templates.netlify.app/{{temp.link}}/">Demo</a>
+                        <a class="btn p-3  btn" target="_blank" href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/arpit456jain/Cool-Front-End-Templates/tree/master/{{temp.link}}" download="" type="button" >Download</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+         -->

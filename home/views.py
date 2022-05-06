@@ -9,7 +9,7 @@ from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
 from .forms import ContactForm, CreationUserForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib import messages
-from django.contrib.auth.models import User, auth
+from django.contrib.auth.models import User,Group, auth
 from .decorators import unauthenticated_user
 from django.contrib.auth.decorators import login_required
 from .models import Newsletter
@@ -39,11 +39,26 @@ def listtemplates(request):
 def listtemplates1(request):
     query = request.GET.get('data')
     if query == "frontend":
-        return render(request, 'home/listtemplates/frontend/frontendtemplates.html')
+        frontend = open("static/json/frontend.json")
+        frontend_data = json.load(frontend)
+        context = {
+        'frontend':frontend_data,
+        }
+        return render(request, 'home/listtemplates/frontend/frontendtemplates.html',context)
     elif query == "css":
-        return render(request, 'home/listtemplates/css/csstemplates.html')
+        with open("static/json/csstemp.json",encoding='utf-8', errors='ignore') as csstemp:
+            css_data = json.load(csstemp)
+            context = {
+            'csstemp':css_data,
+            }
+            return render(request, 'home/listtemplates/css/csstemplates.html',context)
     elif query == "js":
-        return render(request, 'home/listtemplates/js/jstemplates.html')
+        jstemp = open("static/json/jstemp.json")
+        js_data = json.load(jstemp)
+        context = {
+        'jstemp':js_data,
+        }
+        return render(request, 'home/listtemplates/js/jstemplates.html',context)
 
 def our_team(request):
     # Program to fetch data from JSON File
@@ -82,6 +97,8 @@ def register(request):
         user = form.save(commit=False)
         user.is_valid = False
         user.save()
+        group = Group.objects.get(name="publisher")
+        user.groups.add(group)
     else:
         if User.objects.filter(username=request.POST['username']).exists():
             messages.info(request, 'Username already exists')
@@ -324,7 +341,39 @@ def jQuery1(request):
         return render(request, 'home/jQuery/Events/events.html')
     elif query == "effects":
         return render(request, 'home/jQuery/Effects/effects.html')
+    
+    
+# Add views for C Course
+def c_course(request):
+    return render(request, 'home/C/c.html')
 
+
+def c_course1(request):
+    query = request.GET.get('data')
+    if query == "constants":
+        return render(request, 'home/C/Constants/Literals/Constants.html')
+    elif query == "data_types":
+        return render(request, 'home/C/Data_Types/data_types.html')
+    elif query == "modifiers":
+        return render(request, 'home/C/Modifiers/modifiers.html')
+    elif query == "variable-types":
+        return render(request, 'home/C/Variable_Types/Variable_Types.html')
+    elif query == "arrays":
+        return render(request, 'home/C/arrays/arrays.html')
+    elif query == "descision-making":
+        return render(request, 'home/C/descision-making/descision.html')
+    elif query == "functions":
+        return render(request, 'home/C/functions/functions.html')
+    elif query == "keywords":
+        return render(request, 'home/C/keywords/keywords.html')
+    elif query == "numbers":
+        return render(request, 'home/C/numbers/numbers.html')
+    elif query == "operators":
+        return render(request, 'home/C/operators/operators.html')
+    elif query == "strings":
+        return render(request, 'home/C/strings/strings.html')
+    elif query == "loops_types":
+        return render(request, 'home/C/loop-types/loops.html')
 
 def py(request):
     return render(request, 'home/Python/python.html')
@@ -370,6 +419,41 @@ def cpp1(request):
             return render(request,'home/CPP/Operators/operators.html')
     elif query=="loops":
             return render(request,'home/CPP/Loops/loops.html')
+        
+    elif query=="descition-making":
+            return render(request,'home/CPP/descition/descition.html')
+    elif query=="functions":
+            return render(request,'home/CPP/functions/functions.html')
+    elif query=="numbers":
+            return render(request,'home/CPP/numbers/numbers.html')
+    elif query=="arrays":
+            return render(request,'home/CPP/arrays/arrays.html')
+    elif query=="strings":
+            return render(request,'home/CPP/strings/strings.html')
+    elif query=="pointers":
+            return render(request,'home/CPP/pointers/pointers.html')
+    elif query=="class-objects":
+            return render(request,'home/CPP/class/class.html')
+    elif query=="inheritance":
+            return render(request,'home/CPP/inheritance/inheritance.html')
+    elif query=="overloading":
+            return render(request,'home/CPP/overloading/overloading.html')
+    elif query=="polymorphism":
+            return render(request,'home/CPP/polymorphism/polymorphism.html')
+    elif query=="abstraction":
+            return render(request,'home/CPP/abstraction/abstraction.html')
+    elif query=="encapsulation":
+            return render(request,'home/CPP/encapsulation/encapsulation.html')
+    elif query=="interfaces":
+            return render(request,'home/CPP/interfaces/interfaces.html')
+    elif query=="except-handling":
+            return render(request,'home/CPP/except/except.html')
+    elif query=="dynamic-memory":
+            return render(request,'home/CPP/dynamic/dynamic.html')
+    elif query=="namespaces":
+            return render(request,'home/CPP/namespaces/namespaces.html')
+    elif query=="templates":
+            return render(request,'home/CPP/templates/templates.html')
     
 
 

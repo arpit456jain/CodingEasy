@@ -1,11 +1,51 @@
 [
     {
-        "name": "Arpit Jain",
-        "image":"https://media-exp1.licdn.com/dms/image/C4E03AQEtXZQuvI6MJw/profile-displayphoto-shrink_400_400/0/1596527478717?e=1657152000&v=beta&t=bz4BTGtHB5X2duRdjT96WFcvMotx4c_NMv9lyckSVHY",
-        "college": "Madan Mohan Malaviya University of Technology",
+        "name": "Vaibhav Srivastava",
+        "image":"https://avatars.githubusercontent.com/u/86517958?v=4",
+        "college": "Madan Mohan Malviya University of Technology",
+        "twitter":"https://twitter.com/Vaibhav28779078",
+        "linkedin": "https://www.linkedin.com/in/vaibhav-srivastava-bb0998202/",
+        "github": "https://github.com/myhacktech"
+        
+
+    },
+    {
+        "name": "Aarya Ahjolia",
+        "image":"https://avatars.githubusercontent.com/u/82600388?v=4",
+        "college": "Nirma",
         "twitter":"#",
-        "linkedin": "https://www.linkedin.com/in/arpit-jain-0b054a170/",
-        "github": "https://github.com/arpit456jain"
+        "linkedin": "http://www.linkedin.com/in/aaryaahjolia",
+        "github": "https://github.com/aaryahjolia"
+        
+
+    },
+    {
+        "name": "Nayan Das",
+        "image":"https://avatars.githubusercontent.com/u/56421861?v=4",
+        "college": "Rustamji Institute of Technology",
+        "twitter":"https://twitter.com/Mr__palindrome",
+        "linkedin": "https://linkedin.com/in/mr-palindrome",
+        "github": "https://github.com/mr-palindrome"
+        
+
+    },
+    {
+        "name": "Anoushka Jha",
+        "image":"https://media-exp1.licdn.com/dms/image/C5603AQE8oQCOQxWyxA/profile-displayphoto-shrink_400_400/0/1640676983189?e=1657152000&v=beta&t=WBwjA0EkVCKPBIOkQsH9rxR5kdmTbgItdeT4eHtldz8",
+        "college": "IIT(BHU),Varanasi",
+        "twitter":"",
+        "linkedin": "https://www.linkedin.com/in/anoushka-jha-359736227/",
+        "github": "https://github.com/BabyElias"
+        
+
+    },
+    {
+        "name": "Muhammad Galhoum",
+        "image":"https://media-exp1.licdn.com/dms/image/C4D03AQF8NGN6PKnATg/profile-displayphoto-shrink_400_400/0/1626909179437?e=1657152000&v=beta&t=YmDOpEo5a_5x03sQCeZS3aiE9_PSRPnRi6tK375n_EM",
+        "college": "Faculty of Science",
+        "twitter":"https://twitter.com/muhammadgalhoum",
+        "linkedin": "https://www.linkedin.com/in/muhammadgalhoum/",
+        "github": "https://github.com/muhammadgalhoum"
         
 
     }
