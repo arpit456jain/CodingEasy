@@ -72,6 +72,11 @@
                 <li class="list-group-item list-group-item-light">
                   <a href="{% url 'latest_jobs' %}">Latest Jobs</a>
                 </li>
+                {% if request.user.is_staff %}
+                  <li class="list-group-item list-group-item-light">
+                    <a href="{% url 'blog-categories' %}">Edit Blog Categories (Only for Admin)</a>
+                  </li>
+                {% endif %}
               </ul>
             </p>
           </div>

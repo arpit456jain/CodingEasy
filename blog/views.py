@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView)
 from .models import *
+from home.decorators import allowed_users
 
 
 def home(request):
@@ -21,6 +22,11 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 5
+    
+    
+    def myCategories(request):
+        my_categories = Category.objects.all()
+        return render(request, 'blog/home.html',{'my_categories':my_categories})
     
     def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all() 
@@ -95,15 +101,24 @@ class PostCategoryListView(ListView):
         context = super(PostCategoryListView, self).get_context_data(**kwargs)
         context['category'] = self.category
         return context
-    
+
+
 class CategoryDetailView(DetailView):
     model = Category
 
 
-# def CategoryView(request,pk):
-#     category_posts = Post.objects.filter(category=pk)
+# def categoryView(request,pk):
+#     # category_posts = Post.objects.filter(category=pk)
 #     category_name = Category.objects.get(id=pk)
-#     return render(request, 'blog/categories.html',{'category_name':category_name,'category_posts':category_posts})
+#     all_categories = Category.objects.all()
+#     category_id = pk
+#     return render(request, 'blog/category.html',{'all_categories':all_categories,'category_id':category_id,'category_name':category_name})
+
+
+@allowed_users(allowed_roles=['admin'])
+def blogCategories(request):
+    blog_categories = Category.objects.all()
+    return render(request, 'blog/blog-categories.html',{'blog_categories':blog_categories})
 
 
 class CategoryCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
