@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Khushhal Reddy",
+        "image":"https://media-exp1.licdn.com/dms/image/C4E03AQHmgqrJFzrfJA/profile-displayphoto-shrink_400_400/0/1646234972323?e=1657152000&v=beta&t=YwshLGOEzz75wBlqmuVXs4qEQFcVE2ErSm_kiUd6sAE",
+        "college": "VIT, Vellore",
+        "twitter":"https://twitter.com/Not_So_Khush",
+        "linkedin": "https://www.linkedin.com/in/khushhalreddy/",
+        "github": "https://github.com/KKhushhalR2405"
+        
+
+    },
+    {
+        "name": "Raghav Sharma",
+        "image":"https://avatars.githubusercontent.com/u/71115825?v=4",
+        "college": "Thapar Institute of Engineering & Technology",
+        "twitter":"https://twitter.com/raghavTinker",
+        "linkedin": "https://www.linkedin.com/in/raghavtinker/",
+        "github": "https://github.com/raghavTinker"
+        
+
+    }
+]
