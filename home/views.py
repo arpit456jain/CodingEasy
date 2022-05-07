@@ -97,7 +97,7 @@ def register(request):
         user = form.save(commit=False)
         user.is_valid = False
         user.save()
-        group = Group.objects.get(name="publisher")
+        group = Group.objects.get(name="visitor")
         user.groups.add(group)
     else:
         if User.objects.filter(username=request.POST['username']).exists():
