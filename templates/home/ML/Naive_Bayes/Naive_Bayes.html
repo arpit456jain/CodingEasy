@@ -2,13 +2,73 @@
 {% load static %}
 
 {% block content %}
-<br>
-<div class="heading text-center display-3">
-    CodingEasy
-</div> <br>
+
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 290px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="ML.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'ml1' %}?data=linregx" class="btn btn-primary btn-lg btn-block" style="color:white;">Linear Regression</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=logregx" style="color:white;">Logistic Regression</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=knn" class="btn btn-primary btn-lg btn-block" style="color:white;">k-nearest neighbours</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=svm" class="btn btn-primary btn-lg btn-block" style="color:white;">Support Vector machines</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=decitree" class="btn btn-primary btn-lg btn-block" style="color:white;">Decision Tree</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=rf" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Random Forest</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=nv" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Naive Bayes</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=kmc" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">k Means Clustering</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=hrc" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Hierarchical Clustering</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=ohe" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">One Hot Encoding</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=kcv" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">K-Fold Cross Validation</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=gs" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Grid Search</a></h2><br/>
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
 <section class="container mt-3">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
                 <h1 class="text-center">Naive Bayes (Classification Algorithm)</h1>
 
@@ -18,7 +78,7 @@
 
 <section class="container mt-5">
     <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12 main">
             <h3 class="text-center">Naive Bayes</h3>
             <p>Decision Tree is a Classification Algorithm. This algorithm works on the mathematical concepts of Baye's
                 Theorem which is Conditional Probability.</p>
