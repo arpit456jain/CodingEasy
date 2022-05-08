@@ -2,15 +2,68 @@
 {% load static %}
 
 {% block content %}
-<br>
-<div class="heading text-center display-3">
-  Coding Easy
-</div> <br>
+<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="bootstrap.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'bootstrap1' %}?data=grid" class="btn btn-primary btn-lg btn-block" style="color:white;">Grid System</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=container" class="btn btn-primary btn-lg btn-block" style="color:white;">Containers</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=color" class="btn btn-primary btn-lg btn-block" style="color:white;">Colors</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=jumbotron" class="btn btn-primary btn-lg btn-block" style="color:white;">Jumbotron</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=button" class="btn btn-primary btn-lg btn-block" style="color:white;">Buttons</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=navbar" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Navbar</a></h2><br/>
+      <h2><a href="{% url 'bootstrap1' %}?data=cards" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Cards</a></h2><br/>
+      <h2><a href="{% url 'bootstrap1' %}?data=carousel" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Carousel</a></h2><br/>
+      <h2><a href="{% url 'bootstrap1' %}?data=modal" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Modal</a></h2><br/>
+
+
+</div>
+</div>
+</div>
+</div>
 
 <br><br>
 <section class="container mt-3">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
         <h1 class="display-4">What is Bootstrap?</h1>
         <p class="lead">
@@ -27,7 +80,7 @@
 </section>
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <h3 class="text-center">Bootstrap Versions</h3>
       <p>Bootstrap 5 (released 2021) is the newest version of Bootstrap
         (released 2013); with new components, faster stylesheet and more responsiveness.</p>
@@ -53,106 +106,5 @@
   </div>
   </div>
 </section>
-<!-- Cards -->
-<div class="container-fluid ">
-  <div class="row m-3 g-5">
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
 
-        <div class="card-body">
-          <h5 class="card-title">Grid System</h5>
-          <a href="{% url 'bootstrap1' %}?data=grid" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Containers</h5>
-
-          <a href="{% url 'bootstrap1' %}?data=container" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Colors</h5>
-
-          <a href="{% url 'bootstrap1' %}?data=color" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Jumbotron</h5>
-
-          <a href="{% url 'bootstrap1' %}?data=jumbotron" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Buttons</h5>
-
-          <a href="{% url 'bootstrap1' %}?data=button" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Navbar</h5>
-
-          <a href="{% url 'bootstrap1' %}?data=navbar" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Cards</h5>
-
-          <a href="{% url 'bootstrap1' %}?data=cards" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Carousel</h5>
-
-          <a href="{% url 'bootstrap1' %}?data=carousel" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Modal</h5>
-
-          <a href="{% url 'bootstrap1' %}?data=modal" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 {% endblock content %}
