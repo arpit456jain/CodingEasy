@@ -2,16 +2,74 @@
 {% load static %}
 
 {% block content %}
-<br>
 
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+
+<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="javascr.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'js1' %}?data=syntax" class="btn btn-primary btn-lg btn-block" style="color:white;">Syntax</a></h2><br />
+      <h2><a href="{% url 'js1' %}?data=operator"style="color:white;">Operators</a></h2><br />
+      <h2><a href="{% url 'js1' %}?data=datatype" class="btn btn-primary btn-lg btn-block" style="color:white;">Data Types</a></h2><br />
+      <h2><a href="{% url 'js1' %}?data=functions" class="btn btn-primary btn-lg btn-block" style="color:white;">Functions</a></h2><br />
+      <h2><a href="{% url 'js1' %}?data=object" class="btn btn-primary btn-lg btn-block" style="color:white;">Objects</a></h2><br />
+      <h2><a href="{% url 'js1' %}?data=event" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Events</a></h2><br/>
+      <h2><a href="{% url 'js1' %}?data=string" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">String</a></h2><br/>
+      <h2><a href="{% url 'js1' %}?data=number" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Numbers</a></h2><br/>
+      <h2><a href="{% url 'js1' %}?data=math" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">JS Math</a></h2><br/>
+      <h2><a href="{% url 'js1' %}?data=condition" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">JS Conditions</a></h2><br/>
+      <h2><a href="{% url 'js1' %}?data=error" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">JS Errors</a></h2><br/>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
 
 <br><br>
 <section class="container mt-3">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
         <h1 class="text-center display-4">JS Operators</h1>
       </div>
@@ -22,7 +80,7 @@
 
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <p>1.<b>Assignment Operator(=) :</b> Assign a value to a variable</p>
     </div>
 
@@ -37,7 +95,7 @@
 
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <p>2.<b>Addition Operator(+) : </b> Adds numbers</p><br>
     </div>
     <div class="col-md-6 col-sm-12">
@@ -49,7 +107,7 @@
 
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <p> 3. <b>Multiplying Operator(*) : </b> Multiplies numbers</p>
     </div>
     <div class="col-md-6 col-sm-12">
@@ -63,7 +121,7 @@
 
 <section class="container mt-3">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h3 class="text-center" style="font-size:35px"><b> JavaScript Arithmetic Operators</b></h3><br>
       <p style="font-size:20px">Arithmetic operators are used to perform arithmetic on numbers:</p><br>
       <br>
