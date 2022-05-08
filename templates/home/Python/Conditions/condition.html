@@ -1,80 +1,81 @@
 {% extends 'home/base.html' %}
+
 {% load static %}
 
 {% block content %}
 <br>
-  <div class="heading text-center display-3">
-    CodingEasy
-  </div> <br>
-  <section class="container mt-3">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-          <h1 class="text-center">Conditional Statements</h1>
-          <p>Decision-making in a programming language is automated using conditional statements, in which Python
-            evaluates the code to see if it meets the specified conditions.
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">Conditional Statements</h1>
+        <p>Decision-making in a programming language is automated using conditional statements, in which Python
+          evaluates the code to see if it meets the specified conditions.
 
-            The conditions are evaluated and processed as true or false. If this is found to be true, the program is run
-            as needed. If the condition is found to be false, the statement following the If condition is executed.</p>
-          <p class="lead"> Python has three conditional statements that are used in decision-making:-
-          <ol>
-            <li>If Statement</li>
-            <li>If-Else Statement</li>
-            <li>If-Elif-Else Statement</li>
-          </ol>
-          </p>
-        </div>
-  </section>
-  <br><br>
-
-
-  <!-- code and text -->
-
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Python Conditions and If statements</h3>
-        <p class="text-center">
-          Python supports the usual logical conditions from mathematics:</p>
-        <ul>
-          <li>Equals: <span>a == b</span></li>
-          <li>Not Equals: <span>a != b</span></li>
-          <li>Less than: <span>a &lt; b</span></li>
-          <li>Less than or equal to: <span>a &lt;= b</span></li>
-          <li>Greater than: <span>a &gt; b</span></li>
-          <li>Greater than or equal to: <span>a &gt;= b</span></li>
-        </ul>
-        <p class="text-center">These conditions can be used in several ways, most commonly in "if statements" and loops.
-          An "if statement" is written by using the <span>if</span> keyword.</p>
-
+          The conditions are evaluated and processed as true or false. If this is found to be true, the program is run
+          as needed. If the condition is found to be false, the statement following the If condition is executed.</p>
+        <p class="lead"> Python has three conditional statements that are used in decision-making:-
+        <ol>
+          <li>If Statement</li>
+          <li>If-Else Statement</li>
+          <li>If-Elif-Else Statement</li>
+        </ol>
+        </p>
       </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Example</h3>
-        <div class="code">
-          <pre>
+</section>
+<br><br>
+
+
+<!-- code and text -->
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Python Conditions and If statements</h3>
+      <p class="text-center">
+        Python supports the usual logical conditions from mathematics:</p>
+      <ul>
+        <li>Equals: <span>a == b</span></li>
+        <li>Not Equals: <span>a != b</span></li>
+        <li>Less than: <span>a &lt; b</span></li>
+        <li>Less than or equal to: <span>a &lt;= b</span></li>
+        <li>Greater than: <span>a &gt; b</span></li>
+        <li>Greater than or equal to: <span>a &gt;= b</span></li>
+      </ul>
+      <p class="text-center">These conditions can be used in several ways, most commonly in "if statements" and loops.
+        An "if statement" is written by using the <span>if</span> keyword.</p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
                 <code>
                   a = 33
                   b = 200
                   if b &gt; a:<br>&nbsp; print("b is greater than a")
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
-  <br><br>
+    </div>
+</section>
+<br><br>
 
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Else Statement</h3>
-        <p class="text-center">The <span> else</span> keyword catches anything which isn't caught by the preceding
-          conditions.</p>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Example</h3>
-        <div class="code">
-          <pre>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Else Statement</h3>
+      <p class="text-center">The <span> else</span> keyword catches anything which isn't caught by the preceding
+        conditions.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
                 <code>
                   a = 200
                   b = 33
@@ -89,23 +90,23 @@
                     print("a is greater than b")
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
-  <br><br>
+    </div>
+</section>
+<br><br>
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Elif Statement</h3>
-        <p class="text-center">The <span>elif</span> keyword is pythons way of saying "if the previous conditions were
-          not true, then
-          try this condition".</p>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Example</h3>
-        <div class="code">
-          <pre>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Elif Statement</h3>
+      <p class="text-center">The <span>elif</span> keyword is pythons way of saying "if the previous conditions were
+        not true, then
+        try this condition".</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
                 <code>
                   a = 33
                   b = 33
@@ -117,10 +118,12 @@
                     print("a and b are equal")
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
-  <br><br>
-
+    </div>
+</section>
+<br><br>
 
 {% endblock content %}
+
+
+
