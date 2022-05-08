@@ -2,16 +2,71 @@
 {% load static %}
 
 {% block content %}
+
+
 <br />
-<div class="heading text-center display-3">CodingEasy</div>
-<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="python.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'py1' %}?data=basic" class="btn btn-primary btn-lg btn-block" style="color:white;">Basics</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=operator" class="btn btn-primary btn-lg btn-block" style="color:white;">Operators</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=datatype" class="btn btn-primary btn-lg btn-block" style="color:white;">Data Types</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=function" class="btn btn-primary btn-lg btn-block" style="color:white;">Functions</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=condition" class="btn btn-primary btn-lg btn-block" style="color:white;">Conditional Statements</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=loop" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Loops</a></h2><br/>
+      <h2><a href="{% url 'py1' %}?data=file" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">File Handling</a></h2><br/>
+      <h2><a href="{% url 'py1' %}?data=regex" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Python RegEx</a></h2><br/>
+
+</div>
+</div>
+</div>
+</div>
+
 
 <br /><br />
 <!-- jumbotron -->
 <section class="container mt-3">
   <div class="row">
-    <div class="col-sm-12">
-      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
         <h1 class="display-4">What is Python?</h1>
         <p class="lead">
           <b>Python</b> is a general purpose, dynamic, high-level, and interpreted programming language. It supports
@@ -30,7 +85,7 @@
 <!-- Code and Text -->
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <h3 class="text-center">First Python Program</h3>
       <p class="mt-3">
         Let's create a very simple program called Hello World. A "Hello, World!" is a simple program that
@@ -57,90 +112,4 @@
   As you can see, this was a pretty easy task. This is the beauty of the Python programming language.
 </div>
 
-<!-- Cards -->
-<div class="container-fluid mb-5 ">
-  <div class="row m-3 g-5">
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Basic</h5>
-          <a href="{% url 'py1' %}?data=basic" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Operators</h5>
-
-          <a href="{% url 'py1' %}?data=operator" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Data Types</h5>
-
-          <a href="{% url 'py1' %}?data=datatype" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Functions</h5>
-
-          <a href="{% url 'py1' %}?data=function" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Conditional Statement</h5>
-
-          <a href="{% url 'py1' %}?data=condition" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Loops</h5>
-
-          <a href="{% url 'py1' %}?data=loop" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">File Handling</h5>
-
-          <a href="{% url 'py1' %}?data=file" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Python RegEx</h5>
-
-          <a href="{% url 'py1' %}?data=regex" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-
-<!-- /jumbotron -->
 {% endblock content %}
