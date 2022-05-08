@@ -2,15 +2,75 @@
 {% load static %}
 
 {% block content %}
-<br>
-<div class="heading text-center display-3">
-  Coding Easy
-</div> <br>
+
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 290px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="ML.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'ml1' %}?data=linregx" class="btn btn-primary btn-lg btn-block" style="color:white;">Linear Regression</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=logregx" style="color:white;">Logistic Regression</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=knn" class="btn btn-primary btn-lg btn-block" style="color:white;">k-nearest neighbours</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=svm" class="btn btn-primary btn-lg btn-block" style="color:white;">Support Vector machines</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=decitree" class="btn btn-primary btn-lg btn-block" style="color:white;">Decision Tree</a></h2><br />
+      <h2><a href="{% url 'ml1' %}?data=rf" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Random Forest</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=nv" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Naive Bayes</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=kmc" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">k Means Clustering</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=hrc" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Hierarchical Clustering</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=ohe" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">One Hot Encoding</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=kcv" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">K-Fold Cross Validation</a></h2><br/>
+      <h2><a href="{% url 'ml1' %}?data=gs" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Grid Search</a></h2><br/>
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
 
 <br><br>
 <section class="container mt-3">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
         <h1 class="display-4">What is Machine Learning?</h1>
         <p class="lead">
@@ -33,7 +93,7 @@
 </section>
 <section class="container mt-5">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <h3 class="text-center">What is data?</h3>
       <p>Data is just a collection of facts.It can be in any form like numbers, sentence, images, videos and many more. </p>
       <h4 class="text-center">Data Back Then</h4>
@@ -65,7 +125,7 @@
       <P>Various types of Machine Learning Algorithms are discussed in the following section-</P>
       
     </div>
-    <div class="col-md-6 col-sm-12 ">
+    <div class="col-md-6 col-sm-12 main ">
       <h3 class="text-center">3 Main Types of Machine Learning are-</h3>
       <div class="code">
         <pre>
@@ -98,142 +158,5 @@
   </div>
   </div>
 </section>
-<!-- Cards -->
-<div class="container-fluid ">
-  <div class="row m-3 g-5">
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
 
-        <div class="card-body">
-          <h5 class="card-title">Linear Regression</h5>
-          <a href="{% url 'ml1' %}?data=linregx"" class=" btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Logistic Regression</h5>
-
-          <a href="{% url 'ml1' %}?data=logregx" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">K Nearest Neighbors</h5>
-
-          <a href="{% url 'ml1' %}?data=knn" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Support Vector Machines</h5>
-
-          <a href="{% url 'ml1' %}?data=svm" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Decision Tree</h5>
-
-          <a href="{% url 'ml1' %}?data=decitree" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Random Forest</h5>
-
-          <a href="{% url 'ml1' %}?data=rf" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Naive Bayes</h5>
-
-          <a href="{% url 'ml1' %}?data=nv" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">K Means Clustering</h5>
-
-          <a href="{% url 'ml1' %}?data=kmc" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Hierarchical Clustering</h5>
-
-          <a href="{% url 'ml1' %}?data=hrc" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">One Hot Encoding</h5>
-
-          <a href="{% url 'ml1' %}?data=ohe" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">K-Fold Cross Validation</h5>
-
-          <a href="{% url 'ml1' %}?data=kcv" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">Grid Search</h5>
-
-          <a href="{% url 'ml1' %}?data=gs" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
-</div>
 {% endblock content %}
