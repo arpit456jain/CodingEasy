@@ -5,12 +5,67 @@
 {% block content %}
 
   <br>
-  <div class="heading text-center display-3">
-    CodingEasy
-  </div> <br>
+
+
+<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 255px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="django.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'django1' %}?data=basic" class="btn btn-primary btn-lg btn-block" style="color:white;">Basics</a></h2><br />
+      <h2><a href="{% url 'django1' %}?data=enviroment" class="btn btn-primary btn-lg btn-block" style="color:white;">Environment</a></h2><br />
+      <h2><a href="{% url 'django1' %}?data=project" class="btn btn-primary btn-lg btn-block" style="color:white;">Project</a></h2><br />
+      <h2><a href="{% url 'django1' %}?data=view" class="btn btn-primary btn-lg btn-block" style="color:white;">Views</a></h2><br />
+      <h2><a href="{% url 'django1' %}?data=url" class="btn btn-primary btn-lg btn-block" style="color:white;">URLs</a></h2><br />
+      <h2><a href="{% url 'django1' %}?data=template" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Template</a></h2><br/>
+      <h2><a href="{% url 'django1' %}?data=model" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Model</a></h2><br/>
+      <h2><a href="{% url 'django1' %}?data=auth" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Authentication</a></h2><br/>
+
+</div>
+</div>
+</div>
+</div>
+
   <section class="container mt-3">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
       <h1 class="text-center">Models</h1>
       <p>A model is a class that represents table or collection in our DB, and where
@@ -32,7 +87,7 @@
   <!-- code and text -->
   <section class="container mt-5">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h3 class="text-center"></h3>
             
             <h1  class="text-center"><p>Creating Models</p></h1>
@@ -53,7 +108,7 @@
 
 <section class="container mt-5">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h3 class="text-center"></h3>
             
             <h1  class="text-center"><p>Using Models</p></h1>
@@ -79,7 +134,7 @@
 
 <section class="container mt-5">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h3 class="text-center"></h3>
             
             <h1  class="text-center"><p>Fields</p></h1>
