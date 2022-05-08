@@ -24,6 +24,24 @@
 {% block content %}
 <br><br>
 <div class="contact-wrapper">
+  {% comment %} Messages {% endcomment %}
+  <div class="container-fluid">
+    {% if messages %}
+      {% for message in messages %}
+          {% if "warning" in message.tags %}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          {%elif "success" in message.tags %}
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
 <!--Carousel-->
 <div class="container pt-3">
   <div class="col-md-12">
@@ -111,7 +129,7 @@
 <div class="heading text-center h1">Our Courses</div>
 <br />
 <!-- Cards -->
-<div class="container-fluid ">
+<div class="container-fluid">
   <div class="row m-3 g-5">
     <div class="col-md-4  text-center d-flex justify-content-center">
       <div class="card" style="width: 18rem">
