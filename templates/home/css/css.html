@@ -2,15 +2,69 @@
 {% load static %}
 
 {% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
+<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="css.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'css1' %}?data=basic" class="btn btn-primary btn-lg btn-block" style="color:white;">CSS Syntax</a></h2><br />
+      <h2><a href="{% url 'css1' %}?data=selectors" class="btn btn-primary btn-lg btn-block" style="color:white;">CSS Selectors</a></h2><br />
+      <h2><a href="{% url 'css1' %}?data=function" class="btn btn-primary btn-lg btn-block" style="color:white;">CSS Functions</a></h2><br />
+      <h2><a href="{% url 'css1' %}?data=font-family" class="btn btn-primary btn-lg btn-block" style="color:white;">CSS Font Family</a></h2><br />
+      <h2><a href="{% url 'css1' %}?data=font-style" class="btn btn-primary btn-lg btn-block" style="color:white;">CSS Font Style</a></h2><br />
+      <h2><a href="{% url 'css1' %}?data=align" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">CSS Alignments</a></h2><br/>
+      <h2><a href="{% url 'css1' %}?data=color" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">CSS Colors</a></h2><br/>
+      <h2><a href="{% url 'css1' %}?data=margins" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">CSS Margins</a></h2><br/>
+      <h2><a href="{% url 'css1' %}?data=padding" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">CSS Padding</a></h2><br/>
+
+
 </div>
+</div>
+</div>
+</div>
+
 
 <br><br>
 <section class="container mt-3">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
         <h1 class="display-4">What is CSS</h1>
         <p class="lead">CSS stands for Cascading Style Sheets
@@ -24,7 +78,7 @@
 
 <section class="container mt-5">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h3 class="text-center">Why we use CSS?</h3>
       <p class="text-center">CSS is used to define styles for your web pages, including the design, layout and
         variations in display for
@@ -49,7 +103,7 @@
       </p>
       <br></br>
     </div>
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 main">
       <h3 class="text-center">CSS Saves a Lot of Work!</h3>
       <p>The style definitions are normally saved in external .css files.
         <br></br>
@@ -83,104 +137,6 @@
   </div>
 </section>
 
-<div class="container-fluid ">
-  <div class="row m-3 g-5">
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
 
-        <div class="card-body">
-          <h5 class="card-title">CSS Syntax</h5>
-          <a href="{% url 'css1' %}?data=basic" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">CSS Selectors</h5>
-
-          <a href="{% url 'css1' %}?data=selectors" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">CSS Functions</h5>
-
-          <a href="{% url 'css1' %}?data=function" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">CSS Font Family</h5>
-          <a href="{% url 'css1' %}?data=font-family" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">CSS Font Style</h5>
-          <a href="{% url 'css1' %}?data=font-style" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">CSS Alignments</h5>
-
-          <a href="{% url 'css1' %}?data=align" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">CSS Colors</h5>
-
-          <a href="{% url 'css1' %}?data=color" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">CSS Margin</h5>
-          <a href="{% url 'css1' %}?data=margins" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
-
-        <div class="card-body">
-          <h5 class="card-title">CSS Padding</h5>
-          <a href="{% url 'css1' %}?data=padding" class="btn">Explore</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> <br><br>
 
 {% endblock content %}
