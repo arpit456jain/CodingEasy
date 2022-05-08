@@ -2,13 +2,67 @@
 {% load static %}
 
 {% block content %}
-<br>
-  <div class="heading text-center display-3">
-    CodingEasy
-  </div> <br>
+
+
+<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="python.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'py1' %}?data=basic" class="btn btn-primary btn-lg btn-block" style="color:white;">Basics</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=operator" class="btn btn-primary btn-lg btn-block" style="color:white;">Operators</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=datatype" class="btn btn-primary btn-lg btn-block" style="color:white;">Data Types</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=function" class="btn btn-primary btn-lg btn-block" style="color:white;">Functions</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=condition" class="btn btn-primary btn-lg btn-block" style="color:white;">Conditional Statements</a></h2><br />
+      <h2><a href="{% url 'py1' %}?data=loop" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Loops</a></h2><br/>
+      <h2><a href="{% url 'py1' %}?data=file" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">File Handling</a></h2><br/>
+      <h2><a href="{% url 'py1' %}?data=regex" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Python RegEx</a></h2><br/>
+
+</div>
+</div>
+</div>
+</div>
+
   <section class="container mt-3">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
           <h1 class="text-center">Functions</h1>
           <p class="text-center">A function is a block of code which only runs when it is called.<br>
@@ -24,7 +78,7 @@
 
   <section class="container mt-5">
     <div class="row">
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12 main">
 
         <h3 class="text-center display-6">Creating a Function</h3>
         <p class="text-center">In Python a function is defined using the <span class="w3-codespan">def</span>
@@ -48,7 +102,7 @@
 
   <section class="container mt-5">
     <div class="row">
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12 main">
 
         <h3 class="text-center display-6">Calling a Function</h3>
         <p class="text-center">To call a function, use the function name followed by parenthesis.</p>
@@ -72,7 +126,7 @@
 
   <section class="container mt-5">
     <div class="row">
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12 main">
 
         <h3 class="text-center display-6">Arguments</h3>
         <p class="text-center">Arguments are specified after the function name, inside the parentheses.
