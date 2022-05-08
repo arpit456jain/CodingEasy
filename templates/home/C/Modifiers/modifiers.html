@@ -3,9 +3,70 @@
 
 {% block content %}
 <br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+
+
+<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="c.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'cpp1' %}?data=datatype" class="btn btn-primary btn-lg btn-block" style="color:white;">Data Types</a></h2><br />
+      <h2><a href="{% url 'cpp1' %}?data=variable" class="btn btn-primary btn-lg btn-block" style="color:white;">Variables</a></h2><br />
+      <h2><a href="{% url 'cpp1' %}?data=constant" class="btn btn-primary btn-lg btn-block" style="color:white;">Constants</a></h2><br />
+      <h2><a href="{% url 'cpp1' %}?data=modifier" class="btn btn-primary btn-lg btn-block" style="color:white;">Modifiers</a></h2><br />
+      <h2><a href="keywords/keywords.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Keywords</a></h2><br />
+      <h2><a href="operators/operators.html" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Operators</a></h2><br/>
+      <h2><a href="loop-types/loops.html" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Loop Types</a></h2><br/>
+      <h2><a href="descision-making/descision.html" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Decision Making</a></h2><br/>
+      <h2><a href="functions/functions.html" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Functions</a></h2><br/>
+      <h2><a href="numbers/numbers.html" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Numbers</a></h2><br/>
+      <h2><a href="arrays/arrays.html" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Arrays</a></h2><br/>
+      <h2><a href="strings/strings.html" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Strings</a></h2><br/>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
 
 <section class="container mt-3">
   <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
