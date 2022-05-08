@@ -3,13 +3,70 @@
 
 {% block content %}
 
-<br>
-<div class="heading text-center display-3">
-    CodingEasy
-</div> <br>
+
+
+
+<br />
+<style>
+
+
+@media (min-width: 768px) {
+.main {
+padding-right: 40px;
+padding-left: 220px; /* 180 + 40 */
+}
+}
+
+
+.sidebar {
+position: fixed;
+top: 75px;
+bottom: 0;
+left: 0;
+z-index:1;
+width: 250px;
+display: block;
+padding: 20px;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+background-color:blue;
+font-color:white;
+border-right: 1px solid #eee;
+}
+</style>
+
+
+
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="bootstrap.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'bootstrap1' %}?data=grid" class="btn btn-primary btn-lg btn-block" style="color:white;">Grid System</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=container" class="btn btn-primary btn-lg btn-block" style="color:white;">Containers</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=color" class="btn btn-primary btn-lg btn-block" style="color:white;">Colors</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=jumbotron" class="btn btn-primary btn-lg btn-block" style="color:white;">Jumbotron</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=button" class="btn btn-primary btn-lg btn-block" style="color:white;">Buttons</a></h2><br />
+      <h2><a href="{% url 'bootstrap1' %}?data=navbar" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Navbar</a></h2><br/>
+      <h2><a href="{% url 'bootstrap1' %}?data=cards" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Cards</a></h2><br/>
+      <h2><a href="{% url 'bootstrap1' %}?data=carousel" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Carousel</a></h2><br/>
+      <h2><a href="{% url 'bootstrap1' %}?data=modal" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Modal</a></h2><br/>
+
+
+</div>
+</div>
+</div>
+</div>
+
 <section class="container mt-3">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
                 <h1 class="text-center">Bootstrap Navigation Bars</h1>
 
@@ -19,7 +76,7 @@
 
 <section class="container mt-5">
     <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12 main">
             <h3 class="text-center">Bootstrap Navigation Bars</h3>
             <p>A navigation bar is a navigation header that is placed at the top of the
                 page</p>
