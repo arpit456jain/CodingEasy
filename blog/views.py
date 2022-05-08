@@ -24,10 +24,6 @@ class PostListView(ListView):
     paginate_by = 5
     
     
-    def myCategories(request):
-        my_categories = Category.objects.all()
-        return render(request, 'blog/home.html',{'my_categories':my_categories})
-    
     def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all() 
         context = super(PostListView, self).get_context_data( *args, **kwargs)

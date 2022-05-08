@@ -12,7 +12,6 @@ urlpatterns = [
     path('category/posts/<int:pk>',PostCategoryListView.as_view(), name='posts_by_category'),
     # path('categoryDetail/<int:pk>/', categoryView, name='category'),
     path('blogCategories/', blogCategories, name='blog-categories'),
-    # path('', myCategories, name='MyCategories'),
     path('category/<int:pk>/', CategoryDetailView.as_view(), name='category-detail'),
     path('category/new/', CategoryCreateView.as_view(), name='category-create'),
     path('category/<int:pk>/update', CategoryUpdateView.as_view(), name='category-update'),
