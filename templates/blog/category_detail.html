@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load has_group %}
 {% load static %}
 {% block content %}
   <article class="media content-section" style="margin-bottom:70%">
@@ -6,6 +7,16 @@
       <div class="article-metadata">
         <h2 class="article-title">{{ object.name }}</h2>
         {% if request.user.is_staff %}
+          <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'category-update' object.id %}">
+              <i class="fas fa-edit"></i>&nbsp;Update
+            </a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'category-delete' object.id %}">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Delete
+            </a>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'blog-home' %}">Cancel</a>
+          </div>
+        {% elif request.user|has_group:"staff" %}
           <div>
             <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'category-update' object.id %}">
               <i class="fas fa-edit"></i>&nbsp;Update

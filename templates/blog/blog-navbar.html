@@ -1,3 +1,4 @@
+{% load has_group %}
 <nav style="margin-bottom:20px;" class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="{% url 'index' %}" class="navbar-brand">
             <i class="fas fa-hands-helping fa-lg"></i>
@@ -13,6 +14,13 @@
             </a>
             {% if user.is_authenticated %}
                 {% if request.user.is_staff %}
+                    <a href="{% url 'post-create' %}" title="New Post" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                        Add post
+                    </a> 
+                    <a href="{% url 'category-create' %}" title="New Post" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
+                        Add category
+                    </a>
+                {% elif request.user|has_group:"staff" %}
                     <a href="{% url 'post-create' %}" title="New Post" style="font-size:20px; color: #1504fa; letter-spacing: 1px; font-weight: bold;" class="nav-item nav-link">
                         Add post
                     </a> 
