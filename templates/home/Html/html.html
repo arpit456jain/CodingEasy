@@ -2,9 +2,28 @@
 {% load static %}
 
 {% block content %}
-<br />
-<div class="heading text-center display-3">CodingEasy</div>
-<br />
+<div class="container-sm">
+<div class="row">
+
+<div class="sidebar">
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+
+
+
+      <h2 ><a href="html.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+      <h2 ><a href="{% url 'html1' %}?data=basic" class="btn btn-primary btn-lg btn-block" style="color:white;">Basic Tags</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=images" class="btn btn-primary btn-lg btn-block" style="color:white;">Images</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=link" class="btn btn-primary btn-lg btn-block" style="color:white;">Links</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=list" class="btn btn-primary btn-lg btn-block" style="color:white;">Lists</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=table" class="btn btn-primary btn-lg btn-block" style="color:white;">Tables</a></h2><br />
+      <h2><a href="{% url 'html1' %}?data=style" class="btn btn-primary btn-lg btn-block" style="color:white;text-align:center;">Styles<br /> and Semantics</a></h2><br/>
+
+</div>
+</div>
+</div>
+</div>
 
 <br /><br />
 <!-- jumbotron -->
