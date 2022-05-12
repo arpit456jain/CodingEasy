@@ -1,0 +1,205 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+  <div class="heading text-center display-3">
+    Coding Easy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+          <h1 class="text-center">Working with Strings</h1>
+        </div>
+  </section>
+  <br><br>
+
+
+  <!-- code and text -->
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Strings</h3>
+        <p class="text-center">
+            <strong>Strings</strong> are used to store text, and are one of the simplest and most used data structures.<br><br>
+
+            Any text between two single or double quotation marks is a string.
+        </p>
+
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    x = "Hello world"
+                    print(x)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Special Characters</h3>
+        <p class="text-center">
+            There are a number of special characters that can be used in strings.
+            \n represents a new line:<br>
+
+            Similarly, <strong>\t</strong> represents a tab.<br><br>
+
+            If you want to include a single quote in a single-quoted string (or a double quote in a double-quoted string),
+            you need to escape it using a <strong>backslash:</strong>
+        </p>
+
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    print('One\nTwo\nThree')
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    print('Brian\'s mother: He\'s not an angel. He\'s a very naughty boy!')
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Accessing Strings</h3>
+        <p class="text-center">
+            Strings can be thought of as a sequence of characters.
+            Each character in the string has its unique position (or <strong>index</strong>).<br><br>
+
+            You can access a character of a string using its index:
+            <br><br><br>
+            You can also use negative indices, which access the characters of the string counting from the end.
+            <br><br><br><br>
+            You can loop through the characters in a string using a <strong>for</strong> loop:
+        </p>
+
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    x = "Hello"
+                    print(x[2])
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    x = "Hello"
+                    print(x[-1])  
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    x = "Hello"
+                    for c in x:
+                        print(c)  
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">String Operations</h3>
+        <p class="text-center">
+            The <strong>in</strong> operator can be used to check if a string is part of another string.<br><br>
+            The <strong>not in</strong> operator can be used to check if a string is not part of another string.<br><br>
+            Strings can be added together (also called <strong>concatenation</strong>):<br><br>
+            Strings can also be <strong>multiplied</strong> by integers.
+            This produces a repeated version of the original string.<br><br><br>
+            Strings can't be multiplied by other strings. Strings also can't be multiplied by floats,
+            even if the floats are whole numbers.
+        </p>
+
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    print("Spam" + 'eggs')
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    print("spam" * 3)
+
+                    print(4 * '2')
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+  
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">String Functions</h3>
+        <p class="text-center">
+            String have many useful functions:<br>
+            <strong>count(str)</strong> returns how many times the <strong>str</strong> substring appears in the given string.<br>
+            <strong>upper()</strong> converts the string to uppercase.<br>
+            <strong>lower()</strong> converts the string to lowercase.<br>
+            <strong>replace(old, new)</strong> replaces all occurrences of <strong>old</strong> with <strong>new.</strong><br>
+            <strong>len(str)</strong> returns the length of the string (number of characters).<br>
+
+            Take a look at this code for examples:
+        </p>
+
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    x = "This is some text"
+
+                    print(x.count("s"))
+                    print(x.upper())
+                    print(x.lower())
+                    print(x.replace("some text", "awesome"))
+                    print(len(x))
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+{% endblock content %}

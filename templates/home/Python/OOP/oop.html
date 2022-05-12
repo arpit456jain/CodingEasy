@@ -1,0 +1,617 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+  <div class="heading text-center display-3">
+    Coding Easy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+          <h1 class="text-center">OOP</h1>
+          <p class="text-center"><strong>Object Oriented Programming</strong></p>
+        </div>
+  </section>
+  <br><br>
+
+
+  <!-- code and text -->
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Classes</h3>
+        <p class="text-center">
+            We have previously looked at two paradigms of programming
+            <strong>- imperative</strong> (using statements, loops, and functions as subroutines),
+            and <strong>functional</strong> (using pure functions, higher-order functions, and recursion).<br><br>
+
+            Another very popular paradigm is <strong>object-oriented programming</strong> (OOP).<br>
+            Objects are created using <strong>classes,</strong> which are actually the focal point of OOP.<br>
+            The <strong>class</strong> describes what the object will be, but is separate from the object itself.
+            In other words, a class can be described as an object's blueprint, description, or definition.<br>
+            You can use the same class as a blueprint for creating multiple different objects.<br><br>
+
+            Classes are created using the keyword <strong>class</strong> and an indented block,
+            which contains class <strong>methods</strong> (which are functions).<br>
+            Below is an example of a simple class and its objects.
+        </p>
+          
+          
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Code</h3>
+            <div class="code">
+          <pre>
+                <code>
+                  class Cat:
+                    def __init__(self, color, legs):
+                        self.color = color
+                        self.legs = legs
+
+                    felix = Cat("ginger", 4)
+                    rover = Cat("dog-colored", 4)
+                    stumpy = Cat("brown", 3)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">__init__</h3>
+        <p class="text-center">
+            The __init__ method is the most important method in a class.<br>
+            This is called when an instance (object) of the class is created, using the class name as a function.<br><br>
+
+            All methods must have self as their first parameter, although it isn't explicitly passed,
+            Python adds the self argument to the list for you; you do not need to include it when you call the methods.
+            Within a method definition, self refers to the instance calling the method.<br><br>
+
+            Instances of a class have attributes, which are pieces of data associated with them.<br><br>
+            In this example, Cat instances have attributes color and legs.
+            These can be accessed by putting a dot, and the attribute name after an instance.<br>
+            In an __init__ method, self.attribute can therefore be used to set the initial value of an instance's attributes.
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    class Cat:
+                        def __init__(self, color, legs):
+                            self.color = color
+                            self.legs = legs
+
+                    felix = Cat("ginger", 4)
+                    print(felix.color)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Methods</h3>
+        <p class="text-center">
+            Classes can have other <strong>methods</strong> defined to add functionality to them.<br>
+            Remember, that all methods must have <strong>self</strong> as their first parameter.<br>
+            These methods are accessed using the same <strong>dot</strong> syntax as attributes.
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            Classes can also have <strong>class attributes,</strong> created by assigning variables within the body of the class.<br>
+            These can be accessed either from instances of the class, or the class itself.
+            <br><br><br><br><br><br><br><br><br>
+            Trying to access an attribute of an instance that isn't defined causes an <strong>AttributeError.</strong><br>
+            This also applies when you call an undefined method.
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    class Dog:
+                        def __init__(self, name, color):
+                            self.name = name
+                            self.color = color
+
+                        def bark(self):
+                            print("Woof!")
+
+                        fido = Dog("Fido", "brown")
+                        print(fido.name)
+                        fido.bark()
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    class Dog:
+                        legs = 4
+                        def __init__(self, name, color):
+                            self.name = name
+                            self.color = color
+
+                    fido = Dog("Fido", "brown")
+                    print(fido.legs)
+                    print(Dog.legs)
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    class Rectangle: 
+                        def __init__(self, width, height):
+                            self.width = width
+                            self.height = height
+
+                    rect = Rectangle(7, 8)
+                    print(rect.color)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Inheritance</h3>
+        <p class="text-center">
+            <strong>Inheritance</strong> provides a way to share functionality between classes.<br>
+            Imagine several classes, <strong>Cat, Dog, Rabbit</strong> and so on.
+            Although they may differ in some ways (only <strong>Dog</strong> might have the method <strong>bark</strong>),
+            they are likely to be similar in others (all having the attributes <strong>color</strong> and <strong>name</strong>).<br>
+            This similarity can be expressed by making them all inherit from a superclass <strong>Animal,</strong>
+            which contains the shared functionality.<br>
+            To inherit a class from another class, put the superclass name in parentheses after the class name.
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            A class that inherits from another class is called a <strong>subclass.</strong><br>
+            A class that is inherited from is called a <strong>superclass.</strong><br>
+            If a class inherits from another with the same attributes or methods, it overrides them.
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            Inheritance can also be indirect. 
+            One class can inherit from another, and that class can inherit from a third class.
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    class Animal: 
+                        def __init__(self, name, color):
+                            self.name = name
+                            self.color = color
+
+                    class Cat(Animal):
+                        def purr(self):
+                            print("Purr...")
+                            
+                    class Dog(Animal):
+                        def bark(self):
+                            print("Woof!")
+
+                    fido = Dog("Fido", "brown")
+                    print(fido.color)
+                    fido.bark()
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    class Wolf: 
+                        def __init__(self, name, color):
+                            self.name = name
+                            self.color = color
+
+                        def bark(self):
+                            print("Grr...")
+
+                    class Dog(Wolf):
+                        def bark(self):
+                            print("Woof")
+
+                    husky = Dog("Max", "grey")
+                    husky.bark()
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    class A:
+                        def method(self):
+                            print("A method")
+                        
+                    class B(A):
+                        def another_method(self):
+                            print("B method")
+                        
+                    class C(B):
+                        def third_method(self):
+                            print("C method")
+                        
+                    c = C()
+                    c.method()
+                    c.another_method()
+                    c.third_method()
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Magic Methods</h3>
+        <p class="text-center">
+            <strong>Magic methods</strong> are special methods which have <strong>double underscores</strong> at the beginning and end of their names.
+            They are also known as <strong>dunders.</strong><br>
+            So far, the only one we have encountered is <strong>__init__,</strong> but there are several others.<br>
+            They are used to create functionality that can't be represented as a normal method.<br><br>
+
+            One common use of them is <strong>operator overloading.</strong><br>
+            This means defining operators for custom classes that allow operators such as + and * to be used on them.<br>
+            An example magic method is <strong>__add__</strong> for +.<br><br>
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    class Vector2D:
+                        def __init__(self, x, y):
+                            self.x = x
+                            self.y = y
+                        def __add__(self, other):
+                            return Vector2D(self.x + other.x, self.y + other.y)
+
+                    first = Vector2D(5, 7)
+                    second = Vector2D(3, 9)
+                    result = first + second
+                    print(result.x)
+                    print(result.y)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">More magic methods for common operators:</h3>
+        <p class="text-center">
+            <strong>__sub__ for -<br>
+            __mul__ for *<br>
+            __truediv__ for /<br>
+            __floordiv__ for //<br>
+            __mod__ for %<br>
+            __pow__ for **<br>
+            __and__ for &amp;<br>
+            __xor__ for ^<br>
+            __or__ for |</strong><br>
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Python also provides magic methods for comparisons.</h3>
+        <p class="text-center">
+            <strong>__lt__ for &lt;<br>
+            __le__ for &ly;=<br>
+            __eq__ for ==<br>
+            __ne__ for !=<br>
+            __gt__ for ><br>
+            __ge__ for >=</strong><br>
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">There are several magic methods for making classes act like containers.</h3>
+        <p class="text-center">
+            <strong>__len__ for len()<br>
+            __getitem__ for indexing<br>
+            __setitem__ for assigning to indexed values<br>
+            __delitem__ for deleting indexed values<br>
+            __iter__ for iteration over objects (e.g., in for loops)<br>
+            __contains__ for in</strong><br>
+
+            There are many other magic methods that we won't cover here, such as <strong>__call__</strong> for calling objects as functions, and <strong>__int__, __str__,</strong> and the like, for converting objects to built-in types.
+        </p>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Object Lifecycle</h3>
+        <p class="text-center">
+            The lifecycle of an object is made up of its <strong>creation, manipulation,</strong> and destruction.<br><br>
+
+            The first stage of the life-cycle of an object is the <strong>definition</strong> of the class to which it belongs.<br>
+            The next stage is the <strong>instantiation</strong> of an instance, when <strong>__init__</strong> is called.
+            Memory is allocated to store the instance. Just before this occurs, the <strong>__new__</strong> method of
+            the class is called. This is usually overridden only in special cases.<br>
+            After this has happened, the object is ready to be used.
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            When an object is <strong>destroyed,</strong> the memory allocated to it is freed up, and can be used for other purposes.<br>
+            Destruction of an object occurs when its <strong>reference count</strong> reaches zero.<br>
+            Reference count is the number of variables and other elements that refer to an object.<br>
+            If nothing is referring to it (it has a reference count of zero) nothing can interact with it,
+            so it can be safely deleted.<br><br>
+
+            In some situations, two (or more) objects can be referred to by each other only,
+            and therefore can be deleted as well.<br>
+            The <strong>del</strong> statement reduces the reference count of an object by one, and this often leads to its deletion.<br>
+            The magic method for the del statement is <strong>__del__.</strong><br>
+            The process of deleting objects when they are no longer needed is called <strong>garbage collection.</strong><br>
+            In summary, an object's reference count increases when it is assigned a new name
+            or placed in a container (list, tuple, or dictionary).
+            The object's reference count decreases when it's deleted with del,
+            its reference is reassigned, or its reference goes out of scope. When an object's reference count reaches zero, Python automatically deletes it.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="code">
+          <pre>
+                <code>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h3 class="text-center">Code</h3>
+                    a = 42  # Create object <42>
+                    b = a  # Increase ref. count  of <42> 
+                    c = [a]  # Increase ref. count  of <42> 
+
+                    del a  # Decrease ref. count  of <42>
+                    b = 100  # Decrease ref. count  of <42> 
+                    c[0] = -1  # Decrease ref. count  of <42>
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Data Hiding</h3>
+        <p class="text-center">
+            A key part of object-oriented programming is <strong>encapsulation,</strong> which involves packaging of related
+            variables and functions into a single easy-to-use object - an instance of a class.<br>
+            A related concept is <strong>data hiding,</strong> which states that implementation details of a class should be hidden,
+            and a clean standard interface be presented for those who want to use the class.
+            In other programming languages, this is usually done with private methods and attributes,
+            which block external access to certain methods and attributes in a class.<br><br>
+
+            The Python philosophy is slightly different. It is often stated as <strong>"we are all consenting adults here",</strong>
+            meaning that you shouldn't put arbitrary restrictions on accessing parts of a class.
+            Hence there are no ways of enforcing a method or attribute be strictly private.<br><br>
+            However, there are ways to discourage people from accessing parts of a class, such as by denoting that
+            it is an implementation detail, and should be used at their own risk.<br><br>
+            Weakly private methods and attributes have a single underscore at the beginning.<br>
+            This signals that they are private, and shouldn't be used by external code.
+            However, it is mostly only a convention, and does not stop external code from accessing them.<br>
+            Its only actual effect is that from module_name import * won't import variables that start
+            with a single underscore.<br><br>
+            Strongly private methods and attributes have a <strong>double underscore</strong> at the beginning of their names.
+            This causes their names to be mangled, which means that they can't be accessed from outside the class.<br>
+            The purpose of this isn't to ensure that they are kept private, but to avoid bugs if there are subclasses that have
+            methods or attributes with the same names.<br>
+            Name mangled methods can still be accessed externally, but by a different name. The method <strong>__privatemethod</strong>
+            of class <strong>Spam</strong> could be accessed externally with <strong>_Spam__privatemethod.</strong><br><br><br>
+            Basically, Python protects those members by internally changing the name to include the class name.
+            
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    class Queue:
+                        def __init__(self, contents):
+                            self._hiddenlist = list(contents)
+
+                        def push(self, value):
+                            self._hiddenlist.insert(0, value)
+
+                        def pop(self):
+                            return self._hiddenlist.pop(-1)
+
+                        def __repr__(self):
+                            return "Queue({})".format(self._hiddenlist)
+
+                    queue = Queue([1, 2, 3])
+                    print(queue)
+                    queue.push(0)
+                    print(queue)
+                    queue.pop()
+                    print(queue)
+                    print(queue._hiddenlist)
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    class Spam:
+                        __egg = 7
+                        def print_egg(self):
+                            print(self.__egg)
+
+                    s = Spam()
+                    s.print_egg()
+                    print(s._Spam__egg)
+                    print(s.__egg)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Class Methods</h3>
+        <p class="text-center">
+            Methods of objects we've looked at so far are called by an instance of a class,
+            which is then passed to the <strong>self</strong> parameter of the method.<br>
+            <strong>Class methods</strong> are different - they are called by a class, which is passed to the <strong>cls</strong> parameter of the method.<br>
+            A common use of these are factory methods, which instantiate an instance of a class,
+            using different parameters than those usually passed to the class constructor.<br>
+            Class methods are marked with a <strong>classmethod decorator.</strong>
+        </p>
+          
+          
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Code</h3>
+            <div class="code">
+          <pre>
+                <code>
+                    class Rectangle:
+                        def __init__(self, width, height):
+                            self.width = width
+                            self.height = height
+
+                        def calculate_area(self):
+                            return self.width * self.height
+
+                        @classmethod
+                        def new_square(cls, side_length):
+                            return cls(side_length, side_length)
+
+                    square = Rectangle.new_square(5)
+                    print(square.calculate_area())
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Static Methods</h3>
+        <p class="text-center">
+            <strong>Static methods</strong> are similar to class methods, except they don't receive any additional arguments;
+            they are identical to normal functions that belong to a class.<br>
+            They are marked with the <strong>staticmethod</strong> decorator.<br><br>
+            Static methods behave like plain functions,
+            except for the fact that you can call them from an instance of the class.
+        </p>
+          
+          
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Code</h3>
+            <div class="code">
+          <pre>
+                <code>
+                    class Pizza:
+                        def __init__(self, toppings):
+                            self.toppings = toppings
+
+                        @staticmethod
+                        def validate_topping(topping):
+                            if topping == "pineapple":
+                                raise ValueError("No pineapples!")
+                            else:
+                                return True
+
+                    ingredients = ["cheese", "onions", "spam"]
+                    if all(Pizza.validate_topping(i) for i in ingredients):
+                        pizza = Pizza(ingredients)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Properties</h3>
+        <p class="text-center">
+            <strong>Properties</strong> provide a way of customizing access to instance attributes.<br>
+            They are created by putting the <strong>property</strong> decorator above a method, which means when the instance
+            attribute with the same name as the method is accessed, the method will be called instead.<br>
+            One common use of a property is to make an attribute <strong>read-only.</strong><br><br>
+            Properties can also be set by defining <strong>setter/getter</strong> functions.
+            <br><br><br><br><br><br><br><br>
+            The <strong>setter</strong> function sets the corresponding property's value.<br>
+            The <strong>getter</strong> gets the value.<br>
+            To define a setter, you need to use a decorator of the same name as the property,
+            followed by a dot and the <strong>setter</strong> keyword.<br>
+            The same applies to defining <strong>getter</strong> functions.
+        </p>
+          
+          
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Code</h3>
+            <div class="code">
+                <pre>
+                        <code>
+                            class Pizza:
+                                def __init__(self, toppings):
+                                    self.toppings = toppings
+
+                                @property
+                                def pineapple_allowed(self):
+                                    return False
+
+                            pizza = Pizza(["cheese", "tomato"])
+                            print(pizza.pineapple_allowed)
+                            pizza.pineapple_allowed = True
+                        </code>
+                </pre>
+            </div>
+            <div class="code">
+                <pre>
+                        <code>
+                            class Pizza:
+                                def __init__(self, toppings):
+                                    self.toppings = toppings
+                                    self._pineapple_allowed = False
+
+                                @property
+                                def pineapple_allowed(self):
+                                    return self._pineapple_allowed
+
+                                @pineapple_allowed.setter
+                                def pineapple_allowed(self, value):
+                                    if value:
+                                        password = input("Enter the password: ")
+                                        if password == "Sw0rdf1sh!":
+                                            self._pineapple_allowed = value
+                                        else:
+                                            raise ValueError("Alert! Intruder!")
+
+                            pizza = Pizza(["cheese", "tomato"])
+                            print(pizza.pineapple_allowed)
+                            pizza.pineapple_allowed = True
+                            print(pizza.pineapple_allowed)
+                        </code>
+                </pre>
+            </div>
+      </div>
+  </section>
+  <br><br>
+{% endblock content %}

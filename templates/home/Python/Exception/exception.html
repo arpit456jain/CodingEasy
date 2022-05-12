@@ -1,0 +1,226 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+  <div class="heading text-center display-3">
+    Coding Easy
+  </div> <br>
+  <section class="container mt-3">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+          <h1 class="text-center">Exception</h1>
+        </div>
+  </section>
+  <br><br>
+
+
+  <!-- code and text -->
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Exception</h3>
+        <p class="text-center">
+            The <strong>exceptions</strong> occur when something goes wrong, due to incorrect code or input.
+            When an exception occurs, the program immediately stops.
+            The following code produces the <strong>ZeroDivisionError</strong> exception by trying to divide 7 by 0:<br><br>
+            An <strong>exception</strong> is an event, which occurs during the execution of a program that disrupts the normal flow of the program.
+            <br><br><br>
+            Different exceptions are raised for different reasons.<br>
+            Common exceptions:<br>
+            ImportError: an import fails;<br>
+            IndexError: a list is indexed with an out-of-range number;<br>
+            NameError: an unknown variable is used;<br>
+            SyntaxError: the code can't be parsed properly;<br>
+            TypeError: a function is called on a value of an inappropriate type;<br>
+            ValueError: a function is called on a value of the correct type, but with an inappropriate value.<br>
+        </p>
+
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    num1 = 7
+                    num2 = 0
+                    print(num1/num2)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+  
+  <section class="container mt-5">
+      <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Exception Handling</h3>
+        <p class="text-center">
+            When an exception occurs, the program stops executing.<br>
+            To handle exceptions, and to call code when an exception occurs, you can use a <strong>try/except</strong> statement.<br>
+            The <strong>try</strong> block contains code that might throw an exception. If that exception occurs,
+            the code in the <strong>try</strong> block stops being executed,
+            and the code in the <strong>except</strong> block is run. If no error occurs, the code in the <strong>except</strong> block doesn't run.
+            <br><br><br><br><br><br><br>
+            A try statement can have multiple different except blocks to handle different exceptions.<br>
+            Multiple exceptions can also be put into a single except block using parentheses,
+            to have the except block handle all of them.
+            <br><br><br><br><br><br><br>
+            An <strong>except</strong> statement without any exception specified will catch all errors.<br>
+            These should be used sparingly, as they can catch unexpected errors and hide programming mistakes.
+
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    try:
+                        num1 = 7
+                        num2 = 0
+                        print (num1 / num2)
+                        print("Done calculation")
+                    except ZeroDivisionError:
+                        print("An error occurred")
+                        print("due to zero division")
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    try:
+                        variable = 10
+                        print(variable + "hello")
+                        print(variable / 2)
+                    except ZeroDivisionError:
+                        print("Divided by zero")
+                    except (ValueError, TypeError):
+                        print("Error occurred")
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    try:
+                        word = "spam"
+                        print(word / 0)
+                    except:
+                        print("An error occurred")
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">finally</h3>
+        <p class="text-center">
+            After a <strong>try/except</strong> statement,
+            a <strong>finally</strong> block can follow. It will execute after the <strong>try/except</strong> block,
+            no matter if an exception occurred or not.
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    try:
+                        print("Hello")
+                        print(1 / 0)
+                    except ZeroDivisionError:
+                        print("Divided by zero")
+                    finally:
+                        print("This code will run no matter what")
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">else</h3>
+        <p class="text-center">
+            The <strong>else</strong> statement can also be used with <strong>try/except</strong> statements.<br>
+            In this case, the code within it is only executed if no error occurs in the <strong>try</strong> statement.
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    try:
+                        print(1)
+                    except ZeroDivisionError:
+                        print(2)
+                    else:
+                        print(3)
+
+                    try:
+                        print(1/0)
+                    except ZeroDivisionError:
+                        print(4)
+                    else:
+                        print(5)
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Raising Exceptions</h3>
+        <p class="text-center">
+            You can throw (or raise) exceptions when some condition occurs.<br>
+            For example, when you take user input that needs to be in a specific format,
+            you can throw an exception when it does not meet the requirements.<br>
+            This is done using the <strong>raise</strong> statement.
+            <br><br><br><br><br>
+            Exceptions can be raised with arguments that give detail about them.
+        </p>
+
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Code</h3>
+        <div class="code">
+          <pre>
+                <code>
+                    num = 102
+                    if num > 100:
+                    raise ValueError
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+                    name = "123"
+                    raise NameError("Invalid name!")
+                </code>
+            </pre>
+        </div>
+      </div>
+  </section>
+  <br><br>
+
+{% endblock content %}
