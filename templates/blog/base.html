@@ -1,3 +1,4 @@
+{% load has_group %}
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -77,8 +78,12 @@
                 </li>
                 {% if request.user.is_staff %}
                   <li class="list-group-item list-group-item-light">
-                    <a href="{% url 'blog-categories' %}">Edit Blog Categories (Only for Admin)</a>
+                    <a href="{% url 'blog-categories' %}">Edit Blog Categories (Admin &amp; Staff)</a>
                   </li>
+                {% elif request.user|has_group:"staff" %}
+                    <li class="list-group-item list-group-item-light">
+                      <a href="{% url 'blog-categories' %}">Edit Blog Categories (Admin &amp; Staff)</a>
+                    </li>
                 {% endif %}
               </ul>
             </p>

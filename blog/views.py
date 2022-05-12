@@ -9,6 +9,7 @@ from .models import *
 from home.decorators import allowed_users
 
 
+
 def home(request):
     context = {
         'posts': Post.objects.all()
@@ -111,7 +112,7 @@ class CategoryDetailView(DetailView):
 #     return render(request, 'blog/category.html',{'all_categories':all_categories,'category_id':category_id,'category_name':category_name})
 
 
-@allowed_users(allowed_roles=['admin'])
+@allowed_users(allowed_roles=['admin','staff'])
 def blogCategories(request):
     blog_categories = Category.objects.all()
     return render(request, 'blog/blog-categories.html',{'blog_categories':blog_categories})
