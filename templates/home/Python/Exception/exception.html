@@ -44,15 +44,21 @@
         <h3 class="text-center">Code</h3>
         <div class="code">
           <pre>
-                <code>
-                    num1 = 7
-                    num2 = 0
-                    print(num1/num2)
-                </code>
-            </pre>
+            <code>
+                num1 = 7
+                num2 = 0
+                print(num1/num2)
+            </code>
+            <div class="col-md-3 col-sm-6">
+              <strong>shell</strong>
+                Traceback (most recent call last):
+                  File "<string>", line 3, in <module>
+                ZeroDivisionError: division by zero
+            </div>
+          </pre>
         </div>
       </div>
-  </section>
+    </section>
   <br><br>
   
   <section class="container mt-5">
@@ -90,6 +96,11 @@
                         print("An error occurred")
                         print("due to zero division")
                 </code>
+                <div class="col-md-3 col-sm-6">
+                  <strong>shell</strong>
+                    An error occurred
+                    due to zero division
+                </div>
             </pre>
         </div>
         <div class="code">
@@ -104,6 +115,10 @@
                     except (ValueError, TypeError):
                         print("Error occurred")
                 </code>
+                <div class="col-md-3 col-sm-6">
+                  <strong>shell</strong>
+                    Error occurred
+                </div>
             </pre>
         </div>
         <div class="code">
@@ -115,6 +130,10 @@
                     except:
                         print("An error occurred")
                 </code>
+                <div class="col-md-3 col-sm-6">
+                  <strong>shell</strong>
+                    Error occurred
+                </div>
             </pre>
         </div>
       </div>
@@ -145,6 +164,12 @@
                     finally:
                         print("This code will run no matter what")
                 </code>
+                <div class="col-md-3 col-sm-6">
+                  <strong>shell</strong>
+                    Hello
+                    Divided by zero
+                    This code will run no matter what
+                </div>
             </pre>
         </div>
       </div>
@@ -180,6 +205,12 @@
                     else:
                         print(5)
                 </code>
+                <div class="col-md-3 col-sm-6">
+                  <strong>shell</strong>
+                  1
+                  3
+                  4
+                </div>
             </pre>
         </div>
       </div>
@@ -209,6 +240,13 @@
                     if num > 100:
                     raise ValueError
                 </code>
+                <div class="col-md-3 col-sm-6">
+                  <strong>shell</strong>
+                  File "<string>", line 3
+                  raise ValueError
+                  ^
+                  IndentationError: expected an indented block
+                </div>
             </pre>
         </div>
         <div class="code">
@@ -217,6 +255,12 @@
                     name = "123"
                     raise NameError("Invalid name!")
                 </code>
+                <div class="col-md-3 col-sm-6">
+                  <strong>shell</strong>
+                  Traceback (most recent call last):
+                    File "<string>", line 2, in <module>
+                  NameError: Invalid name!
+                </div>
             </pre>
         </div>
       </div>
