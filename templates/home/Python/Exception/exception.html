@@ -53,7 +53,7 @@
               <strong>shell</strong>
                 Traceback (most recent call last):
                   File "<string>", line 3, in <module>
-                ZeroDivisionError: division by zero
+                <strong>ZeroDivisionError:</strong> division by zero
             </div>
           </pre>
         </div>
@@ -238,14 +238,14 @@
                 <code>
                     num = 102
                     if num > 100:
-                    raise ValueError
+                    raise <strong>ValueError</strong>
                 </code>
                 <div class="col-md-3 col-sm-6">
                   <strong>shell</strong>
                   File "<string>", line 3
                   raise ValueError
                   ^
-                  IndentationError: expected an indented block
+                  <strong>IndentationError:</strong> expected an indented block
                 </div>
             </pre>
         </div>
@@ -259,10 +259,26 @@
                   <strong>shell</strong>
                   Traceback (most recent call last):
                     File "<string>", line 2, in <module>
-                  NameError: Invalid name!
+                  <strong>NameError:</strong> Invalid name!
                 </div>
             </pre>
         </div>
+      </div>
+  </section>
+  
+  <br><br>
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="text-center">Common exceptions:</h3>
+        <p class="text-center">
+            <strong>ImportError:</strong> an import fails;<br>
+            <strong>IndexError:</strong> a list is indexed with an out-of-range number;<br>
+            <strong>NameError:</strong> an unknown variable is used;<br>
+            <strong>SyntaxError:</strong> the code can't be parsed properly;<br>
+            <strong>TypeError:</strong> a function is called on a value of an inappropriate type;<br>
+            <strong>ValueError:</strong> a function is called on a value of the correct type, but with an inappropriate value.<br>
+        </p>
       </div>
   </section>
   <br><br>
