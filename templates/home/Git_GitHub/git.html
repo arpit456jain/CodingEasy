@@ -76,7 +76,7 @@
 
 
 
-<section class="container mt-5">
+<!-- <section class="container mt-5">
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <h2 class="text-center"> About Git & Github</h2><p class="basicsyntax">
@@ -100,66 +100,122 @@
             </p><br>
             <h3>Git Commands</h3>
             <ul>
-                <li>git init</li>
+                <li>git config</li>
+                <li>git init</li><br>
+
                 <li>git status</li>
                 <li>git add</li>
                 <li>git commit</li>
+                <li>git push</li><br>
+
                 <li>git log</li>
+                <li>git pull</li>
+                <li>git clone</li>
+                <li>git branch</li><br>
+                
                 <li>git switch</li>
-                <li>git branch</li>
                 <li>git diff</li>
                 <li>git reset</li>
                 <li>git show</li>
                 <li>git merge</li>
                 <li>git remote</li>
                 <li>git checkout</li>
-                <li>git push</li>
-                <li>git pull</li>
                 <li>git stash</li>
                 <br>
             </ul>
         </div>
 
         <div class="col-md-6 col-sm-12">
-            <h3 class="text-center">Example<b class="example"></b></h3>
+            <h3 class="text-center">Examples and Uses<b class="example"></b></h3>
             <div class="code">
                 <pre>
            <code>
-            // Configure the author name and email address to be used with your commits.
-            Note that Git strips some characters (for example trailing periods) from user.name.<br>
-            git config --global user.name "CodingEasy"
-            git config --global user.email CodingEasy@example.com
-
+            // Configure the author name and email address to be used with 
+                your commits. Note that Git strips some characters 
+                from user.name. Using the '--global' tag makes this the 
+                defaut for all commits and repositories.
+            <em>git config --global user.name "CodingEasy"
+            git config --global user.email CodingEasy@example.com</em>
             <br>
-            //Create a working copy of a local repository:<br>
-            git clone /path/to/repository
-            git clone username@host:/path/to/repository
+            // Command used to initialize Git's version control system.
+                It can be used in any folder with any files.
+            <em>git init</em>
             <br>
-
-            //List the files you've changed and those you still need to add or commit:
-            git status
-
+            // Command used to show the status(tracked, untracked, modified) 
+                of the files in the current directory.
+            <em>git status</em>
             <br>
-            //Add one or more files to staging (index):
-            git add &lt;filename&gt;
-            git add *
+            // Add one or more files to staging (index):
+                This command gets the modifed/new files ready to be committed.
+            <em>git add &lt;filename&gt;
+            git add *</em>
             <br>
-
-            //Commit changes to head (but not yet to the remote repository):\
-            git commit -m "Commit message"
-
+            // Commit staged changes.
+                This command commits the changes in the staging area to the
+                repository. This is the final step before pushing the changes to
+                the remote repository.
+            <em>git commit -m "Commit message"</em>
             <br>
-            //Send changes to the master branch of your remote repository:
-            git push origin master
-
+            // Send changes to the master branch of your remote repository:
+                Here 'origin' is the remote repository.
+                and 'master' is the branch that will be pushed to.
+            <em>git push origin master</em>
+            <br>
+            // Show the history of all commits.
+                This command tells you what commits have been made to the
+                repository.
+            <em>git log</em>
+            <br>
+            // Create a working copy of a local repository:<br>
+            <em>git clone /path/to/repository
+            git clone username@host:/path/to/repository</em>
+            <br>
+            // Pull changes from a remote repository.
+                Used incase there were changes in the source repo while 
+                you were working on the repository.
+            <em>git pull</em>
+            <br>
+            // When you want to work on new feature, 
+                but don't want to commit it to the main branch.
+                Make a new branch and start working on it.
+            <em>git branch -d {branch-name}</em>
             <br>
         </code>
           </pre>
             </div>
         </div>
     </div>
-</section>
-
+</section> -->
+<div class="container-fluid mb-5 ">
+    <div class="row m-3 g-5">
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Basic</h5>
+            <a href="{% url 'git1' %}?data=basic" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Intermediate</h5>
+  
+            <a href="{% url 'git1' %}?data=intermediate" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Advanced</h5>
+  
+            <a href="{% url 'git1' %}?data=advanced" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+</div>
 
 
 <!-- /jumbotron -->
