@@ -41,6 +41,7 @@ urlpatterns = [
     path('django/', views.django, name='django'),
     path('django1/', views.django1, name='django1'),
     path('git/', views.git, name='git'),
+    path('git1/', views.git1, name='git1'),
     path('course_video/', views.course_video, name='course_video')
 
     # To add url to a new Course
