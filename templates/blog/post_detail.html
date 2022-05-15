@@ -2,32 +2,37 @@
 {% load static %}
 {% block content %}
   <article class="media content-section" style="margin-bottom:36%">
-    <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+    <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
     <div class="media-body">
       <div class="article-metadata">
-        <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
-        <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small><br>
+        {% if is_favourite %}
+          <a style="float:right;" href="{% url 'favourite_post' post.pk %}"><i class="fas fa-heart fa-lg" style="color:red !important;"></i></a>
+        {% else %}
+          <a style="float:right;" href="{% url 'favourite_post' post.pk %}"><i class="far fa-heart fa-lg"></i></a>
+        {% endif %}
+        <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+        <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small><br>
         <a style="color:#21d192;font-weight:bold;" class="mr-2" href="{% url 'posts_by_category' post.category.pk %}">{{ post.category.name }}</a>
-        {% if object.author == user %}
+        {% if post.author == user %}
           <div>
-            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' post.id %}">
               <i class="fas fa-edit"></i>&nbsp;Update
             </a>
-            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' post.id %}">
               <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Delete
             </a>
           </div>
         {% endif %}
       </div>
-      <h2 class="article-title">{{ object.title }}</h2>
-      <p class="article-content">{{ object.content }}</p>
-      {% if object.image.url != None %}
+      <h2 class="article-title">{{ post.title }}</h2>
+      <p class="article-content">{{ post.content }}</p>
+      {% if post.image.url != None %}
         <br/>
         <div class="post-image">
           <div class="thumbnail">
-            <a href="{{ object.image.url }}" target="_balnk">
+            <a href="{{ post.image.url }}" target="_balnk">
               <figure class="figure">
-                <img src="{{ object.image.url }}" class="figure-img img-fluid rounded" alt="Image for {{ object.title }} post" title="Post Image">
+                <img src="{{ post.image.url }}" class="figure-img img-fluid rounded" alt="Image for {{ post.title }} post" title="Post Image">
                 <figcaption style="color:#428bca; font-weight: bold" class="figure-caption text-right">Press on the Image to Show the Original Size</figcaption>
               </figure>
             </a>
