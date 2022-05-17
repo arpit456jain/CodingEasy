@@ -11,6 +11,7 @@ from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView)
 from .models import *
 from home.decorators import allowed_users
+from .forms import *
 
 
 
@@ -46,13 +47,34 @@ class UserPostListView(ListView):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(author=user).order_by('-date_posted')
     
-
+@ login_required
 def post_detail(request,pk):
     post = get_object_or_404(Post,pk=pk)
+    comments=Comment.objects.filter(post=post).order_by("-pk")
+    
     is_favourite = False
     if post.favourite.filter(pk=request.user.id).exists():
         is_favourite = True
-    return render(request, 'blog/post_detail.html', {'post':post,'is_favourite':is_favourite})
+        
+    if request.method == 'POST':
+        comment_form=CommentForm(request.POST or None)
+        if comment_form.is_valid():
+            content=request.POST.get('content')
+            comment=Comment.objects.create(post=post,user=request.user,content=content)
+            comment.save()
+            return redirect(post.get_absolute_url())
+
+    else:
+        comment_form=CommentForm()
+        
+    context={
+    'comments':comments,
+    'post':post,
+    'is_favourite': is_favourite,
+    'comment_form':comment_form
+    }
+    return render(request, 'blog/post_detail.html', context)
+
     
     
     
