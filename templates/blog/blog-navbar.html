@@ -45,6 +45,9 @@
             {% if user.is_authenticated %}
                 {% comment %} In the Future the following link will be for the user profile {% endcomment %}
                 <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
+                <a href="{% url 'favourite' %}" class="nav-item nav-link" style="color:blue !important;" title="Favourites">
+                    <i class="fa fa-bookmark fa-2xl"></i>
+                </a>
                 <a href="{% url 'profile' %}" class="nav-item nav-link" title="Profile">
                     <i class="fa fa-user fa-lg"></i>
                 </a>
