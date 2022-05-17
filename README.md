@@ -77,7 +77,7 @@ cd CodingEasy
 **4.** Set upstream command:
 
 ```bash
-git remote add upstream https://github.com/arpit456jain.git
+git remote add upstream https://github.com/arpit456jain/CodingEasy.git
 ```
 
 **5.** Create a new branch:
