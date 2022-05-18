@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 {% load static %}
 {% block content %}
-  <article class="media content-section" style="margin-bottom:36%">
+  <article class="media content-section">
     <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
     <div class="media-body">
       <div class="article-metadata">
@@ -11,7 +11,7 @@
           <a style="float:right;" href="{% url 'favourite_post' post.pk %}"><i class="far fa-heart fa-lg"></i></a>
         {% endif %}
         <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
-        <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small><br>
+        <small class="text-muted">{{ post.date_posted|date:"F d, Y"}}</small><br>
         <a style="color:#21d192;font-weight:bold;" class="mr-2" href="{% url 'posts_by_category' post.category.pk %}">{{ post.category.name }}</a>
         {% if post.author == user %}
           <div>
@@ -41,4 +41,18 @@
       {% endif %}
     </div>
   </article>
+  <div>
+    <strong>{{comments.count}} Comment{{comments|pluralize}}</strong>
+  </div>
+  <form method="POST">
+    {% csrf_token %}
+    {{comment_form.as_p}}
+    <input type="submit" value="comment" name="comment" class="btn btn-success btn-sm mt-1 mb-1">
+  </form>    
+  {% for comment in comments %}
+    <div class="article-metadata" style="padding-left:5px;">
+      <strong style="color:#00c851 !important;"><small>{{comment.user}} - {{comment.timestamp}}</small></strong>
+      <p>{{ comment.content}}</p>
+    </div>
+  {% endfor %}
 {% endblock content %}
