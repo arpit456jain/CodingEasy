@@ -1,25 +1,69 @@
 {% extends 'home/base.html' %}
 {% load static %}
 
+<style>
+  body{
+    font-family: sans-serif;
+  }
+</style>
+
 {% block content %}
 <br>
 <div class="heading text-center display-3">
   CodingEasy
-</div> <br>
+</div>
+<br>
 
 <section class="container mt-3">
   <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-    <h1 class="text-center display-3">Data Types</h1>
+    <h1 class="text-center display-3" style="text-align: center;">Data Types</h1>
   </div>
 </section>
+
 <p class="text-center display-6">
 <h3><b><i> C++ offers the programmer a rich assortment of built-in as well as user defined data types.</i></b></h3>
+All variables use data-type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data it can store.
 </p>
-<img src="{% static 'img/cpp-datatypes.jpg' %}">
-<br>
-<br>
 
-Following is the example, which will produce correct size of various data types on your computer.
+<img src="../../../../static/img/cpp-datatypes.jpg" style="margin: auto; display:block;">
+<br>
+<br>
+<p>
+  <h3>Data types in C++ are mainly divided into three types:</h3>
+  <br>
+
+  <b>1. Primitive Data Types:</b> These data types are built-in or predefined data types and can be used directly by the user to declare variables.<br>For example: int, char, float, bool, etc. Primitive data types available in C++ are:<br>
+  <ul>
+    <li>Integer</li>
+    <li>Character</li>
+    <li>Boolean</li>
+    <li>Floating Point</li>
+    <li>Double Floating Point</li>
+    <li>Valueless or Void</li>
+    <li>Wide Character</li>
+  </ul>
+  <br>
+
+  <b>2. Derived Data Types:</b> The data types that are derived from the primitive or built-in datatypes are referred to as Derived Data Types.<br>These can be of four types namely:<br>
+  <ul>
+    <li>Function</li>
+    <li>Array</li>
+    <li>Pointer</li>
+    <li>Reference</li>
+  </ul>
+  <br> 
+
+  <b>3. Abstract or User-Defined Data Types:</b> These data types are defined by the user itself. Like, as defining a class in C++ or a structure.<br>C++ provides the following user-defined datatypes:<br>
+  <ul>
+    <li>Class</li>
+    <li>Structure</li>
+    <li>Union</li>
+    <li>Enumeration</li>
+    <li>Typedef defined DataType</li>
+  </ul>
+</p>
+<br>
+The Below Mentioned Example demonstrates the sizes/space-occupied of various primitive data types discussed above.<br>Running it will produce correct size of various data types on your computer.
 <b><i>
     <p>#include&lt;iostream &gt;
       <br>
@@ -40,7 +84,7 @@ Following is the example, which will produce correct size of various data types 
                     }
     </p>
   </i></b>
-<p>Output is :-</p>
+<p>Output for the above program is:</p>
 <b><i>
     Size of char : 1
     <br>
