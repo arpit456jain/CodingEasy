@@ -43,17 +43,22 @@
         </form>
         <div class="navbar-nav action-buttons ml-auto">
             {% if user.is_authenticated %}
-                {% comment %} In the Future the following link will be for the user profile {% endcomment %}
-                <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
-                <a href="{% url 'favourite' %}" class="nav-item nav-link" style="color:blue !important;" title="Favourites">
-                    <i class="fa fa-bookmark fa-2xl"></i>
-                </a>
-                <a href="{% url 'profile' %}" class="nav-item nav-link" title="Profile">
-                    <i class="fa fa-user fa-lg"></i>
-                </a>
-                <a href="{% url 'logout' %}" title="sign out" class="nav-item nav-link">
-                    <i class="fa fa-sign-out" aria-hidden="true"></i>
-                </a>
+                <div class="collapse navbar-collapse" id="navbar-list-4">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="{{ user.profile.image.url }}" width="40" height="40" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{% url 'profile' %}">Edit Profile</a>
+                                <a class="dropdown-item" href="{% url 'password_reset' %}">Reset Password</a>
+                                <a class="dropdown-item" href="{% url 'favourite' %}">Favourite Posts</a>
+                                <a class="dropdown-item" href="{% url "logout" %}">Sign Out</a>
+                            </div>
+                        </li>   
+                    </ul>
+                    <a href="#" class="btn btn-primary disabled-link">Welcome, {{user.username}} !</a>
+                </div>
             {% else %}
                 <a href="{% url 'login' %}" title="sign in" class="nav-item nav-link">
                     <i class="fa fa-sign-in" aria-hidden="true"></i>
