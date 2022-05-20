@@ -2,5 +2,61 @@
 {% load static %}
 
 {% block content %}
-<h1>Basic</h1>
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h4 class="text-center">INSTALLATION </h4>
+            <p>With platform specific installers for Git, GitHub also provides the
+            ease of staying up-to-date with the latest releases of the command
+            line tool while providing a graphical user interface for day-to-day
+            interaction, review, and repository synchronization.<br><br>
+            <b>GitHub for Windows</b>&nbsp;&nbsp;
+            <a href="https://windows.github.com">https://windows.github.com</a><br>
+            <b>GitHub for Mac</b>&nbsp;&nbsp;
+            <a href="https://mac.github.com">https://mac.github.com</a><br>
+            <b>Git for All Platforms</b>&nbsp;&nbsp;
+            <a href="http://git-scm.com">http://git-scm.com</a>
+            <br>
+            For Linux and Solaris platforms, the latest release is available on
+            the official Git web site.
+            </p><br>
+            <h3>Beginner Git Commands</h3>
+            <ul>
+                <li>git init</li><br>
+
+                <li>git status</li><br>
+
+                <li>git log</li><br>
+
+                <li>git clone</li><br>
+                <br>
+            </ul>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Examples and Uses<b class="example"></b></h3>
+            <div class="code">
+                <pre>
+           <code>
+            // Command used to initialize Git's version control system.
+                It can be used in any folder with any files.
+            <em>git init</em>
+            <br>
+            // Command used to show the status(tracked, untracked, modified) 
+                of the files in the current directory.
+            <em>git status</em>
+            <br>
+            // Create a working copy of a local repository:
+            <em>git log</em>
+            <br>
+            // Create a working copy of a local repository:
+            <em>git clone /path/to/repository
+            git clone username@host:/path/to/repository</em>
+            <br>
+        </code>
+          </pre>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock content %}
