@@ -21,4 +21,5 @@ urlpatterns = [
     path('search', views.search, name='search_post'),
     path('fav/<int:id>/', views.favourite_post, name='favourite_post'),
     path('favourites/', views.post_favourite_list, name='favourite'),
+    path('comment/<int:id>', views.delete_comment, name='delete-comment'),
 ]

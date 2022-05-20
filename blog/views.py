@@ -5,6 +5,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import Q
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import (
@@ -62,6 +63,7 @@ def post_detail(request,pk):
             content=request.POST.get('content')
             comment=Comment.objects.create(post=post,user=request.user,content=content)
             comment.save()
+            messages.success(request,f'Comment posted successfully!')
             return redirect(post.get_absolute_url())
 
     else:
@@ -76,7 +78,14 @@ def post_detail(request,pk):
     return render(request, 'blog/post_detail.html', context)
 
     
-    
+
+@login_required
+def delete_comment(request,id):
+    comment=get_object_or_404(Comment,id=id)
+    comment.delete()
+    messages.success(request,f'Comment deleted successfully!')
+    return redirect(comment.post.get_absolute_url())
+  
     
 @ login_required    
 def favourite_post(request,id):
