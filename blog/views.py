@@ -1,12 +1,17 @@
+from http.client import HTTPResponse
+from urllib import request
+from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView)
 from .models import *
 from home.decorators import allowed_users
+from .forms import *
 
 
 
@@ -41,10 +46,53 @@ class UserPostListView(ListView):
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(author=user).order_by('-date_posted')
+    
+@ login_required
+def post_detail(request,pk):
+    post = get_object_or_404(Post,pk=pk)
+    comments=Comment.objects.filter(post=post).order_by("-pk")
+    
+    is_favourite = False
+    if post.favourite.filter(pk=request.user.id).exists():
+        is_favourite = True
+        
+    if request.method == 'POST':
+        comment_form=CommentForm(request.POST or None)
+        if comment_form.is_valid():
+            content=request.POST.get('content')
+            comment=Comment.objects.create(post=post,user=request.user,content=content)
+            comment.save()
+            return redirect(post.get_absolute_url())
+
+    else:
+        comment_form=CommentForm()
+        
+    context={
+    'comments':comments,
+    'post':post,
+    'is_favourite': is_favourite,
+    'comment_form':comment_form
+    }
+    return render(request, 'blog/post_detail.html', context)
+
+    
+    
+    
+@ login_required    
+def favourite_post(request,id):
+    post = get_object_or_404(Post,id=id)
+    if post.favourite.filter(id=request.user.id).exists():
+        post.favourite.remove(request.user)
+    else:
+        post.favourite.add(request.user)
+    return HttpResponseRedirect(post.get_absolute_url())
 
 
-class PostDetailView(DetailView):
-    model = Post
+@ login_required    
+def post_favourite_list(request):
+    user = request.user
+    favourite_posts = user.favourite.all()
+    return render(request,'blog/post_favourite_list.html',{"favourite_posts":favourite_posts})
 
 
 class PostCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):

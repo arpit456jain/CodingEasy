@@ -397,6 +397,14 @@ def py1(request):
         return render(request, 'home/Python/Operator/operator.html')
     elif query == "regex":
         return render(request, 'home/Python/RegEx/regex.html')
+    elif query == "functional_programming":
+        return render(request, 'home/Python/Functional_Programming/functional_programming.html')
+    elif query == "exception":
+        return render(request, 'home/Python/Exception/exception.html')
+    elif query == "oop":
+        return render(request, 'home/Python/OOP/oop.html')
+    elif query == "working_with_strings":
+        return render(request, 'home/Python/Working_with_Strings/working_with_strings.html')
 
 
 def cpp(request):
