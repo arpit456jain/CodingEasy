@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Python",
+        "image_url":"https://blog.logrocket.com/wp-content/uploads/2022/01/pillow-python-image-processing.png",
+        "page_url":"python"
+
+    },
+    {
+        "name": "JavaScript",
+        "image_url":"https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png",
+        "page_url":"#"
+
+    },
+    {
+        "name": "C",
+        "image_url":"https://i0.wp.com/masterprograming.com/wp-content/uploads/2019/03/c-programming-e1536069688313.png?resize=300%2C300&ssl=1",
+        "page_url":"#"
+
+    },
+    {
+        "name": "C++",
+        "image_url":"https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png",
+        "page_url":"#"
+
+    },
+    {
+        "name": "Django",
+        "image_url":"https://i0.wp.com/copyassignment.com/wp-content/uploads/2021/08/Django-logo.jpg?w=474&ssl=1",
+        "page_url":"#"
+
+    },
+    {
+        "name": "HTML",
+        "image_url":"https://cdn-icons-png.flaticon.com/512/888/888909.png",
+        "page_url":"#"
+
+    },
+    {
+        "name": "CSS",
+        "image_url":"https://cdn-icons-png.flaticon.com/512/888/888847.png",
+        "page_url":"#"
+
+    },
+    {
+        "name": "jQuery",
+        "image_url":"https://www.joykal.com/wp-content/uploads/2019/09/jquery.png",
+        "page_url":"#"
+
+    },
+    {
+        "name": "Bootstrap",
+        "image_url":"https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg",
+        "page_url":"#"
+
+    },
+    {
+        "name": "MachineLearning",
+        "image_url":"https://www.moogsoft.com/wp-content/uploads/2019/10/limits_featured.jpg",
+        "page_url":"#"
+
+    }
+]

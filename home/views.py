@@ -1,3 +1,6 @@
+from multiprocessing import context
+import re
+from unicodedata import category
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
@@ -7,6 +10,7 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
+from requests import request
 from .forms import ContactForm, CreationUserForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib import messages
 from django.contrib.auth.models import User,Group, auth
@@ -85,6 +89,51 @@ def our_team(request):
         'top_contributors':top_contributors_data,
     }
     return render(request, 'home/team/our_team.html', context)
+
+# View Created for Quiz Page
+def quizHome(request):
+    categories = open("static/json/quizCategory.json")
+    categories_data = json.load(categories)
+    context = {
+        'categories':categories_data,
+    }
+
+    return render(request, 'quiz/quizHome.html', context)
+
+def quizPython(request):
+    questions_data = open("static/json/quizJSON/quizPython.json")
+    questions = json.load(questions_data)
+    context = {
+        'questions':questions,
+    }
+
+    if request.method == "POST":
+        score = 0
+        wrong = 0
+        correct = 0
+        total = 0
+        for question in questions:
+            total+=1
+            prob = question['ques']
+            if question['ans'] == request.POST.get(f'{prob}'):
+
+                score += 10
+                correct += 1
+            else:
+                wrong += 1
+        percent = score/(total*10) * 100
+        out_of = total*10
+        return render(request, 'quiz/result.html', context = {
+            'score':score,
+            'total':total,
+            'correct':correct,
+            'wrong':wrong,
+            'percent':percent,
+            'out_of':out_of,
+        })
+
+    return render(request, 'quiz/quizPython.html', context)
+
 
 @unauthenticated_user
 def register(request):

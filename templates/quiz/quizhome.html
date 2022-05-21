@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h3 class="text-center border-success border-2 border-bottom rounded-pill p-2 m-2">Welcome to CodingEasy Quiz Page
+    </h3>
+</div>
+
+<div class="container">
+    <div class="row my-3">
+        {% for category in categories %}
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{category.image_url}}" class="card-img-top mt-1" alt="{{category.name}}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{category.name}}</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{category.page_url}}" class="btn btn-primary">Start the Quiz</a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

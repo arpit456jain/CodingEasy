@@ -1,0 +1,52 @@
+[
+    {
+        "ques":"1. Who developed Python Programming Language?",
+        "option1":"a) Wick van Rossum",
+        "option2": "b) Rasmus Lerdorf",
+        "option3":"c) Guido van Rossum",
+        "option4": "d) Niene Stom",
+        "ans": "c) Guido van Rossum"
+        
+
+    },
+    {
+        "ques": "2. Which type of Programming does Python support?",
+        "option1":"a) object-oriented programming",
+        "option2": "b) structured programming",
+        "option3":"c) functional programming",
+        "option4": "d) all of the mentioned",
+        "ans": "a) object-oriented programming"
+        
+
+    },
+    {
+        "ques": "3. Is Python case sensitive when dealing with identifiers?",
+        "option1":"a) no",
+        "option2": "b) yes",
+        "option3":"c) machine dependent",
+        "option4": "d) none of the mentioned",
+        "ans": "a) no"
+        
+
+    },
+    {
+        "ques": "4. Which of the following is the correct extension of the Python file?",
+        "option1":"a) .python",
+        "option2": "b) .pl",
+        "option3":"c) .py",
+        "option4": "d) .p",
+        "ans": "c) .py"
+        
+
+    },
+    {
+        "ques": "5. Is Python code compiled or interpreted?",
+        "option1":"a) Python code is both compiled and interpreted",
+        "option2": "b) Python code is neither compiled nor interpreted",
+        "option3":"c) Python code is only compiled",
+        "option4": "d) Python code is only interpreted",
+        "ans": "b) Python code is neither compiled nor interpreted"
+        
+
+    }
+]

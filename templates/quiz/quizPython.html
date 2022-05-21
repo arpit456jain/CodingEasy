@@ -1,0 +1,56 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h3 class="text-center border-success border-2 border-bottom rounded-pill p-2 m-2">Python Quiz</h3>
+</div>
+
+<div class="container my-2">
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {% for question in questions %}
+        <div class="form-group">
+            <label for="question">{{question.ques}}</label>
+        </div>
+        <div class="form-check">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{question.ques}}" id="gridRadios1" value="{{question.option1}}"
+                    checked>
+                <label class="form-check-label" for="gridRadios1">
+                    {{question.option1}}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{question.ques}}" id="gridRadios2" value="{{question.option2}}">
+                <label class="form-check-label" for="gridRadios2">
+                    {{question.option2}}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{question.ques}}" id="gridRadios1" value="{{question.option3}}">
+                <label class="form-check-label" for="gridRadios1">
+                    {{question.option3}}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{question.ques}}" id="gridRadios2" value="{{question.option4}}">
+                <label class="form-check-label" for="gridRadios2">
+                    {{question.option4}}
+                </label>
+            </div>
+
+            <br>
+        </div>
+        {% endfor %}
+        <div class="form-check">
+            <input class="btn btn-success" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock content %}
