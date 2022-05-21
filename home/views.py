@@ -12,7 +12,6 @@ from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
 from requests import request
 from .forms import ContactForm, CreationUserForm, UserUpdateForm, ProfileUpdateForm
-from django.contrib import messages
 from django.contrib.auth.models import User,Group, auth
 from .decorators import unauthenticated_user
 from django.contrib.auth.decorators import login_required
@@ -572,6 +571,15 @@ def django1(request):
 
 def git(request):
     return render(request, 'home/Git_GitHub/git.html')
+
+def git1(request):
+    query = request.GET.get('data')
+    if query == "basic":
+        return render(request, 'home/Git_GitHub/basic/basic.html')
+    elif query == "intermediate":
+        return render(request, 'home/Git_GitHub/intermediate/intermediate.html')
+    elif query == "advanced":
+        return render(request, 'home/Git_GitHub/advanced/advanced.html')
 
 def course_video(request):
     return render(request, 'home/Course_video/video_page.html')

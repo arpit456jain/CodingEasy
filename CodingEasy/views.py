@@ -291,3 +291,12 @@ def course_video(request):
 
 def git(request):
     return render(request, './Git_GitHub/git.html')
+
+def git1(request):
+    query = request.GET.get('data')
+    if query == "basic":
+        return render(request, './Git_GitHub/basic/basic.html')
+    elif query == "intermediate":
+        return render(request, './Git_GitHub/intermediate/intermediate.html')
+    elif query == "advanced":
+        return render(request, './Git_GitHub/advanced/advanced.html')

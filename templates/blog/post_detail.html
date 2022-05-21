@@ -52,7 +52,15 @@
   {% for comment in comments %}
     <div class="article-metadata" style="padding-left:5px;">
       <strong style="color:#00c851 !important;"><small>{{comment.user}} - {{comment.timestamp}}</small></strong>
-      <p>{{ comment.content}}</p>
+      {% if request.user.is_staff %}
+        <br/>
+        <p style="display:inline-block;">{{ comment.content}}</p>
+        <a style="float:right;" class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete-comment' comment.id %}">
+          <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;
+        </a>
+      {% else %}
+        <p>{{ comment.content}}</p>
+      {% endif %}
     </div>
   {% endfor %}
 {% endblock content %}

@@ -1,0 +1,70 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            </p><br>
+            <h3>Intermediate Git Commands</h3><br>
+            <ul>
+                <li>git config:</li><br>
+
+                <li>git add</li><br>
+
+                <li>git commit</li><br>
+
+                <li>git push</li><br>
+
+                <li>git pull</li><br>
+
+                <li>git branch</li><br>
+                <br>
+            </ul>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h3 class="text-center">Examples and Uses<b class="example"></b></h3>
+            <div class="code">
+                <pre>
+           <code>
+            // Configure the author name and email address to be used with 
+                your commits. Note that Git strips some characters 
+                from user.name. Using the '--global' tag makes this the 
+                defaut for all commits and repositories.
+            <em>git config --global user.name "CodingEasy"
+            git config --global user.email CodingEasy@example.com</em>
+            <br>
+            // Add one or more files to staging (index):
+                This command gets the modifed/new files ready to be committed.
+            <em>git add &lt;filename&gt;
+            git add *</em>
+            <br>
+            // Commit staged changes.
+                This command commits the changes in the staging area to the
+                repository. This is the final step before pushing the changes to
+                the remote repository.
+            <em>git commit -m "Commit message"</em>
+            <br>
+            // Send changes to the master branch of your remote repository:
+                Here 'origin' is the remote repository.
+                and 'master' is the branch that will be pushed to.
+            <em>git push origin master</em>
+            <br>
+            // Pull changes from a remote repository.
+                Used incase there were changes in the source repo while 
+                you were working on the repository.
+            <em>git pull</em>
+            <br>
+            // When you want to work on new feature, 
+                but don't want to commit it to the main branch.
+                Make a new branch and start working on it.
+            <em>git branch -d {branch-name}</em>
+            <br>
+        </code>
+          </pre>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
