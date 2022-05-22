@@ -1,5 +1,15 @@
 [
     {
+        "name": "Muhammad Galhoum",
+        "image":"https://media-exp1.licdn.com/dms/image/C4D03AQGevf_OomFDLg/profile-displayphoto-shrink_800_800/0/1653220892966?e=1658966400&v=beta&t=O3up3OfIk760hBlTaxO0aybibj1bU-3bvCYZfVVlo24",
+        "college": "Faculty of Science Menofia university",
+        "twitter":"https://twitter.com/muhammadgalhoum",
+        "linkedin": "https://www.linkedin.com/in/muhammadgalhoum/",
+        "github": "https://github.com/muhammadgalhoum"
+        
+
+    },
+    {
         "name": "Vaibhav Srivastava",
         "image":"https://avatars.githubusercontent.com/u/86517958?v=4",
         "college": "Madan Mohan Malviya University of Technology",
@@ -36,16 +46,6 @@
         "twitter":"",
         "linkedin": "https://www.linkedin.com/in/anoushka-jha-359736227/",
         "github": "https://github.com/BabyElias"
-        
-
-    },
-    {
-        "name": "Muhammad Galhoum",
-        "image":"https://media-exp1.licdn.com/dms/image/C4D03AQF8NGN6PKnATg/profile-displayphoto-shrink_400_400/0/1626909179437?e=1657152000&v=beta&t=YmDOpEo5a_5x03sQCeZS3aiE9_PSRPnRi6tK375n_EM",
-        "college": "Faculty of Science",
-        "twitter":"https://twitter.com/muhammadgalhoum",
-        "linkedin": "https://www.linkedin.com/in/muhammadgalhoum/",
-        "github": "https://github.com/muhammadgalhoum"
         
 
     }
