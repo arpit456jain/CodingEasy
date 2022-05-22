@@ -12,4 +12,59 @@
     <h1 class="text-center display-3">Pointers</h1>
   </div>
 </section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Pointers</h3>
+      <p class="text-center">A <strong>pointer</strong> however, is a variable that <strong>stores the memory address as its value</strong>. </p>
+      <p class="text-center">A pointer variable points to a data type (like <code>int</code> or <code>string</code>) of the same 
+      type, and is created with the <code>*</code> operator. The address of the variable you're working with is assigned to the pointer:</p>
+      
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  string food = &quot;Pizza&quot;;&nbsp; 
+                  <strong>string* ptr = &amp;food;</strong>&nbsp;&nbsp;&nbsp; 
+                  // Output the value of food (Pizza)
+                  cout &lt;&lt; food &lt;&lt; &quot;\n&quot;;
+                  // Output the memory address of food 
+                  cout &lt;&lt; &amp;food &lt;&lt; &quot;\n&quot;;
+                  // Output the memory address of food with the pointer
+                  cout &lt;&lt;ptr &lt;&lt; &quot;\n&quot;;
+                  </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Pointer Dereference</h3>
+      <p class="text-center">we used the pointer variable to get the memory address of a variable 
+        (used together with the <code>&amp;</code> <strong>reference</strong> operator). However, you can also 
+        use the pointer to get the value of the variable, by using the <code>*</code> operator 
+        (the <strong>dereference</strong> operator):</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  string food = &quot;Pizza&quot;;&nbsp; // Variable declaration
+                  <strong>string* ptr =&amp;food;</strong>&nbsp;&nbsp;&nbsp; // Pointer declaration
+                    // Reference: Output the memory address of food with the pointer 
+                    cout &lt;&lt;ptr &lt;&lt; &quot;\n&quot;;
+                    //Dereference: Output the value of food with the pointer (Pizza)
+                    <strong>cout &lt;&lt;*ptr &lt;&lt; &quot;\n&quot;;</strong><br>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}

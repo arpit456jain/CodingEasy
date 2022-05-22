@@ -12,4 +12,53 @@
     <h1 class="text-center display-3">Arrays</h1>
   </div>
 </section>
+<br><br>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Arrays</h3>
+      <p class="text-center">Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each 
+        value.</p>
+        <p class="text-center">To declare an array, define the variable type, specify the name 
+        of the array followed by <strong>square brackets</strong> 
+        and specify the number of elements it should store:</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  string cars[4] = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};<br>
+                  int Num[3] = {10, 20, 30};<br>
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Access the Elements of an Array</h3>
+      <p class="text-center">You access an array element by referring to the index number inside square 
+        brackets <code>[]</code>.</p>
+        <p class="text-center">This statement accesses the value of the <strong>first element</strong> in 
+        <strong>cars</strong>:</p>
+        <p class="text-center"><strong>Note:</strong> Array indexes start with 0: [0] is the first element. [1] is the second 
+          element, etc.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  string cars[4] = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};<br>
+                  cout &lt;&lt; cars[0];// Outputs Volvo<br>
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}
