@@ -1,0 +1,29 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h3 class="text-center border-success border-2 border-bottom rounded-pill p-2 m-2">Result</h3>
+</div>
+
+
+<div class="container">
+      <div class="alert alert-primary" role="alert">
+        <h4>Score: {{score}} out of {{out_of}}</h4>
+      </div>
+      <div class="alert alert-success" role="alert">
+        <h4>Correct: {{correct}}</h4>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        <h4>Wrong: {{wrong}}</h4>
+      </div>
+      <div class="alert alert-info" role="alert">
+        <h4>Percentage: {{percent}}</h4>
+      </div>
+</div>
+
+<div class="container">
+  <button class="btn btn-info"><a href="{% url 'home-quiz' %}" style="text-decoration: none; color:white;">Back to Quiz Page</a></button>
+</div>
+{% endblock content %}
