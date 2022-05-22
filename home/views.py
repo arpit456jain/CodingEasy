@@ -427,8 +427,8 @@ def cpp1(request):
     elif query=="loops":
             return render(request,'home/CPP/Loops/loops.html')
         
-    elif query=="descition-making":
-            return render(request,'home/CPP/descition/descition.html')
+    elif query=="decision-making":
+            return render(request,'home/CPP/decision/decision.html')
     elif query=="functions":
             return render(request,'home/CPP/functions/functions.html')
     elif query=="numbers":

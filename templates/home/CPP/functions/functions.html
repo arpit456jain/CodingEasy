@@ -10,6 +10,56 @@
 <section class="container mt-3">
   <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
     <h1 class="text-center display-3">Functions</h1>
+    <p>A function is a block of code which only runs when it is called.</p>
+<p>You can pass data, known as parameters, into a function.</p>
+<p>Functions are used to perform certain actions, and they are 
+important for reusing code: Define the code once, and use it many times.</p>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Create a Function</h3>
+      <p class="text-center">C++ provides some pre-defined 
+        functions, such as <code >main()</code>, which is used to 
+        execute code. But you can also 
+        create your own functions to perform certain actions. </p>
+        <p class="text-center">To create (often referred to as <em>declare</em>) a function, specify the name of the function, followed by parentheses <strong>()</strong>: </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  void <em>myFunction</em>() {<br>&nbsp; 
+                    // code to be executed<br>}<br>
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Call a Function</h3>
+      <p class="text-center">Declared functions are not executed immediately. They are &quot;saved for later 
+        use&quot;, and will be executed later, when they are called.</p>
+        <p class="text-center">To call a function, write the function's name followed by two parentheses <code>()</code> 
+        and a semicolon <code>;</code></p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  // Create a function<br>void myFunction() {<br>&nbsp; cout &lt;&lt; &quot;I just got executed!&quot;;<br>}<br><br>int main() {<br>&nbsp;<strong>myFunction();</strong> // call the &quot;I just got executed!&quot;<br>
+                </code>
+            </pre>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock content %}
