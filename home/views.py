@@ -129,6 +129,7 @@ def quizPython(request):
             'wrong':wrong,
             'percent':percent,
             'out_of':out_of,
+            'questions':questions,
         })
 
     return render(request, 'quiz/quizPython.html', context)

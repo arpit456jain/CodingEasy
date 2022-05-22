@@ -11,6 +11,7 @@
 <div class="container">
       <div class="alert alert-primary" role="alert">
         <h4>Score: {{score}} out of {{out_of}}</h4>
+        
       </div>
       <div class="alert alert-success" role="alert">
         <h4>Correct: {{correct}}</h4>
@@ -25,5 +26,19 @@
 
 <div class="container">
   <button class="btn btn-info"><a href="{% url 'home-quiz' %}" style="text-decoration: none; color:white;">Back to Quiz Page</a></button>
+</div>
+<br><br>
+<div class="container">
+  <h3 class="text-center border border-2 border-info rounded-pill">Answers</h3>
+{% for question in questions %}
+  <div class="card m-1">
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{question.ques}}</p>
+        <footer class="blockquote-footer">{{question.ans}}</footer>
+      </blockquote>
+    </div>
+  </div>
+{% endfor %}
 </div>
 {% endblock content %}
