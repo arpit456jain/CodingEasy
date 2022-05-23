@@ -126,187 +126,180 @@
 <div class="heading text-center h1">Our Courses</div>
 <br />
 
-<!-- Cards -->
-<div class="container-fluid">
-  <div class="row m-3 g-5">
+  <!-- Cards -->
+  <div class="container-fluid">
+    <div class="row m-3 g-5">
 
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>HTML</h2>
-              <p>HYPER TEXT MARKUP LANGUAGE</p>
-              <a href="/html" class="btn" style="margin-top:230px;">Start Course</a>
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/HTML.png' %}" class="img-fluid" style="width:301px; height:167px"/>
             </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/HTML.png' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>CSS</h2>
-              <p>CASCADING STYLE SHEETS</p>
-              <a href="/css" class="btn" style="margin-top:230px;">Start Course</a>
+            <div class="card-body">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">HYPER TEXT MARKUP LANGUAGE.</p>
+              <a href="/html" class="btn btn-primary">Explore</a>
             </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/CSS.JPG' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
           </div>
+        </div>
       </div>
-    </div>
 
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>Bootstrap</h2>
-              <p>Some quick example text to build</p>
-              <a href="/bootstrap" class="btn" style="margin-top:230px;">Start Course</a>
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/CSS.JPG' %}" class="img-fluid" style="width:301px; height:167px"/>
             </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/Bootstrap.jpg' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">CASCADING STYLE SHEETS</p>
+              <a href="/css" class="btn btn-primary">Explore</a>
+            </div>
           </div>
+        </div>
       </div>
-    </div>
 
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>JavaScript</h2>
-              <p> Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/Bootstrap.jpg' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bootstrap</h5>
+              <p class="card-text">Some quick example text to build</p>
+              <a href="/bootstrap" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/js.png' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">JavaScript</h5>
+              <p class="card-text">Javascript (JS) is a scripting languages.</p>
+              <a href="/js" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/jQuery.png' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">jQuery</h5>
+              <p class="card-text">jQuery is a fast than js.
               </p>
-              <a href="/js" class="btn" style="margin-top:230px;">Start Course</a>
+              <a href="/jQuery" class="btn btn-primary">Explore</a>
             </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/js.png' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
           </div>
+        </div>
       </div>
-    </div>
 
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>jQuery</h2>
-              <p> jQuery is a fast, small, and feature-rich JavaScript library.
-                  It makes things like HTML document traversal and manipulation,
-                  event handling, and animation much simpler.
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/python.JPG' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Simple, high level programming language.</p>
+              <a href="/py" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/cpp.png' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">C++</h5>
+              <p class="card-text">General purpose programming language.</p>
+              <a href="/cpp" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/machine_learning.png' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Machine Learning</h5>
+              <p class="card-text">Type of Artificial Intelligence.</p>
+              <a href="/ml" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/django.png' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Django</h5>
+              <p class="card-text">High Level Python Web Framework.</p>
+              <a href="/django" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/git_github.png' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Git and GitHub</h5>
+              <p class="card-text">Version Control System.</p>
+              <a href="/git" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="maincontainer">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{% static 'img/c_lang.png' %}" class="img-fluid" style="width:301px; height:167px"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">C Language</h5>
+              <p class="card-text">
+                C is a powerful programming language.
               </p>
-              <a href="/jQuery" class="btn" style="margin-top:230px;">Start Course</a>
+              <a href="/c" class="btn btn-primary">Explore</a>
             </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/jQuery.png' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
           </div>
+        </div>
       </div>
     </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>Python</h2>
-              <p>Simple, high level, scripting and object-oriented programming language.</p>
-              <a href="/py" class="btn" style="margin-top:230px;">Start Course</a>
-            </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/python.JPG' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>C++</h2>
-              <p>General purpose, object-oriented, middle-level programming language</p>
-              <a href="/cpp" class="btn" style="margin-top:230px;">Start Course</a>
-            </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/cpp.png' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>Machine Learning</h2>
-              <p>Type of artificial intelligence</p>
-              <a href="/ml" class="btn" style="margin-top:230px;">Start Course</a>
-            </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/machine_learning.png' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>Django</h2>
-              <p>High Level Python Web Framework</p>
-              <a href="/django" class="btn" style="margin-top:230px;">Start Course</a>
-            </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/django.png' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>Git and GitHub</h2>
-              <p>Free and Open source Distributed Version Control System</p>
-              <a href="/git" class="btn" style="margin-top:230px;">Start Course</a>
-            </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/git_github.png' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center d-flex justify-content-center">
-      <div class="maincontainer">
-          <div class="back">
-              <h2>C Language</h2>
-              <p>
-                C is a powerful general-purpose programming language.
-                It can be used to develop software like operating
-                systems, databases, compilers, and so on.
-              </p>
-              <a href="/c" class="btn" style="margin-top:230px;">Start Course</a>
-            </div>
-          <div class="front">
-              <div class="image">
-              <img src="{% static 'img/c_lang.png' %}" style="display:block;width:100%;max-width:304px;" width="304" height="300">
-              </div>
-          </div>
-      </div>
-    </div>
-
+    
   </div>
-
-</div>
 </div>
 
 {% endblock content %}
