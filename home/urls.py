@@ -42,7 +42,13 @@ urlpatterns = [
     path('django1/', views.django1, name='django1'),
     path('git/', views.git, name='git'),
     path('git1/', views.git1, name='git1'),
-    path('course_video/', views.course_video, name='course_video')
+    path('course_video/', views.course_video, name='course_video'),
+        path('course_video/', views.course_video, name='course_video'),
+
+    # Quiz Pages URLs here
+    path('quiz/', views.quizHome, name='home-quiz'),
+    path('quiz/python/', views.quizPython, name='home-quizPython'),
+
 
     # To add url to a new Course
 

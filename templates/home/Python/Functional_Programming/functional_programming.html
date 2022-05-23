@@ -3,39 +3,39 @@
 
 {% block content %}
 <br>
-  <div class="heading text-center display-3">
-    Coding Easy
-  </div> <br>
-  <section class="container mt-3">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-          <h1 class="text-center">Functional Programming</h1>
-          <p class="text-center"><strong>Functional programming</strong> is a style of programming
-            that (as the name suggests) is based around functions.<br>
-            A key part of functional programming is <strong>higher-order functions.</strong><br>
-            Higher-order functions take other functions as arguments, or return them as results.
-        </div>
-  </section>
-  <br><br>
-
-
-  <!-- code and text -->
-
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Exaplnation</h3>
-        <p class="text-center">The function <strong>apply_twice</strong> takes another function as its argument,
-          and calls it twice inside its body.
-        </p>
-
-
+<div class="heading text-center display-3">
+  Coding Easy
+</div> <br>
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+        <h1 class="text-center">Functional Programming</h1>
+        <p class="text-center"><strong>Functional programming</strong> is a style of programming
+          that (as the name suggests) is based around functions.<br>
+          A key part of functional programming is <strong>higher-order functions.</strong><br>
+          Higher-order functions take other functions as arguments, or return them as results.
       </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+</section>
+<br><br>
+
+
+<!-- code and text -->
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Exaplnation</h3>
+      <p class="text-center">The function <strong>apply_twice</strong> takes another function as its argument,
+        and calls it twice inside its body.
+      </p>
+
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   def apply_twice(func, arg):
                       return func(func(arg))
@@ -46,50 +46,50 @@
                   print(apply_twice(add_five, 10))
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
-  <br><br>
+    </div>
+</section>
+<br><br>
 
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Pure Functions</h3>
-        <p class="text-center">Functional programming seeks to use <strong>pure functions.</strong>
-          Pure functions have no side effects, and return a value that depends <strong>only</strong> on their arguments.
-          This is how functions in math work: for example, The cos(x) will, for the same value of x,
-          always return the same result.
-        </p>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Pure Functions</h3>
+      <p class="text-center">Functional programming seeks to use <strong>pure functions.</strong>
+        Pure functions have no side effects, and return a value that depends <strong>only</strong> on their arguments.
+        This is how functions in math work: for example, The cos(x) will, for the same value of x,
+        always return the same result.
+      </p>
 
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   def pure_function(x, y):
                     temp = x + 2*y
                     return temp / (2*x + y)
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
+    </div>
+</section>
 
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Impure function:</h3>
-        <p class="text-center">This function is not pure, because it changed the state of some_list.
-        </p>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Impure function:</h3>
+      <p class="text-center">This function is not pure, because it changed the state of some_list.
+      </p>
 
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   some_list = []
                   
@@ -97,32 +97,34 @@
                     some_list.append(arg)
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
+    </div>
+</section>
 
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Lambdas</h3>
-        <p class="text-center">Creating a function normally (using <strong>def</strong>) assigns it to a variable automatically.
-          This is different from the creation of other objects - such as strings and integers - 
-          which can be created on the fly, without assigning them to a variable.
-          The same is possible with functions, provided that they are created using <strong>lambda</strong> syntax.
-          Functions created this way are known as <strong>anonymous.</strong>
-          This approach is most commonly used when passing a simple function as an argument to another function.<br>
-          Lambda functions get their name from lambda calculus, which is a model of computation invented by Alonzo Church.<br>
-          Lambda functions aren't as powerful as named functions.
-          They can only do things that require a single expression - usually equivalent to a single line of code.<br>
-          Lambda functions can be assigned to variables, and used like normal functions. 
-        </p>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Lambdas</h3>
+      <p class="text-center">Creating a function normally (using <strong>def</strong>) assigns it to a variable
+        automatically.
+        This is different from the creation of other objects - such as strings and integers -
+        which can be created on the fly, without assigning them to a variable.
+        The same is possible with functions, provided that they are created using <strong>lambda</strong> syntax.
+        Functions created this way are known as <strong>anonymous.</strong>
+        This approach is most commonly used when passing a simple function as an argument to another function.<br>
+        Lambda functions get their name from lambda calculus, which is a model of computation invented by Alonzo
+        Church.<br>
+        Lambda functions aren't as powerful as named functions.
+        They can only do things that require a single expression - usually equivalent to a single line of code.<br>
+        Lambda functions can be assigned to variables, and used like normal functions.
+      </p>
 
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   def my_func(f, arg):
                     return f(arg)
@@ -130,9 +132,9 @@
                   my_func(lambda x: 2*x*x, 5)
                 </code>
             </pre>
-        </div>
-        <div class="code">
-          <pre>
+      </div>
+      <div class="code">
+        <pre>
                 <code>
                   #named function
                   def polynomial(x):
@@ -143,34 +145,35 @@
                   print((lambda x: x**2 + 5*x + 4) (-4))
                 </code>
             </pre>
-        </div>
-        <div class="code">
-          <pre>
+      </div>
+      <div class="code">
+        <pre>
                 <code>
                   double = lambda x: x * 2
                   print(double(7))
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
+    </div>
+</section>
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">map</h3>
-        <p class="text-center">The built-in functions <strong>map</strong> and <strong>filter</strong> are very useful higher-order functions
-          that operate on lists (or similar objects called <strong>iterables</strong>).
-          The function <strong>map</strong> takes a function and an iterable as arguments,
-          and returns a new iterable with the function applied to each argument.<br>
-          We could have achieved the same result more easily by using lambda syntax.
-        </p>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">map</h3>
+      <p class="text-center">The built-in functions <strong>map</strong> and <strong>filter</strong> are very useful
+        higher-order functions
+        that operate on lists (or similar objects called <strong>iterables</strong>).
+        The function <strong>map</strong> takes a function and an iterable as arguments,
+        and returns a new iterable with the function applied to each argument.<br>
+        We could have achieved the same result more easily by using lambda syntax.
+      </p>
 
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   def add_five(x):
                       return x + 5
@@ -180,9 +183,9 @@
                   print(result)
                 </code>
             </pre>
-        </div>
-        <div class="code">
-          <pre>
+      </div>
+      <div class="code">
+        <pre>
                 <code>
                   def add_five(x):
                       return x + 5
@@ -192,113 +195,116 @@
                   print(result)
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
+    </div>
+</section>
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">filter</h3>
-        <p class="text-center">The function <strong>filter</strong> filters an iterable
-          by removing items that don't match a predicate (a function that returns a Boolean).<br><br>
-          Like map, the result has to be explicitly converted to a list if you want to print it.
-        </p>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">filter</h3>
+      <p class="text-center">The function <strong>filter</strong> filters an iterable
+        by removing items that don't match a predicate (a function that returns a Boolean).<br><br>
+        Like map, the result has to be explicitly converted to a list if you want to print it.
+      </p>
 
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   nums = [11, 22, 33, 44, 55]
                   res = list(filter(lambda x: x%2==0, nums))
                   print(res)
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
-  
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Generators</h3>
-        <p class="text-center"><strong>Generators</strong> are a type of iterable, like lists or tuples.<br>
-          Unlike lists, they don't allow indexing with arbitrary indices,
-          but they can still be iterated through with for <strong>loops.</strong><br>
-          They can be created using functions and the <strong>yield</strong> statement.<br><br>
-          The <strong>yield</strong> statement is used to define a generator, replacing the return
-          of a function to provide a result to its caller without destroying local variables.<br><br>
-          Due to the fact that they <strong>yield</strong> one item at a time, generators don't have the memory restrictions of lists.
-          In fact, they can be <strong>infinite!</strong><br><br>
-          Finite generators can be converted into lists by passing them as arguments to the <strong>list</strong> function.<br><br>
-          Using <strong>generators</strong> results in improved performance,
-          which is the result of the lazy (on demand) generation of values, which translates
-          to lower memory usage. Furthermore, we do not need to wait until all the elements
-          have been generated before we start to use them.
-        </p>
-        
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+    </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Generators</h3>
+      <p class="text-center"><strong>Generators</strong> are a type of iterable, like lists or tuples.<br>
+        Unlike lists, they don't allow indexing with arbitrary indices,
+        but they can still be iterated through with for <strong>loops.</strong><br>
+        They can be created using functions and the <strong>yield</strong> statement.<br><br>
+        The <strong>yield</strong> statement is used to define a generator, replacing the return
+        of a function to provide a result to its caller without destroying local variables.<br><br>
+        Due to the fact that they <strong>yield</strong> one item at a time, generators don't have the memory
+        restrictions of lists.
+        In fact, they can be <strong>infinite!</strong><br><br>
+        Finite generators can be converted into lists by passing them as arguments to the <strong>list</strong>
+        function.<br><br>
+        Using <strong>generators</strong> results in improved performance,
+        which is the result of the lazy (on demand) generation of values, which translates
+        to lower memory usage. Furthermore, we do not need to wait until all the elements
+        have been generated before we start to use them.
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   def countdown():
-                      i=5
-                      while i > 0:
+                    i=5
+                    while i > 0:
                       yield i
                       i -= 1
 
                   for i in countdown():
-                  print(i)
+                    print(i)
                 </code>
               </pre>
       </div>
       <div class="code">
         <pre>
-          <code>
-            def infinite_sevens():
-            while True:
-            yield 7
-            
-                for i in infinite_sevens():
-                print(i)
-          </code>
+                <code>
+                  def infinite_sevens():
+                    while True:
+                      yield 7
+                  
+                  for i in infinite_sevens():
+                    print(i)
+                </code>
         </pre>
       </div>
       <div class="code">
-          <pre>
-            <code>
-              def numbers(x):
-                  for i in range(x):
-                  if i % 2 == 0:
-                  yield i
-                  
+        <pre>
+                <code>
+                  def numbers(x):
+                      for i in range(x):
+                        if i % 2 == 0:
+                          yield i
+                      
                   print(list(numbers(11)))
-            </code>
+                </code>
           </pre>
       </div>
     </div>
-  </section>
+</section>
 
-  
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Decorators</h3>
-        <p class="text-center"><strong>Decorators</strong> provide a way to modify functions using other functions.<br>
-          This is ideal when you need to extend the functionality of functions that you don't want to modify.<br><br>
-          Python provides support to wrap a function in a decorator by pre-pending the function definition with a decorator name and the @ symbol.
-          If we are defining a function we can "decorate" it with the @ symbol like:
-        </p>
 
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Decorators</h3>
+      <p class="text-center"><strong>Decorators</strong> provide a way to modify functions using other functions.<br>
+        This is ideal when you need to extend the functionality of functions that you don't want to modify.<br><br>
+        Python provides support to wrap a function in a decorator by pre-pending the function definition with a
+        decorator name and the @ symbol.
+        If we are defining a function we can "decorate" it with the @ symbol like:
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   def decor(func):
                     def wrap():
@@ -314,9 +320,9 @@
                   decorated()
                 </code>
             </pre>
-        </div>
-        <div class="code">
-          <pre>
+      </div>
+      <div class="code">
+        <pre>
                 <code>
                   def decor(func):
                       def wrap():
@@ -332,35 +338,36 @@
                   print_text();
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
+    </div>
+</section>
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Recursion</h3>
-        <p class="text-center"><strong>Recursion</strong> is a very important concept in functional programming.<br>
-          The fundamental part of recursion is self-reference - functions calling themselves.
-          It is used to solve problems that can be broken up into easier sub-problems of the same type.<br><br>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Recursion</h3>
+      <p class="text-center"><strong>Recursion</strong> is a very important concept in functional programming.<br>
+        The fundamental part of recursion is self-reference - functions calling themselves.
+        It is used to solve problems that can be broken up into easier sub-problems of the same type.<br><br>
 
-          A classic example of a function that is implemented recursively is the <strong>factorial</strong> function,
-          which finds the product of all positive integers below a specified number.<br>
-          For example, 5! (5 factorial) is 5 * 4 * 3 * 2 * 1 (120). To implement this recursively,
-          notice that 5! = 5 * 4!, 4! = 4 * 3!, 3! = 3 * 2!, and so on. Generally, n! = n * (n-1)!.
-          Furthermore, 1! = 1.<br>
-          This is known as the <strong>base case,</strong> as it can be calculated
-          without performing any more factorials.<br>
-          Below is a recursive implementation of the factorial function.<br><br>
-          Recursion can also be indirect. One function can call a second, which calls the first, which calls the second, and so on.
-          This can occur with any number of functions.
-        </p>
+        A classic example of a function that is implemented recursively is the <strong>factorial</strong> function,
+        which finds the product of all positive integers below a specified number.<br>
+        For example, 5! (5 factorial) is 5 * 4 * 3 * 2 * 1 (120). To implement this recursively,
+        notice that 5! = 5 * 4!, 4! = 4 * 3!, 3! = 3 * 2!, and so on. Generally, n! = n * (n-1)!.
+        Furthermore, 1! = 1.<br>
+        This is known as the <strong>base case,</strong> as it can be calculated
+        without performing any more factorials.<br>
+        Below is a recursive implementation of the factorial function.<br><br>
+        Recursion can also be indirect. One function can call a second, which calls the first, which calls the second,
+        and so on.
+        This can occur with any number of functions.
+      </p>
 
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   def factorial(x):
                       if x == 1:
@@ -371,9 +378,9 @@
                   print(factorial(5))
                 </code>
             </pre>
-        </div>
-        <div class="code">
-          <pre>
+      </div>
+      <div class="code">
+        <pre>
                 <code>
                   def is_even(x):
                       if x == 0:
@@ -389,33 +396,36 @@
                   print(is_even(23))
                 </code>
             </pre>
-        </div>
       </div>
-  </section>
-  
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">itertools</h3>
-        <p class="text-center">The module <strong>itertools</strong> is a standard library that contains several functions that are useful in functional programming.<br>
-          One type of function it produces is infinite iterators.<br>
-          The function <strong>count</strong> counts up infinitely from a value.<br>
-          The function <strong>cycle</strong> infinitely iterates through an iterable (for instance a list or string).<br>
-          The function <strong>repeat</strong> repeats an object, either infinitely or a specific number of times.<br><br>
-          There are many functions in <strong>itertools</strong> that operate on iterables, in a similar way to <strong>map</strong> and <strong>filter.</strong><br>
-          Some examples:<br>
-          <strong>takewhile</strong> - takes items from an iterable while a predicate function remains true;<br>
-          <strong>chain</strong> - combines several iterables into one long one;<br>
-          <strong>accumulate</strong> - returns a running total of values in an iterable.<br><br>
-          There are also several combinatoric functions in <strong>itertool</strong>, such as <strong>product</strong> and <strong>permutation.</strong><br>
-          These are used when you want to accomplish a task with all possible combinations of some items.
-        </p>
+    </div>
+</section>
 
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <h3 class="text-center">Code</h3>
-        <div class="code">
-          <pre>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">itertools</h3>
+      <p class="text-center">The module <strong>itertools</strong> is a standard library that contains several functions
+        that are useful in functional programming.<br>
+        One type of function it produces is infinite iterators.<br>
+        The function <strong>count</strong> counts up infinitely from a value.<br>
+        The function <strong>cycle</strong> infinitely iterates through an iterable (for instance a list or string).<br>
+        The function <strong>repeat</strong> repeats an object, either infinitely or a specific number of times.<br><br>
+        There are many functions in <strong>itertools</strong> that operate on iterables, in a similar way to
+        <strong>map</strong> and <strong>filter.</strong><br>
+        Some examples:<br>
+        <strong>takewhile</strong> - takes items from an iterable while a predicate function remains true;<br>
+        <strong>chain</strong> - combines several iterables into one long one;<br>
+        <strong>accumulate</strong> - returns a running total of values in an iterable.<br><br>
+        There are also several combinatoric functions in <strong>itertool</strong>, such as <strong>product</strong> and
+        <strong>permutation.</strong><br>
+        These are used when you want to accomplish a task with all possible combinations of some items.
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Code</h3>
+      <div class="code">
+        <pre>
                 <code>
                   from itertools import accumulate, takewhile
 
@@ -424,9 +434,9 @@
                   print(list(takewhile(lambda x: x<= 6, nums)))
                 </code>
             </pre>
-        </div>
-        <div class="code">
-          <pre>
+      </div>
+      <div class="code">
+        <pre>
                 <code>
                   from itertools import product, permutations
 
@@ -435,9 +445,9 @@
                   print(list(permutations(letters))) 
                                   </code>
             </pre>
-        </div>
       </div>
-  </section>
-  
-    <br><br>
+    </div>
+</section>
+
+<br><br>
 {% endblock content %}
