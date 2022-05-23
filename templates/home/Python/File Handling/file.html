@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-        <h1 class="text-center">File Handling</h1>
+        <h1 class="text-center">File Handling</h1><br>
         <p>The key function for working with files in Python is the
           <code>open()</code> function.
         </p>
@@ -48,7 +48,7 @@
         <pre>
                 <code>
                   f = open(&quot;demofile.txt&quot;, &quot;r&quot;)
-                  print(f.read())
+                    print(f.read())
                 </code>
             </pre>
       </div>
@@ -72,10 +72,12 @@
         <pre>
                 <code>
                   f = open(&quot;demofile2.txt&quot;, &quot;a&quot;)
-                  f.write(&quot;Now the file has more content!&quot;)
+                    f.write(&quot;Now the file has more content!&quot;)
                   f.close()
+                  
                   #open and read the file after the appending:
-                  f = open(&quot;demofile2.txt&quot;, &quot;r&quot;)print(f.read())
+                  f = open(&quot;demofile2.txt&quot;, &quot;r&quot;)
+                    print(f.read())
                 </code>
             </pre>
       </div>
@@ -97,7 +99,8 @@
       <div class="code">
         <pre>
                 <code>
-                  <p>Remove the file "demofile.txt":</p>
+                  #Remove the file "demofile.txt":
+
                   import os
                   os.remove(&quot;demofile.txt&quot;)
                 </code>

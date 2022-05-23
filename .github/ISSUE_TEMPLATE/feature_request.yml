@@ -10,10 +10,4 @@ body:
       description: Description of the enhancement you propose, also include what you tried and what worked.
     validations:
       required: true
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: Screenshots if applicable
-    validations:
-      required: false
+ 
