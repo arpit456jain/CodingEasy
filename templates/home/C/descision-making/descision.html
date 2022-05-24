@@ -1,25 +1,184 @@
-{% extends 'home/base.html' %}
-{% load static %}
-
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
 
 <section class="container mt-3">
   <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-    <h1 class="text-center display-3">Descition Making</h1>
+    <h1 class="text-center display-3">Descision Making</h1>
   </div>
 </section>
 
-{% endblock content %}
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center">Conditional Statments</h3>
+      <p >C has the following conditional statements:</p>
+      <ul>
+        <li>
+          Use <code>if</code> to specify a block of code to
+          be executed, if a specified condition is true
+        </li>
+        <li>
+          Use <code>else</code> to specify a block of code
+          to be executed, if the same condition is false
+        </li>
+        <li>
+          Use <code>else if</code> to specify a new
+          condition to test, if the first condition is false
+        </li>
+        <li>
+          Use <code>switch</code> to specify many
+          alternative blocks of code to be executed
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
 
-{% block code %}
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">If Statement</h3>
+      <p class="text-center">
+        Use the <code>if</code> statement to specify a block of C code to be executed if a condition is <code>true</code>.
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  if (20 &gt; 18) {
+                    &nbsp; printf(&quot;20 is greater than 18&quot;);
+                  }
+
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Else Statement</h3>
+      <p class="text-center">
+        Use the <code>else if</code> statement to specify a new condition if the first condition is <code>false</code>.
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  int time = 20;
+                  if (time &lt; 18) {
+                    &nbsp; printf(&quot;Good day.&quot;);
+                  } else {
+                    &nbsp; printf(&quot;Good evening.&quot;);
+                  }
+                  // Outputs &quot;Good evening.&quot;
+
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">If Else Statement</h3>
+      <p class="text-center">
+        Use the <code>else if</code> statement to specify a new condition if the first condition is <code>false</code>.
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  int time = 22;
+                  if (time &lt; 10) {
+                    &nbsp; printf(&quot;Good morning.&quot;);
+                  } else if (time &lt; 20) {
+                    &nbsp; 
+                    printf(&quot;Good day.&quot;);
+                  } else {
+                    &nbsp; printf(&quot;Good evening.&quot;);
+                  }
+                    // Outputs &quot;Good evening.&quot;
+
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Switch Statement</h3>
+      <p class="text-center">
+        Instead of writing <strong>many </strong><code>if..else</code> statements, you can use the <code>switch</code> statement.</p>
+<p>The <code>switch</code> statement selects one of many code blocks to be executed
+      </p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  int day = 4;
+                  switch (day) {
+                    &nbsp; case 1:
+                    &nbsp;&nbsp;&nbsp; 
+                    printf(&quot;Monday&quot;);
+                    &nbsp;&nbsp;&nbsp; break;
+                    &nbsp; case 2:
+                    &nbsp;&nbsp;&nbsp; 
+                    printf(&quot;Tuesday&quot;);
+                    &nbsp;&nbsp;&nbsp; break;
+                    &nbsp; case 3:&nbsp;&nbsp;&nbsp; 
+                    printf(&quot;Wednesday&quot;);
+                    &nbsp;&nbsp;&nbsp; break;
+                    &nbsp; case 4:
+                    &nbsp;&nbsp;&nbsp; 
+                    printf(&quot;Thursday&quot;);
+                    &nbsp;&nbsp;&nbsp; break;
+                    &nbsp; case 5:
+                    &nbsp;&nbsp;&nbsp; 
+                    printf(&quot;Friday&quot;);
+                    &nbsp;&nbsp;&nbsp; break;
+                    &nbsp; case 6:
+                    &nbsp;&nbsp;&nbsp; 
+                    printf(&quot;Saturday&quot;);
+                    &nbsp;&nbsp;&nbsp; break;
+                    &nbsp; case 7:
+                    &nbsp;&nbsp;&nbsp; 
+                    printf(&quot;Sunday&quot;);
+                    &nbsp;&nbsp;&nbsp; break;
+                  }
+                  // Outputs &quot;Thursday&quot; (day 4)
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %} {% block code %}
 
 <div class="container">
   <h3 class="text-center">Give it a try &#128187;</h3>
-  <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@nikhil25803/CodinEasyC?lite=true"></iframe>
+  <iframe
+    frameborder="0"
+    width="100%"
+    height="500px"
+    src="https://replit.com/@nikhil25803/CodinEasyC?lite=true"
+  ></iframe>
 </div>
 
 {% endblock code %}
