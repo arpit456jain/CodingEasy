@@ -10,6 +10,69 @@
 <section class="container mt-3">
   <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
     <h1 class="text-center display-3">Encapsulation</h1>
+    <br>
+    <section class="container mt-3">
+      <p>
+         Encapsulation is defined as wrapping up of data and information under a single unit. In Object Oriented Programming, Encapsulation is defined as binding together the data and the functions that manipulates them.
+      </p>
   </div>
 </section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Encapsulation</h3>
+			<p>
+Consider a real life example of encapsulation, in a company there are different sections like the accounts section, finance section, sales section etc. The finance section handles all the financial transactions and keep records of all the data related to finance. Similarly the sales section handles all the sales related activities and keep records of all the sales. Now there may arise a situation when for some reason an official from finance section needs all the data about sales in a particular month. In this case, he is not allowed to directly access the data of sales section. He will first have to contact some other officer in the sales section and then request him to give the particular data. This is what encapsulation is. Here the data of sales section and the employees that can manipulate them are wrapped under a single name “sales section”.Encapsulation also lead to data abstraction or hiding. As using encapsulation also hides the data. In the above example the data of any of the section like sales, finance or accounts is hidden from any other section.
+
+In C++ encapsulation can be implemented using Class and access modifiers.
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //Encapsulation
+                                #include &lt;iostream&gt;
+                                  using namespace std;class Encapsulation
+                                  {
+                                     private:
+                                     // data hidden from outside world
+                                     int x;
+                                     public:
+                                     // function to set value of
+                                     // variable x
+                                     void set(int a)
+                                     {
+                                        x =a;
+                                      }
+                                      // function to return value of
+                                      // variable x
+                                      int get
+                                      {
+                                        return x;
+                                      }
+                                    };
+                                    // main function
+                                    int main()
+                                    {
+                                      // creating object of class
+                                      // Encapsulation
+                                      Encapsulation obj;
+                                      // setting value of x
+                                      obj.set(5);
+                                      // returning value of x
+                                      cout&lt;&lt;obj.get();
+                                      return 0;
+                                    }
+
+                                    //output
+                                    5
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
+</section>
+
 {% endblock content %}

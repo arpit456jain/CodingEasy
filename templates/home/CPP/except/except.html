@@ -1,15 +1,146 @@
-{% extends 'home/base.html' %}
-{% load static %}
-
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
 
 <section class="container mt-3">
-  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-    <h1 class="text-center display-3">Exception Handling</h1>
-  </div>
+	<div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+		<h1 class="text-center display-3">Exception Handling</h1>
+		<section class="container mt-3">
+			<p>
+				Exception handling is a feature in C++ that allows you to handle
+				exceptions.An exception is a problem that arises during the
+				execution of a program. A C++ exception is a response to an
+				exceptional circumstance that arises while a program is running,
+				such as an attempt to divide by zero.
+			</p>
+		</section>
+	</div>
+</section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Exception Handling</h3>
+			<p>
+				An exception is a problem that arises during the execution of a
+				program. A C++ exception is a response to an exceptional
+				circumstance that arises while a program is running, such as an
+				attempt to divide by zero. Exceptions provide a way to transfer
+				control from one part of a program to another. C++ exception
+				handling is built upon three keywords: try, catch, and throw.
+			</p>
+			<ul>
+				<li>
+					try: This keyword is used to indicate the beginning of a
+					block of code that might throw an exception. The try block
+					must be followed by a set of statements that may throw an
+					exception, and a set of statements that handle the
+					exception. The try block must be followed by a set of
+					statements that may throw an exception, and a set of
+					statements that handle the exception.
+				</li>
+				<li>
+					catch: This keyword is used to handle the exception. The
+					catch block must be followed by a set of statements that
+					handle the exception. The catch block must be followed by a
+					set of statements that handle the exception.
+				</li>
+				<li>
+					throw: This keyword is used to throw an exception. The throw
+					keyword must be followed by an expression that evaluates to
+					an exception object. The throw keyword must be followed by
+					an expression that evaluates to an exception object.
+				</li>
+			</ul>
+			Assuming a block will raise an exception, a method catches an
+			exception using a combination of the try and catch keywords. A
+			try/catch block is placed around the code that might generate an
+			exception. Code within a try/catch block is referred to as protected
+			code, and the syntax for using try/catch as follows:
+			<pre>
+      try
+      {
+          // protected code
+      }
+      catch (exception_type exception_name)
+      {
+          // exception handling code
+      }
+      </pre
+			>
+			<br />
+			<br />
+			<h3 class="text-center">Throwing Exceptions</h3>
+			<p>
+				Exceptions can be thrown anywhere within a code block using
+				throw statement. The operand of the throw statement determines a
+				type for the exception and can be any expression and the type of
+				the result of the expression determines the type of exception
+				thrown. Following is an example of throwing an exception when
+				dividing by zero condition occurs :
+			</p>
+			<pre>
+        double division(int a, int b) {
+          if( b == 0 ) {
+            throw "Division by zero condition!";
+          }
+          return (a/b);
+        }
+      </pre
+			>
+			<h3 class="text-center">Catching Exceptions</h3>
+			<p>
+				The catch block following the try block catches any exception.
+				You can specify what type of exception you want to catch and
+				this is determined by the exception declaration that appears in
+				parentheses following the keyword catch.
+			</p>
+			<pre>
+        try {
+          // protected code
+        } catch( ExceptionName e ) {
+          // code to handle ExceptionName exception
+        }
+      </pre
+			>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               // C++ program to illustrate
+                                #include &lt;iostream&gt;
+                                using namespace std;
+
+                                  double division(int a, int b) {
+                                    if( b == 0 ) {
+                                      throw "Division by zero condition!";
+                                    }
+                                    return (a/b);
+                                  }
+
+                                  int main () {
+                                    int x = 50;
+                                    int y = 0;
+                                    double z = 0;
+
+                                    try {
+                                      z = division(x, y);
+                                      cout << z << endl;
+                                    } catch (const char* msg) {
+                                      cerr << msg << endl;
+                                    }
+                                   return 0;
+                                  }
+
+
+                                    //output
+                                    Division by zero condition!
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock content %}
