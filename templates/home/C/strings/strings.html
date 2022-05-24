@@ -13,6 +13,52 @@
   </div>
 </section>
 
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Strings</h3>
+      <p class="text-center">Strings are used for storing text/characters.</p>
+      <p class="text-center">For example, "Hello World" is a string of characters.</p>
+      <p class="text-center">Unlike many other programming languages, C does not have a <strong>String type</strong> 
+      to easily create string variables. However, you can use the <code >char</code> type and create 
+      an array of characters to make a string in C.</p>
+      <p class="text-center">To output the string, you can use the <code>printf()</code> function together with the format specifier  <code>%s</code> to tell C that we are now working with strings</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  char greetings[] = "Hello CodingEasy";
+                  printf("%s", greetings);
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Access Strings</h3>
+      <p class="text-center">Since strings are actually arrays in C, you can access a string by referring to its index number inside square brackets <code>[]</code>.</p>
+      
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                  char greetings[] = &quot;Hello CodingEasy&quot;;
+                  printf(&quot;%c&quot;, greetings[0]);
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}
 
 {% block code %}
