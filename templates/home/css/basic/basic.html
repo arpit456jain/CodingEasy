@@ -59,15 +59,94 @@
   </div>
 </section><br><br>
 
-<section class="container mt-3">
-<div class="d-flex justify-content-center">
-<div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GROsYbXDKjc"
-        title="YouTube video player" frameborder="0" allow="accelerometer;
-        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="heading text-center display-4">Types of syntax:-</h3><br></br>
+      <img class="photo" src="{% static 'img/css_syntax' %}" alt="" srcset=""><br></br>
+      <p>There are three ways by which we can use css in html files
+         and make our webpages more user friendly and interactive:-
+      </p>
+      <ol>
+        <li>Internal CSS  </li>
+        <li>Inline  css</li>
+        <li>External css </li>
+      </ol>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+          <code>
+            &lt;style&gt; 
+              .nav{
+              font-size:30px;
+              color:green;
+
+              }
+            &lt;/style&gt; 
+          </code>
+        </pre>
+      </div>
+      <div class="code">
+        <pre>
+          <code>
+            &lt;center style="height:100px;width:100px;"&gt;  I AM VAIBHAV SRIVASTAVA 
+             &lt;p class="nav"&gt; I AM A WEB DEVELOPER &lt;/p&gt;  &lt;/center&gt; 
+          </code>
+        </pre>
+      </div>
+      <div class="code">
+        <pre>
+          <code>
+            &lt;head&gt; 
+              &lt;link rel=stylesheet href="sample.css"&gt;
+            &lt;/head&gt; 
+          </code>
+        </pre>
+      </div>
+    </div>
   </div>
-</div>
 </section><br><br>
+
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5bF1gnJ1ic0"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7hKM_SCBTUU"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vywkY75N6Uc"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GROsYbXDKjc"
+                    title="YouTube video player" frameborder="0" allow="accelerometer;
+                    autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        
+    </div>
+</section>
 
 {% endblock content %}
