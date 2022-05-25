@@ -10,6 +10,111 @@
 <section class="container mt-3">
   <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
     <h1 class="text-center display-3">Namespaces</h1>
+    <br>
+    <section class="container mt-3">
+      <p>
+       A namespace is designed to overcome this difficulty and is used as additional information to differentiate similar functions, classes, variables etc. with the same name available in different libraries. Using namespace, you can define the context in which names are defined. In essence, a namespace defines a scope.
+      </p>
   </div>
+</section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Defining a namespace</h3>
+			<p>
+A namespace definition begins with the keyword namespace followed by the namespace name as follows :
+<pre>
+  <code>
+    namespace namespace_name {
+      // code declarations
+    }
+  </code>
+</pre>
+To call the namespace-enabled version of either function or variable, prepend (::) the namespace name as follows :
+<br>
+<br>
+name::code; // code could be variable or function.
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //namespace definition
+                                #include &lt;iostream&gt;
+                                  using namespace std;
+                                  // first name space
+                                  namespace first_space {
+                                    void func() {
+                                       cout << "Inside first_space" << endl;
+                                      }
+                                    }
+                                  // second name space
+                                  namespace second_space {
+                                    void func() {
+                                      cout << "Inside second_space" << endl;
+                                    }
+                                  }
+
+                                  int main () {
+                                    // Calls function from first name space.first_space::func();
+
+                                    // Calls function from second name space.second_space::func();
+                                    return 0;
+
+                                  }
+
+                                  //output
+                                  Inside first_space
+                                  Inside second_space
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">The Using directive</h3>
+			<p>
+You can also avoid prepending of namespaces with the using namespace directive. This directive tells the compiler that the subsequent code is making use of names in the specified namespace. The namespace is thus implied for the following code :
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //Example
+                                #include &lt;iostream&gt;
+                                using namespace std;
+                                // first name space
+                                namespace first_space {
+                                  void func() {
+                                    cout << "Inside first_space" << endl;
+                                  }
+                                }
+                                // second name space
+                                namespace second_space {
+                                  void func() {
+                                    cout << "Inside second_space" << endl;
+                                  }
+                                }
+                              using namespace first_space;
+                              int main () {
+                                // This calls function from first name space.func();
+                                return 0;
+                              }
+
+                                  //output
+                                  Inside first_space
+
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock content %}
