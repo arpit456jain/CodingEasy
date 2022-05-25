@@ -1,15 +1,145 @@
-{% extends 'home/base.html' %}
-{% load static %}
-
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
 
 <section class="container mt-3">
   <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
     <h1 class="text-center display-3">Templates</h1>
+    <section class="container mt-3">
+      <p>
+        Templates are the foundation of generic programming, which
+        involves writing code in a way that is independent of any
+        particular type.
+        <br />
+        A template is a blueprint or formula for creating a generic
+        class or a function. The library containers like iterators and
+        algorithms are examples of generic programming and have been
+        developed using template concept.
+        <br />
+        There is a single definition of each container, such as vector,
+        but we can define many different kinds of vectors for example,
+        vector int or vector string.
+      </p>
+    </section>
   </div>
 </section>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Function Templates</h3>
+      <p>The general form of a template function definition is shown here:
+        <br />
+      <div class="code">
+        <pre>
+            <code>
+            template &lt;class type&gt; ret-type func-name(parameter list) {
+              // body of function
+            }
+            </code>
+          </pre>
+      </div>
+      Here, type is a placeholder name for a data type used by the function. This name can be used within the function
+      definition.
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                     //function template
+                      #include &lt;iostream&gt;
+                      using namespace std;
+
+                      template &lt;typename T&gt;
+                      inline T const& Max (T const& a, T const& b) {
+                         return a < b ? b:a;
+                      }
+                      int main () {
+                          int i = 39;
+                          int j = 20;
+                          cout << "Max(i, j): " << Max(i, j) << endl;
+
+                          double f1 = 13.5;
+                          double f2 = 20.7; cout << "Max(f1, f2): " << Max(f1, f2) << endl;
+
+                          string s1 = "Hello";
+                          string s2 = "World";
+                          cout << "Max(s1, s2): " << Max(s1, s2) << endl; return 0;
+                          }
+
+                          //output
+                          Max(i, j): 39
+                          Max(f1, f2): 20.7
+                          Max(s1, s2): World
+
+                               </code>
+                           </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Class Templates</h3>
+      <p>Just as we can define function templates, we can also define class templates. The general form of a generic
+        class declaration is shown here
+        <br />
+      <div class="code">
+        <pre>
+            <code>
+            template &lt;class type&gt; class class-name {
+              // class definition
+            }
+            </code>
+          </pre>
+      </div>
+      Here, type is the placeholder type name, which will be specified when a class is instantiated. You can define more
+      than one generic data type by using a comma-separated list.
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                      //class template
+                      #include &lt;iostream&gt;
+                      using namespace std;
+
+                      template &lt;class &gt;
+                        class Number {
+                          private:
+                          // Variable of type T
+                          T num;
+
+                          public:
+                          Number(T n) : num(n) {}   // constructor
+                          T getNum() {
+                            return num;
+                          }
+                        };
+                        int main() {
+                          // create object with int type
+                          Number&lt;int&gt; numberInt(7);
+                          // create object with double type
+                          Number<double> numberDouble(7.7);
+                          cout << "int Number = " << numberInt.getNum() << endl;cout << "double Number = " << numberDouble.getNum() << endl;return 0;
+                        }
+
+                        //output
+                        int Number = 7
+                        double Number = 7.7
+
+                               </code>
+                           </pre>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock content %}

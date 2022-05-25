@@ -1,15 +1,121 @@
-{% extends 'home/base.html' %}
-{% load static %}
-
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
 
 <section class="container mt-3">
-  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-    <h1 class="text-center display-3">Class &amp; Objects</h1>
-  </div>
+	<div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+		<h1 class="text-center display-3">Class &amp; Objects</h1>
+		<p>C++ is an object-oriented programming language.</p>
+		<p>
+			Classes are used to group related variables and functions together.
+		</p>
+		<p>
+			Everything in C++ is associated with classes and objects, along with
+			its attributes and methods. For example: in real life, a car is an
+			object. The car has attributes, such as weight and color, and
+			methods, such as drive and brake.
+		</p>
+		<p>Objects are instances of a class.</p>
+		<p>
+			A class is a user-defined data type that we can use in our program,
+			and it works as an object constructor, or a "blueprint" for creating
+			objects.
+		</p>
+	</div>
+</section>
+
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Create a Class</h3>
+			<p class="text-center">To create a class, use the class keyword:</p>
+			<p class="text-center">
+				You can give any name of your choice to the class as this is a
+				user defined data type
+			</p>
+			<p class="text-center">
+				<code
+					>class <em>className</em> {<br />&nbsp; // class body<br />}</code
+				>
+			</p>
+			<p class="text-center">
+				Example explained -->The class keyword is used to create a class
+				called MyClass. The public keyword is an access specifier, which
+				specifies that members (attributes and methods) of the class are
+				accessible from outside the class. You will learn more about
+				access specifiers later. Inside the class, there is an integer
+				variable myNum and a string variable myString. When variables
+				are declared within a class, they are called attributes. At
+				last, end the class definition with a semicolon ;.
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+              <code>
+                // Create a class named Person
+                class Person {
+                  // Attributes
+                  string name;
+                  int age;
+                  // Methods
+                  void setName(string name) {
+                    this->name = name;
+                  }
+                  void setAge(int age) {
+                    this->age = age;
+                  }
+                  string getName() {
+                    return name;
+                  }
+                  int getAge() {
+                    return age;
+                  }
+                }
+              </code>
+        </pre>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Create an Object</h3>
+			<p class="text-center">
+				In C++, an object is created from a class. We have already
+				created the class named Person, so now we can use this to create
+				objects.
+			</p>
+			<p class="text-center">
+				To create an object of Person, specify the class name, followed
+				by the object name. To access the class attributes (setName
+				,setAge,getName and getAge), use the dot syntax (.) on the
+				object:
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+              <code>
+                // Create an object of Person
+                Person person1;
+                // Set the name of the person
+                person1.setName("John");
+                // Set the age of the person
+                person1.setAge(20);
+                // Get the name of the person
+                string name = person1.getName();
+                // Get the age of the person
+                int age = person1.getAge();
+              </code>
+        </pre>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock content %}

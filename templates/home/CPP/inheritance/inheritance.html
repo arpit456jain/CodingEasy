@@ -1,15 +1,280 @@
-{% extends 'home/base.html' %}
-{% load static %}
-
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
 
 <section class="container mt-3">
-  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-    <h1 class="text-center display-3">Inheritance</h1>
-  </div>
+	<div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+		<h1 class="text-center display-3">Inheritance</h1>
+		<p>
+			In C++, it is possible to inherit attributes and methods from one
+			class to another. We group the "inheritance concept" into two
+			categories:
+		</p>
+		<ul>
+			<li>
+				<p>
+					<strong>Derived class</strong>
+				</p>
+				<p>A class that inherits from another class.</p>
+			</li>
+			<li>
+				<p>
+					<strong>Base class</strong>
+				</p>
+				<p>A class that is inherited by another class.</p>
+			</li>
+		</ul>
+		<p>To inherit from a class, use the : symbol.</p>
+	</div>
 </section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Implementation of inheritance</h3>
+			<p>
+				For creating a sub-class that is inherited from the base class
+				we have to follow the below syntax.
+			</p>
+			<div class="code">
+				<pre>
+          <code>
+            class <em>SubClass</em> : access specifier <em>BaseClass</em> {<br>&nbsp; // code to be executed<br>}<br>
+          </code>
+        </pre>
+			</div>
+			<p>
+				Here, subclass_name is the name of the subclass, access_mode is
+				the mode in which you want to inherit the subclass for example
+				public, private, etc. and base_class_name is the name of the
+				base class from which you want to inherit the subclass. Note: A
+				derived class doesn’t inherit access to private data members.
+				However, it does inherit a full parent object, which contains
+				any private members which that class declares.
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //single inheritance example
+                                class A {
+                                public:
+                                void Car() {
+                                cout &lt;&lt; "I am  Car\n";
+                                }
+                                };
+                                class B : public A {
+                                public:
+                                void Bus() {
+                                cout &lt;&lt; "I am Bus\n";
+                                }
+                                };
+                                int main() {
+                                B b;
+                                b.Car();
+                                return 0;
+                                }
+
+                                //output
+                                I am  Car
+
+
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Multiple inheritance</h3>
+			<p>
+				Multiple Inheritance is a feature of C++ where a class can
+				inherit from more than one class. i.e one subclass is inherited
+				from more than one base class.
+			</p>
+			<img
+				src="https://media.geeksforgeeks.org/wp-content/uploads/multiple-inheritance.png"
+				width="600px"
+			/>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //multiple inheritance example
+                                class A {
+                                public:
+                                void Car() {
+                                cout &lt;&lt; "I am  Car\n";
+                                }
+                                };
+                                class B : public A {
+                                public:
+                                void Bus() {
+                                cout &lt;&lt; "I am Bus\n";
+                                }
+                                };
+                                class C : public A {
+                                public:
+                                void Bike() {
+                                cout &lt;&lt; "I am Bike\n";
+                                }
+                                };
+                                class D : public B, public C {
+                                public:
+                                void Car() {
+                                cout &lt;&lt; "I am Car\n";
+                                }
+                                };
+                                int main() {
+                                D d;
+                                d.Car();
+                                d.Bus();
+                                d.Bike();
+                                return 0;
+                                }
+
+                                //output
+                                I am Car
+                                I am Bus
+                                I am Bike
+
+
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Multilevel inheritance</h3>
+			<p>
+				In this type of inheritance, a derived class is created from
+				another derived class.
+			</p>
+			<img
+				src="https://media.geeksforgeeks.org/wp-content/uploads/multilevel-inheritance.png"
+				width="400px"
+			/>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //multilevel inheritance
+                                class A {
+                                public:
+                                void Car() {
+                                cout &lt;&lt; "I am  Car\n";
+                                }
+                                };
+                                class B : public A {
+                                public:
+                                void Bus() {
+                                cout &lt;&lt; "I am Bus\n";
+                                }
+                                };
+                                class C : public B {
+                                public:
+                                void Bike() {
+                                cout &lt;&lt; "I am Bike\n";
+                                }
+                                };
+                                class D : public C {
+                                public:
+                                void Car() {
+                                cout &lt;&lt; "I am Car\n";
+                                }
+                                };
+                                int main() {
+                                D d;
+                                d.Car();
+                                d.Bus();
+                                d.Bike();
+                                return 0;
+                                }
+
+                                //output
+                                I am Car
+                                I am Bus
+                                I am Bike
+
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Hierarchical inheritance</h3>
+			<p>
+				In this type of inheritance, more than one subclass is inherited
+				from a single base class. i.e. more than one derived class is
+				created from a single base class.
+			</p>
+			<img
+				src="https://media.geeksforgeeks.org/wp-content/uploads/hierarchical-inheritance.png"
+				width="500px"
+			/>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //hierarchical inheritance
+                                class A {
+                                public:
+                                void Car() {
+                                cout &lt;&lt; "I am  Car\n";
+                                }
+                                };
+                                class B : public A {
+                                public:
+                                void Bus() {
+                                cout &lt;&lt; "I am Bus\n";
+                                }
+                                };
+                                class C : public A {
+                                public:
+                                void Bike() {
+                                cout &lt;&lt; "I am Bike\n";
+                                }
+                                };
+
+                                int main() {
+                                B b;
+                                b.Car();
+                                b.Bus();
+                                C c;
+                                c.Car();
+                                c.Bike();
+
+                                //output
+                                I am  Car
+                                I am Bus
+                                I am  Car
+                                I am Bike
+
+
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
+</section>
+
+<br /><br />
 {% endblock content %}
