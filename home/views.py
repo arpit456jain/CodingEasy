@@ -10,7 +10,7 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django. views. decorators. csrf import csrf_exempt
 from django.contrib import messages
-from requests import request
+# from requests import request
 from .forms import ContactForm, CreationUserForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.models import User,Group, auth
 from .decorators import unauthenticated_user
@@ -203,7 +203,6 @@ def profile(request):
     context = {
         'u_form': u_form,
         'p_form': p_form,
-        'title': 'Profile'
     }
     return render(request, 'users/profile.html', context)
 
