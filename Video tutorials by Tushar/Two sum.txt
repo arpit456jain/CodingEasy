@@ -1,0 +1,31 @@
+Question Link:
+https://leetcode.com/problems/two-sum/
+
+Code:
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int n = nums.length;
+        int ar[] = new int[2];
+        int sum = 0;
+        boolean flag = false;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                sum = nums[i] + nums[j];
+                if((sum==target)&&(i!=j)){
+                    ar[0] = i;
+                    ar[1] = j;
+                    flag = true;
+                    break;
+                }
+            }
+            if(flag){
+                break;
+            }
+        }
+        return ar;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1EvrNKz4HpDUIjk87hJk9u_61anFdkjbe/view?usp=drivesdk
