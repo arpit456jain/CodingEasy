@@ -23,33 +23,80 @@
             <p>The carousel is a slideshow for cycling through a series of content<br>It works with a series of
                 images, text, or custom markup. It also includes support for previous/next controls and indicators.
             </p>
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'img/1.jpg' %}" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block"></div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/3.jpg' %}" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block"></div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/4.jpg' %}" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block"></div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
         </div>
         <div class="col-md-6 col-sm-12">
             <h3 class="text-center">Example</h3>
             <div class="code">
                 <pre>
                 <code>
-                    &lt;!-- Carousel --&gt;<br>&lt;div id=&quot;demo&quot; class=&quot;carousel slide&quot; 
-                    data-bs-ride=&quot;carousel&quot;&gt;<br><br>&nbsp; &lt;!-- Indicators/dots --&gt;<br>&nbsp; &lt;div 
-                    class=&quot;carousel-indicators&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;button type=&quot;button&quot; 
-                    data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp; 
-                    &lt;button type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;1&quot;&gt;&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp; 
-                    &lt;button type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;2&quot;&gt;&lt;/button&gt;<br>&nbsp; 
-                    &lt;/div&gt;<br><br>&nbsp; &lt;!-- The slideshow/carousel --&gt;<br>&nbsp; &lt;div 
-                    class=&quot;carousel-inner&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;carousel-item 
-                    active&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;la.jpg&quot; alt=&quot;Los Angeles&quot; 
-                    class=&quot;d-block w-100&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div 
-                    class=&quot;carousel-item&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;img 
-                    src=&quot;chicago.jpg&quot; alt=&quot;Chicago&quot; class=&quot;d-block w-100&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
-                    &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;carousel-item&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    &lt;img src=&quot;ny.jpg&quot; alt=&quot;New York&quot; class=&quot;d-block w-100&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
-                    &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;!-- Left and right controls/icons --&gt;<br>&nbsp; 
-                    &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#demo&quot; 
-                    data-bs-slide=&quot;prev&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;span 
-                    class=&quot;carousel-control-prev-icon&quot;&gt;&lt;/span&gt;<br>&nbsp; &lt;/button&gt;<br>&nbsp; 
-                    &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#demo&quot; 
-                    data-bs-slide=&quot;next&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;span 
-                    class=&quot;carousel-control-next-icon&quot;&gt;&lt;/span&gt;<br>&nbsp; &lt;/button&gt;
+                    &lt;!-- Carousel --&gt;
+                    &lt;div id=&quot;demo&quot; class=&quot;carousel slide&quot; data-bs-ride=&quot;carousel&quot;&gt;
+
+                    &nbsp; &lt;!-- Indicators/dots --&gt;
+                    &lt;div class=&quot;carousel-indicators&quot;&gt;
+                    &nbsp;&nbsp;&nbsp; &lt;button type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/button&gt;
+                    &nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;1&quot;&gt;&lt;/button&gt; 
+                    &nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide-to=&quot;2&quot;&gt;&lt;/button&gt;&nbsp; 
+                    &lt;/div&gt;
+
+                    &lt;!-- The slideshow/carousel --&gt;
+                    &lt;div class=&quot;carousel-inner&quot;&gt;
+                    &nbsp;&nbsp;&nbsp; &lt;div class=&quot;carousel-item active&quot;&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;la.jpg&quot; alt=&quot;Los Angeles&quot; class=&quot;d-block w-100&quot;&gt;
+                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;
+                    &nbsp;&nbsp;&nbsp; &lt;div class=&quot;carousel-item&quot;&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;chicago.jpg&quot; alt=&quot;Chicago&quot; class=&quot;d-block w-100&quot;&gt; 
+                    &nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                    &nbsp;&nbsp;&nbsp; &lt;div class=&quot;carousel-item&quot;&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;ny.jpg&quot; alt=&quot;New York&quot; class=&quot;d-block w-100&quot;&gt;&nbsp;&nbsp;&nbsp; 
+                    &nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                    &nbsp; &lt;/div&gt;
+
+                    &nbsp; &lt;!-- Left and right controls/icons --&gt;
+                    &nbsp; 
+                    &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide=&quot;prev&quot;&gt;
+                    &nbsp;&nbsp;&nbsp; &lt;span class=&quot;carousel-control-prev-icon&quot;&gt;&lt;/span&gt;
+                    &nbsp; &lt;/button&gt;
+                    &nbsp; 
+                    &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#demo&quot; data-bs-slide=&quot;next&quot;&gt;
+                    &nbsp;&nbsp;&nbsp; &lt;span class=&quot;carousel-control-next-icon&quot;&gt;&lt;/span&gt;
+                    &nbsp; &lt;/button&gt;
                 </code>
             </pre>
             </div>

@@ -21,27 +21,67 @@
         <div class="col-md-6 col-sm-12">
             <h3 class="text-center">Bootstrap Modal</h3>
             <p>The Modal component is a dialog box/popup window that is displayed on top of the current
-                page </p>
+                page </p><br>
+
+                        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>   
         </div>
         <div class="col-md-6 col-sm-12">
             <h3 class="text-center">Example</h3>
             <div class="code">
                 <pre>
                 <code>
-                    &lt;!-- Button to Open the Modal --&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; 
-                    data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#myModal&quot;&gt;<br>&nbsp; Open modal<br>&lt;/button&gt;<br>
-                    <br>&lt;!-- The Modal --&gt;<br>&lt;div class=&quot;modal&quot; id=&quot;myModal&quot;&gt;<br>&nbsp; &lt;div class=&quot;modal-dialog&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
-                    &lt;div class=&quot;modal-content&quot;&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- Modal 
-                    Header --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;modal-header&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    &lt;h4 class=&quot;modal-title&quot;&gt;Modal Heading&lt;/h4&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot;&gt;&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    &lt;/div&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- Modal body --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    &lt;div class=&quot;modal-body&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modal 
-                    body..<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    &lt;!-- Modal footer --&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div 
-                    class=&quot;modal-footer&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button 
-                    type=&quot;button&quot; class=&quot;btn btn-danger&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    &lt;/div&gt;<br><br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+                    &lt;!-- Button to Open the Modal --&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#myModal&quot;&gt;&nbsp; Open modal&lt;/button&gt;
+                    
+                    &lt;!-- The Modal --&gt;
+
+                    &lt;div class=&quot;modal&quot; id=&quot;myModal&quot;&gt;
+                    &nbsp; &lt;div class=&quot;modal-dialog&quot;&gt;
+                    &nbsp;&nbsp;&nbsp;&lt;div class=&quot;modal-content&quot;&gt;
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- Modal    Header --&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;modal-header&quot;&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4 class=&quot;modal-title&quot;&gt;Modal Heading&lt;/h4&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot;&gt;&lt;/button&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Modal body --&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;modal-body&quot;&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modal    body..
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Modal footer --&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div   class=&quot;modal-footer&quot;&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button    type=&quot;button&quot; class=&quot;btn btn-danger&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+
+                    &nbsp;&nbsp;&nbsp; &lt;/div&gt;
+                    &nbsp; &lt;/div&gt;
+                    &lt;/div&gt;
                 </code>
             </pre>
             </div>

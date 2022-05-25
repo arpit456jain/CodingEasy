@@ -2,7 +2,120 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .btn-primary{
+        background-color: #007bff !important;
+    }
+    .btn-outline-primary{
+        background-color: transparent !important;
+        color: #007bff !important;
+        border-color: #007bff !important;
+    }
+    .btn-outline-primary:hover{
+        background-color: #007bff !important;
+        color: white !important;
+        border-color: #007bff !important;
+    }
+    .btn-secondary{
+        background-color: #6c757d !important;
+    }
+    .btn-outline-secondary{
+        background-color: transparent !important;
+        color: #6c757d !important;
+        border-color: #6c757d !important;
+    }
+    .btn-outline-secondary:hover{
+        background-color: #6c757d !important;
+        color: white !important;
+        border-color: #6c757d !important;
+    }
+    .btn-success{
+        background-color: #28a745 !important;
+    }
+    .btn-outline-success{
+        background-color: transparent !important;
+        color: #28a745 !important;
+        border-color: #28a745 !important;
+    }
+    .btn-outline-success:hover{
+        background-color: #28a745 !important;
+        color: white !important;
+        border-color: #28a745 !important;
+    }
+    .btn-danger{
+        background-color: #dc3545 !important;
+    }
+    .btn-outline-danger{
+        background-color: transparent !important;
+        color: #dc3545 !important;
+        border-color: #dc3545 !important;
+    }
+    .btn-outline-danger:hover{
+        background-color: #dc3545 !important;
+        color: white !important;
+        border-color: #dc3545 !important;
+    }
+    .btn-warning{
+        background-color: #ffc107 !important;
+    }
+    .btn-outline-warning{
+        background-color: transparent !important;
+        color: #ffc107 !important;
+        border-color: #ffc107 !important;
+    }
+    .btn-outline-warning:hover{
+        background-color: #ffc107 !important;
+        color: white !important;
+        border-color: #ffc107 !important;
+    }
+    .btn-info{
+        background-color: #17a2b8 !important;
+    }
+    .btn-outline-info{
+        background-color: transparent !important;
+        color: #17a2b8 !important;
+        border-color: #17a2b8 !important;
+    }
+    .btn-outline-info:hover{
+        background-color: #17a2b8 !important;
+        color: white !important;
+        border-color: #17a2b8 !important;
+    }
+    .btn-dark{
+        background-color: #343a40 !important;
+    }
+    .btn-outline-dark{
+        background-color: transparent !important;
+        color: #343a40 !important;
+        border-color: #343a40 !important;
+    }
+    .btn-outline-dark:hover{
+        background-color: #343a40 !important;
+        color: white !important;
+        border-color: #343a40 !important;
+    }
+    .btn-light{
+        background-color: #f8f9fa !important;
+        color: black !important;
+    }
+    .btn-outline-light{
+        background-color: transparent !important;
+        color: #f8f9fa !important;
+        border-color: #f8f9fa !important;
+    }
+    .btn-outline-light:hover{
+        background-color: #f8f9fa !important;
+        color: black !important;
+        border-color: #f8f9fa !important;
+    }
+    .btn-link{
+        background-color: transparent !important;
+        color: #007bff !important;
+        font-weight: 400 !important;
+    }
 
+
+</style>
 <div class="heading text-center display-3">
     CodingEasy
 </div> <br>
@@ -24,7 +137,7 @@
             <h3 class="text-center">Button Styles</h3>
 
             <p class="text-center">Bootstrap 5 provides different styles of buttons:<br><br>
-                <button type="button" class="btn">Basic</button>
+                <button type="button" class="btn" style="color: #333 !important; background-color:buttonface !important">Basic</button>
                 <button type="button" class="btn btn-primary">Primary</button>
                 <button type="button" class="btn btn-secondary">Secondary</button>
                 <button type="button" class="btn btn-success">Success</button>
@@ -42,9 +155,16 @@
             <div class="code">
                 <pre>
             <code>
-                &lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Basic&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;<br>
-                &lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;<br>&lt;button 
-                type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Basic&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
                 </code>
         </pre>
             </div>
@@ -75,9 +195,16 @@
             <div class="code">
                 <pre>
             <code>
-                &lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Basic&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;<br>
-                &lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;<br>&lt;button 
-                type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light&lt;/button&gt;<br>&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Basic&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
             </code>
         </pre>
             </div>
