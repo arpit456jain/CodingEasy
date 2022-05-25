@@ -10,6 +10,82 @@
 <section class="container mt-3">
   <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
     <h1 class="text-center display-3">Dynamic Memory</h1>
+    <br>
+    <section class="container mt-3">
+      <p>
+       Dynamic memory allocation in C/C++ refers to performing memory allocation manually by a programmer. Dynamically allocated memory is allocated on Heap and non-static and local variables get memory allocated on Stack .
   </div>
+</section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Dynamic memory allocation</h3>
+			<p>
+Memory in your C++ program is divided into two parts :
+<ul>
+  <li>
+The stack --> All variables declared inside the function will take up memory from the stack.
+  </li>
+  <li>
+The heap --> This is unused memory of the program and can be used to allocate the memory dynamically when program runs.
+</li>
+</ul>
+You can allocate memory at run time within the heap for the variable of a given type using a special operator in C++ which returns the address of the space allocated. This operator is called new operator.
+
+If you are not in need of dynamically allocated memory anymore, you can use delete operator, which de-allocates memory that was previously allocated by new operator.
+			</p>
+      <h4 class="text-center">new and delete Operators</h4>
+      There is following generic syntax to use new operator to allocate memory dynamically for any data-type.
+      <br>
+      <br>
+      new data-type;
+      <br>
+      <br>
+      Here, data-type could be any built-in data type including an array or any user defined data types include class or structure. Let us start with built-in data types. For example we can define a pointer to type double and then request that the memory be allocated at execution time. We can do this using the new operator with the following statements
+<br>
+<br>
+      double* pvalue = NULL; // Pointer initialized with null
+      <br>
+      pvalue = new double; // Allocate memory for the pointer
+      <br>
+      <br>
+      At any point, when you feel a variable that has been dynamically allocated is not anymore required, you can free up the memory that it occupies in the free store with the delete operator as follows :
+      <br>
+      <br>
+      delete pvalue; // Release memory pointed to by pvalue
+
+
+
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               // C++ program to demonstrate
+                                #include &lt;iostream&gt;
+                                using namespace std;
+
+                                int main () {
+                                    double* pvalue  = NULL; // Pointer initialized with null
+
+                                    pvalue  = new double;   // Request memory for the variable
+
+                                    *pvalue = 29494.99;     // Store value at allocated address
+
+                                    cout << "Value of pvalue : " << *pvalue << endl;
+
+
+                                    delete pvalue;         // free up the memory.return 0;
+
+                                    }
+
+                                    //output
+                                    Value of pvalue : 29495
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock content %}
