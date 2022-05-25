@@ -1,15 +1,87 @@
-{% extends 'home/base.html' %}
-{% load static %}
-
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
 
 <section class="container mt-3">
-  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-    <h1 class="text-center display-3">Abstraction</h1>
-  </div>
+	<div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+		<h1 class="text-center display-3">Abstraction</h1>
+		<section class="container mt-3">
+			<p>
+				Abstraction means displaying only essential information and
+				hiding the details. Data abstraction refers to providing only
+				essential information about the data to the outside world,
+				hiding the background details or implementation.
+			</p>
+		</section>
+	</div>
 </section>
+
+</section>
+<p class="text-center display-6">
+<h3><b><i> Abstraction using Classes:</i></b></h3>
+We can implement Abstraction in C++ using classes. Class helps us to group data members and member functions using available access specifiers. A Class can decide which data member will be visible to outside world and which is not.
+</p>
+<br>
+<br>
+<p class="text-center display-6">
+<h3><b><i> Abstraction in Header files: </i></b></h3>
+One more type of abstraction in C++ can be header files. For example, consider the pow() method present in math.h header file. Whenever we need to calculate power of a number, we simply call the function pow() present in the math.h header file and pass the numbers as arguments without knowing the underlying algorithm according to which the function is actually calculating power of numbers.
+</p>
+<br>
+<br>
+<p class="text-center display-6">
+<h3><b><i> Abstraction using access specifiers </i></b></h3>
+Access specifiers are the main pillar of implementing abstraction in C++. We can use access specifiers to enforce restrictions on class members. For example:
+<ul>
+<li>Private members can be accessed only by the class members.</li>
+<li>Protected members can be accessed only by the class members and derived classes.</li>
+<li>Public members can be accessed by anyone.</li>
+</ul>
+We can easily implement abstraction using the above two features provided by access specifiers.
+</p>
+<h4 class="text-left">Example</h4></i>
+<div class="code pl-5">
+  <pre>
+<code >
+<>
+#include &lt;iostream&gt;
+using namespace std;
+
+class implementAbstraction
+{
+    private:
+        int a, b;
+
+    public:
+
+        // method to set values of
+        // private members
+        void set(int x, int y)
+        {
+            a = x;
+            b = y;
+        }
+
+        void display()
+        {
+            cout<<"a = " << a << endl;
+            cout<<"b = " << b << endl;
+        }
+};
+
+int main()
+{
+    implementAbstraction obj;
+    obj.set(10, 20);
+    obj.display();
+    return 0;
+}
+
+//output
+a = 10
+b = 20
+</code>
+</pre>
+</div>
 {% endblock content %}

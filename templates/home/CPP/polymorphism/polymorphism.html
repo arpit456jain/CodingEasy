@@ -1,15 +1,98 @@
-{% extends 'home/base.html' %}
-{% load static %}
-
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
 
 <section class="container mt-3">
-  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-    <h1 class="text-center display-3">Polymorphism</h1>
-  </div>
+	<div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+		<h1 class="text-center display-3">Polymorphism</h1>
+    <p class="text-center">The word polymorphism means having many forms.</p>
+	</div>
+
 </section>
+<p class="text-center display-6">
+<h3><b><i> Polymorphism </i></b></h3>
+In simple words, we can define polymorphism as the ability of a message to be displayed in more than one form. A real-life example of polymorphism, a person at the same time can have different characteristics. Like a man at the same time is a father, a husband, an employee. So the same person posses different behavior in different situations. This is called polymorphism. Polymorphism is considered as one of the important features of Object Oriented Programming.
+In C++ polymorphism is mainly divided into two types:
+<ul>
+<li>Compile time Polymorphism</li>
+<li>Runtime Polymorphism</li>
+</ul>
+</p>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200703160531/Polymorphism-in-CPP.png" style="margin: auto; display:block;">
+<br>
+<br>
+<p class="text-center display-6">
+<h3><b><i> 1.Compile time Polymorphism </i></b></h3>
+This type of polymorphism is achieved by function overloading or operator overloading.
+<ul>
+  <li>
+    Function Overloading: When there are multiple functions with same name but different parameters then these functions are said to be overloaded. Functions can be overloaded by change in number of arguments or/and change in type of arguments.
+  </li>
+  <li>
+    Operator Overloading: When there are multiple operators with same name but different parameters then these operators are said to be overloaded. Operators can be overloaded by change in number of arguments or/and change in type of arguments.
+  </li>
+</ul>
+</p>
+<br>
+<br>
+<p class="text-center display-6">
+<h3><b><i> 1.Runtime Polymorphism</i></b></h3>
+This type of polymorphism is achieved by virtual functions.
+<ul>
+  <li>
+Function overriding on the other hand occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be overridden.
+  </li>
+  <li>
+    Virtual functions are functions that can be redefined in derived classes.
+  </li>
+</ul>
+</p>
+<i><h4 class="text-left">Example</h4></i>
+<div class="code pl-5">
+  <pre>
+<code >
+<>
+#include &lt;iostream&gt;
+using namespace std;
+
+class base
+{
+public:
+    virtual void print ()
+    { cout<< "print base class" << endl; }
+
+    void show ()
+    { cout<< "show base class" << endl; }
+};
+
+class derived:public base
+{
+public:
+    void print () //print () is already virtual function in derived class, we could also declared as virtual void print () explicitly
+    { cout<< "print derived class" << endl; }
+
+    void show ()
+    { cout<< "show derived class" << endl; }
+};
+
+//main function
+int main()
+{
+    base *bptr;
+    derived d;
+    bptr = &d;
+
+    //virtual function, binded at runtime (Runtime polymorphism)
+    bptr->print();
+
+    // Non-virtual function, binded at compile time
+    bptr->show();
+
+    return 0;
+}
+
+</code>
+</pre>
+</div>
 {% endblock content %}

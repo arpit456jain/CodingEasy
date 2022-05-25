@@ -1,15 +1,113 @@
-{% extends 'home/base.html' %}
-{% load static %}
-
-{% block content %}
-<br>
-<div class="heading text-center display-3">
-  CodingEasy
-</div> <br>
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<br />
+<div class="heading text-center display-3">CodingEasy</div>
+<br />
 
 <section class="container mt-3">
-  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
-    <h1 class="text-center display-3">Overloading</h1>
-  </div>
+	<div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+		<h1 class="text-center display-3">Overloading</h1>
+		<br />
+		<section class="container mt-3">
+			<p>
+				Overloading is a feature in C++ that allows you to define
+				multiple functions with the same name or to overload operators.
+			</p>
+		</section>
+	</div>
+</section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Function Overloading</h3>
+			<p>
+				Function overloading is a feature of object oriented programming
+				where two or more functions can have the same name but different
+				parameters. When a function name is overloaded with different
+				jobs it is called Function Overloading. In Function Overloading
+				“Function” name should be the same and the arguments should be
+				different. Function overloading can be considered as an example
+				of polymorphism feature in C++. Following is a simple C++
+				example to demonstrate function overloading.
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //function overloading
+                                #include &lt;iostream&gt;
+                                  using namespace std;
+                                  void print(int i)
+                                  {
+                                    cout << " Here is int " << i << endl;}
+                                  void print(double  f) {
+                                    cout << " Here is float " << f << endl;
+                                  }
+                                  void print(char const *c) {
+                                    cout << " Here is char* " << c << endl;
+                                  }
+                                  int main() {
+                                     print(10);
+                                     print(10.10);
+                                     print("ten");return 0;
+                                    }
+
+
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Operator Overloading</h3>
+			<p>
+				Operator overloading is a feature of object oriented programming
+				where two or more operators can have the same name but different
+				parameters. When an operator name is overloaded with different
+				jobs it is called Operator Overloading. In Operator Overloading
+				“Operator” name should be the same and the arguments should be
+				different. Operator overloading can be considered as an example
+				of polymorphism feature in C++. Following is a simple C++
+				example to demonstrate operator overloading.
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<h3 class="text-center">Example</h3>
+			<div class="code">
+				<pre>
+                               <code>
+                               //operator overloading
+                                #include &lt;iostream&gt;
+                                using namespace std;class Complex {
+                                  private:
+                                  int real, imag;
+                                  public:
+                                  Complex(int r = 0, int i = 0) {real = r;   imag = i;}
+                                  // This is automatically called when '+' is used with
+                                  // between two Complex objects
+                                  Complex operator + (Complex const &obj) {
+                                    Complex res;
+                                    res.real = real + obj.real;
+                                    res.imag = imag + obj.imag;
+                                    return res;
+                                  }
+                                  void print() { cout << real << " + i" << imag << '\n'; }
+                                };
+                                int main()
+                                {
+                                  Complex c1(10, 5), c2(2, 4);
+                                  Complex c3 = c1 + c2;
+                                  c3.print();
+
+                                }
+                               </code>
+                           </pre>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock content %}
