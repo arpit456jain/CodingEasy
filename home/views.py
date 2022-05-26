@@ -303,6 +303,12 @@ def css1(request):
         return render(request, 'home/css/padding/padding.html')
     elif query == "selectors":
         return render(request, 'home/css/selectors/selectors.html')
+    elif query == "comments":
+        return render(request, 'home/css/comments/comments.html')
+    elif query == "borders":
+        return render(request, 'home/css/borders/borders.html')
+    elif query == "box-model":
+        return render(request, 'home/css/boxModel/boxModel.html')
 
 
 def bootstrap(request):

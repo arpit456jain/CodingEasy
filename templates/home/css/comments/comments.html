@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="heading text-center display-3">
+  CodingEasy
+</div> <br>
+
+<section class="container mt-3">
+  <div class="jumbotron px-3 py-4 px-sm-4 py-sm-5 bg-light rounded-3 mb-3">
+    <h1 class="text-center display-3">CSS Comments</h1>
+
+  </div>
+</section>
+<br><br>
+
+
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">COMMENTS</h3>
+      <p class="text-center">
+            Comments are used to explain the code , and may help when you edit the source code at a later date.<br>
+            Comments are ignored by browsers.<br>
+            A CSS comment is placed inside the &lt;style&gt; element, and starts with /* and ends with */:<br>
+      </p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="text-center">Example</h3>
+      <div class="code">
+        <pre>
+                <code>
+                    /* This is a single-line comment */
+                    a {
+                    color: orange;
+                    }
+                </code>
+            </pre>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+{% endblock content %}
