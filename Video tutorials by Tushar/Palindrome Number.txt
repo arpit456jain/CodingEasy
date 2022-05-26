@@ -1,0 +1,23 @@
+Question Link:
+https://leetcode.com/problems/palindrome-number/
+
+Code:
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        int a = x;
+        int y = 0;
+        while(a>0){
+            y = y*10 + (a%10);
+            a=a/10;
+        }
+        boolean flag = true;
+        if((x!=y)||(x<0)){
+            flag = false;
+        }
+        return flag;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1FuLRj8dB4E2t8Ar2_R3fYuB8EEmUphHF/view?usp=drivesdk

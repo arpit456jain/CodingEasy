@@ -1,0 +1,23 @@
+Question Link:
+https://leetcode.com/problems/length-of-last-word/
+
+Code:
+
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int len = 0;
+        for(int i=s.length()-1;i>=0;i--){
+            char ch = s.charAt(i);
+            if(ch!=' '){
+                len++;
+            }
+            else if(len>0){
+                break;
+            }
+        }
+        return len;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1GA1asUPV4iqR4YFW0tqy7keYU3ZHldsO/view?usp=drivesdk
