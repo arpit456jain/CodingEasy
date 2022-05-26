@@ -1,0 +1,29 @@
+Question Link:
+https://leetcode.com/problems/reverse-integer/
+
+Code:
+
+class Solution {
+    public int reverse(int x) {
+        long rev = 0;
+        boolean flag = false;
+        if(x<0){
+            flag = true;
+            x = x*(-1);
+        }
+        while(x>0){
+            rev = (rev*10) + (x%10);
+            x = x/10;
+        }
+        if((rev>2147483647)||(rev<=-2147483647)){
+            return 0;
+        }
+        if(flag){
+            return (int)(rev*(-1));
+        }
+        return (int)(rev);
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1GNNhqFSfuqeTCvA2MPBTmR-_CHDgi4zr/view?usp=drivesdk
