@@ -1,0 +1,17 @@
+Question Link:
+https://leetcode.com/problems/single-number/
+
+Code:
+
+class Solution {
+    public int singleNumber(int[] nums) {
+        int ans = 0;
+        for(int i=0;i<nums.length;i++){
+            ans = ans^nums[i];
+        }    
+        return ans;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1IR8aAUdDyO5vjY5kX6aEJHuCLUjxnyRQ/view?usp=drivesdk
