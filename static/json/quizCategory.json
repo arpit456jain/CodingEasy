@@ -8,25 +8,25 @@
     {
         "name": "JavaScript",
         "image_url":"https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png",
-        "page_url":"#"
+        "page_url":"js"
 
     },
     {
         "name": "C",
         "image_url":"https://i0.wp.com/masterprograming.com/wp-content/uploads/2019/03/c-programming-e1536069688313.png?resize=300%2C300&ssl=1",
-        "page_url":"#"
+        "page_url":"C"
 
     },
     {
         "name": "C++",
         "image_url":"https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png",
-        "page_url":"#"
+        "page_url":"cpp"
 
     },
     {
         "name": "Django",
         "image_url":"https://i0.wp.com/copyassignment.com/wp-content/uploads/2021/08/Django-logo.jpg?w=474&ssl=1",
-        "page_url":"#"
+        "page_url":"django"
 
     },
     {

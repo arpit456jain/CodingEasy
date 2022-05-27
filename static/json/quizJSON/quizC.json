@@ -1,0 +1,42 @@
+[
+    {
+        "ques": "1.C is a",
+        "option1": "a) general-purpose computer programming language",
+        "option2": "b) procedural computer programming language",
+        "option3": "c) multi-paradigm computer programming language",
+        "option4": "d) All the above",
+        "ans": "b) procedural computer programming language"
+    },
+    {
+        "ques": "2. How do you specify double constant 3.14 as a long double?",
+        "option1": "a) 2",
+        "option2": "b) 5",
+        "option3": "c) 7",
+        "option4": "d) Compiled Error",
+        "ans": "a) 2"
+    },
+    {
+        "ques": "3. Choose the correct unary operators in C – a) !, b) ~, c) ^&, d) ++",
+        "option1": "a) a, b, d",
+        "option2": "b) a, b, c",
+        "option3": "c) b, c, d ",
+        "option4": "d) c, d, a",
+        "ans": "a) a, b, d"
+    },
+    {
+        "ques": "4. Why to use fflush() library function?",
+        "option1": "a) To flush all streams and specified streams",
+        "option2": "b) To flush only specified stream",
+        "option3": "c) To flush input/output buffer",
+        "option4": "d) Invalid library function",
+        "ans": "a) To flush all streams and specified streams"
+    },
+    {
+        "ques": "5. Which of the following is the correct way to declare a function pointer where pointer is the pointer to the function and function; is the name of the function",
+        "option1": "a) void (*pointer) = &(int)function;",
+        "option2": "b) void (*pointer) = &(int)function;",
+        "option3": "c) void (*pointer)(int) = &function;",
+        "option4": "d) void &function(*pointer) = int;",
+        "ans": "c) void (*pointer)(int) = &function;"
+    }
+]

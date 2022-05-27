@@ -1,0 +1,42 @@
+[
+    {
+        "ques": "1. Which of the following is a server-side Java Script object?",
+        "option1": "a) Function",
+        "option2": "b) File",
+        "option3": "c) FileUpload",
+        "option4": "d) Date ",
+        "ans": "b) File"
+    },
+    {
+        "ques": "2. How does Java Script store dates in objects of Date type?",
+        "option1": "a) The number of days since January 1st, 1900",
+        "option2": "b) The number of seconds since January 1st, 1970",
+        "option3": "c) The number of milliseconds since January 1st, 1970",
+        "option4": "d) The number of picoseconds since January 1st, 1970",
+        "ans": "c) The number of milliseconds since January 1st, 1970"
+    },
+    {
+        "ques": "3. Which of the following is used to capture all click events in a window?",
+        "option1": "a) window.captureEvents(Event.CLICK); ",
+        "option2": "b) window.routeEvents(Event.CLICK );",
+        "option3": "c) window.handleEvents (Event.CLICK);",
+        "option4": "d) window.raiseEvents(Event.CLICK );",
+        "ans": "a) window.captureEvents(Event.CLICK); "
+    },
+    {
+        "ques": "4. Which of the ways below is incorrect of instantiating a date?",
+        "option1": "a) new Date(dateString)",
+        "option2": "b) new Date()",
+        "option3": "c) new Date(seconds)",
+        "option4": "d) new Date(year, month, day, hours, minutes, seconds, milliseconds)",
+        "ans": "c) new Date(seconds)"
+    },
+    {
+        "ques": "5. What is negative infinity in Java script?",
+        "option1": "a) Any of below",
+        "option2": "b) number in JavaScript, derived by dividing number by a negative number",
+        "option3": "c) number in JavaScript, derived by dividing number by zero",
+        "option4": "d) number in JavaScript, derived by dividing negative number by zero",
+        "ans": "d) number in JavaScript, derived by dividing negative number by zero"
+    }
+]

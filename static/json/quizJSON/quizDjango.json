@@ -1,0 +1,42 @@
+[
+    {
+        "ques": "1. What happens when url.py file is edited while the development server is still running?",
+        "option1": "a) Development server terminates.",
+        "option2": "b The development server automatically restarts.",
+        "option3": "c) The development server does nothing.",
+        "option4": "d The web page is automatically reloaded.",
+        "ans": "b The development server automatically restarts."
+    },
+    {
+        "ques": "2. Which setting contains the parameter of main-urls file?",
+        "option1": "a) ROOT_URLCONF",
+        "option2": "b) MAIN_URLCONF",
+        "option3": "c) STATIC_URL",
+        "option4": "d) MEDIA_URL",
+        "ans": "a) ROOT_URLCONF"
+    },
+    {
+        "ques": "3. Django is based on which framework?",
+        "option1": "a) MVC",
+        "option2": "b) MVVM",
+        "option3": "c) MVT or MTV (Model-View-Template)",
+        "option4": "d) None of the above",
+        "ans": "c) MVT or MTV (Model-View-Template)"
+    },
+    {
+        "ques": "4. Which method is used instead of path() in urls.py to pass in regular expressions as routes?",
+        "option1": "a) static()",
+        "option2": "b) re_path()",
+        "option3": "c) include()",
+        "option4": "d) url()",
+        "ans": "d) url()"
+    },
+    {
+        "ques": "5. What does {{ name }} this mean in Django Templates?",
+        "option1": "a) {{ name }} will be the output.",
+        "option2": "b) It will be displayed as name in HTML.",
+        "option3": "c) The name will be replaced with values of Python variable.",
+        "option4": "d) None of the above",
+        "ans": "c) The name will be replaced with values of Python variable."
+    }
+]
