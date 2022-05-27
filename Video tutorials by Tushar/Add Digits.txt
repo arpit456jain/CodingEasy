@@ -1,0 +1,22 @@
+Question Link:
+https://leetcode.com/problems/add-digits/
+
+Code:
+
+class Solution {
+    public int addDigits(int num) {
+        while(num>9){
+            int sum = 0;
+            int a = num;
+            while(a>0){
+                sum = sum + (a%10);
+                a = a/10;
+            }
+            num = sum;
+        }
+        return num;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1GUqpCs0B8-QEWbd1yUtqdC-j0GdKQIJ1/view?usp=drivesdk
