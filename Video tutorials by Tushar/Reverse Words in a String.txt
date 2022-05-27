@@ -1,0 +1,20 @@
+Question Link:
+https://leetcode.com/problems/reverse-words-in-a-string/
+
+Code:
+
+import java.util.StringTokenizer;  
+class Solution {
+    public String reverseWords(String s) {
+        String ans = "";
+        StringTokenizer str = new StringTokenizer(s," ");
+        while(str.hasMoreTokens()){
+            ans = str.nextToken() + " " + ans;
+        }
+        ans = ans.trim();
+        return ans;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1JEnA2N4beWXdUdgSVEQxC3PR8pZELbek/view?usp=drivesdk
