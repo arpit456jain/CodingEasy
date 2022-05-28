@@ -1,0 +1,20 @@
+Question Link:
+https://leetcode.com/problems/find-the-difference/
+
+Code:
+
+class Solution {
+    public char findTheDifference(String s, String t) {
+        char[] ch1 = s.toCharArray();
+        char[] ch2 = t.toCharArray();
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+        for (int i = 0; i < ch1.length; i++) {
+            if (ch1[i] != ch2[i]) return ch2[i];
+        }
+        return ch2[ch2.length-1];
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1zYWAzi9APMLSN5X3T71_Lsc3Xs40izde/view?usp=sharing
