@@ -1,0 +1,42 @@
+[
+    {
+        "ques": "1. C++ was developed by ___",
+        "option1": "a) Thomas Kushz",
+        "option2": "b) John Kemney",
+        "option3": "c) Bjarne Stroutstrup",
+        "option4": "d) James Goling",
+        "ans": "c) Bjarne Stroutstrup"
+    },
+    {
+        "ques": "2. What is a constant that contains a single character enclosed within single quotes?",
+        "option1": "a) Character",
+        "option2": "b) Numeric",
+        "option3": "c) Fixed",
+        "option4": "d) Floating point",
+        "ans": "a) Character"
+    },
+    {
+        "ques": "3. How can we make an class act as an interface in C++?",
+        "option1": "a) By only providing all the functions as virtual functions in the class.",
+        "option2": "b) Defining the class following with the keyword virtual",
+        "option3": "c) Defining the class following with the keyword interface",
+        "option4": "d) Defining the class following with the keyword abstract",
+        "ans": "a) By only providing all the functions as virtual functions in the class."
+    },
+    {
+        "ques": "4. Compiler generates ___ file",
+        "option1": "a) Executable code",
+        "option2": "b) Object code",
+        "option3": "c) Assembly code",
+        "option4": "d) None of the above.",
+        "ans": "b) Object code"
+    },
+    {
+        "ques": "5. The default executable generation on UNIX for a C++ program is ___",
+        "option1": "a) a.exe",
+        "option2": "b) a",
+        "option3": "c) a.out",
+        "option4": "d) out.a",
+        "ans": "c) a.out"
+    }
+]

@@ -134,6 +134,146 @@ def quizPython(request):
 
     return render(request, 'quiz/quizPython.html', context)
 
+def quizC(request):
+    questions_data = open("static/json/quizJSON/quizC.json")
+    questions = json.load(questions_data)
+    context = {
+        'questions':questions,
+    }
+
+    if request.method == "POST":
+        score = 0
+        wrong = 0
+        correct = 0
+        total = 0
+        for question in questions:
+            total+=1
+            prob = question['ques']
+            if question['ans'] == request.POST.get(f'{prob}'):
+
+                score += 10
+                correct += 1
+            else:
+                wrong += 1
+        percent = score/(total*10) * 100
+        out_of = total*10
+        return render(request, 'quiz/result.html', context = {
+            'score':score,
+            'total':total,
+            'correct':correct,
+            'wrong':wrong,
+            'percent':percent,
+            'out_of':out_of,
+            'questions':questions,
+        })
+
+    return render(request, 'quiz/quizC.html', context)
+
+def quizCpp(request):
+    questions_data = open("static/json/quizJSON/quizCpp.json")
+    questions = json.load(questions_data)
+    context = {
+        'questions':questions,
+    }
+
+    if request.method == "POST":
+        score = 0
+        wrong = 0
+        correct = 0
+        total = 0
+        for question in questions:
+            total+=1
+            prob = question['ques']
+            if question['ans'] == request.POST.get(f'{prob}'):
+
+                score += 10
+                correct += 1
+            else:
+                wrong += 1
+        percent = score/(total*10) * 100
+        out_of = total*10
+        return render(request, 'quiz/result.html', context = {
+            'score':score,
+            'total':total,
+            'correct':correct,
+            'wrong':wrong,
+            'percent':percent,
+            'out_of':out_of,
+            'questions':questions,
+        })
+
+    return render(request, 'quiz/quizCpp.html', context)
+
+def quizJs(request):
+    questions_data = open("static/json/quizJSON/quizJs.json")
+    questions = json.load(questions_data)
+    context = {
+        'questions':questions,
+    }
+
+    if request.method == "POST":
+        score = 0
+        wrong = 0
+        correct = 0
+        total = 0
+        for question in questions:
+            total+=1
+            prob = question['ques']
+            if question['ans'] == request.POST.get(f'{prob}'):
+
+                score += 10
+                correct += 1
+            else:
+                wrong += 1
+        percent = score/(total*10) * 100
+        out_of = total*10
+        return render(request, 'quiz/result.html', context = {
+            'score':score,
+            'total':total,
+            'correct':correct,
+            'wrong':wrong,
+            'percent':percent,
+            'out_of':out_of,
+            'questions':questions,
+        })
+
+    return render(request, 'quiz/quizJs.html', context)
+
+def quizDjango(request):
+    questions_data = open("static/json/quizJSON/quizDjango.json")
+    questions = json.load(questions_data)
+    context = {
+        'questions':questions,
+    }
+
+    if request.method == "POST":
+        score = 0
+        wrong = 0
+        correct = 0
+        total = 0
+        for question in questions:
+            total+=1
+            prob = question['ques']
+            if question['ans'] == request.POST.get(f'{prob}'):
+
+                score += 10
+                correct += 1
+            else:
+                wrong += 1
+        percent = score/(total*10) * 100
+        out_of = total*10
+        return render(request, 'quiz/result.html', context = {
+            'score':score,
+            'total':total,
+            'correct':correct,
+            'wrong':wrong,
+            'percent':percent,
+            'out_of':out_of,
+            'questions':questions,
+        })
+
+    return render(request, 'quiz/quizDjango.html', context)
+
 
 @unauthenticated_user
 def register(request):

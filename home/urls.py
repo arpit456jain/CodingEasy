@@ -48,6 +48,10 @@ urlpatterns = [
     # Quiz Pages URLs here
     path('quiz/', views.quizHome, name='home-quiz'),
     path('quiz/python/', views.quizPython, name='home-quizPython'),
+    path('quiz/C', views.quizC, name='home-cPython'),
+    path('quiz/cpp', views.quizCpp, name='home-quizCpp'),
+    path('quiz/js', views.quizJs, name='jome-quizJs'),
+    path('quiz/django', views.quizDjango, name='home-quizDjango'),
 
 
     # To add url to a new Course
