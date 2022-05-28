@@ -2,6 +2,12 @@
 {% load static %}
 
 {% block content %}
+<style>
+  td {
+    font-size: 1.5rem !important;
+    padding: 10px !important;
+  }
+</style>
 <br>
 <div class="heading text-center display-3">
   CodingEasy
@@ -13,4 +19,77 @@
   </div>
 </section>
 
+<section class="container text-center mt-3">
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="8">
+          <p style="text-align:center; font-size:2rem;"><strong>C Keywords</strong></p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>auto</td>
+        <td>double</td>
+        <td>int</td>
+        <td>struct</td>
+      </tr>
+      <tr>
+        <td>break</td>
+        <td>else</td>
+        <td>long</td>
+        <td>switch</td>
+      </tr>
+      <tr>
+        <td>case</td>
+        <td>enum</td>
+        <td>register</td>
+        <td>typedef</td>
+      </tr>
+      <tr>
+        <td>char</td>
+        <td>extern</td>
+        <td>return</td>
+        <td>union</td>
+      </tr>
+      <tr>
+        <td>const</td>
+        <td>float</td>
+        <td>short</td>
+        <td>unsigned</td>
+      </tr>
+      <tr>
+        <td>continue</td>
+        <td>for</td>
+        <td>signed</td>
+        <td>void</td>
+      </tr>
+      <tr>
+        <td>default</td>
+        <td>goto</td>
+        <td>sizeof</td>
+        <td>volatile</td>
+      </tr>
+      <tr>
+        <td>do</td>
+        <td>if</td>
+        <td>static</td>
+        <td>while</td>
+      </tr>
+    </tbody>
+  </table>
+  <br><br>
+</section>
+
+
 {% endblock content %}
+{% block code %}
+
+<div class="container">
+  <h3 class="text-center">Give it a try &#128187;</h3>
+  <iframe frameborder="0" width="100%" height="500px"
+    src="https://replit.com/@nikhil25803/CodinEasyC?lite=true"></iframe>
+</div>
+
+{% endblock code %}
