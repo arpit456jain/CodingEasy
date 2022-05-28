@@ -76,3 +76,31 @@ class Solution {
         return root;
     }
 }
+
+
+BEST TIME TO BUY AND SELL STOCK
+/////////CODE/////////////////////////////////
+
+
+JAVA
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        int s_a_p_k_k = Integer.MAX_VALUE;
+        int overall_profit = 0;
+        int a_a_b_t_k_p=0;
+        for(int i =0; i<prices.length;i++)
+        {
+            if(prices[i]<s_a_p_k_k)
+            {
+               s_a_p_k_k= prices[i]; 
+            }
+            a_a_b_t_k_p = prices[i]-s_a_p_k_k;
+            if(overall_profit<a_a_b_t_k_p)
+            {
+              overall_profit = a_a_b_t_k_p;  
+            }
+        }
+        return overall_profit;
+    }
+}
