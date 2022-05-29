@@ -1,0 +1,29 @@
+Question link:
+https://leetcode.com/problems/fibonacci-number/
+
+Code:
+
+class Solution {
+    public int fib(int n) {
+        int num1 = 0;
+        int num2 = 1;
+        int[] arry = new int[n+2];
+        arry[0] = 0;
+        arry[1] = 1;
+        
+        if(n == 0) return(num1);
+        if(n == 1) return(num2);
+        
+        for(int i = 0 ; i < n ;i++){
+            int num3 = num2 + num1;
+            arry[i+2] = num3;
+            num1 = num2;
+            num2 = num3;
+        }
+        
+        return(arry[n-1]+arry[n-2]);
+    }
+}
+
+Video Solution link:
+https://drive.google.com/file/d/1Gmo5AnY1syRi8C8-BeRCRICFm-ZYDAst/view?usp=sharing
