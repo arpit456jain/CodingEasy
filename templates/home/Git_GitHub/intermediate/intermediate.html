@@ -2,76 +2,98 @@
 {% load static %}
 
 {% block content %}
-<section class="container mt-5">
-    <div class="row">
-        <div class="col-md-6 col-sm-12">
-            </p><br>
-            <h3>Intermediate Git Commands</h3><br>
-            <ul>
-                <li>git config:</li><br>
+<div class="container">
+    <div class="row my-5">
+        <div class="col">
+            <h3 class="text-center border-bottom border-2 border-info rounded-pill">Intermediate Git Commands with
+                Examples</h3>
 
-                <li>git add</li><br>
-
-                <li>git commit</li><br>
-
-                <li>git push</li><br>
-
-                <li>git pull</li><br>
-
-                <li>git branch</li><br>
-                <br>
-            </ul>
-        </div>
-
-        <div class="col-md-6 col-sm-12">
-            <h3 class="text-center">Examples and Uses<b class="example"></b></h3>
-            <div class="code">
-                <pre>
-           <code>
-            // Configure the author name and email address to be used with 
-                your commits. Note that Git strips some characters 
-                from user.name. Using the '--global' tag makes this the 
-                defaut for all commits and repositories.
-            <em>git config --global user.name "CodingEasy"
-            git config --global user.email CodingEasy@example.com</em>
-            <br>
-            // Add one or more files to staging (index):
-                This command gets the modifed/new files ready to be committed.
-            <em>git add &lt;filename&gt;
-            git add *</em>
-            <br>
-            // Commit staged changes.
-                This command commits the changes in the staging area to the
-                repository. This is the final step before pushing the changes to
-                the remote repository.
-            <em>git commit -m "Commit message"</em>
-            <br>
-            // Send changes to the master branch of your remote repository:
-                Here 'origin' is the remote repository.
-                and 'master' is the branch that will be pushed to.
-            <em>git push origin master</em>
-            <br>
-            // Pull changes from a remote repository.
-                Used incase there were changes in the source repo while 
-                you were working on the repository.
-            <em>git pull</em>
-            <br>
-            // When you want to work on new feature, 
-                but don't want to commit it to the main branch.
-                Make a new branch and start working on it.
-            <em>git branch -d {branch-name}</em>
-            <br>
-        </code>
-          </pre>
+            <div class="card mt-4">
+                <div class="card-header ">
+                    <h6><em>> git config</em></h6>
+                </div>
+                <div class="card-body ">
+                    <h6 class="card-title">// Configure the author name and email address to be used with
+                        your commits. Note that Git strips some characters
+                        from user.name. Using the '--global' tag makes this the
+                        defaut for all commits and repositories.</h6>
+                    <p class="card-text"><em>git config --global user.name "CodingEasy"
+                            git config --global user.email CodingEasy@example.com</em></p>
+                </div>
             </div>
+
+            <div class="card mt-4">
+                <div class="card-header ">
+                    <h6><em>> git add</em></h6>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">// Add one or more files to staging (index):
+                        This command gets the modifed/new files ready to be committed.</h6>
+                    <p class="card-text"><em>git add &lt;filename&gt;
+                            git add *</em></p>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header ">
+                    <h6><em>> git commit</em></h6>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">// Commit staged changes.
+                        This command commits the changes in the staging area to the
+                        repository. This is the final step before pushing the changes to
+                        the remote repository.</h6>
+                    <p class="card-text"><em>git commit -m "Commit message"</em></p>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header ">
+                    <h6><em>> git push</em></h6>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">// Send changes to the master branch of your remote repository:
+                        Here 'origin' is the remote repository.
+                        and 'master' is the branch that will be pushed to.</h6>
+                    <p class="card-text"><em>git push origin branch_name</em></p>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header ">
+                    <h6><em>> git pull</em></h6>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">// Pull changes from a remote repository.
+                        Used incase there were changes in the source repo while
+                        you were working on the repository.</h6>
+                    <p class="card-text"><em>git pull</em></p>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header ">
+                    <h6><em>> git branch</em></h6>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">// When you want to work on new feature,
+                        but don't want to commit it to the main branch.
+                        Make a new branch and start working on it..</h6>
+                    <p class="card-text"><em>git branch -d {branch-name}</em></p>
+                </div>
+            </div>
+
         </div>
     </div>
-</section>
+</div>
+
 
 <section class="container mt-5">
     <div class="row">
+        <h3 class="text-center border-bottom border-2 border-danger rounded-pill">Video Tutorials</h3>
         <div class="col-md-6 col-sm-12">
-            <div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+            <div
+                class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/or4SKW0pwBY"
                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
                     clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -80,18 +102,20 @@
         </div>
 
         <div class="col-md-6 col-sm-12">
-            <div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+            <div
+                class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/QmaerKq8qn0"
-                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
                     clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </div>
 
         <div class="col-md-6 col-sm-12">
-            <div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+            <div
+                class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/CT_b--_DiUA"
-                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
                         clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>

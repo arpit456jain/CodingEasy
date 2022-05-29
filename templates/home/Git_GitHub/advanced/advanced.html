@@ -2,77 +2,135 @@
 {% load static %}
 
 {% block content %}
-<section class="container mt-5">
-    <div class="row">
-        <div class="col-md-6 col-sm-12">
-            </p><br>
-            <h3>Advanced Git Commands</h3><br>
-            <ul>
-                <li>git switch</li><br>
-                <li>git diff</li><br>
-                <li>git reset</li><br>
-                <li>git show</li><br>
-                <li>git merge</li><br>
-                <li>git remote</li><br>
-                <li>git checkout</li><br>
-                <li>git stash</li><br>
-                <br>
-            </ul>
-        </div>
 
-        <div class="col-md-6 col-sm-12">
-            <h3 class="text-center">Examples and Uses<b class="example"></b></h3>
-            <div class="code">
-                <pre>
-           <code>
-            // If you have more than one branch in your repo, you can
-                switch between them using the git switch command.
-            <em>git switch {branch-name}</em>
-            <br>
-            // When you have made some changes to your code and want to see 
-                exactly what you have changed, you can use the git diff command.
-            <em>git diff</em>
-            <br>
-            // When you want to revert your changes, you can use the git reset command.
-                It is a powerful command that is used to undo local changes to the state of a Git repo. 
-            <em>git reset</em>
-            <br>
-            // When you want to see the history of a file, you can use the git show command.
-                It describes the HEAD commit by default
-            <em>git show</em>
-            <br>
-            // When you want to merge two branches, you can use the git merge command.
-                It merges the changes from one branch into another.
-            <em>git merge {branch-name}</em>
-            <br>
-            // When you want to see the list of remotes, you can use the git remote command.
-                It lists the remotes in your repo.
-            <em>git remote</em>
-            <br>
-            // When you want to checkout a branch, you can use the git checkout command.
-                It switches to the specified branch.
-            <em>git checkout {branch-name}</em>
-            <br>
-            // When you want to stash your changes, you can use the git stash command.
-                It saves your changes in a temporary stash (doesnt commit but keeps track).
-            <em>git stash</em>
-        </code>
-          </pre>
+<div class="container">
+    <div class="row my-5">
+        <div class="col">
+            <h4 class="text-center border-2 border-bottom border-info  rounded-pill">Advance Git Commands</h4>
+
+            <div class="card">
+                <h5 class="card-header"><em>git switch</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// If you have more than one branch in your repo, you can
+                        switch between them using the git switch command.</h6>
+                    <p class="card-text"><em>git switch {branch-name}</em></p>
+                </div>
             </div>
+
+            <div class="card mt-2">
+                <h5 class="card-header"><em>git diff</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// When you have made some changes to your code and want to see
+                        exactly what you have changed, you can use the git diff command.</h6>
+                    <p class="card-text"><em>git diff</em></p>
+                </div>
+            </div>
+
+            <div class="card mt-2">
+                <h5 class="card-header"><em>git reset</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// When you want to revert your changes, you can use the git reset command.
+                        It is a powerful command that is used to undo local changes to the state of a Git repo.</h6>
+                    <p class="card-text"><em>git reset</em></p>
+                </div>
+            </div>
+
+            <div class="card mt-2">
+                <h5 class="card-header"><em>git show</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// When you want to see the history of a file, you can use the git show
+                        command.
+                        It describes the HEAD commit by default</h6>
+                    <p class="card-text"><em><em>git show</em></em></p>
+                </div>
+            </div>
+
+
+            <div class="card mt-2">
+                <h5 class="card-header"><em>git merge</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// When you want to merge two branches, you can use the git merge command.
+                        It merges the changes from one branch into another.</h6>
+                    <p class="card-text"><em><em>git merge {branch-name}</em></em></p>
+                </div>
+            </div>
+
+            <div class="card mt-2">
+                <h5 class="card-header"><em>git remote</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// When you want to see the list of remotes, you can use the git remote
+                        command.
+                        It lists the remotes in your repo.</h6>
+                    <p class="card-text"><em><em>git remote</em></em></p>
+                </div>
+            </div>
+
+            <div class="card mt-2">
+                <h5 class="card-header"><em>git reset</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// When you want to revert your changes, you can use the git reset command.
+                        It is a powerful command that is used to undo local changes to the state of a Git repo.</h6>
+                    <p class="card-text"><em>git reset</em></p>
+                </div>
+            </div>
+
+            <div class="card mt-2">
+                <h5 class="card-header"><em>git checkout</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// When you want to checkout a branch, you can use the git checkout command.
+                        It switches to the specified branch.</h6>
+                    <p class="card-text"><em>git checkout {branch-name}</em></p>
+                </div>
+            </div>
+
+            <div class="card mt-2">
+                <h5 class="card-header"><em>git stash</em></h5>
+                <div class="card-body">
+                    <h6 class="card-title">// When you want to stash your changes, you can use the git stash command.
+                        It saves your changes in a temporary stash (doesnt commit but keeps track).</h6>
+                    <p class="card-text"><em>git stash</em></p>
+                </div>
+            </div>
+
+
         </div>
     </div>
-</section>
+</div>
+
 
 <section class="container mt-5">
     <div class="row">
+        <h3 class="text-center border-bottom border-2 border-danger rounded-pill">Video Tutorials</h3>
         <div class="col-md-6 col-sm-12">
-            <div class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/4rfcmxbwkyY"
+            <div
+                class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fguHLyT-3VI"
                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
                     clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div
+                class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Hl-_k_eZ-lg"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div
+                class="embed-responsive embed-responsive-21by9  d-flex align-items-center justify-content-center w-75 p-3 h-75 bg-info">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HaIFnmWK9V0"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
     </div>
 </section>
 {% endblock content %}
