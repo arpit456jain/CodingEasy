@@ -1,0 +1,27 @@
+Question Link:
+https://leetcode.com/problems/valid-palindrome/
+
+Code:
+
+class Solution {
+    public boolean isPalindrome(String s) {
+        s = s.toLowerCase();
+        String str = "";
+        for(int i=0;i<s.length();i++){
+            char ch = s.charAt(i);
+            if(Character.isDigit(ch)||(Character.isLetter(ch))){
+                str = str + Character.toString(ch);
+            }
+        }
+        int n = str.length()-1;
+        for(int i=0;i<str.length()/2;i++){
+            if(str.charAt(i)!=str.charAt(n-i)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1KOPjOiMtZhaEqSKV1Zzmi6vMwWJK5oYU/view?usp=drivesdk
