@@ -1,0 +1,312 @@
+REMOVE ELEMENT
+//////////////CODE///////
+
+JAVA
+
+
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int j =0;
+        for(int i =0;i<nums.length; i++)
+        {
+            if(nums[i] != val)
+            {
+                nums[j] = nums[i];
+                j++;
+            }
+        }
+        return j;
+    }
+}
+
+MAXIMUM SUBARRAY
+///////CODE////////
+JAVA
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int max = nums[0];
+        int min = nums[0];
+        for(int i =1; i<nums.length; i++)
+        {
+            max = Math.max(max+nums[i], nums[i]);
+                if(max>min)
+                    min=max;
+        }
+        return min;
+    }
+}
+
+
+MERGE SORTED ARRAY
+/////////CODE///////
+
+JAVA
+
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int count =0;
+        for(int i =m; i<m+n;i++)
+        {
+            nums1[i]=nums2[count++];
+        }
+        Arrays.sort(nums1);
+    }
+}
+CONVERT SORTED ARRAY TO BINARY SEARCH TREE
+//////CODE////////
+
+
+JAVA
+
+class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        if(nums.length == 0)
+            return null;
+        return helper(nums, 0, nums.length-1);
+    }
+    TreeNode helper(int[] nums, int low, int high)
+    {
+        if(low>high)
+            return null;
+        int mid = (low+high)/2;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = helper(nums, low, mid-1);
+        root.right = helper(nums, mid+1, high);
+        return root;
+    }
+}
+
+
+BEST TIME TO BUY AND SELL STOCK
+/////////CODE/////////////////////////////////
+
+
+JAVA
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        int s_a_p_k_k = Integer.MAX_VALUE;
+        int overall_profit = 0;
+        int a_a_b_t_k_p=0;
+        for(int i =0; i<prices.length;i++)
+        {
+            if(prices[i]<s_a_p_k_k)
+            {
+               s_a_p_k_k= prices[i]; 
+            }
+            a_a_b_t_k_p = prices[i]-s_a_p_k_k;
+            if(overall_profit<a_a_b_t_k_p)
+            {
+              overall_profit = a_a_b_t_k_p;  
+            }
+        }
+        return overall_profit;
+    }
+}
+
+PASCAL'S TRIANGLE
+/////////////////code///////////////////
+java
+
+
+class Solution {
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> list = new ArrayList<>();
+        for(int i =0; i<numRows;i++)
+        {
+            list.add(new ArrayList<Integer>());
+        }
+        for(int i =0; i<numRows; i++)
+        {
+            for(int j =0; j<=i;j++)
+            {
+                if(j==0 || j==i)
+                {
+                    list.get(i).add(1);
+                }
+                else
+                {
+                    list.get(i).add(list.get(i-1).get(j-1) + list.get(i-1).get(j));
+                }
+            }
+        }
+        return list;
+    }
+}
+
+
+PASCAL'S TRIANGLE II
+
+
+/////////CODE////////
+
+JAVA
+
+class Solution {
+    public List<Integer> getRow(int rowIndex) {
+        ArrayList<Integer> res = new ArrayList<>();
+        long val = 1;
+        for(int j =0;j<=rowIndex; j++)
+        {
+            res.add((int)val);
+            val = val * (rowIndex-j)/(j+1);
+        }
+        return res;
+    }
+}
+
+
+MAJORITY ELEMENT
+/////////CODE//////////
+
+JAVA
+
+
+class Solution {
+    public int majorityElement(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i =0; i<nums.length; i++)
+        {
+            map.put(nums[i], map.getOrDefault(nums[i],0)+1);
+        }
+        int max = nums.length/2;
+        int element= -1;
+        for(int key: map.keySet())
+        {
+            if(map.get(key)>max)
+            {
+                max=map.get(key);
+                element = key;
+            }
+        }
+        return element;
+    }
+}
+
+
+
+CONTAINS DUPLICATE
+//////////CODE//////////////
+
+JAVA
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Map<Integer , Integer> temp = new HashMap<>();
+        for(int i =0; i<nums.length;i++)
+        {
+            Integer val = temp.get(nums[i]);
+            if(val!=null)
+            {
+                return true;
+            }
+            temp.put(nums[i],i);
+        }
+        return false;
+    }
+}
+
+
+
+CONTAINS DUPLICATE II
+//////////CODE//////////////
+
+JAVA
+
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+   HashMap <Integer, Integer> map = new HashMap();
+        for(int i =0; i<nums.length; i++)
+        {
+            if(map.get(nums[i])==null)
+                map.put(nums[i],i);
+            else
+            {
+                int val = i - map.get(nums[i]);
+                if(val<=k)
+                    return true;
+                map.put(nums[i], i);
+            }
+        }
+        return false;
+    }
+}
+
+
+FIND FIRST AND LAST POSITION OF ELEMENT IN SORTED ARRAY
+/////////////CODE/////////////////////////
+
+JAVA
+
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int[] ans ={-1,-1};
+        int first = binary_search(nums, target, 1);
+        int last = binary_search(nums, target, 0);
+        ans[0] = first;
+        ans[1] = last;
+        return ans;
+    }
+    int binary_search(int[] nums, int target, int check)
+    {
+        int start = 0;
+        int end = nums.length-1;
+        int result =-1;
+        while(start<=end)
+        {
+            int mid = start +(end-start)/2;
+            if(nums[mid]==target)
+            {
+                result = mid;
+            if(check ==1)
+                end = mid-1;
+            else
+                start = mid+1;
+            }
+        else if(nums[mid]>target)
+            end = mid-1;
+        else
+            start=mid+1;
+    }
+    return result;
+    }
+}
+
+SEARCH IN ROTATED SORTED ARRAY
+/////////CODE////////////
+
+
+JAVA
+
+class Solution {
+    public int search(int[] nums, int target) {
+        int l = 0, r = nums.length-1;
+        int k =0;
+        while(l<r)
+        {
+            int mid = (int)(l+r)/2;
+            if(nums[mid]>nums[l] && nums[mid]>nums[r])
+                l=mid;
+            else
+                r= mid;
+        }
+        int res =0;
+        if(target<=nums[r] && target>=nums[0]) res = binary_search(nums, 0, r, target);
+        else
+            res = binary_search(nums, r+1, nums.length-1, target);
+        return res;
+    }
+    private int binary_search(int[] nums, int l, int r, int target)
+    {
+        while(l<=r)
+        {
+            int mid = l+(r-l)/2;
+            if(nums[mid]==target) return mid;
+            else if(nums[mid]<target) l = mid+1;
+            else
+                r = mid-1;
+        }
+    return -1;
+    }
+}
