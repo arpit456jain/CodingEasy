@@ -157,4 +157,78 @@ class Solution {
 }
 
 
+MAJORITY ELEMENT
+/////////CODE//////////
 
+JAVA
+
+
+class Solution {
+    public int majorityElement(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i =0; i<nums.length; i++)
+        {
+            map.put(nums[i], map.getOrDefault(nums[i],0)+1);
+        }
+        int max = nums.length/2;
+        int element= -1;
+        for(int key: map.keySet())
+        {
+            if(map.get(key)>max)
+            {
+                max=map.get(key);
+                element = key;
+            }
+        }
+        return element;
+    }
+}
+
+
+
+CONTAINS DUPLICATE
+//////////CODE//////////////
+
+JAVA
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Map<Integer , Integer> temp = new HashMap<>();
+        for(int i =0; i<nums.length;i++)
+        {
+            Integer val = temp.get(nums[i]);
+            if(val!=null)
+            {
+                return true;
+            }
+            temp.put(nums[i],i);
+        }
+        return false;
+    }
+}
+
+
+
+CONTAINS DUPLICATE II
+//////////CODE//////////////
+
+JAVA
+
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+   HashMap <Integer, Integer> map = new HashMap();
+        for(int i =0; i<nums.length; i++)
+        {
+            if(map.get(nums[i])==null)
+                map.put(nums[i],i);
+            else
+            {
+                int val = i - map.get(nums[i]);
+                if(val<=k)
+                    return true;
+                map.put(nums[i], i);
+            }
+        }
+        return false;
+    }
+}
