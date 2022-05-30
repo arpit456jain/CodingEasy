@@ -1,0 +1,23 @@
+Question link:
+https://leetcode.com/problems/add-digits/
+
+Code:
+
+class Solution {
+public:
+    int addDigits(int num) {
+       int digitalRoot = 0;
+        while (num > 0) {
+            digitalRoot += num % 10;
+            num = num / 10;
+            
+            if (num == 0 && digitalRoot > 9) {
+                num = digitalRoot;
+                digitalRoot = 0;  
+            }    
+        }     
+        return digitalRoot;
+    }
+};
+Video Solution Link:
+https://drive.google.com/file/d/1uHaa7V-MPY9TsxW99jN8JJS6xwjYbJ_N/view?usp=sharing
