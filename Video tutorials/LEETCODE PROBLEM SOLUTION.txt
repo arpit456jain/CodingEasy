@@ -482,3 +482,27 @@ class Solution {
         return dp[m][n];
     }
 }
+
+BEST TIME TO BUY AND SELL STOCK II
+////////////CODE////////////////
+
+
+JAVA
+
+class Solution {
+    public int maxProfit(int[] prices) {
+       int length = prices.length;
+        int i =1;
+        int max =0;
+        while(i<length)
+        {
+            if(prices[i]>prices[i-1])
+            {
+                max+=prices[i]-prices[i-1];
+            }
+            i++;
+        }
+        return max;
+        
+    }
+}
