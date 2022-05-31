@@ -15,6 +15,7 @@
       color:white;
       border-right: 1px solid #eee; 
       position: fixed;
+      top:70px;
       height: 100%;
       overflow: auto;
     }
@@ -82,7 +83,7 @@
         
         
         
-        <h2 ><a href="html.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+        <h2 ><a href="{% url 'html' %}" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
         <h2 ><a href="{% url 'html1' %}?data=basic" class="btn  btn-lg btn-block" style="color:white;">Basic Tags</a></h2><br />
         <h2><a href="{% url 'html1' %}?data=images" class="btn btn-lg btn-block" style="color:white;">Images</a></h2><br />
         <h2><a href="{% url 'html1' %}?data=link" class="btn btn-lg btn-block" style="color:white;">Links</a></h2><br />
@@ -97,7 +98,7 @@
     const sidenav = document.querySelector("#sn");
 
     window.addEventListener("scroll", () => {
-    this.scrollY >= 40
+    this.scrollY >= 30
     ? sidenav.classList.add("fill")
     : sidenav.classList.remove("fill");
     });
