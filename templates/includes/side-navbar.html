@@ -1,0 +1,53 @@
+<style>
+    .wrapper{
+    display: flex;
+    position: absolute;
+    z-index:10000;
+    }
+
+    .wrapper .sidebar{
+    width: 70px;
+    height: 100%;
+    background: #4b4276;
+    padding: 60px 0px;
+    position: fixed;
+    }
+
+    .wrapper .sidebar ul li{
+    padding: 10px 0px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    list-style:none;
+    }    
+
+    .wrapper .sidebar ul li a{
+    color: #bdb8d7;
+    display: block;
+    }
+
+    .wrapper .sidebar ul li a .fas{
+    width: 25px;
+    }
+    .wrapper .sidebar ul li:hover{
+    background-color: #594f8d;
+    }
+        
+    .wrapper .sidebar ul li:hover a{
+    color: #fff;
+    }
+</style>
+<div class="wrapper">
+    <div class="sidebar">
+        <ul>
+            <li><a href="{% url 'index' %}" title="Home"><i style="color:#bdb8d7" class="fas fa-home"></i></a></li>
+            <li><a href="{% url 'home-feature' %}" title="Features"><i style="color:#bdb8d7" class="fa-solid fa-cubes"></i></a></li>
+            <li><a href="{% url 'listtemplates' %}" title="Templates"><i style="color:#bdb8d7" class="fa-regular fa-folder-open"></i></a></li>
+            <li><a href="{% url 'home-pricing' %}" title="Pricing"><i style="color:#bdb8d7" class="fa-solid fa-money-bill-1"></i></a></li>
+            <li><a href="{% url 'home-team' %}" title="Our Team"><i style="color:#bdb8d7" class="fa-solid fa-people-group"></i></a></li>
+            <li><a href="{% url 'home-quiz' %}" title="Quize"><i style="color:#bdb8d7" class="fa-solid fa-square-check"></i></a></li>
+            <li><a href="{% url 'blog-home' %}" title="Blog"><i style="color:#bdb8d7" class="fas fa-blog"></i></a></li>
+            <li><a href="{% url 'home-contact' %}" title="Contact Us"><i style="color:#bdb8d7" class="fa-solid fa-address-book"></i></a></li>
+        </ul> 
+    </div>
+</div>

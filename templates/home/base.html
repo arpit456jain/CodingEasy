@@ -43,6 +43,7 @@
 </head>
 
 <body>
+    <br>
     <!-- Preloader -->
     {% block loader %}
     <!-- Preloading index template (index.html). Not to be used anywhere else-->
@@ -50,6 +51,8 @@
 
     <!-- Navbar -->
     {% include 'includes/navbar.html' %}
+    {% include 'includes/side-navbar.html' %}
+
     <!-- Main body-->
     {% block content %}
     {% endblock content %}
