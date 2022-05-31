@@ -32,6 +32,10 @@ def pricing(request):
     return render(request, 'home/Pricing/pricing.html')
 
 
+def leetCode(request):
+    return render(request, 'home/LeetCode/LeetCode.html')
+
+
 def editor(request):
     return render(request, 'home/Editor/editor.html')
 
