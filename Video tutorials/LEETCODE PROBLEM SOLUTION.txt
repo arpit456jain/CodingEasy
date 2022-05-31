@@ -392,3 +392,93 @@ class Solution {
         return n %2==0;
     }
 }
+
+N-TH TRIBONACCI NUMBER
+///////////CODE/////
+
+JAVA
+
+
+class Solution {
+    public int tri(int n)
+    {
+        int[] arr = new int[n+1];
+        arr[0]=0;
+        arr[1]=1;
+        arr[2]=1;
+        for(int i =3; i<=n;i++)
+        {
+            arr[i]=arr[i-1]+arr[i-2]+arr[i-3];
+        }
+        return arr[n];
+    }
+    public int tribonacci(int n) {
+        if(n ==0)
+            return 0;
+        if(n==1||n==2)
+            return 1;
+        int ans = tri(n);
+        return ans;
+    }
+}
+
+GET MAXIMUM IN GENERATED ARRAY
+//////////CODE///////
+
+JAVA
+
+class Solution {
+    public int getMaximumGenerated(int n) {
+        int[] dp = new int[n+1];
+        if(n==0)
+        {
+            return 0;
+        }
+        dp[0]=0;
+        dp[1]=1;
+        for(int i =2; i<=n;i++)
+        {
+            dp[i]=i%2==0?dp[i/2]:dp[i/2]+dp[i/2+1];
+        }
+        Arrays.sort(dp);
+        return dp[n];
+    }
+}
+
+LONGEST COMMON SUBSEQUENCE
+////////CODE////////////
+
+JAVA
+
+class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
+          int m = text1.length();
+        int n = text2.length();
+    
+        
+         int[][] dp = new int[m+1][n+1];
+        
+        
+        for(int i = 0; i<=m; i++){
+            for(int j =0; j<=n; j++){
+                
+				// i== 0 means when tehre is no character in str 1
+				// j==0 means when there is no character in str2
+                if(i == 0 || j== 0){
+                    dp[i][j] = 0; // when one of the string is empty than LCS is 0;
+                    continue;
+                }
+                
+	
+                if(text1.charAt(i-1) == text2.charAt(j-1)){
+                    dp[i][j] = dp[i-1][j-1] + 1;
+                }else{
+                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);   
+                }
+
+            }
+        }
+        
+        return dp[m][n];
+    }
+}
