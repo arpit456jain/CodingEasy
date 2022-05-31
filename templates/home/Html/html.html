@@ -2,7 +2,10 @@
 {% load static %}
 
 {% block content %}
-<br />
+{% include 'home/htmlsidenav.html' %}
+
+<br>
+<div class="content">
 <div class="heading text-center display-3">CodingEasy</div>
 <br />
 
@@ -155,6 +158,6 @@
   </div>
 </div>
 </div>
-
+</div>
 <!-- /jumbotron -->
 {% endblock content %}

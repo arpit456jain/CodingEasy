@@ -1,0 +1,30 @@
+Question link:
+https://leetcode.com/problems/unique-number-of-occurrences/
+
+Code:
+
+class Solution {
+    public boolean uniqueOccurrences(int[] arr) {
+        Map<Integer, Integer> h1 = new ConcurrentHashMap<Integer, Integer>();
+
+        for(int a: arr){
+            if(h1.containsKey(a)){
+                h1.put(a, h1.get(a) +1);
+            }else{
+                h1.put(a, 1);
+            }
+        }
+
+        for(int b: h1.keySet()){
+            int c = h1.get(b);
+            h1.remove(b);
+            if(h1.containsValue(c)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1tuiAdcm6S6auOLmdZJjksqMDK5ZRMiKq/view?usp=sharing
