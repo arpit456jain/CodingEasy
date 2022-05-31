@@ -310,3 +310,61 @@ class Solution {
     return -1;
     }
 }
+
+
+COUNTING BITS
+/////////CODE////
+
+JAVA
+
+class Solution {
+    public int[] countBits(int n) {
+        int[] arr = new int[n+1];
+        for(int i =0; i<=n; i++)
+        {
+            arr[i]=arr[i>>1];
+            if((i&1)==1) arr[i]++;
+        }
+        return arr;
+    }
+}
+
+
+IS SUBSEQUENCE
+
+
+/////////CODE//////
+
+JAVA
+
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        if(s.length() == 0) return true;
+        int index =0;
+        for(char c : t.toCharArray())
+        {
+            if(c==s.charAt(index)) index++;
+            if(index == s.length()) return true;
+        }
+        return false;
+    }
+}
+
+MIN COST CLIMBING STAIRS
+///////CODE////////////
+
+JAVA
+class Solution {
+    public int minCostClimbingStairs(int[] cost) {
+        int l = cost.length;
+        int dp[]=new int[l+1];
+        int one =0; int two =0;
+        for(int i =2; i<=l; i++)
+        {
+            one = dp[i-1]+cost[i-1];
+            two= dp[i-2]+cost[i-2];
+            dp[i] = Math.min(one, two);
+        }
+        return dp[l];
+    }
+}
