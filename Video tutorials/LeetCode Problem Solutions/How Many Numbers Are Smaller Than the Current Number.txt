@@ -1,0 +1,24 @@
+Question link:
+https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+
+Code:
+
+class Solution {
+    public int[] smallerNumbersThanCurrent(int[] nums) {
+        int[] result = new int[nums.length];
+        int n= 0;
+        
+        for(int i = 0 ; i < nums.length ; i++){
+            for(int j = 0 ; j < nums.length ; j++){
+                if(nums[i] != nums[j]){ if(nums[i]>nums[j]) n++; }
+            }
+            result[i] = n;
+            n = 0;
+        }
+
+        return result;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/15-0LVtwGpOyhnghjBRB9EZPisVy9Q3Mw/view?usp=sharing
