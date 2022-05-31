@@ -1,0 +1,28 @@
+Question link:
+https://leetcode.com/problems/plus-one/
+
+Code:
+
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> groupedAnagrams = new ArrayList<>();
+        HashMap<String, List<String>> map = new HashMap<>();
+
+        for(int i = 0 ; i < strs.length ; i++){
+            char[] a = strs[i].toCharArray();
+            Arrays.sort(a);
+            String b = String.valueOf(a);
+            if(!map.containsKey(b)){
+                map.put(b, new ArrayList<>());
+            }
+
+            map.get(b).add(strs[i]);
+        }
+
+        groupedAnagrams.addAll(map.values());
+        return groupedAnagrams;
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1dQbITE35J2WDvnQ-PWGPErQPgWe54vHZ/view?usp=sharing

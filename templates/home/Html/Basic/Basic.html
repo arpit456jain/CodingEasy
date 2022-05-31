@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block content %}
+{% include 'home/htmlsidenav.html' %}
 <br>
+<div class="content">
 <div class="heading text-center display-3">
   Coding Easy
 </div> <br>
@@ -203,12 +205,13 @@
 
     </div>
 </section>
+</div>
 {% endblock content %}
 
 {% block code %}
-
+<div class="content">
   <h3 class="text-center">Give it a try &#128187;</h3>
   <iframe frameborder="0" width="100%" height="1500px" src="https://replit.com/@nikhil25803/CodingEasyWeb?lite=true" style="margin: 2px;"></iframe>
-
+</div>
 
 {% endblock code %}
