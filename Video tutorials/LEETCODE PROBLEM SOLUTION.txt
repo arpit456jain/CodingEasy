@@ -368,3 +368,27 @@ class Solution {
         return dp[l];
     }
 }
+
+FIBONACCI NUMBER
+//////////////CODE///////////
+
+JAVA
+
+class Solution {
+    public int fib(int n) {
+        if(n<=1)
+            return n;
+        return fib(n-1)+fib(n-2);
+    }
+}
+
+DIVISOR GAME
+//////////CODE///////////
+
+JAVA
+
+class Solution {
+    public boolean divisorGame(int n) {
+        return n %2==0;
+    }
+}
