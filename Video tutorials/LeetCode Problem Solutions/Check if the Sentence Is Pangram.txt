@@ -1,0 +1,21 @@
+Question link:
+https://leetcode.com/problems/check-if-the-sentence-is-pangram/
+
+Code:
+
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+        if(sentence.length() < 26) return false;
+        String[] alpha = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+        
+        for(String a: alpha){
+            if(!sentence.contains(a)) return false;
+        }
+
+        return true;
+        
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1_ZoHEh4KhEDW0AUacQCOhvo47Xbw8oG7/view?usp=sharing

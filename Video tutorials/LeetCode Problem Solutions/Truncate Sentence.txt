@@ -1,0 +1,18 @@
+Question link:
+https://leetcode.com/problems/truncate-sentence/
+
+Code:
+
+class Solution {
+    public String truncateSentence(String s, int k) {
+        String result = "";
+          String[] strarray  = s.split("\\s");
+              for(int i = 0 ; i < k ; i++){
+                result = result + strarray[i] + " ";
+              }
+        return result.trim();
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1cA3XuCxFkrrYQAUNMUmSbi3jUFrbYFva/view?usp=sharing
