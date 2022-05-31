@@ -1,0 +1,107 @@
+<style>
+    body {
+      margin: 0;
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      padding-top: 50px;
+      padding-left: 25px;
+      padding-right: 25px;
+      width: 300px;
+      background-color:blue;
+      color:white;
+      border-right: 1px solid #eee; 
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+    
+    .sidebar h2 a {
+      display: block;
+      color: black;
+      padding: 15px;
+      background-color: rgb(81, 125, 255) !important;
+      text-decoration: none;
+    }
+     
+    .sidebar h2 a.active {
+      color: white;
+    }
+    
+    .sidebar h2 a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+    
+    div.content {
+      margin-left: 300px !important;
+      padding: 1px 16px;
+     
+    }
+
+    footer.page-footer{
+        margin-left: 300px !important;
+        padding: 1px 16px;
+    }
+    
+    #sn.fill{
+        top:0;
+        padding-top: 70px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {float: left;}
+      div.content {margin-left: 0;}
+    }
+    
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+    </style>
+    </head>
+    <body>
+    
+    <!-- <div class="sidebar">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div> -->
+    <div id="sn" class="col-sm-3 col-md-2 sidebar">
+        
+        
+        
+        <h2 ><a href="html.html" class="btn btn-primary btn-lg btn-block" style="color:white;">Introduction</a></h2><br />
+        <h2 ><a href="{% url 'html1' %}?data=basic" class="btn  btn-lg btn-block" style="color:white;">Basic Tags</a></h2><br />
+        <h2><a href="{% url 'html1' %}?data=images" class="btn btn-lg btn-block" style="color:white;">Images</a></h2><br />
+        <h2><a href="{% url 'html1' %}?data=link" class="btn btn-lg btn-block" style="color:white;">Links</a></h2><br />
+        <h2><a href="{% url 'html1' %}?data=list" class="btn btn-lg btn-block" style="color:white;">Lists</a></h2><br />
+        <h2><a href="{% url 'html1' %}?data=table" class="btn btn-lg btn-block" style="color:white;">Tables</a></h2><br />
+        <h2><a href="{% url 'html1' %}?data=style" class="btn btn-lg btn-block" style="color:white;text-align:center;">Styles<br /> and Semantics</a></h2><br/>
+  
+  </div>
+
+<script>
+
+    const sidenav = document.querySelector("#sn");
+
+    window.addEventListener("scroll", () => {
+    this.scrollY >= 40
+    ? sidenav.classList.add("fill")
+    : sidenav.classList.remove("fill");
+    });
+
+
+</script>
+    
