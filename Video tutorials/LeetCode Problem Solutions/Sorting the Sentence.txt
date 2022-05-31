@@ -1,0 +1,25 @@
+Question link:
+https://leetcode.com/problems/sorting-the-sentence/
+
+Code:
+
+class Solution {
+    public String sortSentence(String s) {
+            String result = "";
+            String[] str = s.split(" ");
+            String[] strs = new String[str.length];
+
+            for(int i = 0 ; i < str.length ; i++){
+                char k = str[i].charAt(str[i].length()-1);
+                strs[k-'0'-1] = str[i].substring(0, str[i].length()-1);
+            }
+
+            for(String a: strs){
+                result = result + " " +a;
+            }
+            return result.trim();
+    }
+}
+
+Video Solution Link:
+https://drive.google.com/file/d/1GfCDaImZt_9pCmXA4PSZfeKx6FZebilv/view?usp=drivesdk
