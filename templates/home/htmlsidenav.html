@@ -4,23 +4,24 @@
       font-family: "Lato", sans-serif;
     }
     
-    .sidebar {
+    .sidenavbar {
       margin: 0;
       padding: 0;
       padding-top: 50px;
       padding-left: 25px;
       padding-right: 25px;
-      width: 300px;
+      width: 300px !important;
       background-color:blue;
       color:white;
       border-right: 1px solid #eee; 
       position: fixed;
-      top:70px;
+      top:60px;
+      left:70px;
       height: 100%;
       overflow: auto;
     }
     
-    .sidebar h2 a {
+    .sidenavbar h2 a {
       display: block;
       color: black;
       padding: 15px;
@@ -28,11 +29,11 @@
       text-decoration: none;
     }
      
-    .sidebar h2 a.active {
+    .sidenavbar h2 a.active {
       color: white;
     }
     
-    .sidebar h2 a:hover:not(.active) {
+    .sidenavbar h2 a:hover:not(.active) {
       background-color: #555;
       color: white;
     }
@@ -51,6 +52,8 @@
     #sn.fill{
         top:0;
         padding-top:100px;
+        width: 300px;
+
     }
 
     @media screen and (max-width: 700px) {
@@ -59,7 +62,7 @@
         height: auto;
         position: relative;
       }
-      .sidebar a {float: left;}
+      .sidenavbar a {float: left;}
       div.content {margin-left: 0;}
     }
     
@@ -79,7 +82,7 @@
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
     </div> -->
-    <div id="sn" class="col-sm-3 col-md-2 sidebar">
+    <div id="sn" class="col-sm-3 col-md-2 sidenavbar">
         
         
         
@@ -93,7 +96,7 @@
   
   </div>
 
-<script>
+<!-- <script>
 
     const sidenav = document.querySelector("#sn");
 
@@ -104,5 +107,5 @@
     });
 
 
-</script>
+</script> -->
     
