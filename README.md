@@ -4,7 +4,7 @@
  
 <a href= "https://github.com/arpit456jain/CodingEasy/issues" target="_blanlk" title="CodingEasy">![Student-portal](https://socialify.git.ci/arpit456jain/CodingEasy/image?description=1&theme=Light)</a>
 
- 
+ <a href="https://hacktoberfest.digitalocean.com/"><img alt="HacktoberFest'21" title="HacktoberFest'21" width=100% src="https://miro.medium.com/v2/resize:fit:1400/1*Lz_KFgbak2sUjwjOG9SZ4g.png"></a>
  <br>
  
 ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) &nbsp;  ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)  &nbsp;
@@ -192,16 +192,7 @@ Congratulations! You've created your virtual environment.
 </table>
 
 
-## Project Mentors
 
-<table>
-<tr>
-<td align="center"><a href="https://github.com/singhmansi25"><img src="https://avatars.githubusercontent.com/u/76874762?v=4" width=150px height=150px /></a></br> <h4 style="color:red;">Mansi Singh</h4>
- <td align="center"><a href="https://github.com/raghavTinker"><img src="https://avatars.githubusercontent.com/u/71115825?v=4" width=150px height=150px /></a></br> <h4 style="color:red;">Raghav Tinker</h4>
- <td align="center"><a href="https://github.com/KKhushhalR2405"><img src="https://avatars.githubusercontent.com/u/58569950?v=4" width=150px height=150px /></a></br> <h4 style="color:red;">Khushhal Reddy</h4>
-
-</tr>
-</table>
 <br>
 
 ## Our valuable Contributors
